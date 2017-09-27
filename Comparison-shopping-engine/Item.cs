@@ -42,9 +42,9 @@ namespace Comparison_shopping_engine
             this.Date = DateTime.Parse(date);
         }
 
-        public void print()
+        public void Print()
         {
-            Console.Out.WriteLine(Name + " " + store + " " + price.ToString());
+            Console.Out.WriteLine(Name + " / " + Store + " / " + Price.ToString() + " / " + Date.ToString());
         }
     }
 }
