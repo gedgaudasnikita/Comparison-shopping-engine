@@ -12,39 +12,39 @@ namespace Comparison_shopping_engine
         private string store;
         //Vienos prakės kaina arba 1kg kaina jei prekė sveriama
         private double price;
+        private DateTime date;
 
         public string Name
-        {
-            get; set;
-        }
+        { get; set; }
 
         public string Store
-        {
-            get; set;
-        }
+        { get; set; }
 
         public double Price
+        { get; set; }
+
+        public DateTime Date
+        { get; set; }
+
+        public Item(string name, string store, double price, DateTime date)
         {
-            get; set;
+            this.Name = name;
+            this.Store = store;
+            this.Price = price;
+            this.Date = date;
         }
 
-        public Item()
+        public Item(string name, string store, double price, string date)
         {
-            this.name = "";
-            this.store = "";
-            this.price = 0;
-        }
-
-        public Item(string name, string store, double price)
-        {
-            this.name = name;
-            this.store = store;
-            this.price = price;
+            this.Name = name;
+            this.Store = store;
+            this.Price = price;
+            this.Date = DateTime.Parse(date);
         }
 
         public void print()
         {
-            Console.Out.WriteLine(name + " " + store + " " + price.ToString());
+            Console.Out.WriteLine(Name + " " + store + " " + price.ToString());
         }
     }
 }
