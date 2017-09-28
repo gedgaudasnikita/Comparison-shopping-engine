@@ -44,7 +44,7 @@ namespace Comparison_shopping_engine
 
         public void Print()
         {
-            Console.Out.WriteLine(Name + " / " + Store + " / " + Price.ToString() + " / " + Date.ToString());
+            Console.Out.WriteLine(Name + " | " + Store + " | " + Price.ToString() + " | " + Date.ToString());
         }
     }
 }
