@@ -4,11 +4,11 @@ using Tesseract;
 
 namespace Comparison_shopping_engine
 {
-    public static class ReceiptTranslator
+    public static class OCRWrapper
     {
         private static TesseractEngine engine = new TesseractEngine(@"./tessdata", "lit", EngineMode.Default);
 
-        public static String convertToText(Bitmap receipt)
+        public static String ConvertToText(Bitmap receipt)
         {
             PixConverter.ToPix(receipt);
             var text = engine.Process(receipt).GetText();

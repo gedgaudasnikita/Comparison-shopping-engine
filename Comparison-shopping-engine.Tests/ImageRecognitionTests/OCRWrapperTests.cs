@@ -10,15 +10,15 @@ using System.Drawing;
 namespace Comparison_shopping_engine.Tests
 {
     [TestClass()]
-    public class ReceiptTranslatorTests
+    public class OCRWrapperTests
     {
         [TestMethod()]
-        public void convertToTextTest_ExtractsText()
+        public void ConvertToTextTest_ExtractsText()
         {
             var item = "Nuolaidų kuponas šokoladui";
             var img = new Bitmap("./testdata/receipt.jpg");
 
-            var result = ReceiptTranslator.convertToText(img);
+            var result = OCRWrapper.ConvertToText(img);
 
             Assert.IsTrue(result.Contains(item));
         }
