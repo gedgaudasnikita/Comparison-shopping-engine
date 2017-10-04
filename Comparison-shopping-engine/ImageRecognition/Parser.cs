@@ -10,6 +10,7 @@ namespace Comparison_shopping_engine
 {
     public static class Parser
     {
+        public const int MAX_SIMILARITY_DISTANCE = 7;
         public const int MIN_STORE_LENGTH = 2;
         public const int MAX_STORE_LENGTH = 7;
         private static string[] supportedStores = ConfigurationManager.AppSettings["supportedStores"].Split(',');
@@ -18,7 +19,9 @@ namespace Comparison_shopping_engine
         public static string ParseStore(string source)
         {
             string parsedStore = "";
-            int minScore = int.MaxValue;
+
+            //A distance larger than this would give a basically random choice, consider the store unparseable
+            int minScore = MAX_SIMILARITY_DISTANCE;
 
             for (int index = 0; index < source.Length; index++)
             {
@@ -65,7 +68,7 @@ namespace Comparison_shopping_engine
             string itemName = matchedItem.Groups[1].Value;
 
             int itemPrice = 0;
-            string itemPriceClean = matchedItem.Groups[2].Value.RemoveDigits();
+            string itemPriceClean = matchedItem.Groups[2].Value.RemoveNonDigits();
             int.TryParse(itemPriceClean, out itemPrice);
 
             return parsedItem;

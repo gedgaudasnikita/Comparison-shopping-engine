@@ -8,7 +8,7 @@ namespace Comparison_shopping_engine
 {
     public static class StringExtension
     {
-        public static string RemoveDigits(this string str)
+        public static string RemoveNonDigits(this string str)
         {
             return new String(str.Where(Char.IsDigit).ToArray());
         }
