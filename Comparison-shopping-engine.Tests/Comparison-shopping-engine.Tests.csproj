@@ -57,8 +57,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
+    <Compile Include="ImageRecognitionTests\ReceiptParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReceiptTranslatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comparison-shopping-engine\Comparison-shopping-engine.csproj">
