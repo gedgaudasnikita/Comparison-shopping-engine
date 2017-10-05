@@ -27,7 +27,12 @@ namespace Comparison_shopping_engine
         { get; set; }
 
         public Item(string name)
-        { this.Name = name; }
+        {
+            this.Name = name;
+            this.Store = "MissingSt";
+            this.Price = Int32.MaxValue;
+            this.Date = DateTime.Now;
+        }
 
         public Item(string name, string store)
             : this(name)
