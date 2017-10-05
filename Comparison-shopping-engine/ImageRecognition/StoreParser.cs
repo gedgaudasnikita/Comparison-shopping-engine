@@ -10,15 +10,12 @@ namespace Comparison_shopping_engine
 {
     public class StoreParser: IParser<string>
     {
-        private int maximumMatchingDistance = 7;
-
         private string[] supportedStores;
         private int minimumStoreNameLength;
         private int maximumStoreNameLength;
 
         public StoreParser()
         {
-            int.TryParse(ConfigurationManager.AppSettings["maximumMatchingDistance"], out maximumMatchingDistance);
             supportedStores = ConfigurationManager.AppSettings["supportedStores"].Split(',');
             minimumStoreNameLength = supportedStores.Min(storeName => storeName.Length);
             maximumStoreNameLength = supportedStores.Max(storeName => storeName.Length);
@@ -28,8 +25,8 @@ namespace Comparison_shopping_engine
         {
             string parsedStore = "";
 
-            //Larger distances give virtually random results, better consider the store unparseable
-            int minScore = maximumMatchingDistance;
+            //Larger distances will always parse the shortest shop name, better consider the store unparseable
+            int minScore = minimumStoreNameLength;
 
             //We iterate through the whole source, because there is no guaranteed placement of the store name
             for (int index = 0; index < source.Length; index++)
