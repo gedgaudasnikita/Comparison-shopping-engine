@@ -23,7 +23,7 @@ namespace Comparison_shopping_engine
 
         public static bool IsEqual(Item a, Item b)
         {
-            return EqualName(a, b) && EqualStore(a, b) && (a.Price == b.Price) && (a.Date >= b.Date);
+            return EqualName(a, b) && EqualStore(a, b) && (a.Price == b.Price) && (a.Date == b.Date);
         }
 
         public static bool IsSameItemOlder(Item a, Item b)
@@ -33,12 +33,12 @@ namespace Comparison_shopping_engine
 
         public static bool IsSameItemNewer(Item a, Item b)
         {
-            return EqualName(a, b) && EqualStore(a, b) && (a.Price != b.Price) && (a.Date > b.Date);
+            return EqualName(a, b) && EqualStore(a, b) && (a.Date > b.Date);
         }
 
         public static bool IsSameNameCheaper(Item a, Item b)
         {
-            return EqualName(a, b) && (a.Price > b.Price) && (a.Date >= b.Date);
+            return EqualName(a, b) && (a.Price > b.Price);
         }
 
         public static bool IsCheaper(Item a, Item b)

@@ -46,30 +46,14 @@ namespace Comparison_shopping_engine
                 if (ItemComparer.IsEqual(newItem, oldItem))
                 {
                     inList = true;
-                    Console.Out.WriteLine("Item already exists in list");
-                    break;
-                }
-
-                else if (ItemComparer.IsSameItemOlder(newItem, oldItem))
-                {
-                    inList = true;
-                    Console.Out.WriteLine("Newer same Item already exists in list");
-                    break;
-                }
-
-                else if (ItemComparer.IsSameItemNewer(newItem, oldItem))
-                {
-                    instance.itemList.Remove(oldItem);
-                    AddItem(newItem);
-                    Console.Out.WriteLine("Older Item found, replaced with new Item");
-                    inList = true;
+                    //Console.Out.WriteLine("Item already exists in list");
                     break;
                 }
             }
             if (!inList)
             {
                 AddItem(newItem);
-                Console.Out.WriteLine("No Item found, Item added to list");
+                //Console.Out.WriteLine("No Item found, Item added to list");
             }
         }
 
@@ -79,13 +63,8 @@ namespace Comparison_shopping_engine
             CompareAddItem(newItem);
             foreach (Item oldItem in instance.itemList)
             {
-                if (ItemComparer.IsSameItemOlder(newItem, oldItem) && !ItemComparer.IsCheaper(newItem, oldItem))
+                if (ItemComparer.IsSameNameCheaper(newItem, oldItem))
                     newItem = oldItem;
-
-                else if (ItemComparer.IsSameNameCheaper(newItem, oldItem))
-                {
-                    newItem = oldItem;
-                }
 
             }
             return newItem;
