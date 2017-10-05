@@ -10,12 +10,15 @@ namespace Comparison_shopping_engine
 {
     public static class Parser
     {
-        //WE CANT JUST ASSUME THE VALUE IS PARSEABLE! Fix ASAP
+        //FORMATEXCEPTION ALERT! Fix ASAP
         private static int maximumMatchingDistance = int.Parse(ConfigurationManager.AppSettings["maximumMatchingDistance"]);
+        
         private static string[] supportedStores = ConfigurationManager.AppSettings["supportedStores"].Split(',');
         private static int minimumStoreNameLength = supportedStores.Min(storeName => storeName.Length);
         private static int maximumStoreNameLength = supportedStores.Max(storeName => storeName.Length);
-        private static string itemRegex = @"(.+)(\d.*\d.*\d.*A)";
+        
+        //Lines ending with three numbers and tax groups A or M1 are what we consider items
+        private static string itemRegex = @"(.+)(\d.*\d.*\d.*(A|M1))";
 
         public static string ParseStore(string source)
         {
@@ -24,10 +27,13 @@ namespace Comparison_shopping_engine
             //Larger distances give virtually random results, better consider the store unparseable
             int minScore = maximumMatchingDistance;
 
+            //We iterate through the whole source, because there is no guaranteed placement of the store name
             for (int index = 0; index < source.Length; index++)
             {
+                //Matching all possible substrings is inefficient, limit that to relevants only
                 for (int length = minimumStoreNameLength; length < maximumStoreNameLength && length + index < source.Length; length++)
                 {
+                    //Calculate a matching score for each store name; smallest wins
                     foreach(string store in supportedStores)
                     {
                         int currentScore = store.GetDistance(source.Substring(index, length));
@@ -40,9 +46,7 @@ namespace Comparison_shopping_engine
                     }
                 }
             }
-            source.Substring(0, 0);
 
-            Console.WriteLine(minScore);
             return parsedStore;
         }
 
