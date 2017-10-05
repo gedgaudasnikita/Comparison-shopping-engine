@@ -11,5 +11,9 @@ in the Package Manager Console.
 
 Reasonale: `nuget restore` does not run PowerShell scripts, and Tesseract, for some reason, uses PowerShell scripts.
 
-## Caveats
-If for some reason, when running unit tests or trying to build the project, VS starts throwing up with errors like "failed to copy *.dll" or something similar, just restart VS, most of the time it does the trick.
+## Possible problems
+If for some reason, when running unit tests or trying to build the project, VS starts throwing up with errors like "failed to copy *.dll" or something similar, in the properties of all *.dll's in 'x64' and 'x86' directories change "Copy to working directory" to "Copy if newer". 🙂
+
+
+
+
