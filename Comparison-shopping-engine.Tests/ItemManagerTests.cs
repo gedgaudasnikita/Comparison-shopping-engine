@@ -31,15 +31,17 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void CompareAddItemTest()
+        public void ExistsTest()
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
             Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
             Item b = new Item("Name", "StoreB", 915, DateTime.Now);
-            m1.CompareAddItem(a);
-            m1.CompareAddItem(a);
-            m1.CompareAddItem(b);
+            if (!m1.Exists(a)) m1.AddItem(a);
+            if (!m1.Exists(a)) m1.AddItem(a);
+            if (!m1.Exists(a)) m1.AddItem(a);
+            if (!m1.Exists(a)) m1.AddItem(a);
+            if (!m1.Exists(b)) m1.AddItem(b);
             Assert.IsTrue(m1.Count() == 2);
         }
 
