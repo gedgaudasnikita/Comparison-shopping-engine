@@ -58,7 +58,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
-    <Compile Include="ImageRecognitionTests\ReceiptParserTests.cs" />
+    <Compile Include="ImageRecognitionTests\StoreParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
