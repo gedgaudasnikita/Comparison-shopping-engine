@@ -9,6 +9,10 @@ namespace Comparison_shopping_engine
     //Statinė klasė turinti visus Item palyginimo metodus
     public static class ItemComparer
     {
+        //SameName - sutampa pavadinimai
+        //SameStore - sutampa parduotuves
+        //SameItem - sutampa pavadinimai ir parduotuves
+
         //Pasako ar prekių pavadinimai lygūs, palyginimas case-sensitive
         public static bool EqualName(Item a, Item b)
         {
