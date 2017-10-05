@@ -31,8 +31,15 @@ namespace Comparison_shopping_engine
         {
             Receipt result = new Receipt();
 
-            result.Store = storeParser.Parse(source);
-            result.Items = itemListParser.Parse(source);
+            if (storeParser != null)
+            {
+                result.Store = storeParser.Parse(source);
+            }
+
+            if (itemListParser != null)
+            {
+                result.Items = itemListParser.Parse(source);
+            }
 
             return result;
         }
