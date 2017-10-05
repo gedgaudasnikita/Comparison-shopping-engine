@@ -16,6 +16,7 @@ namespace Comparison_shopping_engine
 
         private ItemManager()
         {
+                itemList = new List<Item>();
         }
 
         public static ItemManager Init()
@@ -23,7 +24,6 @@ namespace Comparison_shopping_engine
             if (instance == null)
             {
                 instance = new ItemManager();
-                instance.itemList = new List<Item>();
             }
             return instance;
         }
