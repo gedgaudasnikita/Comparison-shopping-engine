@@ -68,12 +68,6 @@ namespace Comparison_shopping_engine
             return newItem;
         }
 
-        public void PrintList()
-        {
-            foreach (Item item in instance.itemList)
-                item.Print();
-        }
-
         public int Count()
         {
             return instance.itemList.Count();

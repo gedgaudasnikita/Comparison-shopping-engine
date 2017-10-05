@@ -8,10 +8,10 @@ namespace Comparison_shopping_engine
 {
     public class Item
     {
-        private string name;
-        private string store;
+        private string name = "MissingNa";
+        private string store = "MssingSt";
         //Vienos prakės kaina arba 1kg kaina jei prekė sveriama
-        private double price;
+        private int price;
         private DateTime date;
 
         public string Name
@@ -20,31 +20,62 @@ namespace Comparison_shopping_engine
         public string Store
         { get; set; }
 
-        public double Price
+        public int Price
         { get; set; }
 
         public DateTime Date
         { get; set; }
 
-        public Item(string name, string store, double price, DateTime date)
+        public Item(string name)
+        { this.Name = name; }
+
+        public Item(string name, string store)
+            : this(name)
         {
-            this.Name = name;
             this.Store = store;
+        }
+
+        public Item(string name, string store, int price)
+            : this(name, store)
+        {
             this.Price = price;
+        }
+
+        public Item(string name, int price)
+            : this(name)
+        {
+            this.Price = price;
+            this.Store = "MissingSt";
+
+        }
+
+        public Item(string name, int price, DateTime date)
+            : this(name, price)
+        {
             this.Date = date;
         }
 
-        public Item(string name, string store, double price, string date)
+        public Item(string name, int price, string date)
+            : this(name, price)
         {
-            this.Name = name;
-            this.Store = store;
-            this.Price = price;
             this.Date = DateTime.Parse(date);
         }
 
-        public void Print()
+        public Item(string name, string store, int price, DateTime date)
+            :this(name, store, price)
         {
-            Console.Out.WriteLine(Name + " | " + Store + " | " + Price.ToString() + " | " + Date.ToString());
+            this.Date = date;
+        }
+
+        public Item(string name, string store, int price, string date)
+            :this(name, store, price)
+        {
+            this.Date = DateTime.Parse(date);
+        }
+
+        override public String ToString()
+        {
+            return (Name + " | " + Store + " | " + Price.ToString() + " | " + Date.ToString());
         }
     }
 }
