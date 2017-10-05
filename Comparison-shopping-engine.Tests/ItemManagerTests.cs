@@ -44,16 +44,16 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void FindCheaperTest()
+        public void FindCheapestTest()
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
-            Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
-            Item b = new Item("Name", "StoreB", 1099, DateTime.Now);
-            m1.CompareAddItem(a);
-            m1.CompareAddItem(b);
-            Item c = m1.FindCheapest(a);
-            Assert.IsTrue(c.Equals(b));
+            m1.AddItem(new Item("NameA", "Store", 1000, "2017-12-12"));
+            m1.AddItem(new Item("NameB", "Store", 1015, "2017-12-12"));
+            m1.AddItem(new Item("NameC", "Store", 2015, "2017-12-12"));
+            m1.AddItem(new Item("NameA", "Store", 1900, "2017-12-12"));
+            Item c = m1.FindCheapest(new Item("NameA"));
+            Assert.IsTrue(c.Equals(new Item("NameA", "Store", 1000, "2017-12-12")));
         }
 
         [TestMethod()]
