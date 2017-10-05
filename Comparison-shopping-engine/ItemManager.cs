@@ -14,7 +14,9 @@ namespace Comparison_shopping_engine
         private static ItemManager instance = null;
         private List<Item> itemList;
 
-        private ItemManager() { }
+        private ItemManager()
+        {
+        }
 
         public static ItemManager Init()
         {
@@ -23,14 +25,13 @@ namespace Comparison_shopping_engine
                 instance = new ItemManager();
                 instance.itemList = new List<Item>();
             }
-
             return instance;
         }
 
         //Ideda prekę į sąrašą
         public void AddItem(Item item)
         {
-            instance.itemList.Add(item);
+            itemList.Add(item);
         }
 
         //Palygina prekę su visu sąrašu
@@ -38,20 +39,9 @@ namespace Comparison_shopping_engine
         //Jeigu randą senesnę su kitokia kaina, pakeičia ją naujesne
         public void CompareAddItem(Item newItem)
         {
-            bool inList = false;
-            foreach (Item oldItem in instance.itemList)
-            {
-                if (ItemComparer.IsEqual(newItem, oldItem))
-                {
-                    inList = true;
-                    //Console.Out.WriteLine("Item already exists in list");
-                    break;
-                }
-            }
-            if (!inList)
+            if (!itemList.Contains(newItem))
             {
                 AddItem(newItem);
-                //Console.Out.WriteLine("No Item found, Item added to list");
             }
         }
 
@@ -61,7 +51,7 @@ namespace Comparison_shopping_engine
             CompareAddItem(newItem);
             foreach (Item oldItem in instance.itemList)
             {
-                if (ItemComparer.IsSameNameCheaper(oldItem, newItem))
+                if (new ItemNameComparer().Compare(oldItem, newItem) == 0 && new ItemPriceComparer().Compare(oldItem, newItem) < 0)
                     newItem = oldItem;
 
             }
@@ -70,12 +60,12 @@ namespace Comparison_shopping_engine
 
         public int Count()
         {
-            return instance.itemList.Count();
+            return itemList.Count();
         }
 
         public void ClearList()
         {
-            instance.itemList.Clear();
+            itemList.Clear();
         }
     }
 }

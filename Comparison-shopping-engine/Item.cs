@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine
 {
-    public class Item
+    public class Item : IEquatable<Item>
     {
         private string name = "MissingNa";
         private string store = "MssingSt";
@@ -76,6 +76,14 @@ namespace Comparison_shopping_engine
         override public String ToString()
         {
             return (Name + " | " + Store + " | " + Price.ToString() + " | " + Date.ToString());
+        }
+
+        public bool Equals(Item other)
+        {
+            return (new ItemNameComparer().Compare(this, other) == 0
+                && new ItemStoreComparer().Compare(this, other) == 0
+                && new ItemPriceComparer().Compare(this, other) == 0
+                && new ItemDateComparer().Compare(this, other) == 0);
         }
     }
 }

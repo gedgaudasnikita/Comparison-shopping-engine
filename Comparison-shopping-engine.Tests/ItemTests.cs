@@ -24,5 +24,14 @@ namespace Comparison_shopping_engine.Tests
             Item i = new Item("Name", "Store", 999, "2017-10-10");
             Assert.IsNotNull(i);
         }
+
+        [TestMethod()]
+        public void EqualsTest()
+        {
+            Item a = new Item("Name", "Store", 999, "2017-10-10");
+            Item b = new Item("Name", "Store", 999, "2017-10-10");
+            Item c = new Item("Other", "Other", 999, "2017-10-10");
+            Assert.IsTrue(a.Equals(b) && !a.Equals(c));
+        }
     }
 }
