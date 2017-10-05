@@ -46,9 +46,8 @@ namespace Comparison_shopping_engine
         }
 
         //Grąžina pigiausią prekę su tokių pat pavadinimu
-        public Item FindCheaper(Item newItem)
+        public Item FindCheapest(Item newItem)
         {
-            CompareAddItem(newItem);
             foreach (Item oldItem in instance.itemList)
             {
                 if (new ItemNameComparer().Compare(oldItem, newItem) == 0 && new ItemPriceComparer().Compare(oldItem, newItem) < 0)
