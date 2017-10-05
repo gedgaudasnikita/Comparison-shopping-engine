@@ -26,7 +26,7 @@ namespace Comparison_shopping_engine.Tests
             m1.ClearList();
             Item a = new Item("Name", "Store", 1515, DateTime.Now);
             m1.AddItem(a);
-            Item b = m1.FindCheaper(a);
+            Item b = m1.FindCheapest(a);
             Assert.IsTrue(a.Equals(b));
         }
 
@@ -52,7 +52,7 @@ namespace Comparison_shopping_engine.Tests
             Item b = new Item("Name", "StoreB", 1099, DateTime.Now);
             m1.CompareAddItem(a);
             m1.CompareAddItem(b);
-            Item c = m1.FindCheaper(a);
+            Item c = m1.FindCheapest(a);
             Assert.IsTrue(c.Equals(b));
         }
 
