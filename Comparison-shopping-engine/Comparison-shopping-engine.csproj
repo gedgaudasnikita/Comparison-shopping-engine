@@ -72,10 +72,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageRecognition\Parser.cs" />
+    <Compile Include="ImageRecognition\ItemListParser.cs" />
+    <Compile Include="ImageRecognition\IParser.cs" />
+    <Compile Include="ImageRecognition\StoreParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ImageRecognition\OCRWrapper.cs" />
+    <Compile Include="ImageRecognition\Receipt.cs" />
     <Compile Include="StringExtensions\StringExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
