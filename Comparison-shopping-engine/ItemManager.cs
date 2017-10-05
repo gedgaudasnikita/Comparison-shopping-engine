@@ -34,15 +34,10 @@ namespace Comparison_shopping_engine
             itemList.Add(item);
         }
 
-        //Palygina prekę su visu sąrašu
-        //Jeigu prekės neranda, įdeda ją į sąrašą
-        //Jeigu randą senesnę su kitokia kaina, pakeičia ją naujesne
-        public void CompareAddItem(Item newItem)
+        //Pasako ar sąraše jau yra tokia prekė
+        public bool Exists(Item newItem)
         {
-            if (!itemList.Contains(newItem))
-            {
-                AddItem(newItem);
-            }
+            return itemList.Contains(newItem);
         }
 
         //Grąžina pigiausią prekę su tokių pat pavadinimu
