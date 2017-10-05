@@ -24,7 +24,7 @@ namespace Comparison_shopping_engine.Tests
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
-            Item a = new Item("Name", "Store", 15.15, DateTime.Now);
+            Item a = new Item("Name", "Store", 1515, DateTime.Now);
             m1.AddItem(a);
             Item b = m1.FindCheaper(a);
             Assert.AreEqual(a, b);
@@ -35,8 +35,8 @@ namespace Comparison_shopping_engine.Tests
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
-            Item a = new Item("Name", "StoreA", 15.15, DateTime.Now);
-            Item b = new Item("Name", "StoreB", 9.15, DateTime.Now);
+            Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
+            Item b = new Item("Name", "StoreB", 915, DateTime.Now);
             m1.CompareAddItem(a);
             m1.CompareAddItem(a);
             m1.CompareAddItem(b);
@@ -48,8 +48,8 @@ namespace Comparison_shopping_engine.Tests
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
-            Item a = new Item("Name", "StoreA", 15.15, DateTime.Now);
-            Item b = new Item("Name", "StoreB", 10.99, DateTime.Now);
+            Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
+            Item b = new Item("Name", "StoreB", 1099, DateTime.Now);
             m1.CompareAddItem(a);
             m1.CompareAddItem(b);
             Item c = m1.FindCheaper(a);
@@ -57,17 +57,11 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void PrintListTest()
-        {
-            Assert.IsTrue(true);
-        }
-
-        [TestMethod()]
         public void CountTest()
         {
             ItemManager m1 = ItemManager.Init();
             m1.ClearList();
-            Item a = new Item("Name", "Store", 9.99, "2017-10-05");
+            Item a = new Item("Name", "Store", 999, "2017-10-05");
             m1.AddItem(a);
             Assert.IsTrue(m1.Count() == 1);
         }
@@ -76,10 +70,10 @@ namespace Comparison_shopping_engine.Tests
         public void ClearListTest()
         {
             ItemManager m1 = ItemManager.Init();
-            m1.AddItem(new Item("Name", "Store", 9.99, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 9.99, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 9.99, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 9.99, DateTime.Now));
+            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
+            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
+            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
+            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
             m1.ClearList();
             Assert.IsTrue(m1.Count() == 0);
         }
