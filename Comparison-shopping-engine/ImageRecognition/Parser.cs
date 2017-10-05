@@ -10,22 +10,23 @@ namespace Comparison_shopping_engine
 {
     public static class Parser
     {
-        public const int MAX_SIMILARITY_DISTANCE = 7;
-        public const int MIN_STORE_LENGTH = 2;
-        public const int MAX_STORE_LENGTH = 7;
+        //WE CANT JUST ASSUME THE VALUE IS PARSEABLE! Fix ASAP
+        private static int maximumMatchingDistance = int.Parse(ConfigurationManager.AppSettings["maximumMatchingDistance"]);
         private static string[] supportedStores = ConfigurationManager.AppSettings["supportedStores"].Split(',');
+        private static int minimumStoreNameLength = supportedStores.Min(storeName => storeName.Length);
+        private static int maximumStoreNameLength = supportedStores.Max(storeName => storeName.Length);
         private static string itemRegex = @"(.+)(\d.*\d.*\d.*A)";
 
         public static string ParseStore(string source)
         {
             string parsedStore = "";
 
-            //A distance larger than this would give a basically random choice, consider the store unparseable
-            int minScore = MAX_SIMILARITY_DISTANCE;
+            //Larger distances give virtually random results, better consider the store unparseable
+            int minScore = maximumMatchingDistance;
 
             for (int index = 0; index < source.Length; index++)
             {
-                for (int length = MIN_STORE_LENGTH; length < MAX_STORE_LENGTH && length + index < source.Length; length++)
+                for (int length = minimumStoreNameLength; length < maximumStoreNameLength && length + index < source.Length; length++)
                 {
                     foreach(string store in supportedStores)
                     {
