@@ -8,13 +8,13 @@ namespace Comparison_shopping_engine
 {
     //Klasė atsakinga už Item objektų sarašą, jo tvarkymą ir jo rašymą/skaitymą iš failo
     //Pradžiai naudoju singleton'ą, kuris laiko List<Item>, tad visas prekių sąrašas bus laikomas atmintį
-    //Singleton'o sūkurimas neapsaugotas tarp nuo skirtingų thread'ų, todėl jį sukurti turėtų tik vienas thread'as
+    //Singleton'o sūkurimas neapsaugotas nuo dvigubo sukurimo tarp skirtingų thread'ų, todėl jį sukurti turėtų tik vienas thread'as
     public class ItemManager
     {
         private static ItemManager instance = null;
         private List<Item> itemList;
 
-        private ItemManager() {}
+        private ItemManager() { }
 
         public static ItemManager Init()
         {
@@ -30,9 +30,7 @@ namespace Comparison_shopping_engine
         //Ideda prekę į sąrašą
         public void AddItem(Item item)
         {
-            if (instance != null)
-                instance.itemList.Add(item);
-            else Console.Out.WriteLine("ItemManager not initialised!");
+            instance.itemList.Add(item);
         }
 
         //Palygina prekę su visu sąrašu
@@ -63,7 +61,7 @@ namespace Comparison_shopping_engine
             CompareAddItem(newItem);
             foreach (Item oldItem in instance.itemList)
             {
-                if (ItemComparer.IsSameNameCheaper(newItem, oldItem))
+                if (ItemComparer.IsSameNameCheaper(oldItem, newItem))
                     newItem = oldItem;
 
             }
@@ -74,6 +72,16 @@ namespace Comparison_shopping_engine
         {
             foreach (Item item in instance.itemList)
                 item.Print();
+        }
+
+        public int Count()
+        {
+            return instance.itemList.Count();
+        }
+
+        public void ClearList()
+        {
+            instance.itemList.Clear();
         }
     }
 }

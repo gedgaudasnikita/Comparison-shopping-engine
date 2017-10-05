@@ -42,7 +42,7 @@ namespace Comparison_shopping_engine
 
         public static bool IsSameNameCheaper(Item a, Item b)
         {
-            return EqualName(a, b) && (a.Price > b.Price);
+            return EqualName(a, b) && (a.Price < b.Price);
         }
 
         public static bool IsCheaper(Item a, Item b)
