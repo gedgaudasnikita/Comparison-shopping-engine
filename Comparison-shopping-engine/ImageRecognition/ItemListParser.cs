@@ -9,7 +9,7 @@ namespace Comparison_shopping_engine
     class ItemListParser: IParser<List<Item>>
     {
         //Lines ending with three numbers and tax groups A or M1 are what we consider items
-        private string itemRegex = @"(.+)(\d.*\d.*\d.*(A|M1))";
+        private string itemRegex = @"(.+)(\d.*\d.*\d.*)(?:A|M1)";
 
         public List<Item> Parse(string source)
         {
