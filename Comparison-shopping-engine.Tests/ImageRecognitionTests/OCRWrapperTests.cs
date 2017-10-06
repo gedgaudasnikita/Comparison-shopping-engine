@@ -19,7 +19,6 @@ namespace Comparison_shopping_engine.Tests
             var img = new Bitmap("./testdata/receipt.jpg");
 
             var result = OCRWrapper.ConvertToText(img);
-
             Assert.IsTrue(result.Contains(item));
         }
     }
