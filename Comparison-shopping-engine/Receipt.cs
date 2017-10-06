@@ -20,7 +20,7 @@ namespace Comparison_shopping_engine
 
         public static IParser<string> StoreParser { private get; set; }
         public static IParser<List<Item>> ItemListParser { private get; set; }
-        public static IParser<DateTime> dateParser { private get; set; }
+        public static IParser<DateTime> DateParser { private get; set; }
 
         //Instance fields
         //User provided data, encapsulated in one entity
