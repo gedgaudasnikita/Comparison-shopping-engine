@@ -60,6 +60,8 @@
     <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
     <Compile Include="ImageRecognitionTests\DateParserTests.cs" />
     <Compile Include="ImageRecognitionTests\StoreParserTests.cs" />
+    <Compile Include="ItemManagerTests.cs" />
+    <Compile Include="ItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
