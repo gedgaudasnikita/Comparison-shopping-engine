@@ -32,9 +32,12 @@ namespace Comparison_shopping_engine
 
             string itemName = matchedItem.Groups[1].Value;
 
-            int itemPrice = 0;
+            int itemPrice;
             string itemPriceClean = matchedItem.Groups[2].Value.RemoveNonDigits();
-            int.TryParse(itemPriceClean, out itemPrice);
+            if (!int.TryParse(itemPriceClean, out itemPrice))
+            {
+                itemPrice = 0;
+            }
 
             return parsedItem;
         }
