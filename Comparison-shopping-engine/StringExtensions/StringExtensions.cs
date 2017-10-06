@@ -6,16 +6,31 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine
 {
+    /// <summary>
+    /// The class, containing all the custom extension methods for the primitive <see langword="string"/> type
+    /// </summary>
     public static class StringExtension
     {
+        /// <summary>
+        /// Removes all the non-digits from the given string. 
+        /// Used in image recognition functionality, more specifically in normalisation processes
+        /// </summary>
+        /// <param name="str">The <see langword="string"/> for the method to be called on.</param>
+        /// <returns>A <see langword="string"/> with digits only</returns>
         public static string RemoveNonDigits(this string str)
         {
             return new String(str.Where(Char.IsDigit).ToArray());
         }
 
+        /// <summary>
+        /// Calculates a Damerau-Levenshtein distance between the two given strings.
+        /// Used in image recognition functionality, more specifically in normalisation processes
+        /// </summary>
+        /// <param name="str">The <see langword="string"/> for the method to be called on.</param>
+        /// <param name="comparison">The <see langword="string"/> to get distance to (from <paramref name="str"/>).</param>
+        /// <returns>The <see langword="int "/> with the Damerau-Levenshtein distance for the two strings</returns>
         public static int GetDistance(this string str, string comparison)
         {
-            //Calculating Damerau-Levenshtein distance
             //Credit: https://gist.github.com/wickedshimmy/449595/cb33c2d0369551d1aa5b6ff5e6a802e21ba4ad5c
             int len_orig = str.Length;
             int len_diff = comparison.Length;
