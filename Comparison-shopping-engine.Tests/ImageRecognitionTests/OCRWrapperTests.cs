@@ -15,10 +15,11 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void ConvertToTextTest_ExtractsText()
         {
-            var item = "Nuolaidų kuponas šokoladui";
+            var item = "Malta kava \"Pamig Extra“";
             var img = new Bitmap("./testdata/receipt.jpg");
 
             var result = OCRWrapper.ConvertToText(img);
+
             Assert.IsTrue(result.Contains(item));
         }
     }

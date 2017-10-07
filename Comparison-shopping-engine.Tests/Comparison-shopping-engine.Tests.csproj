@@ -62,6 +62,7 @@
     <Compile Include="ImageRecognitionTests\ItemListParserTests.cs" />
     <Compile Include="ImageRecognitionTests\StoreParserTests.cs" />
     <Compile Include="ItemManagerTests.cs" />
+    <Compile Include="ReceiptTests.cs" />
     <Compile Include="ItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,9 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="testdata\receipt.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="testdata\receipt2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

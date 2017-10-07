@@ -63,7 +63,6 @@ namespace Comparison_shopping_engine
             }
 
             Item parsedItem = new Item(itemName, itemPrice);
-            Console.WriteLine(parsedItem.ToString());
             return parsedItem;
         }
     }
