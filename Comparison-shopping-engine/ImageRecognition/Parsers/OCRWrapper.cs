@@ -6,7 +6,7 @@ namespace Comparison_shopping_engine
 {
     /// <summary>
     /// This static class is representing the OCR functionality, contains the Tesseract engine
-    /// and makes use of it
+    /// and makes use of it.
     /// </summary>
     public static class OCRWrapper
     {
@@ -20,8 +20,10 @@ namespace Comparison_shopping_engine
         public static String ConvertToText(Bitmap receipt)
         {
             PixConverter.ToPix(receipt);
-            var text = engine.Process(receipt).GetText();
-            return text;
+            var resultPage = engine.Process(receipt);
+            var resultText = resultPage.GetText();
+            resultPage.Dispose();
+            return resultText;
         }
     }
 }
