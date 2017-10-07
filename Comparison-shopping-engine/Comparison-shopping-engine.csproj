@@ -71,17 +71,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageRecognition\DateParser.cs" />
+    <Compile Include="ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="ImageRecognition\IParser.cs" />
-    <Compile Include="ImageRecognition\ItemListParser.cs" />
-    <Compile Include="ImageRecognition\StoreParser.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="ItemComparer.cs" />
-    <Compile Include="ItemManager.cs" />
+    <Compile Include="ImageRecognition\Parsers\ItemListParser.cs" />
+    <Compile Include="ImageRecognition\Parsers\StoreParser.cs" />
+    <Compile Include="CoreEntities\Item.cs" />
+    <Compile Include="CoreEntities\ItemComparer.cs" />
+    <Compile Include="BusinessLogic\ItemManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ImageRecognition\OCRWrapper.cs" />
-    <Compile Include="Receipt.cs" />
+    <Compile Include="ImageRecognition\Parsers\OCRWrapper.cs" />
+    <Compile Include="CoreEntities\Receipt.cs" />
     <Compile Include="StringExtensions\StringExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

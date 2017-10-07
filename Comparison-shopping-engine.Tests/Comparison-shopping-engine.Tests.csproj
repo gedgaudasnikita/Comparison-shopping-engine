@@ -61,9 +61,9 @@
     <Compile Include="ImageRecognitionTests\DateParserTests.cs" />
     <Compile Include="ImageRecognitionTests\ItemListParserTests.cs" />
     <Compile Include="ImageRecognitionTests\StoreParserTests.cs" />
-    <Compile Include="ItemManagerTests.cs" />
-    <Compile Include="ReceiptTests.cs" />
-    <Compile Include="ItemTests.cs" />
+    <Compile Include="BusinessLogic\ItemManagerTests.cs" />
+    <Compile Include="CoreEntities\ReceiptTests.cs" />
+    <Compile Include="CoreEntities\ItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
