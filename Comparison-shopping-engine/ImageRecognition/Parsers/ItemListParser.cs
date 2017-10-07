@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine
@@ -10,7 +11,7 @@ namespace Comparison_shopping_engine
     /// This class describes the behaviour of parsing an itemList from plain text.
     /// Intended for usage from <see cref="Receipt"> class
     /// </summary>
-    class ItemListParser: IParser<List<Item>>
+    public class ItemListParser: IParser<List<Item>>
     {
         //Lines ending with three numbers and tax groups A or M1 are what we consider items
         private string itemRegex = @"(.+)(\d.*\d.*\d.*)(?:A|M1)";
@@ -48,12 +49,10 @@ namespace Comparison_shopping_engine
         /// </returns>
         private Item ParseItem(Match matchedItem)
         {
-            Item parsedItem = new Item();
-
             //According to the specified regex, there are two matching groups (the last one is not matching)
             //Match.Group[0] is a full match
             //Match.Group[1] is the first matching group
-            string itemName = matchedItem.Groups[1].Value;
+            string itemName = matchedItem.Groups[1].Value.Trim();
 
             //Match.Group[2] is the second matching group
             int itemPrice;
@@ -63,6 +62,7 @@ namespace Comparison_shopping_engine
                 itemPrice = 0;
             }
 
+            Item parsedItem = new Item(itemName, itemPrice);
             return parsedItem;
         }
     }
