@@ -65,6 +65,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreEntities\ItemComparers\ItemDateComparer.cs" />
+    <Compile Include="CoreEntities\ItemComparers\ItemPriceComparer.cs" />
+    <Compile Include="CoreEntities\ItemComparers\ItemStoreComparer.cs" />
+    <Compile Include="CoreEntities\ItemComparers\ItemNameComparer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,7 +80,6 @@
     <Compile Include="ImageRecognition\Parsers\ItemListParser.cs" />
     <Compile Include="ImageRecognition\Parsers\StoreParser.cs" />
     <Compile Include="CoreEntities\Item.cs" />
-    <Compile Include="CoreEntities\ItemComparer.cs" />
     <Compile Include="BusinessLogic\ItemManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
