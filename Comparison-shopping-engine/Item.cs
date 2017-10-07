@@ -8,12 +8,6 @@ namespace Comparison_shopping_engine
 {
     public class Item : IEquatable<Item>
     {
-        private string name = "MissingNa";
-        private string store = "MssingSt";
-        //Vienos prakės kaina arba 1kg kaina jei prekė sveriama
-        private int price;
-        private DateTime date;
-
         public string Name
         { get; set; }
 
@@ -31,7 +25,7 @@ namespace Comparison_shopping_engine
             this.Name = name;
             this.Store = "MissingSt";
             this.Price = Int32.MaxValue;
-            this.Date = DateTime.Now;
+            this.Date = DateTime.Now.Date;
         }
 
         public Item(string name, string store)

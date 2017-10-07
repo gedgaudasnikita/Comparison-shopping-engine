@@ -10,23 +10,17 @@ namespace Comparison_shopping_engine
     /// <summary>
     /// A class representing the Receipt entity. Mainly used for encapsualting the results of image recognition.
     /// </summary>
-    class Receipt
+    public class Receipt
     {
         //Static fields
         //Mainly parsers, enabling Dependency Injection
-        private static IParser<string> storeParser;
-        private static IParser<List<Item>> itemListParser;
-        private static IParser<DateTime> dateParser;
 
         public static IParser<string> StoreParser { private get; set; }
         public static IParser<List<Item>> ItemListParser { private get; set; }
         public static IParser<DateTime> DateParser { private get; set; }
 
         //Instance fields
-        //User provided data, encapsulated in one entity
-        private string store;
-        private List<Item> items;
-        private DateTime date;
+        //User provided data, encapsulated in one entity\
 
         public string Store { get; set; }
         public List<Item> Items { get; set; }
@@ -55,23 +49,36 @@ namespace Comparison_shopping_engine
             Receipt result = new Receipt();
 
             // In perspective, null cases should throw a custom exception - this should not be a normal flow
-            if (storeParser != null)
+            if (StoreParser != null)
             {
-                result.Store = storeParser.Parse(source);
+                result.Store = StoreParser.Parse(source);
             }
 
-            if (itemListParser != null)
+            if (ItemListParser != null)
             {
-                result.Items = itemListParser.Parse(source);
+                result.Items = ItemListParser.Parse(source);
             }
 
-            if (dateParser != null)
+            if (DateParser != null)
             {
-                result.Date = dateParser.Parse(source);
+                result.Date = DateParser.Parse(source);
             }
 
+            //Make sure the dates and stores are all the same
+            foreach (Item item in result.Items)
+            {
+                item.Date = result.Date;
+                item.Store = result.Store;
+            }
+          
             return result;
         }
 
+        public Receipt()
+        {
+            Store = "";
+            Date = new DateTime().Date;
+            Items = new List<Item>();
+        }
     }
 }
