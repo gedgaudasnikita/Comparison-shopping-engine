@@ -69,12 +69,6 @@
     <Compile Include="CoreEntities\ItemComparers\ItemPriceComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemStoreComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemNameComparer.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="ImageRecognition\IParser.cs" />
     <Compile Include="ImageRecognition\Parsers\ItemListParser.cs" />
