@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,8 @@ namespace Comparison_shopping_engine
     /// <summary>
     /// The class, representing the core item entity.
     /// </summary>
-    public class Item : IEquatable<Item>
+    [Serializable]
+    public class Item : IEquatable<Item>, ISerializable
     {
         //Indicates whether the Item has been saved to the storage or not
         public bool Saved
@@ -99,6 +101,22 @@ namespace Comparison_shopping_engine
         public bool isComplete()
         {
             return (Store != "MissingSt" && Store != "") && (Price != 0);
+        }
+
+        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            info.AddValue("Name", Name, typeof(string));
+            info.AddValue("Price", Price, typeof(int));
+            info.AddValue("Store", Store, typeof(string));
+            info.AddValue("Date", Date, typeof(DateTime));
+        }
+
+        public Item(SerializationInfo info, StreamingContext context)
+        {
+            Name = (string)info.GetValue("Name", typeof(string));
+            Price = (int)info.GetValue("Price", typeof(int));
+            Store = (string)info.GetValue("Store", typeof(string));
+            Date = (DateTime)info.GetValue("Date", typeof(DateTime));
         }
     }
 }
