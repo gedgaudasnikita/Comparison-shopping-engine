@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,13 +17,15 @@ namespace Comparison_shopping_engine
     {
         private static ItemManager instance = null;
         private List<Item> itemList;
+        private string storageDir;
 
         private ItemManager()
         {
-                itemList = new List<Item>();
+            itemList = new List<Item>();
+            storageDir = ConfigurationManager.AppSettings["storageDir"];
         }
 
-        public static ItemManager Init()
+        public static ItemManager getInstance()
         {
             if (instance == null)
             {
@@ -60,6 +66,63 @@ namespace Comparison_shopping_engine
         public void ClearList()
         {
             itemList.Clear();
+        }
+
+        /// <summary>
+        /// A method serializing all of the Item objects currently stored
+        /// to a User configured location.
+        /// Deletes all old *.item files in the named directory before writing.
+        /// </summary>
+        public void Persist()
+        {
+            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
+
+            if (storageDirInfo.Exists)
+            {
+                foreach (FileInfo file in storageDirInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+            } else
+            {
+                System.IO.Directory.CreateDirectory(storageDir);
+            }
+
+            IFormatter formatter = new BinaryFormatter();
+
+            foreach(var item in itemList)
+            {
+                string filename = $"{ storageDir }/{ item.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item";
+                FileStream fileStream = new FileStream(filename, FileMode.Create);
+                formatter.Serialize(fileStream, item);
+                fileStream.Close();
+            }
+        }
+
+        /// <summary>
+        /// A method deserializing all of the Item objects currently saved
+        /// from a User configured location.
+        /// Deletes all old Item objects from itemList before reading.
+        /// </summary>
+        public void LoadAll()
+        {
+            itemList.Clear();
+
+            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
+
+            IFormatter formatter = new BinaryFormatter();
+            if (storageDirInfo.Exists)
+            {
+                foreach (FileInfo file in storageDirInfo.GetFiles("*.item"))
+                {
+                    FileStream fileStream = new FileStream(file.FullName, FileMode.Open);
+                    itemList.Add((Item)formatter.Deserialize(fileStream));
+                    fileStream.Close();
+                }
+            } else
+            {
+                System.IO.Directory.CreateDirectory(storageDir);
+            }
         }
     }
 }
