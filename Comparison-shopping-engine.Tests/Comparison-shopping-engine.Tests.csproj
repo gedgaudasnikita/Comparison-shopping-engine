@@ -58,6 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controller\ControllerTests.cs" />
     <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
     <Compile Include="ImageRecognitionTests\DateParserTests.cs" />
     <Compile Include="ImageRecognitionTests\ItemListParserTests.cs" />
