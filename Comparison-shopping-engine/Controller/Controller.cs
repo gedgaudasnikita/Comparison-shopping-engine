@@ -10,9 +10,9 @@ namespace Comparison_shopping_engine.Controller
     public static class Controller
     {
         /// <summary>
-        /// 
+        /// Processes given <see langword="Bitmap"/> into a receipt with its items replaces with cheapest items in ItemManagers list
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="source">A <see langword="Bitmap"/> to process</param>
         /// <returns></returns>
         public static Receipt ProcessReceipt(Bitmap source)
         {
@@ -21,9 +21,9 @@ namespace Comparison_shopping_engine.Controller
         }
 
         /// <summary>
-        /// 
+        /// Compares given <see cref="Receipt"> items and replaces them with cheapest items in ItemManagers list
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="source">A <see cref="Receipt"> to process</param>
         /// <returns></returns>
         public static Receipt ProcessReceipt(Receipt source)
         {

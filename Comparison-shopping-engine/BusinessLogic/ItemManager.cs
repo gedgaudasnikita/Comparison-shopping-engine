@@ -13,6 +13,11 @@ namespace Comparison_shopping_engine
     //Klasė atsakinga už Item objektų sarašą, jo tvarkymą ir jo rašymą/skaitymą iš failo
     //Pradžiai naudoju singleton'ą, kuris laiko List<Item>, tad visas prekių sąrašas bus laikomas atmintį
     //Singleton'o sūkurimas neapsaugotas nuo dvigubo sukurimo tarp skirtingų thread'ų, todėl jį sukurti turėtų tik vienas thread'as
+    /// <summary>
+    /// Class responsible for managing an internal List<Item>, as well as writing/reading from file
+    /// ItemManager itself is a singleton, so the entire List is in the memory for now
+    /// Singleton initialisation is not double thread protected
+    /// </summary>
     public class ItemManager
     {
         private static ItemManager instance = null;
@@ -39,31 +44,39 @@ namespace Comparison_shopping_engine
         }
 
         /// <summary>
-        /// Adds a given <see langword = "Item"/> to ItemManagers internal List
+        /// Adds a given <see cref = "Item"/> to ItemManagers internal List
         /// </summary>
-        /// <param name="item">An <see langword = "Item"/> to add to the list</param>
+        /// <param name="item">An <see cref = "Item"/> to add to the list</param>
         public void Add(Item item)
         {
             itemList.Add(item);
         }
 
         /// <summary>
-        /// 
+        /// Adds a given <see cref = "List{Item}"/> to ItemManagers internal List
         /// </summary>
-        /// <param name="list"></param>
+        /// <param name="list">A <see cref = "List{Item}"> to add Items from</param>
         public void Add(List<Item> list)
         {
             foreach (Item item in list)
                 Add(item);
         }
 
-        //Pasako ar sąraše jau yra tokia prekė
+        /// <summary>
+        /// Checks if a given item already exists in the list
+        /// </summary>
+        /// <param name="newItem">An <see cref = "Item"/> to check for</param>
+        /// <returns></returns>
         public bool Exists(Item newItem)
         {
             return itemList.Contains(newItem);
         }
 
-        //Grąžina pigiausią prekę su tokių pat pavadinimu
+        /// <summary>
+        /// Returns the cheapest <see cref = "Item"/> of the same name from the list
+        /// </summary>
+        /// <param name="newItem">An <see cref = "Item"/> to compare to</param>
+        /// <returns></returns>
         public Item FindCheapest(Item newItem)
         {
             foreach (Item oldItem in instance.itemList)
@@ -75,11 +88,18 @@ namespace Comparison_shopping_engine
             return newItem;
         }
 
+        /// <summary>
+        /// Returns the amount of items in itemList
+        /// </summary>
+        /// <returns></returns>
         public int Count()
         {
             return itemList.Count();
         }
 
+        /// <summary>
+        /// Runs Clear() on internal itemList
+        /// </summary>
         public void ClearList()
         {
             itemList.Clear();
