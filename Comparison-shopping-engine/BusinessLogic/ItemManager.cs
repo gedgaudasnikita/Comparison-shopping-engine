@@ -25,7 +25,7 @@ namespace Comparison_shopping_engine
             storageDir = ConfigurationManager.AppSettings["storageDir"];
         }
 
-        public static ItemManager getInstance()
+        public static ItemManager GetInstance()
         {
             if (instance == null)
             {
