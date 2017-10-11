@@ -38,6 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Drawing" />
     <Reference Include="Tesseract, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
       <HintPath>..\Comparison-shopping-engine\packages\Tesseract.3.0.2.0\lib\net451\Tesseract.dll</HintPath>
@@ -57,6 +58,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Controller\ControllerTests.cs" />
     <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
     <Compile Include="ImageRecognitionTests\DateParserTests.cs" />
     <Compile Include="ImageRecognitionTests\ItemListParserTests.cs" />
