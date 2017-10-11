@@ -24,7 +24,7 @@ namespace Comparison_shopping_engine.Controller.Tests
         {
             //TO DO
             //Test with receipt examples
-            Assert.Fail();
+            Assert.Inconclusive();
         }
     }
 }
