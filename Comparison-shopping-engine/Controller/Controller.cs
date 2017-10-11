@@ -28,7 +28,13 @@ namespace Comparison_shopping_engine.Controller
         public static Receipt ProcessReceipt(Receipt source)
         {
             ItemManager manager = ItemManager.GetInstance();
-
+            List<Item> cheapList = new List<Item>();
+            manager.Add(source.Items);
+            foreach (Item item in source.Items)
+            {
+                cheapList.Add(manager.FindCheapest(item));
+            }
+            source.Items = cheapList;
             return source;
         }
     }
