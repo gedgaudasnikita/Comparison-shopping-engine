@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Comparison_shopping_engine
@@ -38,6 +31,7 @@ namespace Comparison_shopping_engine
         /// <summary>
         /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
         /// </summary>
+        /// <param name="resultInfo"></param>
         private void UpdateResultLabel(string resultInfo)
         {
             this.lbl_ReceptInfo.Text = resultInfo;
