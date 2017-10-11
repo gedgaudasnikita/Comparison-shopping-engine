@@ -25,6 +25,10 @@ namespace Comparison_shopping_engine
             storageDir = ConfigurationManager.AppSettings["storageDir"];
         }
 
+        /// <summary>
+        /// Initializes ItemManager and return reference to ItemManager object
+        /// </summary>
+        /// <returns></returns>
         public static ItemManager GetInstance()
         {
             if (instance == null)
@@ -34,10 +38,23 @@ namespace Comparison_shopping_engine
             return instance;
         }
 
-        //Ideda prekę į sąrašą
-        public void AddItem(Item item)
+        /// <summary>
+        /// Adds a given <see langword = "Item"/> to ItemManagers internal List
+        /// </summary>
+        /// <param name="item">An <see langword = "Item"/> to add to the list</param>
+        public void Add(Item item)
         {
             itemList.Add(item);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list"></param>
+        public void Add(List<Item> list)
+        {
+            foreach (Item item in list)
+                Add(item);
         }
 
         //Pasako ar sąraše jau yra tokia prekė

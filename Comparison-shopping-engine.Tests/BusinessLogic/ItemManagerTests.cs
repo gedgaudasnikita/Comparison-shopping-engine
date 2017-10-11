@@ -27,7 +27,7 @@ namespace Comparison_shopping_engine.Tests
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             Item a = new Item("Name", "Store", 1515, DateTime.Now);
-            m1.AddItem(a);
+            m1.Add(a);
             Item b = m1.FindCheapest(a);
             Assert.IsTrue(a.Equals(b));
         }
@@ -39,11 +39,11 @@ namespace Comparison_shopping_engine.Tests
             m1.ClearList();
             Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
             Item b = new Item("Name", "StoreB", 915, DateTime.Now);
-            if (!m1.Exists(a)) m1.AddItem(a);
-            if (!m1.Exists(a)) m1.AddItem(a);
-            if (!m1.Exists(a)) m1.AddItem(a);
-            if (!m1.Exists(a)) m1.AddItem(a);
-            if (!m1.Exists(b)) m1.AddItem(b);
+            if (!m1.Exists(a)) m1.Add(a);
+            if (!m1.Exists(a)) m1.Add(a);
+            if (!m1.Exists(a)) m1.Add(a);
+            if (!m1.Exists(a)) m1.Add(a);
+            if (!m1.Exists(b)) m1.Add(b);
             Assert.AreEqual(2, m1.Count());
         }
 
@@ -52,10 +52,10 @@ namespace Comparison_shopping_engine.Tests
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
-            m1.AddItem(new Item("NameA", "Store", 1000, "2017-12-12"));
-            m1.AddItem(new Item("NameB", "Store", 1015, "2017-12-12"));
-            m1.AddItem(new Item("NameC", "Store", 2015, "2017-12-12"));
-            m1.AddItem(new Item("NameA", "Store", 1900, "2017-12-12"));
+            m1.Add(new Item("NameA", "Store", 1000, "2017-12-12"));
+            m1.Add(new Item("NameB", "Store", 1015, "2017-12-12"));
+            m1.Add(new Item("NameC", "Store", 2015, "2017-12-12"));
+            m1.Add(new Item("NameA", "Store", 1900, "2017-12-12"));
             Item c = m1.FindCheapest(new Item("NameA"));
             Assert.IsTrue(c.Equals(new Item("NameA", "Store", 1000, "2017-12-12")));
         }
@@ -66,7 +66,7 @@ namespace Comparison_shopping_engine.Tests
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             Item a = new Item("Name", "Store", 999, "2017-10-05");
-            m1.AddItem(a);
+            m1.Add(a);
             Assert.AreEqual(1, m1.Count());
         }
 
@@ -74,10 +74,10 @@ namespace Comparison_shopping_engine.Tests
         public void ClearListTest()
         {
             ItemManager m1 = ItemManager.GetInstance();
-            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
-            m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
+            m1.Add(new Item("Name", "Store", 999, DateTime.Now));
+            m1.Add(new Item("Name", "Store", 999, DateTime.Now));
+            m1.Add(new Item("Name", "Store", 999, DateTime.Now));
+            m1.Add(new Item("Name", "Store", 999, DateTime.Now));
             m1.ClearList();
             Assert.AreEqual(0, m1.Count());
         }
@@ -88,7 +88,7 @@ namespace Comparison_shopping_engine.Tests
             ItemManager m1 = ItemManager.GetInstance();
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
             string storageDir = ConfigurationManager.AppSettings["storageDir"];
-            m1.AddItem(testItem);
+            m1.Add(testItem);
 
             m1.Persist();
 
@@ -103,7 +103,7 @@ namespace Comparison_shopping_engine.Tests
         {
             ItemManager m1 = ItemManager.GetInstance();
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
-            m1.AddItem(testItem);
+            m1.Add(testItem);
 
             m1.Persist();
             m1.ClearList();

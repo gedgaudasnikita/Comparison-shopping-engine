@@ -28,6 +28,7 @@ namespace Comparison_shopping_engine.Controller
         public static Receipt ProcessReceipt(Receipt source)
         {
             ItemManager manager = ItemManager.GetInstance();
+
             return source;
         }
     }
