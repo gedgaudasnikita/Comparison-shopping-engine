@@ -24,7 +24,6 @@ namespace Comparison_shopping_engine
         /// <param name="e"></param>
         private void Btn_NewReceipt_Click(object sender, EventArgs e)
         {
-            Stream myStream = null;
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 InitialDirectory = "c:\\",
@@ -33,21 +32,15 @@ namespace Comparison_shopping_engine
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    if ((myStream = openFileDialog.OpenFile()) != null)
-                    {
-                        using (myStream)
-                        {
-                            // code to read the stream
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
+                ProcessReceipt(new Bitmap(openFileDialog.FileName));
             }
+        }
+        /// <summary>
+        /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
+        /// </summary>
+        private void UpdateResultLabel(string resultInfo)
+        {
+            this.lbl_ReceptInfo.Text = resultInfo;
         }
     }
 }
