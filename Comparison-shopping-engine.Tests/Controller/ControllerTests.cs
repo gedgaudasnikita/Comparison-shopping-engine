@@ -14,7 +14,7 @@ namespace Comparison_shopping_engine.Controller.Tests
         [TestMethod()]
         public void ProcessReceiptTest()
         {
-            /*ItemManager manager = ItemManager.GetInstance();
+            ItemManager manager = ItemManager.GetInstance();
             manager.ClearList();
 
             manager.Add(new Item("Name A", "Store A", 1915, DateTime.Now.Date));
@@ -32,11 +32,11 @@ namespace Comparison_shopping_engine.Controller.Tests
             receipt.Items = list;
             Controller.ProcessReceipt(receipt);
 
-            Item item = list.ElementAt(0);
-            Item item1 = list.ElementAt(1);
-            Item item2 = list.ElementAt(2);
+            Item item = receipt.Items.ElementAt(0);
+            Item item1 = receipt.Items.ElementAt(1);
+            Item item2 = receipt.Items.ElementAt(2);
 
-            Assert.IsTrue(item.Equals(item2));*/
+            Assert.IsTrue(item.Equals(item2) && item1.Equals(new Item("Name B", "Store D", 600, DateTime.Now.Date)));
         }
     }
 }
