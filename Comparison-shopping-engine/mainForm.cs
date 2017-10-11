@@ -18,7 +18,7 @@ namespace Comparison_shopping_engine
             InitializeComponent();
         }
         /// <summary>
-        /// Reacts to button <see cref="btn_NewReceipt"></see> click by opening a <see cref="OpenFileDialog"/>.
+        /// Reacts to a button (<see cref="btn_NewReceipt"></see>) click by opening an <see cref="OpenFileDialog"/>.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
