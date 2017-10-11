@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Comparison_shopping_engine
 {
-    public partial class mainForm : Form
+    public partial class MainForm : Form
     {
-        public mainForm()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -15,7 +15,7 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Btn_NewReceipt_Click(object sender, EventArgs e)
+        private void BtnNewReceiptClick(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -32,7 +32,7 @@ namespace Comparison_shopping_engine
         /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
         /// </summary>
         /// <param name="resultInfo"></param>
-        private void UpdateResultLabel(string resultInfo)
+        public void UpdateResultLabel(string resultInfo)
         {
             this.lbl_ReceptInfo.Text = resultInfo;
         }

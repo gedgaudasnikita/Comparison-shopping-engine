@@ -1,6 +1,6 @@
 ﻿namespace Comparison_shopping_engine
 {
-    partial class mainForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,14 +51,14 @@
             this.lbl_ReceptInfo.TabIndex = 1;
             this.lbl_ReceptInfo.Text = "Receipt information will be here";
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 383);
             this.Controls.Add(this.lbl_ReceptInfo);
             this.Controls.Add(this.btn_NewReceipt);
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Comparison Shopping Engine";
             this.ResumeLayout(false);
