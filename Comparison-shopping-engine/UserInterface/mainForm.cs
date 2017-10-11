@@ -25,7 +25,7 @@ namespace Comparison_shopping_engine
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                ProcessReceipt(new Bitmap(openFileDialog.FileName));
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName));
             }
         }
         /// <summary>
