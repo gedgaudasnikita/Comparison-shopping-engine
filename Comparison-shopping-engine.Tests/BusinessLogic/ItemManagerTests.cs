@@ -16,15 +16,15 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void InitTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
-            ItemManager m2 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
+            ItemManager m2 = ItemManager.GetInstance();
             Assert.AreEqual(m1, m2);
         }
 
         [TestMethod()]
         public void AddItemTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             Item a = new Item("Name", "Store", 1515, DateTime.Now);
             m1.AddItem(a);
@@ -35,7 +35,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void ExistsTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             Item a = new Item("Name", "StoreA", 1515, DateTime.Now);
             Item b = new Item("Name", "StoreB", 915, DateTime.Now);
@@ -50,7 +50,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void FindCheapestTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             m1.AddItem(new Item("NameA", "Store", 1000, "2017-12-12"));
             m1.AddItem(new Item("NameB", "Store", 1015, "2017-12-12"));
@@ -63,7 +63,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void CountTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
             Item a = new Item("Name", "Store", 999, "2017-10-05");
             m1.AddItem(a);
@@ -73,7 +73,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void ClearListTest()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
             m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
             m1.AddItem(new Item("Name", "Store", 999, DateTime.Now));
@@ -85,7 +85,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void PersistTest_savesItems()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
             string storageDir = ConfigurationManager.AppSettings["storageDir"];
             m1.AddItem(testItem);
@@ -101,7 +101,7 @@ namespace Comparison_shopping_engine.Tests
         [TestMethod()]
         public void LoadAllTest_loadsItems()
         {
-            ItemManager m1 = ItemManager.getInstance();
+            ItemManager m1 = ItemManager.GetInstance();
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
             m1.AddItem(testItem);
 
