@@ -10,7 +10,17 @@ namespace Comparison_shopping_engine.Controller
     public static class Controller
     {
         /// <summary>
-        /// Processes given <see langword="Bitmap"/> into a receipt with its items replaces with cheapest items in ItemManagers list
+        /// Processes given <see langword="Bitmap"> into a receipt
+        /// </summary>
+        /// <param name="source">A <see langword="Bitmap"> to process</param>
+        /// <returns></returns>
+        public static Receipt ProcessBitmap(Bitmap source)
+        {
+            return Receipt.Convert(source);
+        }
+
+        /// <summary>
+        /// Processes given <see langword="Bitmap"/> into a receipt with its items replaced with cheapest items in ItemManagers list
         /// </summary>
         /// <param name="source">A <see langword="Bitmap"/> to process</param>
         /// <returns></returns>
