@@ -25,7 +25,13 @@ namespace Comparison_shopping_engine
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), UpdateResultLabel);
+                string previousText = btn_NewReceipt.Text;
+                btn_NewReceipt.Text = "Loading...";
+                MainForm.ActiveForm.Refresh();
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), (result) => {
+                    btn_NewReceipt.Text = previousText;
+                    UpdateResultLabel(result);
+                });
             }
         }
         /// <summary>
