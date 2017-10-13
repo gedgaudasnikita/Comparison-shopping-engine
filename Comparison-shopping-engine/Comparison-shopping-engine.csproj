@@ -74,23 +74,26 @@
     <Compile Include="CoreEntities\ItemComparers\ItemPriceComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemStoreComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemNameComparer.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="ImageRecognition\IParser.cs" />
     <Compile Include="ImageRecognition\Parsers\ItemListParser.cs" />
     <Compile Include="ImageRecognition\Parsers\StoreParser.cs" />
     <Compile Include="CoreEntities\Item.cs" />
     <Compile Include="BusinessLogic\ItemManager.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ImageRecognition\Parsers\OCRWrapper.cs" />
     <Compile Include="CoreEntities\Receipt.cs" />
     <Compile Include="StringExtensions\StringExtensions.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -122,7 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="x64\liblept172.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x64\libtesseract304.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
