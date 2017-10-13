@@ -14,9 +14,17 @@ namespace Comparison_shopping_engine
         [STAThread]
         static void Main()
         {
+            InitEntities();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+        }
+
+        static void InitEntities()
+        {
+            Receipt.ItemListParser = new ItemListParser();
+            Receipt.DateParser = new DateParser();
+            Receipt.StoreParser = new StoreParser();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine
 {
+    public delegate void StringResultCallback(string result);
     public static class Controller
     {
         /// <summary>
@@ -14,10 +15,10 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="source">A <see langword="Bitmap"/> to process</param>
         /// <returns></returns>
-        public static Receipt ProcessReceipt(Bitmap source)
+        public static void ProcessReceipt(Bitmap source, StringResultCallback callback)
         {
             Receipt receipt = Receipt.Convert(source);
-            return ProcessReceipt(receipt);
+            ProcessReceipt(receipt, callback);
         }
 
         /// <summary>
@@ -25,8 +26,16 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="source">A <see cref="Receipt"> to process</param>
         /// <returns></returns>
-        public static Receipt ProcessReceipt(Receipt source)
+        public static void ProcessReceipt(Receipt source, StringResultCallback callback)
         {
+            String result = "Source: ";
+
+            foreach (Item item in source.Items)
+            {
+                result += "\n" + item.ToString();
+            }
+
+
             ItemManager manager = ItemManager.GetInstance();
             List<Item> cheapList = new List<Item>();
             manager.Add(source.Items);
@@ -34,8 +43,15 @@ namespace Comparison_shopping_engine
             {
                 cheapList.Add(manager.FindCheapest(item));
             }
-            source.Items = cheapList;
-            return source;
+
+            result += "\nCheaper: ";
+
+            foreach (Item item in cheapList)
+            {
+                result += "\n" + item.ToString();
+            }
+
+            callback(result);
         }
     }
 }
