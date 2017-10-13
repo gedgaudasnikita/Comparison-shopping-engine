@@ -80,10 +80,10 @@
     <Compile Include="ImageRecognition\Parsers\StoreParser.cs" />
     <Compile Include="CoreEntities\Item.cs" />
     <Compile Include="BusinessLogic\ItemManager.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="UserInterface\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="UserInterface\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -91,7 +91,7 @@
     <Compile Include="ImageRecognition\Parsers\OCRWrapper.cs" />
     <Compile Include="CoreEntities\Receipt.cs" />
     <Compile Include="StringExtensions\StringExtensions.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="UserInterface\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

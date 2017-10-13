@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine.Controller
+namespace Comparison_shopping_engine
 {
     public static class Controller
     {

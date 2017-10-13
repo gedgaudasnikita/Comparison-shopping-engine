@@ -38,7 +38,7 @@
             this.btn_NewReceipt.TabIndex = 0;
             this.btn_NewReceipt.Text = "Upload new receipt";
             this.btn_NewReceipt.UseVisualStyleBackColor = true;
-            this.btn_NewReceipt.Click += new System.EventHandler(this.Btn_NewReceipt_Click);
+            this.btn_NewReceipt.Click += new System.EventHandler(this.BtnNewReceiptClick);
             // 
             // lbl_ReceptInfo
             // 
