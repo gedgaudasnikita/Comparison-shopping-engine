@@ -11,7 +11,7 @@ namespace Comparison_shopping_engine
     /// The class, representing the core item entity.
     /// </summary>
     [Serializable]
-    public class Item : IEquatable<Item>, ISerializable
+    public class Item : IEquatable<Item>
     {
         //Indicates whether the Item has been saved to the storage or not
         public bool Saved
@@ -27,6 +27,15 @@ namespace Comparison_shopping_engine
 
         public DateTime Date
         { get; set; }
+
+        //Needed for JavaScriptSerializer
+        public Item()
+        {
+            this.Name = "";
+            this.Store = "MissingSt";
+            this.Price = Int32.MaxValue;
+            this.Date = DateTime.Now.Date;
+        }
 
         public Item(string name)
         {
@@ -101,22 +110,6 @@ namespace Comparison_shopping_engine
         public bool isComplete()
         {
             return (Store != "MissingSt" && Store != "") && (Price != 0);
-        }
-
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("Name", Name, typeof(string));
-            info.AddValue("Price", Price, typeof(int));
-            info.AddValue("Store", Store, typeof(string));
-            info.AddValue("Date", Date, typeof(DateTime));
-        }
-
-        public Item(SerializationInfo info, StreamingContext context)
-        {
-            Name = (string)info.GetValue("Name", typeof(string));
-            Price = (int)info.GetValue("Price", typeof(int));
-            Store = (string)info.GetValue("Store", typeof(string));
-            Date = (DateTime)info.GetValue("Date", typeof(DateTime));
         }
     }
 }

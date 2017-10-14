@@ -29,7 +29,7 @@ namespace Comparison_shopping_engine.Tests
 
             Receipt receipt = new Receipt();
             receipt.Items = list;
-            Controller.ProcessReceipt(receipt, (string Source) => { return; });
+            //Controller.ProcessReceipt(receipt, (string Source) => { return; });
 
             Item item = receipt.Items.ElementAt(0);
             Item item1 = receipt.Items.ElementAt(1);

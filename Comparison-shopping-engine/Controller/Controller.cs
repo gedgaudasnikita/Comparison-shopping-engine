@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine
 {
-    public delegate void StringResultCallback(string result);
+    public delegate void ComparisonResultCallback(Receipt parsed, List<Item> itemLists);
     public static class Controller
     {
         /// <summary>
@@ -15,7 +15,7 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="source">A <see langword="Bitmap"/> to process</param>
         /// <returns></returns>
-        public static void ProcessReceipt(Bitmap source, StringResultCallback callback)
+        public static void ProcessReceipt(Bitmap source, ComparisonResultCallback callback)
         {
             Receipt receipt = Receipt.Convert(source);
             ProcessReceipt(receipt, callback);
@@ -26,32 +26,18 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="source">A <see cref="Receipt"> to process</param>
         /// <returns></returns>
-        public static void ProcessReceipt(Receipt source, StringResultCallback callback)
+        public static void ProcessReceipt(Receipt source, ComparisonResultCallback callback)
         {
-            String result = "Source: ";
-
-            foreach (Item item in source.Items)
-            {
-                result += "\n" + item.ToString();
-            }
-
-
             ItemManager manager = ItemManager.GetInstance();
-            List<Item> cheapList = new List<Item>();
             manager.Add(source.Items);
-            foreach (Item item in source.Items)
-            {
-                cheapList.Add(manager.FindCheapest(item));
-            }
 
-            result += "\nCheaper: ";
+            //TODO: Add normalisation and suggestions
 
-            foreach (Item item in cheapList)
-            {
-                result += "\n" + item.ToString();
-            }
+            manager.Persist();
 
-            callback(result);
+            List<Item> cheapList = source.Items.Select(item => manager.FindCheapest(item)).ToList();
+
+            callback(source, cheapList);
         }
     }
 }

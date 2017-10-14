@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -28,9 +29,9 @@ namespace Comparison_shopping_engine
                 string previousText = btn_NewReceipt.Text;
                 btn_NewReceipt.Text = "Loading...";
                 MainForm.ActiveForm.Refresh();
-                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), (result) => {
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), (parsed, cheaper) => {
                     btn_NewReceipt.Text = previousText;
-                    UpdateResultLabel(result);
+                    UpdateResultLabel(parsed, cheaper);
                 });
             }
         }
@@ -38,8 +39,20 @@ namespace Comparison_shopping_engine
         /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
         /// </summary>
         /// <param name="resultInfo"></param>
-        public void UpdateResultLabel(string resultInfo)
+        public void UpdateResultLabel(Receipt parsed, List<Item> cheaper)
         {
+            var resultInfo = "Parsed receipt: \n";
+            foreach (var item in parsed.Items)
+            {
+                resultInfo += $"{ item.ToString() }\n";
+            }
+
+            resultInfo += "\nCheapest items found: \n";
+            foreach (var item in cheaper)
+            {
+                resultInfo += $"{ item.ToString() }\n";
+            }
+
             this.lbl_ReceptInfo.Text = resultInfo;
         }
     }
