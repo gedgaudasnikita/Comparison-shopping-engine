@@ -9,13 +9,17 @@ using System.Web.Script.Serialization;
 
 namespace Comparison_shopping_engine
 {
-    class NormalizationEngine
+    /// <summary>
+    /// This class is used for normalisation of <see cref="string"/> names and storing the fixed names.
+    /// Intended for OCR result correction and autocomplete suggestion mechanisms.
+    /// </summary>
+    public class NormalizationEngine
     {
         private static NormalizationEngine instance = null;
         private List<string> names;
         private string normalizationDir;
 
-        public NormalizationEngine()
+        private NormalizationEngine()
         {
             names = new List<string>();
             normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
@@ -41,14 +45,38 @@ namespace Comparison_shopping_engine
         }
 
         /// <summary>
+        /// Check if a given name is stored
+        /// </summary>
+        /// <param name="name">The <see cref="string"/> to be checked</param>
+        /// <returns>A <see cref="bool"/> indicating whether the name is stored or not</returns>
+        public bool Exists(string name)
+        {
+            return names.Contains(name);
+        }
+
+        /// <summary>
+        /// Clear the internal list
+        /// </summary>
+        public void ClearList()
+        {
+            names.Clear();
+        }
+
+        /// <summary>
         /// Get a closest string match from the name storage. Intended to use for initial data normalisation.
         /// </summary>
         /// <param name="name">A <see cref="string"/> to be matched</param>
         /// <returns>A <see cref="string"/> with the closest match</returns>
-        public string getClosest(string name)
+        public string GetClosest(string name)
         {
-            //Ensures we only iterate through the collection once.
-            return names.Aggregate((name1, name2) => name1.GetDistance(name) > name2.GetDistance(name) ? name2 : name1);
+            if (names.Count == 0)
+            {
+                return "";
+            } else
+            {
+                //Ensures we only iterate through the collection once.
+                return names.Aggregate((name1, name2) => name1.GetDistance(name) > name2.GetDistance(name) ? name2 : name1);
+            }
         }
 
         /// <summary>
@@ -59,7 +87,7 @@ namespace Comparison_shopping_engine
         /// <param name="name">A <see cref="string"/> to be matched</param>
         /// <param name="limit">An <see cref="int"/>, indicating the preferred amount of matches to return</param>
         /// <returns>A <see cref="List{string}"/> of the closest matches</returns>
-        public IEnumerable<string> getClosestList(string name, int limit)
+        public IEnumerable<string> GetClosestList(string name, int limit)
         {
             return names.OrderBy(savedName => savedName.GetDistance(name)).Take(limit);
         }
@@ -98,7 +126,7 @@ namespace Comparison_shopping_engine
         /// </summary>
         public void LoadAll()
         {
-            names.Clear();
+            ClearList();
 
             DirectoryInfo dirInfo = new DirectoryInfo(normalizationDir);
 
