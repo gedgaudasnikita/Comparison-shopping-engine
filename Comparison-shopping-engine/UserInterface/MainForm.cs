@@ -28,15 +28,22 @@ namespace Comparison_shopping_engine
             {
                 string previousText = btn_NewReceipt.Text;
                 lbl_ReceptInfo.Text = "Loading...";
+                btn_NewReceipt.Enabled = false;
                 MainForm.ActiveForm.Refresh();
-                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), UpdateResultLabel);
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), LblReceiptInfoUpdate);
             }
         }
         /// <summary>
         /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
         /// </summary>
-        /// <param name="resultInfo"></param>
-        public void UpdateResultLabel(Receipt parsed, List<Item> cheaper)
+        /// <param name="parsed">
+        /// A <see cref="Receipt"> with all the information parsed
+        /// </param>
+        /// <param name="cheaper">
+        /// A <see langword="List"> of <see cref="Item">, each one being
+        /// the same as in <paramref name="parsed"/> but the cheapest found
+        /// </param>
+        public void LblReceiptInfoUpdate(Receipt parsed, List<Item> cheaper)
         {
             var resultInfo = "Parsed receipt: \n";
             foreach (var item in parsed.Items)
@@ -50,7 +57,9 @@ namespace Comparison_shopping_engine
                 resultInfo += $"{ item.ToString() }\n";
             }
 
-            this.lbl_ReceptInfo.Text = resultInfo;
+            btn_NewReceipt.Enabled = true;
+            lbl_ReceptInfo.Text = resultInfo;
+            MainForm.ActiveForm.Refresh();
         }
     }
 }

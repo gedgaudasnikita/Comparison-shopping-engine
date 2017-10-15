@@ -154,7 +154,6 @@ namespace Comparison_shopping_engine
                 {
                     string serialized = File.ReadAllText(file.FullName);
                     var item = serializer.Deserialize<Item>(serialized);
-                    Console.Write(item.ToString());
                     itemList.Add(item);
                 }
             } else
