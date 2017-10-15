@@ -74,6 +74,7 @@
     <Compile Include="CoreEntities\ItemComparers\ItemPriceComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemStoreComparer.cs" />
     <Compile Include="CoreEntities\ItemComparers\ItemNameComparer.cs" />
+    <Compile Include="ImageRecognition\NormalisationEngine\NormalizationEngine.cs" />
     <Compile Include="ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="ImageRecognition\IParser.cs" />
     <Compile Include="ImageRecognition\Parsers\ItemListParser.cs" />
@@ -111,6 +112,9 @@
     </None>
     <None Include="db\test3.item">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="norm\names.list">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

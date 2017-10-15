@@ -18,6 +18,13 @@ namespace Comparison_shopping_engine
         public static void ProcessReceipt(Bitmap source, ComparisonResultCallback callback)
         {
             Receipt receipt = Receipt.Convert(source);
+
+            var normalizer = NormalizationEngine.GetInstance();
+            receipt.Items.ForEach(item => item.Name = normalizer.getClosest(item.Name));
+
+            //TODO: Add request for user normalization
+            //Is going to happen through the callback
+
             ProcessReceipt(receipt, callback);
         }
 
