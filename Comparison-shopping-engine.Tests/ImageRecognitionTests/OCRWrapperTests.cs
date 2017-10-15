@@ -13,13 +13,12 @@ namespace Comparison_shopping_engine.Tests
     public class OCRWrapperTests
     {
         [TestMethod()]
-        public void ConvertToTextTest_ExtractsText()
+        public void ConvertToTextTest_extractsText()
         {
             var item = "Malta kava \"Pamig Extra“";
             var img = new Bitmap("./testdata/receipt.jpg");
 
             var result = OCRWrapper.ConvertToText(img);
-
             Assert.IsTrue(result.Contains(item));
         }
     }

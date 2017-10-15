@@ -14,7 +14,7 @@ namespace Comparison_shopping_engine.Tests
     public class ItemManagerTests
     {
         [TestMethod()]
-        public void InitTest()
+        public void GetInstanceTest_isSingleton()
         {
             ItemManager m1 = ItemManager.GetInstance();
             ItemManager m2 = ItemManager.GetInstance();
@@ -22,7 +22,7 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void AddItemTest()
+        public void AddItemTest_addsItem()
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
@@ -33,7 +33,7 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void ExistsTest()
+        public void ExistsTest_findsExisting()
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
@@ -48,7 +48,7 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void FindCheapestTest()
+        public void FindCheapestTest_findsCheapest()
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
@@ -61,7 +61,7 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void CountTest()
+        public void CountTest_returnsCount()
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.ClearList();
@@ -71,7 +71,7 @@ namespace Comparison_shopping_engine.Tests
         }
 
         [TestMethod()]
-        public void ClearListTest()
+        public void ClearListTest_clearsList()
         {
             ItemManager m1 = ItemManager.GetInstance();
             m1.Add(new Item("Name", "Store", 999, DateTime.Now));
@@ -102,7 +102,7 @@ namespace Comparison_shopping_engine.Tests
         public void LoadAllTest_loadsItems()
         {
             ItemManager m1 = ItemManager.GetInstance();
-            Item testItem = new Item("Name", "Store", 999, DateTime.Now);
+            Item testItem = new Item("Name", "Store", 999, DateTime.Now.Date);
             m1.Add(testItem);
 
             m1.Persist();
@@ -111,6 +111,7 @@ namespace Comparison_shopping_engine.Tests
             Assert.IsFalse(m1.Exists(testItem));
 
             m1.LoadAll();
+            Console.WriteLine(testItem.ToString());
             
             Assert.IsTrue(m1.Exists(testItem));
         }

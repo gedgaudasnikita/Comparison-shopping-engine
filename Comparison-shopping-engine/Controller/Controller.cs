@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine.Controller
+namespace Comparison_shopping_engine
 {
+    public delegate void ComparisonResultCallback(Receipt parsed, List<Item> itemLists);
     public static class Controller
     {
         /// <summary>
@@ -14,10 +15,10 @@ namespace Comparison_shopping_engine.Controller
         /// </summary>
         /// <param name="source">A <see langword="Bitmap"/> to process</param>
         /// <returns></returns>
-        public static Receipt ProcessReceipt(Bitmap source)
+        public static void ProcessReceipt(Bitmap source, ComparisonResultCallback callback)
         {
             Receipt receipt = Receipt.Convert(source);
-            return ProcessReceipt(receipt);
+            ProcessReceipt(receipt, callback);
         }
 
         /// <summary>
@@ -25,17 +26,18 @@ namespace Comparison_shopping_engine.Controller
         /// </summary>
         /// <param name="source">A <see cref="Receipt"> to process</param>
         /// <returns></returns>
-        public static Receipt ProcessReceipt(Receipt source)
+        public static void ProcessReceipt(Receipt source, ComparisonResultCallback callback)
         {
             ItemManager manager = ItemManager.GetInstance();
-            List<Item> cheapList = new List<Item>();
             manager.Add(source.Items);
-            foreach (Item item in source.Items)
-            {
-                cheapList.Add(manager.FindCheapest(item));
-            }
-            source.Items = cheapList;
-            return source;
+
+            //TODO: Add normalisation and suggestions
+
+            manager.Persist();
+
+            List<Item> cheapList = source.Items.Select(item => manager.FindCheapest(item)).ToList();
+
+            callback(source, cheapList);
         }
     }
 }

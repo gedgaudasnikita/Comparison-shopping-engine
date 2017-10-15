@@ -7,6 +7,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace Comparison_shopping_engine
 {
@@ -49,6 +50,7 @@ namespace Comparison_shopping_engine
         /// <param name="item">An <see cref = "Item"/> to add to the list</param>
         public void Add(Item item)
         {
+            item.Saved = true;
             itemList.Add(item);
         }
 
@@ -125,14 +127,12 @@ namespace Comparison_shopping_engine
                 System.IO.Directory.CreateDirectory(storageDir);
             }
 
-            IFormatter formatter = new BinaryFormatter();
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
 
-            foreach(var item in itemList)
+            foreach (var item in itemList)
             {
                 string filename = $"{ storageDir }/{ item.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item";
-                FileStream fileStream = new FileStream(filename, FileMode.Create);
-                formatter.Serialize(fileStream, item);
-                fileStream.Close();
+                File.WriteAllText(filename, serializer.Serialize(item));
             }
         }
 
@@ -147,14 +147,14 @@ namespace Comparison_shopping_engine
 
             DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
 
-            IFormatter formatter = new BinaryFormatter();
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
             if (storageDirInfo.Exists)
             {
                 foreach (FileInfo file in storageDirInfo.GetFiles("*.item"))
                 {
-                    FileStream fileStream = new FileStream(file.FullName, FileMode.Open);
-                    itemList.Add((Item)formatter.Deserialize(fileStream));
-                    fileStream.Close();
+                    string serialized = File.ReadAllText(file.FullName);
+                    var item = serializer.Deserialize<Item>(serialized);
+                    itemList.Add(item);
                 }
             } else
             {

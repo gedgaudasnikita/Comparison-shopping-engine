@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnNewReceiptClick(object sender, EventArgs e)
+        private void Btn_NewReceipt_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -25,16 +26,40 @@ namespace Comparison_shopping_engine
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName));
+                string previousText = btn_NewReceipt.Text;
+                lbl_ReceptInfo.Text = "Loading...";
+                btn_NewReceipt.Enabled = false;
+                MainForm.ActiveForm.Refresh();
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), Lbl_ReceiptInfo_Update);
             }
         }
         /// <summary>
         /// Changes <see cref="lbl_ReceiptInfo"></see> text to a given <see langword="string"/>.
         /// </summary>
-        /// <param name="resultInfo"></param>
-        public void UpdateResultLabel(string resultInfo)
+        /// <param name="parsed">
+        /// A <see cref="Receipt"> with all the information parsed
+        /// </param>
+        /// <param name="cheaper">
+        /// A <see langword="List"> of <see cref="Item">, each one being
+        /// the same as in <paramref name="parsed"/> but the cheapest found
+        /// </param>
+        public void Lbl_ReceiptInfo_Update(Receipt parsed, List<Item> cheaper)
         {
-            this.lbl_ReceptInfo.Text = resultInfo;
+            var resultInfo = "Parsed receipt: \n";
+            foreach (var item in parsed.Items)
+            {
+                resultInfo += $"{ item.ToString() }\n";
+            }
+
+            resultInfo += "\nCheapest items found: \n";
+            foreach (var item in cheaper)
+            {
+                resultInfo += $"{ item.ToString() }\n";
+            }
+
+            btn_NewReceipt.Enabled = true;
+            lbl_ReceptInfo.Text = resultInfo;
+            MainForm.ActiveForm.Refresh();
         }
     }
 }

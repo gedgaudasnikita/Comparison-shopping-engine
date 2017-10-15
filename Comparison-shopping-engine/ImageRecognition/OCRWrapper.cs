@@ -11,7 +11,7 @@ namespace Comparison_shopping_engine
     public static class OCRWrapper
     {
         private static TesseractEngine engine = new TesseractEngine(@"./tessdata", "lit", EngineMode.Default);
-
+       
         /// <summary>
         /// Converts a given <see langword="Bitmap"/> to plain text.
         /// </summary>
@@ -19,9 +19,9 @@ namespace Comparison_shopping_engine
         /// <returns>The <see langword="string"/> output of the OCR engine</returns>
         public static String ConvertToText(Bitmap receipt)
         {
-            PixConverter.ToPix(receipt);
-            var resultPage = engine.Process(receipt);
-            var resultText = resultPage.GetText();
+            Pix convertedImage = PixConverter.ToPix(receipt);
+            var resultPage = engine.Process(convertedImage);
+            string resultText = resultPage.GetText();
             resultPage.Dispose();
             return resultText;
         }
