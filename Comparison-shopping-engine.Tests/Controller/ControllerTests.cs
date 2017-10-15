@@ -11,7 +11,7 @@ namespace Comparison_shopping_engine.Tests
     public class ControllerTests
     {
         [TestMethod()]
-        public void ProcessReceiptTest()
+        public void ProcessReceiptTest_processesReceipt()
         {
             ItemManager manager = ItemManager.GetInstance();
             manager.ClearList();
@@ -29,13 +29,19 @@ namespace Comparison_shopping_engine.Tests
 
             Receipt receipt = new Receipt();
             receipt.Items = list;
-            //Controller.ProcessReceipt(receipt, (string Source) => { return; });
 
-            Item item = receipt.Items.ElementAt(0);
-            Item item1 = receipt.Items.ElementAt(1);
-            Item item2 = receipt.Items.ElementAt(2);
+            Receipt resultReceipt;
+            List<Item> cheaperItems = list;
+            Controller.ProcessReceipt(receipt, (resultReceiptReceived, cheaperItemsReceived) => {
+                resultReceipt = resultReceiptReceived;
+                cheaperItems = cheaperItemsReceived;
+            });
 
-            //Assert.IsTrue(item.Equals(item2) && item1.Equals(new Item("Name B", "Store D", 600, DateTime.Now.Date)));
+            Item item = cheaperItems.ElementAt(0);
+            Item item1 = cheaperItems.ElementAt(1);
+            Item item2 = cheaperItems.ElementAt(2);
+
+            Assert.IsTrue(item.Equals(item2) && item1.Equals(new Item("Name B", "Store D", 600, DateTime.Now.Date)));
         }
     }
 }

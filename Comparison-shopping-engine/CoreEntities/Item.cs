@@ -13,6 +13,7 @@ namespace Comparison_shopping_engine
     [Serializable]
     public class Item : IEquatable<Item>
     {
+        private DateTime date;
         //Indicates whether the Item has been saved to the storage or not
         public bool Saved
         { get; set; }
@@ -26,7 +27,16 @@ namespace Comparison_shopping_engine
         { get; set; }
 
         public DateTime Date
-        { get; set; }
+        {
+            get
+            {
+                return date.ToUniversalTime().Date;
+            }
+            set
+            {
+                date = value.ToUniversalTime().Date;
+            }
+        }
 
         //Needed for JavaScriptSerializer
         public Item()

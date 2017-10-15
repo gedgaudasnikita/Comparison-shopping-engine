@@ -60,9 +60,9 @@
   <ItemGroup>
     <Compile Include="Controller\ControllerTests.cs" />
     <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
-    <Compile Include="ImageRecognitionTests\DateParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\ItemListParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\StoreParserTests.cs" />
+    <Compile Include="ImageRecognitionTests\Parsers\DateParserTests.cs" />
+    <Compile Include="ImageRecognitionTests\Parsers\ItemListParserTests.cs" />
+    <Compile Include="ImageRecognitionTests\Parsers\StoreParserTests.cs" />
     <Compile Include="BusinessLogic\ItemManagerTests.cs" />
     <Compile Include="CoreEntities\ReceiptTests.cs" />
     <Compile Include="CoreEntities\ItemTests.cs" />
@@ -76,7 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="testdata\receipt.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Choose>

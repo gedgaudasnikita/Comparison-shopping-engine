@@ -153,7 +153,9 @@ namespace Comparison_shopping_engine
                 foreach (FileInfo file in storageDirInfo.GetFiles("*.item"))
                 {
                     string serialized = File.ReadAllText(file.FullName);
-                    itemList.Add(serializer.Deserialize<Item>(serialized));
+                    var item = serializer.Deserialize<Item>(serialized);
+                    Console.Write(item.ToString());
+                    itemList.Add(item);
                 }
             } else
             {

@@ -12,21 +12,21 @@ namespace Comparison_shopping_engine.Tests
     public class ItemTests
     {
         [TestMethod()]
-        public void ItemTest()
+        public void ItemTest_constructsWithDateTime()
         {
             Item i = new Item("Name", "Store", 999, DateTime.Now);
             Assert.IsNotNull(i);
         }
 
         [TestMethod()]
-        public void ItemTest1()
+        public void ItemTest_constructsWithDateString()
         {
             Item i = new Item("Name", "Store", 999, "2017-10-10");
             Assert.IsNotNull(i);
         }
 
         [TestMethod()]
-        public void EqualsTest()
+        public void EqualsTest_equalsCorrectly()
         {
             Item a = new Item("Name", "Store", 999, "2017-10-10");
             Item b = new Item("Name", "Store", 999, "2017-10-10");

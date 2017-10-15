@@ -11,7 +11,7 @@ namespace Comparison_shopping_engine
     public static class OCRWrapper
     {
         private static TesseractEngine engine = new TesseractEngine(@"./tessdata", "lit", EngineMode.Default);
-
+       
         /// <summary>
         /// Converts a given <see langword="Bitmap"/> to plain text.
         /// </summary>
