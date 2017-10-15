@@ -16,7 +16,7 @@ namespace Comparison_shopping_engine
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnNewReceiptClick(object sender, EventArgs e)
+        private void Btn_NewReceipt_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -30,7 +30,7 @@ namespace Comparison_shopping_engine
                 lbl_ReceptInfo.Text = "Loading...";
                 btn_NewReceipt.Enabled = false;
                 MainForm.ActiveForm.Refresh();
-                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), LblReceiptInfoUpdate);
+                Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), Lbl_ReceiptInfo_Update);
             }
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Comparison_shopping_engine
         /// A <see langword="List"> of <see cref="Item">, each one being
         /// the same as in <paramref name="parsed"/> but the cheapest found
         /// </param>
-        public void LblReceiptInfoUpdate(Receipt parsed, List<Item> cheaper)
+        public void Lbl_ReceiptInfo_Update(Receipt parsed, List<Item> cheaper)
         {
             var resultInfo = "Parsed receipt: \n";
             foreach (var item in parsed.Items)
