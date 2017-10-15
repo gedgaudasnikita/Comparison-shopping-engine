@@ -59,6 +59,17 @@ namespace Comparison_shopping_engine.Tests
             Assert.AreEqual("very unlikely to get matched with", result.ElementAt(1));
         }
 
+        [TestMethod()]
+        public void GetClosestListTest_returnsEmptyListIfNoMatch()
+        {
+            NormalizationEngine m1 = NormalizationEngine.GetInstance();
+            m1.ClearList();
+
+            var result = m1.GetClosestList("pretty Lily", 2);
+
+            Assert.AreEqual(0, result.Count());
+        }
+
 
         [TestMethod()]
         public void PersistTest_savesNames()
