@@ -26,6 +26,7 @@ namespace Comparison_shopping_engine
             Receipt.DateParser = new DateParser();
             Receipt.StoreParser = new StoreParser();
             ItemManager.GetInstance().LoadAll();
+            NormalizationEngine.GetInstance().LoadAll();
         }
     }
 }

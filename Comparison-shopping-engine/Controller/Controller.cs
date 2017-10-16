@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 namespace Comparison_shopping_engine
 {
     public delegate void ComparisonResultCallback(Receipt parsed, List<Item> itemLists);
+
+    /// <summary>
+    /// This class connects the UX components with the core entities.
+    /// Essentially this class is responsible for the application behaviour
+    /// </summary>
     public static class Controller
     {
         /// <summary>
@@ -18,6 +23,12 @@ namespace Comparison_shopping_engine
         public static void ProcessReceipt(Bitmap source, ComparisonResultCallback callback)
         {
             Receipt receipt = Receipt.Convert(source);
+
+            var normalizer = NormalizationEngine.GetInstance();
+            receipt.Items.ForEach(item => item.Name = normalizer.GetClosest(item.Name));
+
+            //TODO: Add request for user normalization through the callback
+
             ProcessReceipt(receipt, callback);
         }
 

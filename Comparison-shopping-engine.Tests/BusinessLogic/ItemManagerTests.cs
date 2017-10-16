@@ -111,7 +111,6 @@ namespace Comparison_shopping_engine.Tests
             Assert.IsFalse(m1.Exists(testItem));
 
             m1.LoadAll();
-            Console.WriteLine(testItem.ToString());
             
             Assert.IsTrue(m1.Exists(testItem));
         }

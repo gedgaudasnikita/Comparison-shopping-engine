@@ -29,7 +29,7 @@ namespace Comparison_shopping_engine
                 string previousText = btn_NewReceipt.Text;
                 lbl_ReceptInfo.Text = "Loading...";
                 btn_NewReceipt.Enabled = false;
-                MainForm.ActiveForm.Refresh();
+                Refresh();
                 Controller.ProcessReceipt(new Bitmap(openFileDialog.FileName), Lbl_ReceiptInfo_Update);
             }
         }
@@ -59,7 +59,7 @@ namespace Comparison_shopping_engine
 
             btn_NewReceipt.Enabled = true;
             lbl_ReceptInfo.Text = resultInfo;
-            MainForm.ActiveForm.Refresh();
+            Refresh();
         }
     }
 }
