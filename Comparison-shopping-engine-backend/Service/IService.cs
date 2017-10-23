@@ -12,6 +12,9 @@ namespace Comparison_shopping_engine_backend
     public interface IService
     {
         [OperationContract]
+        Receipt Test();
+
+        [OperationContract]
         Receipt ProcessImage(Bitmap source);
 
         [OperationContract]

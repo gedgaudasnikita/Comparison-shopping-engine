@@ -51,5 +51,10 @@ namespace Comparison_shopping_engine_backend
 
             return cheapList;
         }
+
+        public Receipt Test()
+        {
+            return new Receipt();
+        }
     }
 }

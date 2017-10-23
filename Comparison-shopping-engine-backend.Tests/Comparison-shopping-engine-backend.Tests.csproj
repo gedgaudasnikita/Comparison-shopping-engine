@@ -58,11 +58,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ImageRecognitionTests\NormalizationEngineTests.cs" />
-    <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\DateParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\ItemListParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\StoreParserTests.cs" />
+    <Compile Include="ImageRecognition\NormalizationEngineTests.cs" />
+    <Compile Include="ImageRecognition\OCRWrapperTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\DateParserTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\ItemListParserTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\StoreParserTests.cs" />
     <Compile Include="BusinessLogic\ItemManagerTests.cs" />
     <Compile Include="CoreEntities\ReceiptTests.cs" />
     <Compile Include="CoreEntities\ItemTests.cs" />
