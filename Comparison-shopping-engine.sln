@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-backend.Tests", "Comparison-shopping-engine-backend.Tests\Comparison-shopping-engine-backend.Tests.csproj", "{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-backend", "Comparison-shopping-engine-backend\Comparison-shopping-engine-backend.csproj", "{657981FE-B065-4537-8B59-7A86B1AD4E5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{657981FE-B065-4537-8B59-7A86B1AD4E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{657981FE-B065-4537-8B59-7A86B1AD4E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{657981FE-B065-4537-8B59-7A86B1AD4E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{657981FE-B065-4537-8B59-7A86B1AD4E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
