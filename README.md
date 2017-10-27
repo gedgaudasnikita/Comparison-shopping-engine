@@ -19,6 +19,4 @@ Reasonale: `nuget restore` does not run PowerShell scripts, and Tesseract, for s
 If for some reason, when running unit tests or trying to build the project, VS starts throwing up with errors like "failed to copy *.dll" or something similar, in the properties of all *.dll's in 'x64' and 'x86' directories change "Copy to working directory" to "Copy if newer". 🙂
 
 ## Documentation
-You can always find the latest code documentation in [CodeDocs](https://codedocs.xyz/gedgaudasnikita/Comparison-shopping-engine/)
-
-
+You can always find the latest code documentation in [CodeDocs](https://codedocs.xyz/gedgaudasnikita/Comparison-shopping-engine/).
