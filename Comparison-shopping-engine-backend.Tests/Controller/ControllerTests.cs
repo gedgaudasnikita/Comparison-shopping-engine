@@ -29,13 +29,9 @@ namespace Comparison_shopping_engine_backend.Tests
 
             Receipt receipt = new Receipt();
             receipt.Items = list;
-
-            Receipt resultReceipt;
+            
             List<Item> cheaperItems = list;
-            Controller.ProcessReceipt(receipt, (resultReceiptReceived, cheaperItemsReceived) => {
-                resultReceipt = resultReceiptReceived;
-                cheaperItems = cheaperItemsReceived;
-            });
+            cheaperItems = Controller.ProcessReceipt(receipt);
 
             Item item = cheaperItems.ElementAt(0);
             Item item1 = cheaperItems.ElementAt(1);

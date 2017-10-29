@@ -6,8 +6,8 @@
     <ProjectGuid>{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Comparison_shopping_engine.Tests</RootNamespace>
-    <AssemblyName>Comparison-shopping-engine.Tests</AssemblyName>
+    <RootNamespace>Comparison_shopping_engine_backend.Tests</RootNamespace>
+    <AssemblyName>Comparison-shopping-engine-backend.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -59,15 +59,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Controller\ControllerTests.cs" />
-    <Compile Include="ImageRecognitionTests\NormalizationEngineTests.cs" />
-    <Compile Include="ImageRecognitionTests\OCRWrapperTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\DateParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\ItemListParserTests.cs" />
-    <Compile Include="ImageRecognitionTests\Parsers\StoreParserTests.cs" />
+    <Compile Include="Extensions\StringExtensionsTests.cs" />
+    <Compile Include="ImageRecognition\NormalizationEngineTests.cs" />
+    <Compile Include="ImageRecognition\OCRWrapperTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\DateParserTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\ItemListParserTests.cs" />
+    <Compile Include="ImageRecognition\Parsers\StoreParserTests.cs" />
     <Compile Include="BusinessLogic\ItemManagerTests.cs" />
     <Compile Include="CoreEntities\ReceiptTests.cs" />
     <Compile Include="CoreEntities\ItemTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\Routers\RouterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Comparison-shopping-engine-backend\Comparison-shopping-engine-backend.csproj">
@@ -80,6 +82,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

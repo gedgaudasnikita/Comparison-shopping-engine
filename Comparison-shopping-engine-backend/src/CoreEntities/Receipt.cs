@@ -10,6 +10,7 @@ namespace Comparison_shopping_engine_backend
     /// <summary>
     /// A class representing the Receipt entity. Mainly used for encapsualting the results of image recognition.
     /// </summary>
+    [Serializable]
     public class Receipt
     {
         //Static fields

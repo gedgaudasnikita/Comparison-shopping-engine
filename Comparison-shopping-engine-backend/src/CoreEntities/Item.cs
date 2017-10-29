@@ -14,9 +14,11 @@ namespace Comparison_shopping_engine_backend
     public class Item : IEquatable<Item>
     {
         private DateTime date;
+
         //Indicates whether the Item has been saved to the storage or not
         public bool Saved
         { get; set; }
+
         public string Name
         { get; set; }
 
@@ -117,7 +119,7 @@ namespace Comparison_shopping_engine_backend
         /// is ready to be saved to storage or not.
         /// </summary>
         /// <returns>The <see cref="bool"/> result, indicating whether the data is valid or not</returns>
-        public bool isComplete()
+        public bool IsComplete()
         {
             return (Store != "MissingSt" && Store != "") && (Price != 0);
         }
