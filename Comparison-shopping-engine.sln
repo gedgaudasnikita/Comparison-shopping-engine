@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine", "Comparison-shopping-engine\Comparison-shopping-engine.csproj", "{5D3F37A8-9E60-4DC0-8112-A21656427B70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-backend", "Comparison-shopping-engine-backend\Comparison-shopping-engine-backend.csproj", "{5D3F37A8-9E60-4DC0-8112-A21656427B70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine.Tests", "Comparison-shopping-engine.Tests\Comparison-shopping-engine.Tests.csproj", "{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-backend.Tests", "Comparison-shopping-engine-backend.Tests\Comparison-shopping-engine-backend.Tests.csproj", "{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {147F9DF9-105F-4B41-91C6-FC2A9E29EB5F}
 	EndGlobalSection
 EndGlobal
