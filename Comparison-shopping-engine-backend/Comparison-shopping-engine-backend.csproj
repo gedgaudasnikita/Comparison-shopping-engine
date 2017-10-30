@@ -74,7 +74,7 @@
     <Compile Include="src\CoreEntities\ItemComparers\ItemPriceComparer.cs" />
     <Compile Include="src\CoreEntities\ItemComparers\ItemStoreComparer.cs" />
     <Compile Include="src\CoreEntities\ItemComparers\ItemNameComparer.cs" />
-    <Compile Include="src\Extensions\HttpListenerContextExtensions.cs" />
+    <Compile Include="src\Extensions\HttpListenerRequestExtensions.cs" />
     <Compile Include="src\ImageRecognition\NormalizationEngine.cs" />
     <Compile Include="src\ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="src\ImageRecognition\IParser.cs" />
@@ -82,9 +82,10 @@
     <Compile Include="src\ImageRecognition\Parsers\StoreParser.cs" />
     <Compile Include="src\CoreEntities\Item.cs" />
     <Compile Include="src\BusinessLogic\ItemManager.cs" />
+    <Compile Include="src\Server\Endpoints\SaveReceiptEndpoint.cs" />
     <Compile Include="src\Server\Endpoints\ProcessReceiptEndpoint.cs" />
     <Compile Include="src\Server\Endpoints\ProcessImageEndpoint.cs" />
-    <Compile Include="src\Server\Endpoints\TestEndpoint.cs" />
+    <Compile Include="src\Server\Endpoints\GetSuggestionsEndpoint.cs" />
     <Compile Include="src\Server\IEndpoint.cs" />
     <Compile Include="src\Server\IServer.cs" />
     <Compile Include="src\Server\Routers\Router.cs" />

@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Net.Http;
 
 namespace Comparison_shopping_engine_backend
 {
@@ -12,7 +13,8 @@ namespace Comparison_shopping_engine_backend
         /// Returns a <see cref="Callback"/> that represents the functionality fot the given endpoint.
         /// </summary>
         /// <param name="endpoint">A <see cref="string"/> that identifies the endpoint URI</param>
+        /// <param name="method">A <see cref="HttpMethod"/> that identifies the method used</param>
         /// <returns>A respective <see cref="Callback"/></returns>
-        Callback GetCallback(string endpoint);
+        Callback GetCallback(string endpoint, HttpMethod method);
     }
 }

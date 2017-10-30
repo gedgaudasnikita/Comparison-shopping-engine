@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -13,33 +12,39 @@ namespace Comparison_shopping_engine_backend
 {
     /// <summary>
     /// This class encapsulates the expected behaviour of the endpoint, the responsibility of which is
-    /// to parse photographed receipt into a Receipt object, and return it to the end user
+    /// to return the list of the best matching item names stored in the normalisation engine given the
+    /// input name.
     /// </summary>
-    class ProcessImageEndpoint : IEndpoint
+    public class GetSuggestionsEndpoint : IEndpoint
     {
         private JavaScriptSerializer serializer = new JavaScriptSerializer();
 
         public Callback GetHandler()
         {
-            return ProcessImage;
+            return GetSuggestions;
         }
 
         public HttpMethod GetMethod()
         {
-            return HttpMethod.Post;
+            return HttpMethod.Get;
         }
 
         public string GetURI()
         {
-            return "ProcessImage";
+            return "GetSuggestions";
         }
-    
-        private string ProcessImage(Stream input, NameValueCollection inputQuery)
+
+        private string GetSuggestions(Stream body, NameValueCollection inputQuery)
         {
-            Bitmap image = new Bitmap(input);
+            var name = inputQuery["input"];
 
-            Receipt result = Controller.ProcessImage(image);
+            if (name == null || !Int32.TryParse(inputQuery["limit"], out int limit))
+            {
+                throw new ArgumentException();
+            }
 
+            var result = NormalizationEngine.GetInstance().GetClosestList(name, limit);
+            
             return serializer.Serialize(result);
         }
     }

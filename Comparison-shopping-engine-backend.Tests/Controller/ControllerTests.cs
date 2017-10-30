@@ -22,15 +22,17 @@ namespace Comparison_shopping_engine_backend.Tests
             manager.Add(new Item("Name A", "Store C", 1566, DateTime.Now.Date));
             manager.Add(new Item("Name B", "Store A", 2000, DateTime.Now.Date));
 
-            List<Item> list = new List<Item>();
-            list.Add(new Item("Name A", "Store D", 2099, DateTime.Now.Date));
-            list.Add(new Item("Name B", "Store D", 600, DateTime.Now.Date));
-            list.Add(new Item("Name A", "Store D", 1899, DateTime.Now.Date));
+            List<Item> list = new List<Item>
+            {
+                new Item("Name A", "Store D", 2099, DateTime.Now.Date),
+                new Item("Name B", "Store D", 600, DateTime.Now.Date),
+                new Item("Name A", "Store D", 1899, DateTime.Now.Date)
+            };
 
-            Receipt receipt = new Receipt();
-            receipt.Items = list;
-            
+            Receipt receipt = new Receipt { Items = list };
+
             List<Item> cheaperItems = list;
+            Controller.SaveReceipt(receipt);
             cheaperItems = Controller.ProcessReceipt(receipt);
 
             Item item = cheaperItems.ElementAt(0);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,13 +48,12 @@ namespace Comparison_shopping_engine_backend
         /// <param name="ctx">The <see cref="HttpListenerContext"/> of the particular request</param>
         private void HandleConnection(HttpListenerContext ctx)
         {
-            Stream input = ctx.Request.InputStream;
             byte[] output = new byte[0];
             try
             {
-                Callback cb = router.GetCallback(ctx.GetEndpoint());
+                Callback cb = router.GetCallback(ctx.Request.GetEndpoint(), new HttpMethod(ctx.Request.HttpMethod));
+                output = Encoding.UTF8.GetBytes(cb(ctx.Request.InputStream, ctx.Request.QueryString));
                 ctx.Response.StatusCode = (int)HttpStatusCode.OK;
-                output = Encoding.UTF8.GetBytes(cb(input));
             }
             catch (KeyNotFoundException)
             {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,13 +10,13 @@ namespace Comparison_shopping_engine_backend
 {
     public class Router: IRouter
     {
-        private Dictionary<string, Callback> URIMap;
+        private Dictionary<Tuple<string, HttpMethod>, Callback> URIMap;
         
         public Router (List<IEndpoint> endpoints)
         {
-            URIMap = new Dictionary<string, Callback>();
+            URIMap = new Dictionary<Tuple<string, HttpMethod>, Callback>();
             endpoints.ForEach((endpoint) => {
-                URIMap.Add(endpoint.GetURI(), endpoint.GetHandler());
+                URIMap.Add(new Tuple<string, HttpMethod>(endpoint.GetURI(), endpoint.GetMethod()), endpoint.GetHandler());
             });
         }
 
@@ -24,10 +25,11 @@ namespace Comparison_shopping_engine_backend
         /// Throws a KeyNotFoundException in case the endpoint is not stored.
         /// </summary>
         /// <param name="endpoint">A <see cref="string"/> that identifies the endpoint URI</param>
+        /// <param name="method">A <see cref="HttpMethod"/> that identifies the method used</param>
         /// <returns>A respective <see cref="Callback"/></returns>
-        public Callback GetCallback(string endpoint)
+        public Callback GetCallback(string endpoint, HttpMethod method)
         {
-            return URIMap[endpoint];
+            return URIMap[new Tuple<string, HttpMethod>(endpoint, method)];
         }
     }
 }

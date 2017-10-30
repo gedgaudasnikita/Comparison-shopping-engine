@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 namespace Comparison_shopping_engine_backend
 {
     /// <summary>
-    /// The class, containing all the custom extension methods for the <see cref="HttpListenerContext"/> type
+    /// The class, containing all the custom extension methods for the <see cref="HttpListenerRequest"/> type
     /// </summary>
-    public static class HttpListenerContextExtensions
+    public static class HttpListenerRequestExtensions
     {
         /// <summary>
         /// Returns the first segment of the URI, used as an endpoint identifier
         /// </summary>
-        /// <param name="ctx">The <see cref="HttpListenerContext"/> for the method to be called on.</param>
+        /// <param name="rqs">The <see cref="HttpListenerRequest"/> for the method to be called on.</param>
         /// <returns>A <see cref="string"/>, identifying the endpoint</returns>
-        public static string GetEndpoint(this HttpListenerContext ctx)
+        public static string GetEndpoint(this HttpListenerRequest rqs)
         {
-            return ctx.Request.Url.Segments[1].Replace("/", "");
+            return rqs.Url.Segments[1].Replace("/", "");
         }
     }
 }
