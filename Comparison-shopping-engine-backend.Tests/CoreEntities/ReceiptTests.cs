@@ -16,8 +16,7 @@ namespace Comparison_shopping_engine_backend.Tests
         {
             public List<Item> Parse(string source)
             {
-                List<Item> result = new List<Item>();
-                result.Add(new Item("itemName", 100));
+                List<Item> result = new List<Item> { new Item("itemName", 100) };
                 return result;
             }
         }

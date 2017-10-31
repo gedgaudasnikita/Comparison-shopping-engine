@@ -36,13 +36,22 @@ namespace Comparison_shopping_engine_backend
         public static List<Item> ProcessReceipt(Receipt source)
         {
             ItemManager manager = ItemManager.GetInstance();
-            manager.Add(source.Items);
-
-            manager.Persist();
 
             List<Item> cheapList = source.Items.Select(item => manager.FindCheapest(item)).ToList();
 
             return cheapList;
+        }
+
+        /// <summary>
+        /// Saves the given <see cref="Receipt"> items 
+        /// </summary>
+        /// <param name="source">A <see cref="Receipt"> to save</param>
+        public static void SaveReceipt(Receipt source)
+        {
+            ItemManager manager = ItemManager.GetInstance();
+            manager.Add(source.Items);
+
+            manager.Persist();
         }
     }
 }

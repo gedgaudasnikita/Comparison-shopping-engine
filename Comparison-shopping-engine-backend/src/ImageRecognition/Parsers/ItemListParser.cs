@@ -30,7 +30,7 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         /// <param name="source">The <see cref="string"/> to be parsed.</param>
         /// <returns>
-        /// Returns a <see cref="List<>"/> of <see cref="Item"/>, with the information, 
+        /// Returns a <see cref="List{Item}"/>, with the information, 
         /// parsed from <paramref name="source"/>.
         /// </returns>
         public List<Item> Parse(string source)
@@ -64,9 +64,8 @@ namespace Comparison_shopping_engine_backend
             string itemName = matchedItem.Groups[1].Value.Trim();
 
             //Match.Group[2] is the second matching group
-            int itemPrice;
             string itemPriceClean = matchedItem.Groups[2].Value.RemoveNonDigits();
-            if (!int.TryParse(itemPriceClean, out itemPrice))
+            if (!int.TryParse(itemPriceClean, out int itemPrice))
             {
                 itemPrice = 0;
             }

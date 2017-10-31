@@ -13,15 +13,15 @@ namespace Comparison_shopping_engine_backend
 {
     /// <summary>
     /// This class encapsulates the expected behaviour of the endpoint, the responsibility of which is
-    /// to parse photographed receipt into a Receipt object, and return it to the end user
+    /// to save the given Receipt object to the database.
     /// </summary>
-    class ProcessImageEndpoint : IEndpoint
+    class SaveReceiptEndpoint : IEndpoint
     {
         private JavaScriptSerializer serializer = new JavaScriptSerializer();
 
         public Callback GetHandler()
         {
-            return ProcessImage;
+            return SaveReceipt;
         }
 
         public HttpMethod GetMethod()
@@ -31,16 +31,16 @@ namespace Comparison_shopping_engine_backend
 
         public string GetURI()
         {
-            return "ProcessImage";
+            return "SaveReceipt";
         }
     
-        private string ProcessImage(Stream input, NameValueCollection inputQuery)
+        private string SaveReceipt(Stream input, NameValueCollection inputQuery)
         {
-            Bitmap image = new Bitmap(input);
+            Receipt given = serializer.Deserialize<Receipt>(new StreamReader(input).ReadToEnd());
 
-            Receipt result = Controller.ProcessImage(image);
+            Controller.SaveReceipt(given);
 
-            return serializer.Serialize(result);
+            return "";
         }
     }
 }

@@ -31,9 +31,10 @@ namespace Comparison_shopping_engine_backend
             NormalizationEngine.GetInstance().LoadAll();
 
             //Server initialization
-            var endpoints = new List<IEndpoint>() { new TestEndpoint(),
+            var endpoints = new List<IEndpoint>() { new GetSuggestionsEndpoint(),
                                                     new ProcessImageEndpoint(),
-                                                    new ProcessReceiptEndpoint()}; 
+                                                    new ProcessReceiptEndpoint(),
+                                                    new GetSuggestionsEndpoint()}; 
             server = new HttpServer(ConfigurationManager.AppSettings["serverURL"], new Router(endpoints));
         }
     }
