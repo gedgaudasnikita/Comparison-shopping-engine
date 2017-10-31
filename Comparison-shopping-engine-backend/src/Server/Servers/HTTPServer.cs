@@ -55,10 +55,15 @@ namespace Comparison_shopping_engine_backend
                 output = Encoding.UTF8.GetBytes(cb(ctx.Request.InputStream, ctx.Request.QueryString));
                 ctx.Response.StatusCode = (int)HttpStatusCode.OK;
             }
+            catch (ArgumentException)
+            {
+                ctx.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                output = Encoding.UTF8.GetBytes("Wrong parameters");
+            }
             catch (KeyNotFoundException)
             {
                 ctx.Response.StatusCode = (int)HttpStatusCode.NotFound;
-                output = Encoding.UTF8.GetBytes("Wrong URL");
+                output = Encoding.UTF8.GetBytes("Wrong URL or method");
             }
             catch (Exception ex)
             {
