@@ -4,14 +4,20 @@
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
     p1:id="@+id/linearLayout1">
+    <TextView
+        p1:text="CoShE"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView1" />
     <Button
-        p1:text="Upload Photo"
+        p1:text="Test Upload Photo"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/button1"
         p1:textAllCaps="false" />
     <Button
-        p1:text="Enter Item"
+        p1:text="Test Enter Item"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/button3"
