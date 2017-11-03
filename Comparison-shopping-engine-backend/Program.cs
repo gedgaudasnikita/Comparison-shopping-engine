@@ -34,7 +34,7 @@ namespace Comparison_shopping_engine_backend
             var endpoints = new List<IEndpoint>() { new GetSuggestionsEndpoint(),
                                                     new ProcessImageEndpoint(),
                                                     new ProcessReceiptEndpoint(),
-                                                    new GetSuggestionsEndpoint()}; 
+                                                    new SaveReceiptEndpoint()}; 
             server = new HttpServer(ConfigurationManager.AppSettings["serverURL"], new Router(endpoints));
         }
     }
