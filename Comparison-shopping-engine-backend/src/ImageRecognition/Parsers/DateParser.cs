@@ -9,7 +9,7 @@ namespace Comparison_shopping_engine_backend
 {
     /// <summary>
     /// This class describes the behaviour of parsing an date from plain text.
-    /// Intended for usage from <see cref="Receipt"> class
+    /// Intended for usage from <see cref="ParseableReceipt"> class
     /// </summary>
     public class DateParser: IParser<DateTime>
     {

@@ -24,9 +24,9 @@ namespace Comparison_shopping_engine_backend
         static void InitEntities()
         {
             //Core initialization
-            Receipt.ItemListParser = new ItemListParser();
-            Receipt.DateParser = new DateParser();
-            Receipt.StoreParser = new StoreParser();
+            ParseableReceipt.ItemListParser = new ItemListParser();
+            ParseableReceipt.DateParser = new DateParser();
+            ParseableReceipt.StoreParser = new StoreParser();
             ItemManager.GetInstance().LoadAll();
             NormalizationEngine.GetInstance().LoadAll();
 

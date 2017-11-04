@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +9,6 @@ namespace Comparison_shopping_engine_backend
     /// <summary>
     /// The class, representing the core item entity.
     /// </summary>
-    [Serializable]
     public class Item : IEquatable<Item>
     {
         private DateTime date;
