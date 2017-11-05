@@ -10,13 +10,14 @@ namespace Comparison_shopping_engine_backend
     [TestClass]
     public class RouterTests
     {
-        private class TestEndpoint : IEndpoint
+        private class TestEndpoint : IBackendEndpoint
         {
-            public Callback Handler { get; set; }
+            public bool testFlag = false;
 
-            public Callback GetHandler()
+            public Stream Handle(Stream body, NameValueCollection query)
             {
-                return Handler;
+                testFlag = true;
+                return null;
             }
 
             public HttpMethod GetMethod()
@@ -34,14 +35,12 @@ namespace Comparison_shopping_engine_backend
         public void GetCallback_getsCorrectCallback()
         {
             TestEndpoint endpoint = new TestEndpoint();
-            Callback cb = (Stream body, NameValueCollection queryString) => { return "testString"; };
-            endpoint.Handler = cb;
 
-            Router test = new Router(new List<IEndpoint> { endpoint });
+            Router test = new Router(new List<IBackendEndpoint> { endpoint });
             
-            Callback result = test.GetCallback("test", HttpMethod.Get);
+            test.GetHandler("test", HttpMethod.Get)(null, null);
 
-            Assert.AreEqual(cb, result);
+            Assert.AreEqual(true, endpoint.testFlag);
         }
     }
 }

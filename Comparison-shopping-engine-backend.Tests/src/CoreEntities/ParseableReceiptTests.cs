@@ -10,7 +10,7 @@ using System.Drawing;
 namespace Comparison_shopping_engine_backend.Tests
 {
     [TestClass()]
-    public class ReceiptTests
+    public class ParseableReceiptTests
     {
         private class ItemListParserMock : IParser<List<Item>>
         {
@@ -41,12 +41,12 @@ namespace Comparison_shopping_engine_backend.Tests
         [TestMethod()]
         public void ConvertTest_convertsFromImage()
         {
-            Receipt.ItemListParser = new ItemListParserMock();
-            Receipt.StoreParser = new StoreParserMock();
-            Receipt.DateParser = new DateParserMock();
+            ParseableReceipt.ItemListParser = new ItemListParserMock();
+            ParseableReceipt.StoreParser = new StoreParserMock();
+            ParseableReceipt.DateParser = new DateParserMock();
             var img = new Bitmap("./testdata/receipt.jpg");
 
-            Receipt receipt = Receipt.Convert(img);
+            ParseableReceipt receipt = ParseableReceipt.Convert(img);
 
             Assert.AreEqual(new DateTime(1, 1, 1), receipt.Date);
             Assert.AreEqual("storeName", receipt.Store);
@@ -60,11 +60,11 @@ namespace Comparison_shopping_engine_backend.Tests
         [TestMethod()]
         public void ParseTest_parsesFromString()
         {
-            Receipt.ItemListParser = new ItemListParserMock();
-            Receipt.StoreParser = new StoreParserMock();
-            Receipt.DateParser = new DateParserMock();
+            ParseableReceipt.ItemListParser = new ItemListParserMock();
+            ParseableReceipt.StoreParser = new StoreParserMock();
+            ParseableReceipt.DateParser = new DateParserMock();
 
-            Receipt receipt = Receipt.Parse("");
+            ParseableReceipt receipt = ParseableReceipt.Parse("");
 
             Assert.AreEqual(new DateTime(1, 1, 1), receipt.Date);
             Assert.AreEqual("storeName", receipt.Store);

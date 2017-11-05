@@ -8,7 +8,7 @@ namespace Comparison_shopping_engine_backend
     /// This static class is representing the OCR functionality, contains the Tesseract engine
     /// and makes use of it.
     /// </summary>
-    public static class OCRWrapper
+    public static class OcrWrapper
     {
         private static TesseractEngine engine = new TesseractEngine(@"./tessdata", "lit", EngineMode.Default);
        
@@ -24,6 +24,11 @@ namespace Comparison_shopping_engine_backend
             string resultText = resultPage.GetText();
             resultPage.Dispose();
             return resultText;
+        }
+
+        public static void Dispose()
+        {
+            engine.Dispose();
         }
     }
 }

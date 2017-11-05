@@ -20,7 +20,7 @@ namespace Comparison_shopping_engine_backend
         /// <returns>A parsed <see cref="Receipt"></returns>
         public static Receipt ProcessImage(Bitmap source)
         {
-            Receipt receipt = Receipt.Convert(source);
+            Receipt receipt = ParseableReceipt.Convert(source);
 
             var normalizer = NormalizationEngine.GetInstance();
             receipt.Items.ForEach(item => item.Name = normalizer.GetClosest(item.Name));

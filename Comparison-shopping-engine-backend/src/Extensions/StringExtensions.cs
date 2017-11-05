@@ -49,10 +49,10 @@ namespace Comparison_shopping_engine_backend
                 {
                     int cost = second[j - 1] == first[i - 1] ? 0 : 1;
                     var vals = new int[] {
-                matrix[i - 1, j] + 1,
-                matrix[i, j - 1] + 1,
-                matrix[i - 1, j - 1] + cost
-            };
+                    matrix[i - 1, j] + 1,
+                    matrix[i, j - 1] + 1,
+                    matrix[i - 1, j - 1] + cost
+                };
                     matrix[i, j] = vals.Min();
                     if (i > 1 && j > 1 && first[i - 1] == second[j - 2] && first[i - 2] == second[j - 1])
                         matrix[i, j] = Math.Min(matrix[i, j], matrix[i - 2, j - 2] + cost);

@@ -18,23 +18,29 @@ namespace Comparison_shopping_engine_backend
             server.Start();
             Console.WriteLine("Press any key to kill the process");
             Console.ReadKey();
+            DestroyEntities();
+        }
+
+        static void DestroyEntities()
+        {
             server.Dispose();
+            OcrWrapper.Dispose();
         }
 
         static void InitEntities()
         {
             //Core initialization
-            Receipt.ItemListParser = new ItemListParser();
-            Receipt.DateParser = new DateParser();
-            Receipt.StoreParser = new StoreParser();
+            ParseableReceipt.ItemListParser = new ItemListParser();
+            ParseableReceipt.DateParser = new DateParser();
+            ParseableReceipt.StoreParser = new StoreParser();
             ItemManager.GetInstance().LoadAll();
             NormalizationEngine.GetInstance().LoadAll();
 
             //Server initialization
-            var endpoints = new List<IEndpoint>() { new GetSuggestionsEndpoint(),
-                                                    new ProcessImageEndpoint(),
-                                                    new ProcessReceiptEndpoint(),
-                                                    new SaveReceiptEndpoint()}; 
+            var endpoints = new List<IBackendEndpoint>() { new GetSuggestionsBackendEndpoint(),
+                                                    new ProcessImageBackendEndpoint(),
+                                                    new ProcessReceiptBackendEndpoint(),
+                                                    new SaveReceiptBackendEndpoint()}; 
             server = new HttpServer(ConfigurationManager.AppSettings["serverURL"], new Router(endpoints));
         }
     }

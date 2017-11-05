@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 namespace Comparison_shopping_engine_backend
 {
     /// <summary>
-    /// A class representing the Receipt entity. Mainly used for encapsualting the results of image recognition.
+    /// A class representing the ParseableReceipt entity. Adds the parsing functionality needed in the backend
     /// </summary>
-    [Serializable]
-    public class Receipt
+    public class ParseableReceipt: Receipt
     {
         //Static fields
         //Mainly parsers, enabling Dependency Injection
@@ -20,34 +19,27 @@ namespace Comparison_shopping_engine_backend
         public static IParser<List<Item>> ItemListParser { private get; set; }
         public static IParser<DateTime> DateParser { private get; set; }
 
-        //Instance fields
-        //User provided data, encapsulated in one entity\
-
-        public string Store { get; set; }
-        public List<Item> Items { get; set; }
-        public DateTime Date { get; set; }
-
         /// <summary>
-        /// Converts a given <see cref="Bitmap"/> to a Receipt entity with the parsed information
+        /// Converts a given <see cref="Bitmap"/> to a ParseableReceipt entity with the parsed information
         /// </summary>
         /// <param name="source">A <see cref="Bitmap"/> to convert from</param>
-        /// <returns>A converted <see cref="Receipt"/></returns>
-        public static Receipt Convert(Bitmap source)
+        /// <returns>A converted <see cref="ParseableReceipt"/></returns>
+        public static ParseableReceipt Convert(Bitmap source)
         {
-            var text = OCRWrapper.ConvertToText(source);
+            var text = OcrWrapper.ConvertToText(source);
             return Parse(text);
         }
 
         /// <summary>
-        /// Creates a new <see cref="Receipt"/> instance and fills it with information, parsed from
+        /// Creates a new <see cref="ParseableReceipt"/> instance and fills it with information, parsed from
         /// <paramref name="source"/>, using the supplied parsers, specific to each relative field of
-        /// <see cref="Receipt"/>
+        /// <see cref="Parseable"/>
         /// </summary>
         /// <param name="source">A <see cref="string"/> to parse</param>
-        /// <returns>A newly created <see cref="Receipt"/></returns>
-        public static Receipt Parse(string source)
+        /// <returns>A newly created <see cref="Parseable"/></returns>
+        public static ParseableReceipt Parse(string source)
         {
-            Receipt result = new Receipt();
+            ParseableReceipt result = new ParseableReceipt();
 
             // In perspective, null cases should throw a custom exception - this should not be a normal flow
             if (StoreParser != null)
@@ -73,13 +65,6 @@ namespace Comparison_shopping_engine_backend
             }
           
             return result;
-        }
-
-        public Receipt()
-        {
-            Store = "";
-            Date = new DateTime().Date;
-            Items = new List<Item>();
         }
     }
 }
