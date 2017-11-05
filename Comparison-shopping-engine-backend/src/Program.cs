@@ -18,7 +18,13 @@ namespace Comparison_shopping_engine_backend
             server.Start();
             Console.WriteLine("Press any key to kill the process");
             Console.ReadKey();
+            DestroyEntities();
+        }
+
+        static void DestroyEntities()
+        {
             server.Dispose();
+            OCRWrapper.Dispose();
         }
 
         static void InitEntities()

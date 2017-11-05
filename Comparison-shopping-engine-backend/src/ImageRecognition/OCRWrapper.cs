@@ -25,5 +25,10 @@ namespace Comparison_shopping_engine_backend
             resultPage.Dispose();
             return resultText;
         }
+
+        public static void Dispose()
+        {
+            engine.Dispose();
+        }
     }
 }
