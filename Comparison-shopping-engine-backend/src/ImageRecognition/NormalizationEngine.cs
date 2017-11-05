@@ -116,9 +116,10 @@ namespace Comparison_shopping_engine_backend
             JsonSerializerStream serializer = new JsonSerializerStream();
             
             string filename = $"{ normalizationDir }/names.list";
-            FileStream resultStream = new FileStream(filename, FileMode.OpenOrCreate);
-            serializer.Serialize(resultStream, names);
-            resultStream.Close();
+            using (var resultStream = new FileStream(filename, FileMode.OpenOrCreate))
+            {
+                serializer.Serialize(resultStream, names);
+            }
         }
 
         /// <summary>
@@ -142,9 +143,10 @@ namespace Comparison_shopping_engine_backend
             JsonSerializerStream serializer = new JsonSerializerStream();
             if (fileInfo.Exists)
             {
-                FileStream inputStream = new FileStream($"{ normalizationDir }/names.list", FileMode.OpenOrCreate);
-                names = serializer.Deserialize<List<string>>(inputStream) ?? names;
-                inputStream.Close();
+                using (var inputStream = new FileStream($"{ normalizationDir }/names.list", FileMode.OpenOrCreate))
+                {
+                    names = serializer.Deserialize<List<string>>(inputStream) ?? names;
+                }
             }
         }
     }

@@ -76,6 +76,7 @@ namespace Comparison_shopping_engine_backend
                 outputStream.CopyTo(ctx.Response.OutputStream);
                 ctx.Response.Close();
             }
+            outputStream.Close();
         }
 
         public void Dispose()

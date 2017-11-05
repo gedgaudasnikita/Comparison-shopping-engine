@@ -24,7 +24,7 @@ namespace Comparison_shopping_engine_backend
         static void DestroyEntities()
         {
             server.Dispose();
-            OCRWrapper.Dispose();
+            OcrWrapper.Dispose();
         }
 
         static void InitEntities()

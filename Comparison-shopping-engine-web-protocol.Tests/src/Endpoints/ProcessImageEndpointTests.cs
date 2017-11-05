@@ -23,6 +23,7 @@ namespace Comparison_shopping_engine_backend.Tests
             //So apparently noone ever cared to write an instance equality method for Bitmap
             //Whatever, this test is not supposed to stay in the project anyway
             Assert.AreEqual(bitmap.GetPixel(103, 103), result.GetPixel(103, 103));
+            bitmap.Dispose();
         }
 
         [TestMethod()]

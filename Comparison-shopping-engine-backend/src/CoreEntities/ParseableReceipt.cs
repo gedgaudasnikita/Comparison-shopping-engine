@@ -26,7 +26,7 @@ namespace Comparison_shopping_engine_backend
         /// <returns>A converted <see cref="ParseableReceipt"/></returns>
         public static ParseableReceipt Convert(Bitmap source)
         {
-            var text = OCRWrapper.ConvertToText(source);
+            var text = OcrWrapper.ConvertToText(source);
             return Parse(text);
         }
 

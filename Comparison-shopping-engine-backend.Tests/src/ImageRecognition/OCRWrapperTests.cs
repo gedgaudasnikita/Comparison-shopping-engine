@@ -10,7 +10,7 @@ using System.Drawing;
 namespace Comparison_shopping_engine_backend.Tests
 {
     [TestClass()]
-    public class OCRWrapperTests
+    public class OcrWrapperTests
     {
         [TestMethod()]
         public void ConvertToTextTest_extractsText()
@@ -18,8 +18,9 @@ namespace Comparison_shopping_engine_backend.Tests
             var item = "Malta kava \"Pamig Extra“";
             var img = new Bitmap("./testdata/receipt.jpg");
 
-            var result = OCRWrapper.ConvertToText(img);
+            var result = OcrWrapper.ConvertToText(img);
             Assert.IsTrue(result.Contains(item));
+            img.Dispose();
         }
     }
 }

@@ -132,9 +132,10 @@ namespace Comparison_shopping_engine_backend
             foreach (var item in itemList)
             {
                 string filename = $"{ storageDir }/{ item.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item";
-                FileStream resultStream = new FileStream(filename, FileMode.OpenOrCreate);
-                serializer.Serialize(resultStream, item);
-                resultStream.Close();
+                using (var resultStream = new FileStream(filename, FileMode.OpenOrCreate))
+                {
+                    serializer.Serialize(resultStream, item);
+                }
             }
         }
 
@@ -154,10 +155,11 @@ namespace Comparison_shopping_engine_backend
             {
                 foreach (FileInfo file in storageDirInfo.GetFiles("*.item"))
                 {
-                    FileStream inputStream = new FileStream(file.FullName, FileMode.OpenOrCreate);
-                    var item = serializer.Deserialize<Item>(inputStream);
-                    itemList.Add(item);
-                    inputStream.Close();
+                    using (var inputStream = new FileStream(file.FullName, FileMode.OpenOrCreate))
+                    {
+                        var item = serializer.Deserialize<Item>(inputStream);
+                        itemList.Add(item);
+                    }
                 }
             } else
             {
