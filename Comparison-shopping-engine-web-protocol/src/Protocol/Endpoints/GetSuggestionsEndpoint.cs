@@ -51,10 +51,15 @@ namespace Comparison_shopping_engine_backend
 
         public GetSuggestionsParameters GetRequestParameters(NameValueCollection requestParameters)
         {
-            return new GetSuggestionsParameters
+            if (requestParameters["Input"] == null || !Int32.TryParse(requestParameters["Limit"], out int limit))
+            {
+                throw new ArgumentException();
+            }
+
+            return new GetSuggestionsParameters()
             {
                 Input = requestParameters["Input"],
-                Limit = Int32.Parse(requestParameters["Limit"])
+                Limit = limit
             };
         }
 
