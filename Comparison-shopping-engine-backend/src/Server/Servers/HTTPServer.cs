@@ -48,32 +48,32 @@ namespace Comparison_shopping_engine_backend
         /// <param name="ctx">The <see cref="HttpListenerContext"/> of the particular request</param>
         private void HandleConnection(HttpListenerContext ctx)
         {
-            byte[] output = new byte[0];
+            Stream outputStream = new MemoryStream(); 
             try
             {
-                Callback cb = router.GetCallback(ctx.Request.GetEndpoint(), new HttpMethod(ctx.Request.HttpMethod));
-                output = Encoding.UTF8.GetBytes(cb(ctx.Request.InputStream, ctx.Request.QueryString));
+                var handler = router.GetHandler(ctx.Request.GetEndpoint(), new HttpMethod(ctx.Request.HttpMethod));
+                outputStream = handler(ctx.Request.InputStream, ctx.Request.QueryString);
                 ctx.Response.StatusCode = (int)HttpStatusCode.OK;
             }
             catch (ArgumentException)
             {
                 ctx.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                output = Encoding.UTF8.GetBytes("Wrong parameters");
+                outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Wrong parameters"));
             }
             catch (KeyNotFoundException)
             {
                 ctx.Response.StatusCode = (int)HttpStatusCode.NotFound;
-                output = Encoding.UTF8.GetBytes("Wrong URL or method");
+                outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Wrong URL or method"));
             }
             catch (Exception ex)
             {
                 ctx.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 Console.WriteLine(ex);
-                output = Encoding.UTF8.GetBytes("Sorry but 500");
+                outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Sorry but 500"));
             }
             finally
             {
-                ctx.Response.OutputStream.Write(output, 0, output.Length);
+                outputStream.CopyTo(ctx.Response.OutputStream);
                 ctx.Response.Close();
             }
         }

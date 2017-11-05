@@ -14,7 +14,7 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         /// <param name="endpoint">A <see cref="string"/> that identifies the endpoint URI</param>
         /// <param name="method">A <see cref="HttpMethod"/> that identifies the method used</param>
-        /// <returns>A respective <see cref="Callback"/></returns>
-        Callback GetCallback(string endpoint, HttpMethod method);
+        /// <returns>A respective <see cref="Handler"/></returns>
+        Handler GetHandler(string endpoint, HttpMethod method);
     }
 }

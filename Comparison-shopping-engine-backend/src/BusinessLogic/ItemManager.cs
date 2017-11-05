@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -7,7 +8,6 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 
 namespace Comparison_shopping_engine_backend
 {
@@ -127,12 +127,14 @@ namespace Comparison_shopping_engine_backend
                 System.IO.Directory.CreateDirectory(storageDir);
             }
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            JsonSerializerStream serializer = new JsonSerializerStream();
 
             foreach (var item in itemList)
             {
                 string filename = $"{ storageDir }/{ item.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item";
-                File.WriteAllText(filename, serializer.Serialize(item));
+                FileStream resultStream = new FileStream(filename, FileMode.OpenOrCreate);
+                serializer.Serialize(resultStream, item);
+                resultStream.Close();
             }
         }
 
@@ -147,14 +149,15 @@ namespace Comparison_shopping_engine_backend
 
             DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            JsonSerializerStream serializer = new JsonSerializerStream();
             if (storageDirInfo.Exists)
             {
                 foreach (FileInfo file in storageDirInfo.GetFiles("*.item"))
                 {
-                    string serialized = File.ReadAllText(file.FullName);
-                    var item = serializer.Deserialize<Item>(serialized);
+                    FileStream inputStream = new FileStream(file.FullName, FileMode.OpenOrCreate);
+                    var item = serializer.Deserialize<Item>(inputStream);
                     itemList.Add(item);
+                    inputStream.Close();
                 }
             } else
             {

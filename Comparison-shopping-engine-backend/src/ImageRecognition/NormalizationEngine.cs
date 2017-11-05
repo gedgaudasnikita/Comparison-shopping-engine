@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 
 namespace Comparison_shopping_engine_backend
 {
@@ -87,9 +87,9 @@ namespace Comparison_shopping_engine_backend
         /// <param name="name">A <see cref="string"/> to be matched</param>
         /// <param name="limit">An <see cref="int"/>, indicating the preferred amount of matches to return</param>
         /// <returns>A <see cref="List{string}"/> of the closest matches</returns>
-        public IEnumerable<string> GetClosestList(string name, int limit)
+        public List<string> GetClosestList(string name, int limit)
         {
-            return names.OrderBy(savedName => savedName.GetDistance(name)).Take(limit);
+            return new List<string>(names.OrderBy(savedName => savedName.GetDistance(name)).Take(limit));
         }
 
         /// <summary>
@@ -113,10 +113,12 @@ namespace Comparison_shopping_engine_backend
                 System.IO.Directory.CreateDirectory(normalizationDir);
             }
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            JsonSerializerStream serializer = new JsonSerializerStream();
             
             string filename = $"{ normalizationDir }/names.list";
-            File.WriteAllText(filename, serializer.Serialize(names));
+            FileStream resultStream = new FileStream(filename, FileMode.OpenOrCreate);
+            serializer.Serialize(resultStream, names);
+            resultStream.Close();
         }
 
         /// <summary>
@@ -137,11 +139,12 @@ namespace Comparison_shopping_engine_backend
 
             FileInfo fileInfo = new FileInfo($"{ normalizationDir }/names.list");
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            JsonSerializerStream serializer = new JsonSerializerStream();
             if (fileInfo.Exists)
             {
-                string serialized = File.ReadAllText($"{ normalizationDir }/names.list");
-                names = serializer.Deserialize<List<string>>(serialized) ?? names;
+                FileStream inputStream = new FileStream($"{ normalizationDir }/names.list", FileMode.OpenOrCreate);
+                names = serializer.Deserialize<List<string>>(inputStream) ?? names;
+                inputStream.Close();
             }
         }
     }
