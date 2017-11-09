@@ -3,23 +3,32 @@
     p1:orientation="vertical"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/linearLayout1">
+    p1:id="@+id/homeLinearLayout1">
     <TextView
-        p1:text="CoShE"
+        p1:text="Home Screen"
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/textView1" />
-    <Button
-        p1:text="Test Upload Photo"
+        p1:id="@+id/homeTextView"
+        p1:textAllCaps="false"
+        p1:gravity="center" />
+    <ImageView
+        p1:src="@android:drawable/ic_menu_gallery"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/button1"
-        p1:textAllCaps="false" />
+        p1:id="@+id/homeImageView" />
     <Button
-        p1:text="Test Enter Item"
+        p1:text="Camera"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/button3"
-        p1:textAllCaps="false" />
+        p1:id="@+id/homeCameraButton"
+        p1:textAllCaps="false"
+        p1:clickable="true" />
+    <Button
+        p1:text="Go to Result Screen"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/homeNextButton"
+        p1:textAllCaps="false"
+        p1:clickable="true" />
 </LinearLayout>
