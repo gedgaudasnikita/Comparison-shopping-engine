@@ -32,7 +32,7 @@ namespace Comparison_shopping_engine_backend
         {
             listener.Start();
 
-            while (true)
+            while (listener.IsListening)
             {
                 var context = await listener.GetContextAsync();
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
