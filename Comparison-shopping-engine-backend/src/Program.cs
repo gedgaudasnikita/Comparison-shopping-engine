@@ -23,8 +23,8 @@ namespace Comparison_shopping_engine_backend
 
         static void DestroyEntities()
         {
-            server.Dispose();
             OcrWrapper.Dispose();
+            server.Dispose();
         }
 
         static void InitEntities()
