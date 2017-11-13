@@ -14,13 +14,13 @@ namespace Comparison_shopping_engine_backend
     public static class Controller
     {
         /// <summary>
-        /// Processes given <see cref="Bitmap"/> into a <see cref="Receipt"> with normalised names
+        /// Processes given <see cref="string"/> into a <see cref="Receipt"> with normalised names
         /// </summary>
-        /// <param name="source">A <see cref="Bitmap"/> to process</param>
+        /// <param name="source">A <see cref="string"/> to process</param>
         /// <returns>A parsed <see cref="Receipt"></returns>
-        public static Receipt ProcessImage(Bitmap source)
+        public static Receipt ProcessImage(string source)
         {
-            Receipt receipt = ParseableReceipt.Convert(source);
+            Receipt receipt = ParseableReceipt.Parse(source);
 
             var normalizer = NormalizationEngine.GetInstance();
             receipt.Items.ForEach(item => item.Name = normalizer.GetClosest(item.Name));

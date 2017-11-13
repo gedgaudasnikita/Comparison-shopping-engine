@@ -20,17 +20,6 @@ namespace Comparison_shopping_engine_backend
         public static IParser<DateTime> DateParser { private get; set; }
 
         /// <summary>
-        /// Converts a given <see cref="Bitmap"/> to a ParseableReceipt entity with the parsed information
-        /// </summary>
-        /// <param name="source">A <see cref="Bitmap"/> to convert from</param>
-        /// <returns>A converted <see cref="ParseableReceipt"/></returns>
-        public static ParseableReceipt Convert(Bitmap source)
-        {
-            var text = OcrWrapper.ConvertToText(source);
-            return Parse(text);
-        }
-
-        /// <summary>
         /// Creates a new <see cref="ParseableReceipt"/> instance and fills it with information, parsed from
         /// <paramref name="source"/>, using the supplied parsers, specific to each relative field of
         /// <see cref="Parseable"/>

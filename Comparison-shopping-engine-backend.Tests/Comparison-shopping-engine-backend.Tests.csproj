@@ -63,7 +63,6 @@
     <Compile Include="src\Controller\ControllerTests.cs" />
     <Compile Include="src\Extensions\StringExtensionsTests.cs" />
     <Compile Include="src\ImageRecognition\NormalizationEngineTests.cs" />
-    <Compile Include="src\ImageRecognition\OCRWrapperTests.cs" />
     <Compile Include="src\ImageRecognition\Parsers\DateParserTests.cs" />
     <Compile Include="src\ImageRecognition\Parsers\ItemListParserTests.cs" />
     <Compile Include="src\ImageRecognition\Parsers\StoreParserTests.cs" />
@@ -85,11 +84,6 @@
       <Project>{1240682E-CB5C-4826-9F64-0A11B34D8C54}</Project>
       <Name>Comparison-shopping-engine-web-protocol</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="testdata\receipt.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Choose>

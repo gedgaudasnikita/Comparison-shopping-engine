@@ -15,7 +15,7 @@ namespace Comparison_shopping_engine_backend
     /// This class encapsulates the expected behaviour of the endpoint, the responsibility of which is
     /// to parse photographed receipt into a Receipt object, and return it to the end user
     /// </summary>
-    public class ProcessImageEndpoint : IEndpoint<Bitmap, object, Receipt>
+    public class ProcessImageEndpoint : IEndpoint<string, object, Receipt>
     {
         private JsonSerializerStream serializer = new JsonSerializerStream();
 
@@ -24,16 +24,15 @@ namespace Comparison_shopping_engine_backend
             return HttpMethod.Post;
         }
 
-        public Bitmap GetRequestBody(Stream bodyObject)
+        public string GetRequestBody(Stream bodyObject)
         {
-            return new Bitmap(bodyObject);
+            return new StreamReader(bodyObject).ReadToEnd();
         }
 
-        public Stream GetRequestBody(Bitmap bodyObject)
+        public Stream GetRequestBody(string bodyObject)
         {
-            var stream = new MemoryStream();
-            bodyObject.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
-            return stream;
+            var bytes = Encoding.UTF8.GetBytes(bodyObject);
+            return new MemoryStream(bytes);
         }
 
         public NameValueCollection GetRequestParameters(object requestParameters)

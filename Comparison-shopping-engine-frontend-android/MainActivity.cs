@@ -14,6 +14,8 @@ namespace Comparison_shopping_engine_frontend_android
     [Activity(Label = "Comparison_shopping_engine_frontend_android", MainLauncher = true)]
     public class MainActivity : Activity
     {
+        private OcrWrapper ocr;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -37,6 +39,8 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 homeCameraButton.SetBackgroundColor(Color.DarkRed);
             }
+
+            ocr = new OcrWrapper(this);
         }
 
         /// <summary>
@@ -86,8 +90,6 @@ namespace Comparison_shopping_engine_frontend_android
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
-            base.OnActivityResult(requestCode, resultCode, data);
-
             // Make it available in the gallery
 
             Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
@@ -111,6 +113,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Dispose of the Java side bitmap.
             GC.Collect();
+            base.OnActivityResult(requestCode, resultCode, data);
         }
 
     }
