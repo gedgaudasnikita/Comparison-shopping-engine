@@ -85,11 +85,6 @@
       <Name>Comparison-shopping-engine-web-protocol</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="testdata\receipt.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

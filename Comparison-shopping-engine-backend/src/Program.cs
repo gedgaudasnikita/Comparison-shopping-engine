@@ -23,7 +23,6 @@ namespace Comparison_shopping_engine_backend
 
         static void DestroyEntities()
         {
-            OcrWrapper.Dispose();
             server.Dispose();
         }
 
