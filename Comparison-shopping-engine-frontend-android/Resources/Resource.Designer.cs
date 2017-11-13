@@ -44,17 +44,20 @@ namespace Comparison_shopping_engine_frontend_android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int button1 = 2130968578;
-			
 			// aapt resource value: 0x7f040003
-			public const int button3 = 2130968579;
+			public const int homeCameraButton = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int homeImageView = 2130968578;
 			
 			// aapt resource value: 0x7f040000
-			public const int linearLayout1 = 2130968576;
+			public const int homeLinearLayout1 = 2130968576;
+			
+			// aapt resource value: 0x7f040004
+			public const int homeNextButton = 2130968580;
 			
 			// aapt resource value: 0x7f040001
-			public const int textView1 = 2130968577;
+			public const int homeTextView = 2130968577;
 			
 			static Id()
 			{
