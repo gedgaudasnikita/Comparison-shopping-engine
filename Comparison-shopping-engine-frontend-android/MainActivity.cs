@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
+using Android.Media;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -145,6 +146,29 @@ namespace Comparison_shopping_engine_frontend_android
             options.InSampleSize = inSampleSize;
             options.InJustDecodeBounds = false;
             Bitmap resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
+
+            // Check photo orientation and rotate if necessary
+            Matrix mtx = new Matrix();
+            ExifInterface exif = new ExifInterface(fileName);
+            string orientation = exif.GetAttribute(ExifInterface.TagOrientation);
+
+            switch (orientation)
+            {
+                case "6": // portrait
+                    mtx.PreRotate(90);
+                    resizedBitmap = Bitmap.CreateBitmap(resizedBitmap, 0, 0, resizedBitmap.Width, resizedBitmap.Height, mtx, false);
+                    mtx.Dispose();
+                    mtx = null;
+                    break;
+                case "1": // landscape
+                    break;
+                default:
+                    mtx.PreRotate(90);
+                    resizedBitmap = Bitmap.CreateBitmap(resizedBitmap, 0, 0, resizedBitmap.Width, resizedBitmap.Height, mtx, false);
+                    mtx.Dispose();
+                    mtx = null;
+                    break;
+            }
 
             return resizedBitmap;
         }
