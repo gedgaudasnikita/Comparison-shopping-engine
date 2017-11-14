@@ -17,6 +17,9 @@ namespace Comparison_shopping_engine_frontend_android
     public class MainActivity : Activity
     {
         private OcrWrapper ocr;
+        Button homeCameraButton;
+        Button homeGalleryButton;
+        Button homeResultScreenButton;
         ImageView imageView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -26,9 +29,9 @@ namespace Comparison_shopping_engine_frontend_android
             SetContentView(Resource.Layout.Home);
 
             // Set up Buttons
-            Button homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
-            Button homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
-            Button homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
+            homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
+            homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
+            homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             if (IsThereAnAppToTakePictures())
@@ -132,6 +135,8 @@ namespace Comparison_shopping_engine_frontend_android
 
                     // Dispose of the Java side bitmap.
                     GC.Collect();
+
+                    homeResultScreenButton.Text = "Submit Photo";
                     break;
                 //1 - call Gallery
                 case 1:
@@ -141,6 +146,8 @@ namespace Comparison_shopping_engine_frontend_android
 
                         Bitmap chosenGalleryImage = BitmapHelpers.CheckAndRotateBitmap(GetPathToImage(chosenImageUri), Media.GetBitmap(this.ContentResolver, chosenImageUri));
                         imageView.SetImageURI(data.Data);
+
+                        homeResultScreenButton.Text = "Submit Photo";
                     }
                     break;
                 default:
