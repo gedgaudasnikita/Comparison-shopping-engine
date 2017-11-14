@@ -9,7 +9,6 @@ using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
 using Android.Media;
-using static Android.Provider.MediaStore.Images;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -45,6 +44,7 @@ namespace Comparison_shopping_engine_frontend_android
             else
             {
                 homeCameraButton.SetBackgroundColor(Color.DarkRed);
+                homeCameraButton.Clickable = false;
             }
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
@@ -60,6 +60,8 @@ namespace Comparison_shopping_engine_frontend_android
             public static File file;
             public static File dir;
             public static Bitmap bitmap;
+            public static int imageViewHeight;
+            public static int imageViewWidth;
         }
 
         /// <summary>
@@ -87,27 +89,41 @@ namespace Comparison_shopping_engine_frontend_android
         }
 
         /// <summary>
-        /// Call to camera, to get a photo
+        /// Call to camera app, to get a photo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
+            App.imageViewHeight = imageView.Height;
+            App.imageViewWidth = imageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             App.file = new File(App.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(App.file));
             StartActivityForResult(intent, 0);
         }
 
+        /// <summary>
+        /// Call to photo gallery app, to get a photo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
+            App.imageViewHeight = imageView.Height;
+            App.imageViewWidth = imageView.Width;
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
-            StartActivityForResult(
-                Intent.CreateChooser(imageIntent, "Select photo"), 1);
+            StartActivityForResult(Intent.CreateChooser(imageIntent, "Select photo"), 1);
         }
 
+        /// <summary>
+        /// Handles data returned from Android apps
+        /// </summary>
+        /// <param name="requestCode"></param>
+        /// <param name="resultCode">Intent code, used to distinguish between different activities</param>
+        /// <param name="data"></param>
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
@@ -124,9 +140,7 @@ namespace Comparison_shopping_engine_frontend_android
                     // Display in ImageView. We will resize the bitmap to fit the display.
                     // Loading the full sized image will consume to much memory
                     // and cause the application to crash.
-                    int height = Resources.DisplayMetrics.HeightPixels - imageView.Height * 2;
-                    int width = imageView.Width;
-                    App.bitmap = App.file.Path.LoadAndResizeBitmap(width, height);
+                    App.bitmap = App.file.Path.LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
                     if (App.bitmap != null)
                     {
                         imageView.SetImageBitmap(App.bitmap);
@@ -142,10 +156,8 @@ namespace Comparison_shopping_engine_frontend_android
                 case 1:
                     if (resultCode == Result.Ok)
                     {
-                        Android.Net.Uri chosenImageUri = data.Data;
-
-                        Bitmap chosenGalleryImage = BitmapHelpers.CheckAndRotateBitmap(GetPathToImage(chosenImageUri), Media.GetBitmap(this.ContentResolver, chosenImageUri));
-                        imageView.SetImageURI(data.Data);
+                        Bitmap chosenGalleryImage = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
+                        imageView.SetImageBitmap(chosenGalleryImage);
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }
@@ -185,7 +197,6 @@ namespace Comparison_shopping_engine_frontend_android
             int outHeight = options.OutHeight;
             int outWidth = options.OutWidth;
             int inSampleSize = 1;
-
             if (outHeight > height || outWidth > width)
             {
                 inSampleSize = outWidth > outHeight
