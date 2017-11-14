@@ -15,6 +15,7 @@ namespace Comparison_shopping_engine_frontend_android
     public class MainActivity : Activity
     {
         private OcrWrapper ocr;
+        ImageView imageView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,7 +26,7 @@ namespace Comparison_shopping_engine_frontend_android
             // Set up Buttons
             Button homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             Button homeResultScreenButton = FindViewById<Button>(Resource.Id.homeNextButton);
-            ImageView imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
+            imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             if (IsThereAnAppToTakePictures())
             {
@@ -73,6 +74,8 @@ namespace Comparison_shopping_engine_frontend_android
             App.dir = new File(
                 Android.OS.Environment.GetExternalStoragePublicDirectory(
                     Android.OS.Environment.DirectoryPictures), "CoShE Pictures");
+            if (!App.dir.Exists())
+                App.dir.Mkdirs();
         }
 
         /// <summary>
@@ -90,6 +93,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
+            base.OnActivityResult(requestCode, resultCode, data);
             // Make it available in the gallery
 
             Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
@@ -101,7 +105,6 @@ namespace Comparison_shopping_engine_frontend_android
             // Loading the full sized image will consume to much memory
             // and cause the application to crash.
 
-            ImageView imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
             int height = Resources.DisplayMetrics.HeightPixels;
             int width = imageView.Height;
             App.bitmap = App.file.Path.LoadAndResizeBitmap(width, height);
@@ -113,7 +116,6 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Dispose of the Java side bitmap.
             GC.Collect();
-            base.OnActivityResult(requestCode, resultCode, data);
         }
 
     }
