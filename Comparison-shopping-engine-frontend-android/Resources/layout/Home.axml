@@ -25,10 +25,17 @@
         p1:textAllCaps="false"
         p1:clickable="true" />
     <Button
-        p1:text="Go to Result Screen"
+        p1:text="Photo from Gallery"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/homeNextButton"
+        p1:id="@+id/homeGalleryButton"
+        p1:textAllCaps="false"
+        p1:clickable="true" />
+    <Button
+        p1:text="Result Screen"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/homeResultScreenButton"
         p1:textAllCaps="false"
         p1:clickable="true" />
 </LinearLayout>

@@ -9,6 +9,7 @@ using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
 using Android.Media;
+using static Android.Provider.MediaStore.Images;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -26,7 +27,8 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Set up Buttons
             Button homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
-            Button homeResultScreenButton = FindViewById<Button>(Resource.Id.homeNextButton);
+            Button homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
+            Button homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             if (IsThereAnAppToTakePictures())
@@ -41,6 +43,8 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 homeCameraButton.SetBackgroundColor(Color.DarkRed);
             }
+
+            homeGalleryButton.Click += OnHomeGalleryButtonClick;
 
             ocr = new OcrWrapper(this);
         }
@@ -92,31 +96,71 @@ namespace Comparison_shopping_engine_frontend_android
             StartActivityForResult(intent, 0);
         }
 
+        private void OnHomeGalleryButtonClick(object sender, EventArgs e)
+        {
+            Intent imageIntent = new Intent();
+            imageIntent.SetType("image/*");
+            imageIntent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(
+                Intent.CreateChooser(imageIntent, "Select photo"), 1);
+        }
+
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            // Make it available in the gallery
-
-            Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-            Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
-            mediaScanIntent.SetData(contentUri);
-            SendBroadcast(mediaScanIntent);
-
-            // Display in ImageView. We will resize the bitmap to fit the display.
-            // Loading the full sized image will consume to much memory
-            // and cause the application to crash.
-
-            int height = Resources.DisplayMetrics.HeightPixels;
-            int width = imageView.Height;
-            App.bitmap = App.file.Path.LoadAndResizeBitmap(width, height);
-            if (App.bitmap != null)
+            switch (requestCode)
             {
-                imageView.SetImageBitmap(App.bitmap);
-                App.bitmap = null;
-            }
+                // 0 - call Camera
+                case 0:
 
-            // Dispose of the Java side bitmap.
-            GC.Collect();
+                    Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+                    Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
+                    mediaScanIntent.SetData(contentUri);
+                    SendBroadcast(mediaScanIntent);
+
+                    // Display in ImageView. We will resize the bitmap to fit the display.
+                    // Loading the full sized image will consume to much memory
+                    // and cause the application to crash.
+                    int height = Resources.DisplayMetrics.HeightPixels - imageView.Height * 2;
+                    int width = imageView.Width;
+                    App.bitmap = App.file.Path.LoadAndResizeBitmap(width, height);
+                    if (App.bitmap != null)
+                    {
+                        imageView.SetImageBitmap(App.bitmap);
+                        App.bitmap = null;
+                    }
+
+                    // Dispose of the Java side bitmap.
+                    GC.Collect();
+                    break;
+                //1 - call Gallery
+                case 1:
+                    if (resultCode == Result.Ok)
+                    {
+                        Android.Net.Uri chosenImageUri = data.Data;
+
+                        Bitmap chosenGalleryImage = BitmapHelpers.CheckAndRotateBitmap(GetPathToImage(chosenImageUri), Media.GetBitmap(this.ContentResolver, chosenImageUri));
+                        imageView.SetImageURI(data.Data);
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private string GetPathToImage(Android.Net.Uri uri)
+        {
+            string path = null;
+            // The projection contains the columns we want to return in our query.
+            var projection = new[] { Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data };
+            using (var cursor = ManagedQuery(uri, projection, null, null, null))
+            {
+                if (cursor == null) return path;
+                var columnIndex = cursor.GetColumnIndexOrThrow(Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data);
+                cursor.MoveToFirst();
+                path = cursor.GetString(columnIndex);
+            }
+            return path;
         }
 
     }
@@ -147,6 +191,13 @@ namespace Comparison_shopping_engine_frontend_android
             options.InJustDecodeBounds = false;
             Bitmap resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
 
+            resizedBitmap = CheckAndRotateBitmap(fileName, resizedBitmap);
+
+            return resizedBitmap;
+        }
+
+        public static Bitmap CheckAndRotateBitmap(this string fileName, Bitmap rotatedBitmap)
+        {
             // Check photo orientation and rotate if necessary
             Matrix mtx = new Matrix();
             ExifInterface exif = new ExifInterface(fileName);
@@ -156,7 +207,7 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 case "6": // portrait
                     mtx.PreRotate(90);
-                    resizedBitmap = Bitmap.CreateBitmap(resizedBitmap, 0, 0, resizedBitmap.Width, resizedBitmap.Height, mtx, false);
+                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
                     mtx.Dispose();
                     mtx = null;
                     break;
@@ -164,13 +215,13 @@ namespace Comparison_shopping_engine_frontend_android
                     break;
                 default:
                     mtx.PreRotate(90);
-                    resizedBitmap = Bitmap.CreateBitmap(resizedBitmap, 0, 0, resizedBitmap.Width, resizedBitmap.Height, mtx, false);
+                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
                     mtx.Dispose();
                     mtx = null;
                     break;
             }
 
-            return resizedBitmap;
+            return rotatedBitmap;
         }
     }
 }
