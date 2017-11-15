@@ -17,6 +17,9 @@ using System.Collections.Specialized;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// An HttpClient wrapper class adapted to the IEndpoint concept
+    /// </summary>
     public class Client
     {
         private HttpClient client;
@@ -28,6 +31,14 @@ namespace Comparison_shopping_engine_frontend_android
             serverRootUri = _serverRootUri;
         }
 
+        /// <summary>
+        /// Performs an HTTP request to the endpoint, specified by the <typeparamref name="T"/> type with the given
+        /// data.
+        /// </summary>
+        /// <typeparam name="T">The class that inherits IEndpointMeta and encapsulates the information for the necessary endpoint</typeparam>
+        /// <param name="body">The <see cref="Stream"/> containing the body data of the request, optional</param>
+        /// <param name="query">The <see cref="NameValueCollection"/> containing the parameter query of the request, optional</param>
+        /// <returns>A <see cref="Stream"/> containing the response body information</returns>
         public async Task<Stream> Request<T>(Stream body = null, NameValueCollection query = null) where T : IEndpointMeta, new()
         {
             T endpoint = new T();

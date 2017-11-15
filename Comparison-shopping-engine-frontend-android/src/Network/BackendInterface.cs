@@ -16,17 +16,25 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// This class provides the easy-to-use methods for calling the backend endpoints.
+    /// </summary>
     public class BackendInterface
     {
         private Client cli;
 
         public BackendInterface()
         {
-            //TODO: Figure out a way to export this into configuration
-            cli = new Client("http://10.0.2.2:4444");
+            cli = new Client(Configuration.backendUrl);
         }
 
-        public async Task<List<string>> GetSuggestions(String input, int limit)
+        /// <summary>
+        /// Calls the backend's GetSuggestions endpoint
+        /// </summary>
+        /// <param name="input">The <see cref="string"/> to be matched</param>
+        /// <param name="limit">The maximum amount of similar items</param>
+        /// <returns>A <see cref="List{string}"/> with all the matches order by similarity</returns>
+        public async Task<List<string>> GetSuggestions(string input, int limit)
         {
             var endpoint = new GetSuggestionsEndpoint();
             var query = endpoint.GetRequestParameters(new GetSuggestionsParameters
@@ -40,6 +48,11 @@ namespace Comparison_shopping_engine_frontend_android
             return result;
         }
 
+        /// <summary>
+        /// Calls the backend's ProcessImage endpoint
+        /// </summary>
+        /// <param name="input">The <see cref="string"/>, containing the result of OCR</param>
+        /// <returns>A <see cref="Receipt"/> object with the parsed data</returns>
         public async Task<Receipt> ProcessImage(string input)
         {
             var endpoint = new ProcessImageEndpoint();
@@ -50,6 +63,11 @@ namespace Comparison_shopping_engine_frontend_android
             return result;
         }
 
+        /// <summary>
+        /// Calls the backend's ProcessReceipt endpoint
+        /// </summary>
+        /// <param name="input">The <see cref="Receipt"/>, that has been confirmed by the user</param>
+        /// <returns>The <see cref="List{Item}"/> with the cheapest items found</returns>
         public async Task<List<Item>> ProcessReceipt(Receipt input)
         {
             var endpoint = new ProcessReceiptEndpoint();
@@ -60,6 +78,10 @@ namespace Comparison_shopping_engine_frontend_android
             return result;
         }
 
+        /// <summary>
+        /// Calls the backend's SaveReceipt endpoint
+        /// </summary>
+        /// <param name="input">The <see cref="Receipt"/> to be saved</param>
         public async void SaveReceipt(Receipt input)
         {
             var endpoint = new SaveReceiptEndpoint();
