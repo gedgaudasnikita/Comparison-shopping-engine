@@ -65,9 +65,6 @@
     <Compile Include="src\Endpoints\GetSuggestionsEndpointTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Comparison-shopping-engine-core-entities\Comparison-shopping-engine-core-entities.csproj">
       <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
@@ -81,6 +78,9 @@
     <Content Include="testdata\receipt.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

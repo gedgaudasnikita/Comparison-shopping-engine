@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comparison_shopping_engine_core_entities;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;

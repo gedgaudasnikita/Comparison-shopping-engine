@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_core_entities
 {
     /// <summary>
     /// A class representing the Receipt entity.
