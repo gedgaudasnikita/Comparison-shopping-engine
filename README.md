@@ -14,5 +14,9 @@ Update-Package –reinstall
 
 in the Package Manager Console and don't ask any questions, because i don't know the answers and i don't even want to know them at this point.
 
+---
+
+If you want to boot the entire system (both back-end and front-end) when you run the solution (F5) in VS, right-click on the solution, navigate to `Properties` -> `Common Properties` -> `Startup Project`, select `Multiple startup projects` and set action `Start` on projects `Comparison-shopping-engine-backend` and `Comparison-shopping-engine-frontend-android`. All the rest should be set to `None`.
+
 ## Documentation
 You can always find the latest code documentation in [CodeDocs](https://codedocs.xyz/gedgaudasnikita/Comparison-shopping-engine/).
