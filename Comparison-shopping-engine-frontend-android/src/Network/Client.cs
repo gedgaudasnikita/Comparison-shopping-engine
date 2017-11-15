@@ -37,8 +37,10 @@ namespace Comparison_shopping_engine_frontend_android
             if (query != null)
             {
                 var queryString = String.Join("&", query.AllKeys.Select(a => a + "=" + System.Net.WebUtility.UrlEncode(query[a])));
-                requestUri += queryString;
+                requestUri += $"?{queryString}";
             }
+
+            Console.WriteLine(requestUri);
 
             var message = new HttpRequestMessage(endpoint.GetMethod(), requestUri);
 
@@ -48,8 +50,17 @@ namespace Comparison_shopping_engine_frontend_android
                 message.Content = content;
             }
 
-            var result = await client.SendAsync(message);
-            return await result.Content.ReadAsStreamAsync();
+            HttpResponseMessage result = new HttpResponseMessage();
+
+            result = await client.SendAsync(message);
+
+            Stream resultStream = new MemoryStream();
+            if (result.IsSuccessStatusCode)
+            {
+                resultStream = await result.Content.ReadAsStreamAsync();
+            }
+           
+            return resultStream;
         }
 
     }
