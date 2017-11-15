@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Comparison_shopping_engine_web_protocol;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {

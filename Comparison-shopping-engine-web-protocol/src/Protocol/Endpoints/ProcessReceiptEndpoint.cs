@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Comparison_shopping_engine_core_entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -9,7 +10,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_web_protocol
 {
     public class ProcessReceiptEndpoint : IEndpoint<Receipt, Object, List<Item>>
     {

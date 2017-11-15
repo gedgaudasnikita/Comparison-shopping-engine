@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Configuration;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {

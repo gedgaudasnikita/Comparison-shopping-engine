@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Comparison_shopping_engine_core_entities;
+using Comparison_shopping_engine_web_protocol;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
