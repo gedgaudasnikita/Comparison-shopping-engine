@@ -67,6 +67,9 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f040003
 			public const int homeVLinearLayout = 2130968579;
 			
+			// aapt resource value: 0x7f040009
+			public const int itemsLinearLayout = 2130968585;
+			
 			// aapt resource value: 0x7f040007
 			public const int resultsLinearLayout = 2130968583;
 			

@@ -20,6 +20,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         LinearLayout resultsLinearLayout;
         Button resultsNewItemButton;
+        LinearLayout itemsLinearLayout;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -34,12 +35,15 @@ namespace Comparison_shopping_engine_frontend_android
             resultsNewItemButton = new Button(this);
             resultsNewItemButton.Text = "New Item";
 
+            // Set up itemsLinearLayout
+            itemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.itemsLinearLayout);
+
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
 
-            // Add Button to LinearLayout
+            // Add Button and itemsLinearLayout to resultsLinearLayout
             resultsLinearLayout.AddView(resultsNewItemButton);
-
+            resultsLinearLayout.AddView(itemsLinearLayout);
         }
 
         private void OnResultsNewItemButtonClick(object sender, EventArgs e)
@@ -57,10 +61,11 @@ namespace Comparison_shopping_engine_frontend_android
                 receipt.Text = receiptText;
                 resultsLinearLayout.AddView(receipt);
             }
+
             BackendInterface backendIterface = new BackendInterface();
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
             List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
-
+            
         }
     }
 }
