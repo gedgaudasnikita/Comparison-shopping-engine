@@ -44,11 +44,14 @@ namespace Comparison_shopping_engine_frontend_android
             // Add Button and itemsLinearLayout to resultsLinearLayout
             resultsLinearLayout.AddView(resultsNewItemButton);
             resultsLinearLayout.AddView(itemsLinearLayout);
+
+            resultsNewItemButton.Click += OnResultsNewItemButtonClick;
         }
 
         private void OnResultsNewItemButtonClick(object sender, EventArgs e)
         {
-            
+            LinearLayout item = NewItem();
+            itemsLinearLayout.AddView(item);
         }
 
         private async void ProcessReceipt()
@@ -97,6 +100,23 @@ namespace Comparison_shopping_engine_frontend_android
                     FocusableInTouchMode = true
                 });
             }
+        }
+
+        private LinearLayout NewItem()
+        {
+            LinearLayout itemLayout = new LinearLayout(this);
+            itemLayout.LayoutParameters = new LinearLayout.LayoutParams(width: ViewGroup.LayoutParams.MatchParent, height: ViewGroup.LayoutParams.WrapContent);
+            EditText itemName = new EditText(this);
+            EditText itemStore = new EditText(this);
+            EditText itemDate = new EditText(this);
+            EditText itemPrice = new EditText(this);
+
+            itemLayout.AddView(itemName);
+            itemLayout.AddView(itemStore);
+            itemLayout.AddView(itemDate);
+            itemLayout.AddView(itemPrice);
+
+            return itemLayout;
         }
     }
 }
