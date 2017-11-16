@@ -19,9 +19,10 @@ namespace Comparison_shopping_engine_frontend_android
         BackendInterface backendInterface = new BackendInterface();
 
         LinearLayout resultsLinearLayout;
-        Button resultsNewItemButton;
+        Button resultsNewItemButton, resultsSubmitButton;
         LinearLayout itemsLinearLayout;
-
+        List<EditText> editTextList = new List<EditText>(); // List for all EditText views created to show items' properties to the user
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,10 +31,10 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Set up layout and create list of items
             resultsLinearLayout = FindViewById<LinearLayout>(Resource.Id.resultsLinearLayout);
-
+            
             // Button for adding new items to the list
-            resultsNewItemButton = new Button(this);
-            resultsNewItemButton.Text = "New Item";
+            resultsNewItemButton = FindViewById<Button>(Resource.Id.resultsNewItemButton);
+            resultsSubmitButton = FindViewById<Button>(Resource.Id.resultsSubmitButton);
 
             // Set up itemsLinearLayout
             itemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.itemsLinearLayout);
@@ -46,12 +47,25 @@ namespace Comparison_shopping_engine_frontend_android
             resultsLinearLayout.AddView(itemsLinearLayout);
 
             resultsNewItemButton.Click += OnResultsNewItemButtonClick;
+            resultsSubmitButton.Click += OnResultsSubmitButtonClick;
+        }
+
+        private void OnResultsSubmitButtonClick(object sender, EventArgs e)
+        {
+            foreach(var editText in editTextList)
+            {
+                editText.Clickable = false;
+                editText.SetCursorVisible(false);
+                editText.Focusable = false;
+                editText.FocusableInTouchMode = false;
+            }
         }
 
         private void OnResultsNewItemButtonClick(object sender, EventArgs e)
         {
-            LinearLayout item = NewItem();
-            itemsLinearLayout.AddView(item);
+            Item item = new Item();
+            LinearLayout linearLayoutForItem = NewItem(item);// passing item with default values because user can change them
+            itemsLinearLayout.AddView(linearLayoutForItem);
         }
 
         private async void ProcessReceipt()
@@ -71,49 +85,67 @@ namespace Comparison_shopping_engine_frontend_android
             
             foreach(var item in itemList)
             {
-                this.itemsLinearLayout.AddView(new EditText(this)
-                {
-                    Text = item.Store,
-                    Clickable = true,
-                    Focusable = true,
-                    FocusableInTouchMode = true
-                });
-                this.itemsLinearLayout.AddView(new EditText(this)
-                {
-                    Text = item.Date.ToString("yyyy-MM-dd"),
-                    Clickable = true,
-                    Focusable = true,
-                    FocusableInTouchMode = true
-                });
-                this.itemsLinearLayout.AddView(new EditText(this)
-                {
-                    Text = item.Name,
-                    Clickable = true,
-                    Focusable = true,
-                    FocusableInTouchMode = true
-                });
-                this.itemsLinearLayout.AddView(new EditText(this)
-                {
-                    Text = item.Price.ToString(),
-                    Clickable = true,
-                    Focusable = true,
-                    FocusableInTouchMode = true
-                });
+                LinearLayout itemLinearLayout = NewItem(item);
+                itemsLinearLayout.AddView(itemLinearLayout);
             }
+
         }
 
-        private LinearLayout NewItem()
+        /// <summary>
+        /// Creates a LinearLayout with 4 editable EditText views for passed Item object.
+        /// Each view is filled with one item property.
+        /// </summary>
+        private LinearLayout NewItem(Item item)
         {
             LinearLayout itemLayout = new LinearLayout(this);
-            itemLayout.LayoutParameters = new LinearLayout.LayoutParams(width: ViewGroup.LayoutParams.MatchParent, height: ViewGroup.LayoutParams.WrapContent);
-            EditText itemName = new EditText(this);
-            EditText itemStore = new EditText(this);
-            EditText itemDate = new EditText(this);
-            EditText itemPrice = new EditText(this);
+            itemLayout.LayoutParameters = new LinearLayout.LayoutParams(
+                width: ViewGroup.LayoutParams.MatchParent,
+                height: ViewGroup.LayoutParams.WrapContent);
+            itemLayout.Orientation = Orientation.Horizontal;
+            itemLayout.WeightSum = 4;
 
+            EditText itemName = new EditText(this)
+            {
+                Gravity = GravityFlags.Left,
+                Text = item.Name,
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent)
+            };
+            EditText itemStore = new EditText(this)
+            {
+                Gravity = GravityFlags.Left,
+                Text = item.Store,
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent)
+            };
+            EditText itemDate = new EditText(this)
+            {
+                Gravity = GravityFlags.Left,
+                Text = item.Date.ToString("yyyy-MM-dd"),
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent)
+            };
+            EditText itemPrice = new EditText(this)
+            {
+                Gravity = GravityFlags.Left,
+                Text = item.Price.ToString(),
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent)
+            };
+
+            //name, date, store, price
+            editTextList.Add(itemName);
+            editTextList.Add(itemDate);
+            editTextList.Add(itemStore);
+            editTextList.Add(itemPrice);
+            
             itemLayout.AddView(itemName);
-            itemLayout.AddView(itemStore);
             itemLayout.AddView(itemDate);
+            itemLayout.AddView(itemStore);
             itemLayout.AddView(itemPrice);
 
             return itemLayout;
