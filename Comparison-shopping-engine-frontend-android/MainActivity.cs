@@ -23,6 +23,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
@@ -59,6 +60,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
+            homeConfigButton.Click += OnHomeConfigButtonClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
 
