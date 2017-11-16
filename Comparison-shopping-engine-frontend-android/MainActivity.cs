@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
-using Android.Media;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -27,11 +26,19 @@ namespace Comparison_shopping_engine_frontend_android
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
 
+            // Reset App class for safety reasons
+            AppData.file = null;
+            AppData.dir = null;
+            AppData.bitmap = null;
+
             // Set up Buttons
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
+
+            // Make imageView invisible while there's no photo
+            imageView.Visibility = Android.Views.ViewStates.Gone;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
@@ -45,26 +52,12 @@ namespace Comparison_shopping_engine_frontend_android
             else
             {
                 homeCameraButton.Enabled = false;
-                homeCameraButton.Clickable = false;
             }
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
 
             ocr = new OcrWrapper(this);
-        }
-
-        /// <summary>
-        /// static class used for storing camera picture data and save location
-        /// </summary>
-        public static class App
-        {
-            public static File file;
-            public static File dir;
-            public static Bitmap bitmap = null;
-            //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
-            public static int imageViewHeight;
-            public static int imageViewWidth;
         }
 
         /// <summary>
@@ -80,15 +73,15 @@ namespace Comparison_shopping_engine_frontend_android
         }
 
         /// <summary>
-        /// Self explanatory
+        /// Creates a directory on phone for taken pictures
         /// </summary>
         private void CreateDirectoryForPictures()
         {
-            App.dir = new File(
+            AppData.dir = new File(
                 Android.OS.Environment.GetExternalStoragePublicDirectory(
                     Android.OS.Environment.DirectoryPictures), "CoShE Pictures");
-            if (!App.dir.Exists())
-                App.dir.Mkdirs();
+            if (!AppData.dir.Exists())
+                AppData.dir.Mkdirs();
         }
 
         /// <summary>
@@ -98,11 +91,11 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
-            App.imageViewHeight = imageView.Height;
-            App.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = imageView.Height;
+            AppData.imageViewWidth = imageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
-            App.file = new File(App.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
-            intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(App.file));
+            AppData.file = new File(AppData.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+            intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(AppData.file));
             StartActivityForResult(intent, 0);
         }
 
@@ -113,8 +106,8 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
-            App.imageViewHeight = imageView.Height;
-            App.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = imageView.Height;
+            AppData.imageViewWidth = imageView.Width;
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
@@ -126,10 +119,29 @@ namespace Comparison_shopping_engine_frontend_android
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
+        private async void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
         {
-            //For now it just goes to the empty result screen
             Intent intent = new Intent(this, typeof(ResultsActivity));
+
+            // Generate receipt out of image, if we have one
+            if (AppData.bitmap != null)
+            {
+                string receiptText = null;
+                bool initialized = await ocr.Initialize();
+
+                // TODO: exception or a pop-up to inform user that OCR failed
+                if (initialized)
+                {
+                    receiptText = await ocr.ConvertToText(AppData.bitmap);
+                }
+
+                // Just in case OCR managed to fuck up
+                if (receiptText != null && receiptText != "")
+                {
+                    intent.PutExtra("ReceiptText", receiptText);
+                }
+            }
+
             StartActivity(intent);
         }
 
@@ -146,32 +158,36 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 // 0 - call Camera
                 case 0:
-
-                    Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-                    Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
-                    mediaScanIntent.SetData(contentUri);
-                    SendBroadcast(mediaScanIntent);
-
-                    // Display in ImageView. We will resize the bitmap to fit the display.
-                    // Loading the full sized image will consume to much memory
-                    // and cause the application to crash.
-                    App.bitmap = App.file.Path.LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                    if (App.bitmap != null)
+                    if (resultCode == Result.Ok)
                     {
-                        imageView.SetImageBitmap(App.bitmap);
+                        Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+                        Android.Net.Uri contentUri = Android.Net.Uri.FromFile(AppData.file);
+                        mediaScanIntent.SetData(contentUri);
+                        SendBroadcast(mediaScanIntent);
+
+                        // Display in ImageView. We will resize the bitmap to fit the display.
+                        // Loading the full sized image will consume to much memory
+                        // and cause the application to crash.
+                        AppData.bitmap = AppData.file.Path.LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
+                        if (AppData.bitmap != null)
+                        {
+                            imageView.SetImageBitmap(AppData.bitmap);
+                            imageView.Visibility = Android.Views.ViewStates.Visible;
+                        }
+
+                        // Not sure if needed, source had it, better keep it in case.
+                        GC.Collect();
+
+                        homeResultScreenButton.Text = "Submit Photo";
                     }
-
-                    // Dispose of the Java side bitmap.
-                    GC.Collect();
-
-                    homeResultScreenButton.Text = "Submit Photo";
                     break;
                 //1 - call Gallery
                 case 1:
                     if (resultCode == Result.Ok)
                     {
-                        App.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                        imageView.SetImageBitmap(App.bitmap);
+                        AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
+                        imageView.SetImageBitmap(AppData.bitmap);
+                        imageView.Visibility = Android.Views.ViewStates.Visible;
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }
@@ -181,17 +197,27 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
+        // Probably could be turned into extension method, but I'm not sure how to acomplish that
         /// <summary>
-        /// Self explanatory
+        /// Return string path to image from Uri
         /// </summary>
-        /// <param name="uri"></param>
+        /// <param name="uri">Uri of Bitmap, from which path will be provided</param>
         /// <returns></returns>
         private string GetPathToImage(Android.Net.Uri uri)
         {
+            string doc_id = "";
+            using (var c1 = ContentResolver.Query(uri, null, null, null, null))
+            {
+                c1.MoveToFirst();
+                String document_id = c1.GetString(0);
+                doc_id = document_id.Substring(document_id.LastIndexOf(":") + 1);
+            }
+
             string path = null;
+
             // The projection contains the columns we want to return in our query.
-            var projection = new[] { Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data };
-            using (var cursor = ManagedQuery(uri, projection, null, null, null))
+            string selection = Android.Provider.MediaStore.Images.Media.InterfaceConsts.Id + " =? ";
+            using (var cursor = ManagedQuery(Android.Provider.MediaStore.Images.Media.ExternalContentUri, null, selection, new string[] { doc_id }, null))
             {
                 if (cursor == null) return path;
                 var columnIndex = cursor.GetColumnIndexOrThrow(Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data);
@@ -201,65 +227,6 @@ namespace Comparison_shopping_engine_frontend_android
             return path;
         }
 
-    }
-
-    public static class BitmapHelpers
-    {
-        public static Bitmap LoadAndResizeBitmap(this string fileName, int width, int height)
-        {
-            // First we get the the dimensions of the file on disk
-            BitmapFactory.Options options = new BitmapFactory.Options { InJustDecodeBounds = true };
-            BitmapFactory.DecodeFile(fileName, options);
-
-            // Next we calculate the ratio that we need to resize the image by
-            // in order to fit the requested dimensions.
-            int outHeight = options.OutHeight;
-            int outWidth = options.OutWidth;
-            int inSampleSize = 1;
-            if (outHeight > height || outWidth > width)
-            {
-                inSampleSize = outWidth > outHeight
-                                   ? outHeight / height
-                                   : outWidth / width;
-            }
-
-            // Now we will load the image and have BitmapFactory resize it for us.
-            options.InSampleSize = inSampleSize;
-            options.InJustDecodeBounds = false;
-            Bitmap resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
-
-            resizedBitmap = CheckAndRotateBitmap(fileName, resizedBitmap);
-
-            return resizedBitmap;
-        }
-
-        public static Bitmap CheckAndRotateBitmap(this string fileName, Bitmap rotatedBitmap)
-        {
-            // Check photo orientation and rotate if necessary
-            Matrix mtx = new Matrix();
-            ExifInterface exif = new ExifInterface(fileName);
-            string orientation = exif.GetAttribute(ExifInterface.TagOrientation);
-
-            switch (orientation)
-            {
-                case "6": // portrait
-                    mtx.PreRotate(90);
-                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
-                    mtx.Dispose();
-                    mtx = null;
-                    break;
-                case "1": // landscape
-                    break;
-                default:
-                    mtx.PreRotate(90);
-                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
-                    mtx.Dispose();
-                    mtx = null;
-                    break;
-            }
-
-            return rotatedBitmap;
-        }
     }
 }
 
