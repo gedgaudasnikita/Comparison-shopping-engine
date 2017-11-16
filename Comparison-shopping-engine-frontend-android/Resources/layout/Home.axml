@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
-    p1:orientation="vertical"
-    p1:layout_width="match_parent"
-    p1:layout_height="match_parent"
-    p1:id="@+id/homeLinearLayout1">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeLinearLayout">
     <TextView
-        p1:text="Home Screen"
-        p1:textAppearance="?android:attr/textAppearanceLarge"
-        p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/homeTextView"
-        p1:textAllCaps="false"
-        p1:gravity="center" />
+        android:id="@+id/homeTextView"
+        android:text="Home Screen"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center" />
     <ImageView
-        p1:src="@android:drawable/ic_menu_gallery"
-        p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/homeImageView" />
+        android:id="@+id/homeImageView"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
     <Button
-        p1:text="Camera"
-        p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/homeCameraButton"
-        p1:textAllCaps="false"
-        p1:clickable="true" />
+        android:id="@+id/homeCameraButton"
+        android:text="Camera"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:clickable="true" />
     <Button
-        p1:text="Go to Result Screen"
-        p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
-        p1:id="@+id/homeNextButton"
-        p1:textAllCaps="false"
-        p1:clickable="true" />
+        android:id="@+id/homeGalleryButton"
+        android:text="Photo from Gallery"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:clickable="true" />
+    <Button
+        android:id="@+id/homeResultScreenButton"
+        android:text="Result Screen"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:clickable="true" />
 </LinearLayout>
