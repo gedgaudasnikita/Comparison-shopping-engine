@@ -27,9 +27,9 @@ namespace Comparison_shopping_engine_frontend_android
             SetContentView(Resource.Layout.Home);
 
             // Reset App class for safety reasons
-            App.file = null;
-            App.dir = null;
-            App.bitmap = null;
+            AppData.file = null;
+            AppData.dir = null;
+            AppData.bitmap = null;
 
             // Set up Buttons
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
@@ -38,7 +38,7 @@ namespace Comparison_shopping_engine_frontend_android
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             // Make imageView invisible while there's no photo
-            imageView.Visibility = Android.Views.ViewStates.Invisible;
+            imageView.Visibility = Android.Views.ViewStates.Gone;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
@@ -61,19 +61,6 @@ namespace Comparison_shopping_engine_frontend_android
         }
 
         /// <summary>
-        /// static class used for storing camera picture data and save location
-        /// </summary>
-        public static class App
-        {
-            public static File file;
-            public static File dir;
-            public static Bitmap bitmap;
-            //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
-            public static int imageViewHeight;
-            public static int imageViewWidth;
-        }
-
-        /// <summary>
         /// Checks if device is able to call camera app
         /// </summary>
         /// <returns>True if device is able to call camera app</returns>
@@ -86,15 +73,15 @@ namespace Comparison_shopping_engine_frontend_android
         }
 
         /// <summary>
-        /// Self explanatory
+        /// Creates a directory on phone for taken pictures
         /// </summary>
         private void CreateDirectoryForPictures()
         {
-            App.dir = new File(
+            AppData.dir = new File(
                 Android.OS.Environment.GetExternalStoragePublicDirectory(
                     Android.OS.Environment.DirectoryPictures), "CoShE Pictures");
-            if (!App.dir.Exists())
-                App.dir.Mkdirs();
+            if (!AppData.dir.Exists())
+                AppData.dir.Mkdirs();
         }
 
         /// <summary>
@@ -104,11 +91,11 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
-            App.imageViewHeight = imageView.Height;
-            App.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = imageView.Height;
+            AppData.imageViewWidth = imageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
-            App.file = new File(App.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
-            intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(App.file));
+            AppData.file = new File(AppData.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+            intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(AppData.file));
             StartActivityForResult(intent, 0);
         }
 
@@ -119,8 +106,8 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
-            App.imageViewHeight = imageView.Height;
-            App.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = imageView.Height;
+            AppData.imageViewWidth = imageView.Width;
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
@@ -137,7 +124,7 @@ namespace Comparison_shopping_engine_frontend_android
             Intent intent = new Intent(this, typeof(ResultsActivity));
 
             // Generate receipt out of image, if we have one
-            if (App.bitmap != null)
+            if (AppData.bitmap != null)
             {
                 string receiptText = null;
                 bool initialized = await ocr.Initialize();
@@ -145,7 +132,7 @@ namespace Comparison_shopping_engine_frontend_android
                 // TODO: exception or a pop-up to inform user that OCR failed
                 if (initialized)
                 {
-                    receiptText = await ocr.ConvertToText(App.bitmap);
+                    receiptText = await ocr.ConvertToText(AppData.bitmap);
                 }
 
                 // Just in case OCR managed to fuck up
@@ -174,17 +161,17 @@ namespace Comparison_shopping_engine_frontend_android
                     if (resultCode == Result.Ok)
                     {
                         Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-                        Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
+                        Android.Net.Uri contentUri = Android.Net.Uri.FromFile(AppData.file);
                         mediaScanIntent.SetData(contentUri);
                         SendBroadcast(mediaScanIntent);
 
                         // Display in ImageView. We will resize the bitmap to fit the display.
                         // Loading the full sized image will consume to much memory
                         // and cause the application to crash.
-                        App.bitmap = App.file.Path.LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                        if (App.bitmap != null)
+                        AppData.bitmap = AppData.file.Path.LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
+                        if (AppData.bitmap != null)
                         {
-                            imageView.SetImageBitmap(App.bitmap);
+                            imageView.SetImageBitmap(AppData.bitmap);
                             imageView.Visibility = Android.Views.ViewStates.Visible;
                         }
 
@@ -198,8 +185,8 @@ namespace Comparison_shopping_engine_frontend_android
                 case 1:
                     if (resultCode == Result.Ok)
                     {
-                        App.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                        imageView.SetImageBitmap(App.bitmap);
+                        AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
+                        imageView.SetImageBitmap(AppData.bitmap);
                         imageView.Visibility = Android.Views.ViewStates.Visible;
 
                         homeResultScreenButton.Text = "Submit Photo";
