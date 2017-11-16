@@ -38,7 +38,7 @@ namespace Comparison_shopping_engine_frontend_android
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             // Make imageView invisible while there's no photo
-            imageView.Visibility = Android.Views.ViewStates.Gone;
+            imageView.Visibility = Android.Views.ViewStates.Invisible;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())

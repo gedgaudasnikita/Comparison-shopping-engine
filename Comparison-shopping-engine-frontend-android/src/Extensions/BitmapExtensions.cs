@@ -65,10 +65,10 @@ namespace Comparison_shopping_engine_frontend_android
                 case "1": // landscape
                     break;
                 default:
-                    mtx.PreRotate(90);
+                    /*mtx.PreRotate(90);
                     rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
                     mtx.Dispose();
-                    mtx = null;
+                    mtx = null;*/
                     break;
             }
 
