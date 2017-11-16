@@ -15,6 +15,8 @@ namespace Comparison_shopping_engine_frontend_android
     [Activity(Label = "CoShE Results")]
     public class ResultsActivity : Activity
     {
+        BackendInterface backendInterface = new BackendInterface();
+
         LinearLayout resultsLinearLayout;
         Button resultsNewItemButton;
 
@@ -31,7 +33,16 @@ namespace Comparison_shopping_engine_frontend_android
             resultsNewItemButton = new Button(this);
             resultsNewItemButton.Text = "New Item";
 
-            // Get passed receiptText if it's passed, should be separate function, for testing only
+            // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
+            ProcessReceipt();
+
+            // Add Button to LinearLayout
+            resultsLinearLayout.AddView(resultsNewItemButton);
+
+        }
+
+        private void ProcessReceipt ()
+        {
             string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("NoReceipt");
 
             if (!receiptText.Equals("NoReceipt"))
@@ -40,10 +51,6 @@ namespace Comparison_shopping_engine_frontend_android
                 receipt.Text = receiptText;
                 resultsLinearLayout.AddView(receipt);
             }
-
-            //Add Items to LinearLayout
-            resultsLinearLayout.AddView(resultsNewItemButton);
-
         }
     }
 }

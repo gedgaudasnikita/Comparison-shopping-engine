@@ -28,6 +28,11 @@ namespace Comparison_shopping_engine_frontend_android
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
 
+            // Reset App class for safety reasons
+            App.file = null;
+            App.dir = null;
+            App.bitmap = null;
+
             // Set up Buttons
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
@@ -62,7 +67,7 @@ namespace Comparison_shopping_engine_frontend_android
         {
             public static File file;
             public static File dir;
-            public static Bitmap bitmap = null;
+            public static Bitmap bitmap;
             //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
             public static int imageViewHeight;
             public static int imageViewWidth;
