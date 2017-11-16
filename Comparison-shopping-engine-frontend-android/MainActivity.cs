@@ -24,7 +24,7 @@ namespace Comparison_shopping_engine_frontend_android
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            // Set our view from the "main" layout resource
+            // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
 
             // Set up Buttons
@@ -49,6 +49,7 @@ namespace Comparison_shopping_engine_frontend_android
             }
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
+            homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
 
             ocr = new OcrWrapper(this);
         }
@@ -118,6 +119,18 @@ namespace Comparison_shopping_engine_frontend_android
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
             StartActivityForResult(Intent.CreateChooser(imageIntent, "Select photo"), 1);
+        }
+
+        /// <summary>
+        /// Go to Results screen, if we have a photo, generate receipt and display as a list of items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
+        {
+            //For now it just goes to the empty result screen
+            Intent intent = new Intent(this, typeof(ResultsActivity));
+            StartActivity(intent);
         }
 
         /// <summary>

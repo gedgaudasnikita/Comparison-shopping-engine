@@ -65,7 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResultScreen.cs" />
+    <Compile Include="ResultsActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="src\Configuration.cs" />
     <Compile Include="src\ImageRecognition\OcrWrapper.cs" />
