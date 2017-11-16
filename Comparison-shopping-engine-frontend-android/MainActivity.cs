@@ -7,7 +7,7 @@ using Android.Provider;
 using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
-using Android.Graphics;
+using Android.Views;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -18,6 +18,7 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeCameraButton;
         Button homeGalleryButton;
         Button homeResultScreenButton;
+        Button homeConfigButton;
         ImageView imageView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -30,11 +31,13 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.file = null;
             AppData.dir = null;
             AppData.bitmap = null;
+            
 
             // Set up Buttons
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
+            homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             // Make imageView invisible while there's no photo
@@ -58,6 +61,7 @@ namespace Comparison_shopping_engine_frontend_android
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
+
         }
 
         /// <summary>
@@ -145,6 +149,13 @@ namespace Comparison_shopping_engine_frontend_android
             StartActivity(intent);
         }
 
+        private void OnHomeConfigButtonClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ConfigActivity));
+
+            StartActivity(intent);
+        }
+
         /// <summary>
         /// Handles data returned from Android apps
         /// </summary>
@@ -226,7 +237,6 @@ namespace Comparison_shopping_engine_frontend_android
             }
             return path;
         }
-
     }
 }
 

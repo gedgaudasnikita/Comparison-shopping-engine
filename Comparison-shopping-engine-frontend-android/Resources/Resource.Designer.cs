@@ -49,6 +49,9 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f040004
 			public const int homeCameraButton = 2130968580;
 			
+			// aapt resource value: 0x7f040007
+			public const int homeConfigButton = 2130968583;
+			
 			// aapt resource value: 0x7f040005
 			public const int homeGalleryButton = 2130968581;
 			
@@ -67,11 +70,11 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f040003
 			public const int homeVLinearLayout = 2130968579;
 			
-			// aapt resource value: 0x7f040007
-			public const int resultsLinearLayout = 2130968583;
-			
 			// aapt resource value: 0x7f040008
-			public const int resultsTextView = 2130968584;
+			public const int resultsLinearLayout = 2130968584;
+			
+			// aapt resource value: 0x7f040009
+			public const int resultsTextView = 2130968585;
 			
 			static Id()
 			{
@@ -87,10 +90,13 @@ namespace Comparison_shopping_engine_frontend_android
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Home = 2130837504;
+			public const int Config = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Results = 2130837505;
+			public const int Home = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Results = 2130837506;
 			
 			static Layout()
 			{
