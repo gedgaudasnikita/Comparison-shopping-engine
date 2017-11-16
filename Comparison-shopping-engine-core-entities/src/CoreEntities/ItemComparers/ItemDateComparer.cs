@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_core_entities
 {
     /// <summary>
     /// This class describes the comparison by date logic for Item classes

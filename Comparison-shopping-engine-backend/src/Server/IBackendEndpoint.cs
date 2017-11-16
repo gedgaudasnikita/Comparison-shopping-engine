@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comparison_shopping_engine_web_protocol;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;

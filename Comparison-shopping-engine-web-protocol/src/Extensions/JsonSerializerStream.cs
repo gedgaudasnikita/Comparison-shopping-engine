@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_web_protocol
 {
     /// <summary>
     /// The class, containing all the custom extension methods for the <see cref="JsonSerializer"/> type

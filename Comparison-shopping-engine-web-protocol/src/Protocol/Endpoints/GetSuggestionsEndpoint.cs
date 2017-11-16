@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_web_protocol
 {
     public struct GetSuggestionsParameters
     {

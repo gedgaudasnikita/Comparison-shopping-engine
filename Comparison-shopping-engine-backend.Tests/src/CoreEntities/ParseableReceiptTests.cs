@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
@@ -35,26 +36,6 @@ namespace Comparison_shopping_engine_backend.Tests
             {
                 return new DateTime(1, 1, 1);
             }
-        }
-
-
-        [TestMethod()]
-        public void ConvertTest_convertsFromImage()
-        {
-            ParseableReceipt.ItemListParser = new ItemListParserMock();
-            ParseableReceipt.StoreParser = new StoreParserMock();
-            ParseableReceipt.DateParser = new DateParserMock();
-            var img = new Bitmap("./testdata/receipt.jpg");
-
-            ParseableReceipt receipt = ParseableReceipt.Convert(img);
-
-            Assert.AreEqual(new DateTime(1, 1, 1), receipt.Date);
-            Assert.AreEqual("storeName", receipt.Store);
-            Assert.AreEqual(1, receipt.Items.Count);
-            Assert.AreEqual(100, receipt.Items[0].Price);
-            Assert.AreEqual("itemName", receipt.Items[0].Name);
-            Assert.AreEqual(new DateTime(1, 1, 1), receipt.Items[0].Date);
-            Assert.AreEqual("storeName", receipt.Items[0].Store);
         }
 
         [TestMethod()]
