@@ -68,6 +68,7 @@
     <Compile Include="ResultsActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="src\Configuration.cs" />
+    <Compile Include="src\Extensions\BitmapExtensions.cs" />
     <Compile Include="src\ImageRecognition\OcrWrapper.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

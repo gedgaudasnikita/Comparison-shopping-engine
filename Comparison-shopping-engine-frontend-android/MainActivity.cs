@@ -8,8 +8,6 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
-using Android.Media;
-using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -190,7 +188,7 @@ namespace Comparison_shopping_engine_frontend_android
                             imageView.Visibility = Android.Views.ViewStates.Visible;
                         }
 
-                        // Dispose of the Java side bitmap.
+                        // Not sure if needed, source had it, better keep it in case.
                         GC.Collect();
 
                         homeResultScreenButton.Text = "Submit Photo";
@@ -212,17 +210,27 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
+        // Probably could be turned into extension method, but I'm not sure how to acomplish that
         /// <summary>
-        /// Self explanatory
+        /// Return string path to image from Uri
         /// </summary>
-        /// <param name="uri"></param>
+        /// <param name="uri">Uri of Bitmap, from which path will be provided</param>
         /// <returns></returns>
         private string GetPathToImage(Android.Net.Uri uri)
         {
+            string doc_id = "";
+            using (var c1 = ContentResolver.Query(uri, null, null, null, null))
+            {
+                c1.MoveToFirst();
+                String document_id = c1.GetString(0);
+                doc_id = document_id.Substring(document_id.LastIndexOf(":") + 1);
+            }
+
             string path = null;
+
             // The projection contains the columns we want to return in our query.
-            var projection = new[] { Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data };
-            using (var cursor = ManagedQuery(uri, projection, null, null, null))
+            string selection = Android.Provider.MediaStore.Images.Media.InterfaceConsts.Id + " =? ";
+            using (var cursor = ManagedQuery(Android.Provider.MediaStore.Images.Media.ExternalContentUri, null, selection, new string[] { doc_id }, null))
             {
                 if (cursor == null) return path;
                 var columnIndex = cursor.GetColumnIndexOrThrow(Android.Provider.MediaStore.Images.Media.InterfaceConsts.Data);
@@ -232,65 +240,6 @@ namespace Comparison_shopping_engine_frontend_android
             return path;
         }
 
-    }
-
-    public static class BitmapHelpers
-    {
-        public static Bitmap LoadAndResizeBitmap(this string fileName, int width, int height)
-        {
-            // First we get the the dimensions of the file on disk
-            BitmapFactory.Options options = new BitmapFactory.Options { InJustDecodeBounds = true };
-            BitmapFactory.DecodeFile(fileName, options);
-
-            // Next we calculate the ratio that we need to resize the image by
-            // in order to fit the requested dimensions.
-            int outHeight = options.OutHeight;
-            int outWidth = options.OutWidth;
-            int inSampleSize = 1;
-            if (outHeight > height || outWidth > width)
-            {
-                inSampleSize = outWidth > outHeight
-                                   ? outHeight / height
-                                   : outWidth / width;
-            }
-
-            // Now we will load the image and have BitmapFactory resize it for us.
-            options.InSampleSize = inSampleSize;
-            options.InJustDecodeBounds = false;
-            Bitmap resizedBitmap = BitmapFactory.DecodeFile(fileName, options);
-
-            resizedBitmap = CheckAndRotateBitmap(fileName, resizedBitmap);
-
-            return resizedBitmap;
-        }
-
-        public static Bitmap CheckAndRotateBitmap(this string fileName, Bitmap rotatedBitmap)
-        {
-            // Check photo orientation and rotate if necessary
-            Matrix mtx = new Matrix();
-            ExifInterface exif = new ExifInterface(fileName);
-            string orientation = exif.GetAttribute(ExifInterface.TagOrientation);
-
-            switch (orientation)
-            {
-                case "6": // portrait
-                    mtx.PreRotate(90);
-                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
-                    mtx.Dispose();
-                    mtx = null;
-                    break;
-                case "1": // landscape
-                    break;
-                default:
-                    mtx.PreRotate(90);
-                    rotatedBitmap = Bitmap.CreateBitmap(rotatedBitmap, 0, 0, rotatedBitmap.Width, rotatedBitmap.Height, mtx, false);
-                    mtx.Dispose();
-                    mtx = null;
-                    break;
-            }
-
-            return rotatedBitmap;
-        }
     }
 }
 
