@@ -14,7 +14,7 @@ namespace Comparison_shopping_engine_frontend_android
     [Activity(Label = "CoShE Home", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        private OcrWrapper ocr;
+        private Lazy<OcrWrapper> ocr;
         Button homeCameraButton;
         Button homeGalleryButton;
         Button homeResultScreenButton;
@@ -57,7 +57,7 @@ namespace Comparison_shopping_engine_frontend_android
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
 
-            ocr = new OcrWrapper(this);
+            ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
         }
 
         /// <summary>
@@ -127,12 +127,12 @@ namespace Comparison_shopping_engine_frontend_android
             if (AppData.bitmap != null)
             {
                 string receiptText = null;
-                bool initialized = await ocr.Initialize();
+                bool initialized = await ocr.Value.Initialize();
 
                 // TODO: exception or a pop-up to inform user that OCR failed
                 if (initialized)
                 {
-                    receiptText = await ocr.ConvertToText(AppData.bitmap);
+                    receiptText = await ocr.Value.ConvertToText(AppData.bitmap);
                 }
 
                 // Just in case OCR managed to fuck up
