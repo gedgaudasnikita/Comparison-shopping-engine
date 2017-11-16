@@ -23,9 +23,18 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         public StoreParser()
         {
-            supportedStores = ConfigurationManager.AppSettings["supportedStores"].Split(',');
-            minimumStoreNameLength = supportedStores.Min(storeName => storeName.Length);
-            maximumStoreNameLength = supportedStores.Max(storeName => storeName.Length);
+            var supportedStoresConfig = ConfigurationManager.AppSettings["supportedStores"];
+
+            if (supportedStoresConfig != null)
+            {
+                supportedStores = supportedStoresConfig.Split(',');
+                minimumStoreNameLength = supportedStores.Min(storeName => storeName.Length);
+                maximumStoreNameLength = supportedStores.Max(storeName => storeName.Length);
+            }
+            else
+            {
+                throw new ConfigurationErrorsException("At least one store required");
+            }
         }
 
         /// <summary>

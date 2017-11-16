@@ -30,7 +30,16 @@ namespace Comparison_shopping_engine_backend
         private ItemManager()
         {
             itemList = new List<Item>();
-            storageDir = ConfigurationManager.AppSettings["storageDir"];
+            var storageDirConfig = ConfigurationManager.AppSettings["storageDir"];
+
+            if (storageDirConfig != null)
+            {
+                storageDir = storageDirConfig;
+            }
+            else
+            {
+                throw new ConfigurationErrorsException("No storage directory specified");
+            }
         }
 
         /// <summary>

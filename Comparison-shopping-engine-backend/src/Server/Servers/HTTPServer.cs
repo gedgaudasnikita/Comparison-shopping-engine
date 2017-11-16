@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -17,11 +19,20 @@ namespace Comparison_shopping_engine_backend
         private HttpListener listener;
         private IRouter router;
 
-        public HttpServer(string rootUrl, IRouter _router)
+        public HttpServer(IRouter _router)
         {
-            listener = new HttpListener();
-            listener.Prefixes.Add(rootUrl);
-            router = _router;
+            var rootUrlConfig = ConfigurationManager.AppSettings["serverURL"];
+
+            if (rootUrlConfig != null)
+            {
+                listener = new HttpListener();
+                listener.Prefixes.Add(rootUrlConfig);
+                router = _router;
+            }
+            else
+            {
+                throw new ConfigurationErrorsException("No server host URL configured.");
+            }
         }
 
         /// <summary>
@@ -34,10 +45,17 @@ namespace Comparison_shopping_engine_backend
 
             while (listener.IsListening)
             {
-                var context = await listener.GetContextAsync();
+                try
+                {
+                    var context = await listener.GetContextAsync();
 #pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
-                Task.Factory.StartNew(() => HandleConnection(context));
+                    Task.Factory.StartNew(() => HandleConnection(context));
 #pragma warning restore CS4014 // I regret doing so many things
+                }
+                catch (ObjectDisposedException)
+                {
+                    return;
+                }
             }
         }
         
@@ -47,36 +65,70 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         /// <param name="ctx">The <see cref="HttpListenerContext"/> of the particular request</param>
         private void HandleConnection(HttpListenerContext ctx)
+        {         
+            //All the exception handling happenning in one function
+            //The arrow function contains both retrieving the handler and invoking it
+            MapExceptions(
+                () => {
+                    return router.GetHandler(
+                        ctx.Request.GetEndpoint(),
+                        new HttpMethod(ctx.Request.HttpMethod)
+                    )
+                    (
+                        ctx.Request.InputStream,
+                        ctx.Request.QueryString
+                    );
+                }, 
+                out int statusCode, 
+                out Stream outputStream
+            );
+
+            ctx.Response.StatusCode = statusCode;
+
+            if (outputStream != null)
+            {
+                outputStream.CopyTo(ctx.Response.OutputStream);
+                outputStream.Close();
+            }
+
+            ctx.Response.Close();
+        }
+
+        /// <summary>
+        /// Contains the responses for every sort of exception case expected to possibly occur, and assigns them 
+        /// appropriately upon catching.
+        /// </summary>
+        /// <param name="handler">The arrow function, that calls the internal handling method of the endpoint</param>
+        /// <param name="statusCode">The out'd <see cref="int"/> to pass the appropriate status code to the caller</param>
+        /// <param name="outputStream">The out'd <see cref="Stream"/> to pass the appropriate response body to the caller</param>
+        private void MapExceptions(Func<Stream> handler, out int statusCode, out Stream outputStream)
         {
-            Stream outputStream = new MemoryStream(); 
             try
             {
-                var handler = router.GetHandler(ctx.Request.GetEndpoint(), new HttpMethod(ctx.Request.HttpMethod));
-                outputStream = handler(ctx.Request.InputStream, ctx.Request.QueryString);
-                ctx.Response.StatusCode = (int)HttpStatusCode.OK;
+                statusCode = (int)HttpStatusCode.OK;
+                outputStream = handler();
             }
             catch (ArgumentException)
             {
-                ctx.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                statusCode = (int)HttpStatusCode.BadRequest;
                 outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Wrong parameters"));
             }
             catch (KeyNotFoundException)
             {
-                ctx.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                statusCode = (int)HttpStatusCode.NotFound;
                 outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Wrong URL or method"));
+            }
+            catch (JsonReaderException)
+            {
+                statusCode = (int)HttpStatusCode.BadRequest;
+                outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Format error"));
             }
             catch (Exception ex)
             {
-                ctx.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 Console.WriteLine(ex);
+                statusCode = (int)HttpStatusCode.InternalServerError;
                 outputStream = new MemoryStream(Encoding.UTF8.GetBytes("Sorry but 500"));
             }
-            finally
-            {
-                outputStream.CopyTo(ctx.Response.OutputStream);
-                ctx.Response.Close();
-            }
-            outputStream.Close();
         }
 
         public void Dispose()
