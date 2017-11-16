@@ -12,7 +12,7 @@ using Android.Media;
 
 namespace Comparison_shopping_engine_frontend_android
 {
-    [Activity(Label = "Comparison_shopping_engine_frontend_android", MainLauncher = true)]
+    [Activity(Label = "CoShE Home", MainLauncher = true)]
     public class MainActivity : Activity
     {
         private OcrWrapper ocr;
@@ -33,6 +33,7 @@ namespace Comparison_shopping_engine_frontend_android
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
+            // Check if camera is available
             if (IsThereAnAppToTakePictures())
             {
                 CreateDirectoryForPictures();
@@ -40,10 +41,10 @@ namespace Comparison_shopping_engine_frontend_android
                 homeCameraButton.Click += OnHomeCameraButtonClick;
             }
 
-            // Short-term solution for testing, when no camera is found, camera button is red
+            // Disable camera button if no camera is available
             else
             {
-                homeCameraButton.SetBackgroundColor(Color.DarkRed);
+                homeCameraButton.Enabled = false;
                 homeCameraButton.Clickable = false;
             }
 
@@ -60,6 +61,7 @@ namespace Comparison_shopping_engine_frontend_android
             public static File file;
             public static File dir;
             public static Bitmap bitmap;
+            //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
             public static int imageViewHeight;
             public static int imageViewWidth;
         }
@@ -121,9 +123,9 @@ namespace Comparison_shopping_engine_frontend_android
         /// <summary>
         /// Handles data returned from Android apps
         /// </summary>
-        /// <param name="requestCode"></param>
-        /// <param name="resultCode">Intent code, used to distinguish between different activities</param>
-        /// <param name="data"></param>
+        /// <param name="requestCode">Intent code, used to distinguish between different activities</param>
+        /// <param name="resultCode">Code that stores info about the result itself</param>
+        /// <param name="data">Data returned by Intent activity</param>
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
@@ -167,6 +169,11 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
+        /// <summary>
+        /// Self explanatory
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <returns></returns>
         private string GetPathToImage(Android.Net.Uri uri)
         {
             string path = null;

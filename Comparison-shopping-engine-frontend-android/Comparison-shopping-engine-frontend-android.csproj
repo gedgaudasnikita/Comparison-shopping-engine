@@ -65,6 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ResultScreen.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="src\Configuration.cs" />
     <Compile Include="src\ImageRecognition\OcrWrapper.cs" />
@@ -81,6 +82,9 @@
     <AndroidAsset Include="Assets\tessdata\lit.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AndroidAsset>
+    <AndroidResource Include="Resources\layout\Results.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Home.axml">
