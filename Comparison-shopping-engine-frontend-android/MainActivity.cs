@@ -9,6 +9,7 @@ using Android.Content.PM;
 using Java.IO;
 using Android.Graphics;
 using Android.Media;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -126,10 +127,29 @@ namespace Comparison_shopping_engine_frontend_android
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
+        private async void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
         {
-            //For now it just goes to the empty result screen
             Intent intent = new Intent(this, typeof(ResultsActivity));
+
+            // Generate receipt out of image, if we have one
+            if (App.bitmap != null)
+            {
+                string receiptText = null;
+                bool initialized = await ocr.Initialize();
+
+                // TODO: exception or a pop-up to inform user that OCR failed
+                if (initialized)
+                {
+                    receiptText = await ocr.ConvertToText(App.bitmap);
+                }
+
+                // Just in case OCR managed to fuck up
+                if (receiptText != null && receiptText != "")
+                {
+                    intent.PutExtra("ReceiptText", receiptText);
+                }
+            }
+
             StartActivity(intent);
         }
 
@@ -146,25 +166,27 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 // 0 - call Camera
                 case 0:
-
-                    Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
-                    Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
-                    mediaScanIntent.SetData(contentUri);
-                    SendBroadcast(mediaScanIntent);
-
-                    // Display in ImageView. We will resize the bitmap to fit the display.
-                    // Loading the full sized image will consume to much memory
-                    // and cause the application to crash.
-                    App.bitmap = App.file.Path.LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                    if (App.bitmap != null)
+                    if (resultCode == Result.Ok)
                     {
-                        imageView.SetImageBitmap(App.bitmap);
+                        Intent mediaScanIntent = new Intent(Intent.ActionMediaScannerScanFile);
+                        Android.Net.Uri contentUri = Android.Net.Uri.FromFile(App.file);
+                        mediaScanIntent.SetData(contentUri);
+                        SendBroadcast(mediaScanIntent);
+
+                        // Display in ImageView. We will resize the bitmap to fit the display.
+                        // Loading the full sized image will consume to much memory
+                        // and cause the application to crash.
+                        App.bitmap = App.file.Path.LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
+                        if (App.bitmap != null)
+                        {
+                            imageView.SetImageBitmap(App.bitmap);
+                        }
+
+                        // Dispose of the Java side bitmap.
+                        GC.Collect();
+
+                        homeResultScreenButton.Text = "Submit Photo";
                     }
-
-                    // Dispose of the Java side bitmap.
-                    GC.Collect();
-
-                    homeResultScreenButton.Text = "Submit Photo";
                     break;
                 //1 - call Gallery
                 case 1:

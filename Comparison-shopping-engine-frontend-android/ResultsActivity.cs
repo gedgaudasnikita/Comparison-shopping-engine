@@ -31,7 +31,17 @@ namespace Comparison_shopping_engine_frontend_android
             resultsNewItemButton = new Button(this);
             resultsNewItemButton.Text = "New Item";
 
-            //Add Button to LinearLayout
+            // Get passed receiptText if it's passed, should be separate function, for testing only
+            string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("NoReceipt");
+
+            if (!receiptText.Equals("NoReceipt"))
+            {
+                TextView receipt = new TextView(this);
+                receipt.Text = receiptText;
+                resultsLinearLayout.AddView(receipt);
+            }
+
+            //Add Items to LinearLayout
             resultsLinearLayout.AddView(resultsNewItemButton);
 
         }
