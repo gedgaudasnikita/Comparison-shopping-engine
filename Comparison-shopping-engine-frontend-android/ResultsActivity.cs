@@ -66,6 +66,37 @@ namespace Comparison_shopping_engine_frontend_android
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
             List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
             
+            foreach(var item in itemList)
+            {
+                this.itemsLinearLayout.AddView(new EditText(this)
+                {
+                    Text = item.Store,
+                    Clickable = true,
+                    Focusable = true,
+                    FocusableInTouchMode = true
+                });
+                this.itemsLinearLayout.AddView(new EditText(this)
+                {
+                    Text = item.Date.ToString("yyyy-MM-dd"),
+                    Clickable = true,
+                    Focusable = true,
+                    FocusableInTouchMode = true
+                });
+                this.itemsLinearLayout.AddView(new EditText(this)
+                {
+                    Text = item.Name,
+                    Clickable = true,
+                    Focusable = true,
+                    FocusableInTouchMode = true
+                });
+                this.itemsLinearLayout.AddView(new EditText(this)
+                {
+                    Text = item.Price.ToString(),
+                    Clickable = true,
+                    Focusable = true,
+                    FocusableInTouchMode = true
+                });
+            }
         }
     }
 }
