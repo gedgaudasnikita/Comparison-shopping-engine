@@ -19,22 +19,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
-    <Button
-        android:id="@+id/homeCameraButton"
-        android:text="Camera"
-        android:textAllCaps="false"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:clickable="true" />
-    <Button
-        android:id="@+id/homeGalleryButton"
-        android:text="Photo from Gallery"
-        android:textAllCaps="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:clickable="true" />
+        android:id="@+id/homeVLinearLayout"
+        android:weightSum="4">
+        <Button
+            android:id="@+id/homeCameraButton"
+            android:text="Camera"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+        <Button
+            android:id="@+id/homeGalleryButton"
+            android:text="Photo from Gallery"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
     <Button
         android:id="@+id/homeResultScreenButton"
         android:text="Result Screen"
