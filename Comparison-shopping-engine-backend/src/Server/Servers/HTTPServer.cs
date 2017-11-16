@@ -56,6 +56,10 @@ namespace Comparison_shopping_engine_backend
                 {
                     return;
                 }
+                catch (HttpListenerException)
+                {
+                    return;
+                }
             }
         }
         
