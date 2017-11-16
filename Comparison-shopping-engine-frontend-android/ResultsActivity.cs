@@ -33,6 +33,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             //Add Button to LinearLayout
             resultsLinearLayout.AddView(resultsNewItemButton);
+
         }
     }
 }

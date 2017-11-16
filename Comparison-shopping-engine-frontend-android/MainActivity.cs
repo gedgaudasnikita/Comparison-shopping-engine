@@ -61,7 +61,7 @@ namespace Comparison_shopping_engine_frontend_android
         {
             public static File file;
             public static File dir;
-            public static Bitmap bitmap;
+            public static Bitmap bitmap = null;
             //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
             public static int imageViewHeight;
             public static int imageViewWidth;
@@ -159,7 +159,6 @@ namespace Comparison_shopping_engine_frontend_android
                     if (App.bitmap != null)
                     {
                         imageView.SetImageBitmap(App.bitmap);
-                        App.bitmap = null;
                     }
 
                     // Dispose of the Java side bitmap.
@@ -171,8 +170,8 @@ namespace Comparison_shopping_engine_frontend_android
                 case 1:
                     if (resultCode == Result.Ok)
                     {
-                        Bitmap chosenGalleryImage = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
-                        imageView.SetImageBitmap(chosenGalleryImage);
+                        App.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
+                        imageView.SetImageBitmap(App.bitmap);
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }
