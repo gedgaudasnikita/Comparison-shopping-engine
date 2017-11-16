@@ -8,7 +8,7 @@
     android:minHeight="25px">
     <TextView
         android:id="@+id/resultsTextView"
-        android:text="Results Screen"
+        android:text="Results"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAllCaps="false"
         android:layout_width="match_parent"

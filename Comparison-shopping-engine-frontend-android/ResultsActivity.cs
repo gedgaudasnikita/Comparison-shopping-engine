@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -41,7 +42,12 @@ namespace Comparison_shopping_engine_frontend_android
 
         }
 
-        private void ProcessReceipt ()
+        private void OnResultsNewItemButtonClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void ProcessReceipt()
         {
             string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("NoReceipt");
 
@@ -51,6 +57,10 @@ namespace Comparison_shopping_engine_frontend_android
                 receipt.Text = receiptText;
                 resultsLinearLayout.AddView(receipt);
             }
+            BackendInterface backendIterface = new BackendInterface();
+            Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
+            List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
+
         }
     }
 }
