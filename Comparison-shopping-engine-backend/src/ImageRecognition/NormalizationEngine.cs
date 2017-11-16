@@ -1,4 +1,5 @@
-﻿using Comparison_shopping_engine_web_protocol;
+﻿using Comparison_shopping_engine_core_entities;
+using Comparison_shopping_engine_web_protocol;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,16 @@ namespace Comparison_shopping_engine_backend
         private NormalizationEngine()
         {
             names = new List<string>();
-            normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
+            var normalizationDirConfig = ConfigurationManager.AppSettings["normalizationDir"];
+
+            if (normalizationDirConfig != null)
+            {
+                normalizationDir = normalizationDirConfig;
+            }
+            else
+            {
+                throw new ConfigurationErrorsException("No normalisation storage specified");
+            }
         }
 
         public static NormalizationEngine GetInstance()

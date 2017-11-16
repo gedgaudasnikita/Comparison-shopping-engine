@@ -22,8 +22,17 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         public ItemListParser()
         {
+            var taxGroups = ConfigurationManager.AppSettings["supportedTaxGroups"];
+
             //Lines ending with three numbers (price) and a tax group are what we consider items
-            itemRegex = $@"(.+)(\d.*\d.*\d.*)(?:{ ConfigurationManager.AppSettings["supportedTaxGroups"].Replace(',', '|') })";
+            if (taxGroups != null)
+            {
+                itemRegex = $@"(.+)(\d.*\d.*\d.*)(?:{ taxGroups.Replace(',', '|') })";
+            }
+            else
+            {
+                throw new ConfigurationErrorsException("At least one tax group required");
+            }
         }
 
         /// <summary>
