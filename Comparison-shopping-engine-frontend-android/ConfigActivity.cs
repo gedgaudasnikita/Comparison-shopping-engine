@@ -20,6 +20,7 @@ namespace Comparison_shopping_engine_frontend_android
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Config);
+
         }
     }
 }

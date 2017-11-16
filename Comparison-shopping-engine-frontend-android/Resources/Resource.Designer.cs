@@ -30,6 +30,22 @@ namespace Comparison_shopping_engine_frontend_android
 			global::Tesseract.Droid.Resource.String.Hello = global::Comparison_shopping_engine_frontend_android.Resource.String.Hello;
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int Themes = 2130968576;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -46,35 +62,44 @@ namespace Comparison_shopping_engine_frontend_android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040004
-			public const int homeCameraButton = 2130968580;
+			// aapt resource value: 0x7f050000
+			public const int configLinearLayout = 2131034112;
 			
-			// aapt resource value: 0x7f040007
-			public const int homeConfigButton = 2130968583;
+			// aapt resource value: 0x7f050002
+			public const int configSpinner = 2131034114;
 			
-			// aapt resource value: 0x7f040005
-			public const int homeGalleryButton = 2130968581;
+			// aapt resource value: 0x7f050001
+			public const int configTextView = 2131034113;
 			
-			// aapt resource value: 0x7f040002
-			public const int homeImageView = 2130968578;
+			// aapt resource value: 0x7f050007
+			public const int homeCameraButton = 2131034119;
 			
-			// aapt resource value: 0x7f040000
-			public const int homeLinearLayout = 2130968576;
+			// aapt resource value: 0x7f05000a
+			public const int homeConfigButton = 2131034122;
 			
-			// aapt resource value: 0x7f040006
-			public const int homeResultScreenButton = 2130968582;
+			// aapt resource value: 0x7f050008
+			public const int homeGalleryButton = 2131034120;
 			
-			// aapt resource value: 0x7f040001
-			public const int homeTextView = 2130968577;
+			// aapt resource value: 0x7f050005
+			public const int homeImageView = 2131034117;
 			
-			// aapt resource value: 0x7f040003
-			public const int homeVLinearLayout = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int homeLinearLayout = 2131034115;
 			
-			// aapt resource value: 0x7f040008
-			public const int resultsLinearLayout = 2130968584;
+			// aapt resource value: 0x7f050009
+			public const int homeResultScreenButton = 2131034121;
 			
-			// aapt resource value: 0x7f040009
-			public const int resultsTextView = 2130968585;
+			// aapt resource value: 0x7f050004
+			public const int homeTextView = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int homeVLinearLayout = 2131034118;
+			
+			// aapt resource value: 0x7f05000b
+			public const int resultsLinearLayout = 2131034123;
+			
+			// aapt resource value: 0x7f05000c
+			public const int resultsTextView = 2131034124;
 			
 			static Id()
 			{
@@ -119,6 +144,9 @@ namespace Comparison_shopping_engine_frontend_android
 			
 			// aapt resource value: 0x7f030002
 			public const int app_name = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int configSpinner = 2130903043;
 			
 			static String()
 			{
