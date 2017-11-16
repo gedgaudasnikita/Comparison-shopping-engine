@@ -39,6 +39,9 @@ namespace Comparison_shopping_engine_frontend_android
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
+            // Make imageView invisible while there's no photo
+            imageView.Visibility = Android.Views.ViewStates.Invisible;
+
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
             {
@@ -51,7 +54,6 @@ namespace Comparison_shopping_engine_frontend_android
             else
             {
                 homeCameraButton.Enabled = false;
-                homeCameraButton.Clickable = false;
             }
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
@@ -185,6 +187,7 @@ namespace Comparison_shopping_engine_frontend_android
                         if (App.bitmap != null)
                         {
                             imageView.SetImageBitmap(App.bitmap);
+                            imageView.Visibility = Android.Views.ViewStates.Visible;
                         }
 
                         // Dispose of the Java side bitmap.
@@ -199,6 +202,7 @@ namespace Comparison_shopping_engine_frontend_android
                     {
                         App.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(App.imageViewWidth, App.imageViewHeight);
                         imageView.SetImageBitmap(App.bitmap);
+                        imageView.Visibility = Android.Views.ViewStates.Visible;
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }
