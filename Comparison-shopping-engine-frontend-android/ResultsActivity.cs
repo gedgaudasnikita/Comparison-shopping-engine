@@ -41,11 +41,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
-
-            // Add Button and itemsLinearLayout to resultsLinearLayout
-            resultsLinearLayout.AddView(resultsNewItemButton);
-            resultsLinearLayout.AddView(itemsLinearLayout);
-
+            
             resultsNewItemButton.Click += OnResultsNewItemButtonClick;
             resultsSubmitButton.Click += OnResultsSubmitButtonClick;
         }
@@ -71,14 +67,7 @@ namespace Comparison_shopping_engine_frontend_android
         private async void ProcessReceipt()
         {
             string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("NoReceipt");
-
-            if (!receiptText.Equals("NoReceipt"))
-            {
-                TextView receipt = new TextView(this);
-                receipt.Text = receiptText;
-                resultsLinearLayout.AddView(receipt);
-            }
-
+            
             BackendInterface backendIterface = new BackendInterface();
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
             List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
