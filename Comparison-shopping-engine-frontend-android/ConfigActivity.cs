@@ -24,19 +24,14 @@ namespace Comparison_shopping_engine_frontend_android
 
             Spinner spinner = FindViewById<Spinner>(Resource.Id.configSpinner);
 
-            SetUpSpinner(spinner);
-
-            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(SpinnerItemSelected);
-            
-        }
-
-        private void SetUpSpinner(Spinner spinner)
-        {
             ArrayAdapter adapter = ArrayAdapter.CreateFromResource(
                     this, Resource.Array.Themes, Android.Resource.Layout.SimpleSpinnerDropDownItem);
 
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinner.Adapter = adapter;
+
+            spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(SpinnerItemSelected);
+            
         }
 
         private void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)

@@ -15,6 +15,6 @@ namespace Comparison_shopping_engine_frontend_android
         public static int imageViewHeight;
         public static int imageViewWidth;
 
-        public static int theme = Android.Resource.Style.ThemeMaterial;
+        public static int theme;
     }
 }

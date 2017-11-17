@@ -23,6 +23,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            RetrieveConfig();
             SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
             // Set our view from the "Home" layout resource
@@ -64,6 +65,18 @@ namespace Comparison_shopping_engine_frontend_android
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
 
+        }
+
+        protected override void OnDestroy()
+        {
+            SaveConfig();
+            base.OnDestroy();
+        }
+
+        protected override void OnRestart()
+        {
+            SaveConfig();
+            base.OnRestart();
         }
 
         /// <summary>
@@ -242,6 +255,22 @@ namespace Comparison_shopping_engine_frontend_android
                 path = cursor.GetString(columnIndex);
             }
             return path;
+        }
+
+        private void SaveConfig()
+        {
+            //Store app preferences
+            var prefs = Application.Context.GetSharedPreferences("CoShE", FileCreationMode.Private);
+            var prefEditor = prefs.Edit();
+            prefEditor.PutInt("Theme", AppData.theme);
+            prefEditor.Commit();
+        }
+
+        private void RetrieveConfig()
+        {
+            //Retrieve app preferences
+            var prefs = Application.Context.GetSharedPreferences("CoShE", FileCreationMode.Private);
+            AppData.theme = prefs.GetInt("Theme", Android.Resource.Style.ThemeMaterial);
         }
     }
 }
