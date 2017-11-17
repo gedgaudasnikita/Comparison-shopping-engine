@@ -111,6 +111,7 @@ namespace Comparison_shopping_engine_frontend_android
                     width: ViewGroup.LayoutParams.MatchParent,
                     height: ViewGroup.LayoutParams.WrapContent)
             };
+
             EditText itemDate = new EditText(this)
             {
                 Gravity = GravityFlags.Left,

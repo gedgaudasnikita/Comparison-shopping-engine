@@ -15,12 +15,18 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center" />
-    <LinearLayout
-        android:id="@+id/itemsLinearLayout"
-        android:orientation="vertical"
+    <ScrollView
+        android:id="@+id/resultsScroll"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" >
+        <LinearLayout
+            android:id="@+id/itemsLinearLayout"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" 
+            android:weightSum="0"/>
+    </ScrollView>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
