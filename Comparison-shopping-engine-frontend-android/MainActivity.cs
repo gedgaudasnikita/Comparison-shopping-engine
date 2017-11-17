@@ -155,7 +155,7 @@ namespace Comparison_shopping_engine_frontend_android
         {
             Intent intent = new Intent(this, typeof(ConfigActivity));
 
-            StartActivity(intent);
+            StartActivityForResult(intent, 2);
         }
 
         /// <summary>
@@ -204,6 +204,10 @@ namespace Comparison_shopping_engine_frontend_android
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }
+                    break;
+                //2 - config screen
+                case 2:
+                    Recreate();
                     break;
                 default:
                     break;

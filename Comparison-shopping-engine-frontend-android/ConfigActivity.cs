@@ -49,9 +49,11 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 case "Dark":
                     AppData.theme = Android.Resource.Style.ThemeMaterial;
+                    Finish();
                     break;
                 case "Light":
                     AppData.theme = Android.Resource.Style.ThemeMaterialLight;
+                    Finish();
                     break;
                 default:
                     break;
