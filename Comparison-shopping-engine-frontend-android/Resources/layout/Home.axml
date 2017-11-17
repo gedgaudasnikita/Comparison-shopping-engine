@@ -50,4 +50,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:clickable="true" />
+    <Button
+        android:id="@+id/homeConfigButton"
+        android:text="Config"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:clickable="true" />
 </LinearLayout>

@@ -7,7 +7,7 @@ using Android.Provider;
 using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
-using Android.Graphics;
+using Android.Views;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -18,10 +18,13 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeCameraButton;
         Button homeGalleryButton;
         Button homeResultScreenButton;
+        Button homeConfigButton;
         ImageView imageView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            RetrieveConfig();
+            SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
@@ -30,11 +33,13 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.file = null;
             AppData.dir = null;
             AppData.bitmap = null;
+            
 
             // Set up Buttons
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
+            homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
             imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
 
             // Make imageView invisible while there's no photo
@@ -56,8 +61,22 @@ namespace Comparison_shopping_engine_frontend_android
 
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
+            homeConfigButton.Click += OnHomeConfigButtonClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
+
+        }
+
+        protected override void OnDestroy()
+        {
+            SaveConfig();
+            base.OnDestroy();
+        }
+
+        protected override void OnRestart()
+        {
+            SaveConfig();
+            base.OnRestart();
         }
 
         /// <summary>
@@ -145,6 +164,13 @@ namespace Comparison_shopping_engine_frontend_android
             StartActivity(intent);
         }
 
+        private void OnHomeConfigButtonClick(object sender, EventArgs e)
+        {
+            Intent intent = new Intent(this, typeof(ConfigActivity));
+
+            StartActivityForResult(intent, 2);
+        }
+
         /// <summary>
         /// Handles data returned from Android apps
         /// </summary>
@@ -192,6 +218,10 @@ namespace Comparison_shopping_engine_frontend_android
                         homeResultScreenButton.Text = "Submit Photo";
                     }
                     break;
+                //2 - config screen
+                case 2:
+                    Recreate();
+                    break;
                 default:
                     break;
             }
@@ -227,6 +257,21 @@ namespace Comparison_shopping_engine_frontend_android
             return path;
         }
 
+        private void SaveConfig()
+        {
+            //Store app preferences
+            var prefs = Application.Context.GetSharedPreferences("CoShE", FileCreationMode.Private);
+            var prefEditor = prefs.Edit();
+            prefEditor.PutInt("Theme", AppData.theme);
+            prefEditor.Commit();
+        }
+
+        private void RetrieveConfig()
+        {
+            //Retrieve app preferences
+            var prefs = Application.Context.GetSharedPreferences("CoShE", FileCreationMode.Private);
+            AppData.theme = prefs.GetInt("Theme", Android.Resource.Style.ThemeMaterial);
+        }
     }
 }
 
