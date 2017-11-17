@@ -66,7 +66,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         private async void ProcessReceipt()
         {
-            string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("NoReceipt");
+            string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("");
             
             BackendInterface backendIterface = new BackendInterface();
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
