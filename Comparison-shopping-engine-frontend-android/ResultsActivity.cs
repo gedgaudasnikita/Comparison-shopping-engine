@@ -41,11 +41,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
-
-            // Add Button and itemsLinearLayout to resultsLinearLayout
-            resultsLinearLayout.AddView(resultsNewItemButton);
-            resultsLinearLayout.AddView(itemsLinearLayout);
-
+            
             resultsNewItemButton.Click += OnResultsNewItemButtonClick;
             resultsSubmitButton.Click += OnResultsSubmitButtonClick;
         }
