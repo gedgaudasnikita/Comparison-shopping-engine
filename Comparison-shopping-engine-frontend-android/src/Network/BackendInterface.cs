@@ -58,7 +58,7 @@ namespace Comparison_shopping_engine_frontend_android
             var endpoint = new ProcessImageEndpoint();
             var body = endpoint.GetRequestBody(input);
 
-            var response = await cli.Request<GetSuggestionsEndpoint>(body: body);
+            var response = await cli.Request<ProcessImageEndpoint>(body: body);
             var result = endpoint.GetResponseBody(response);
             return result;
         }
