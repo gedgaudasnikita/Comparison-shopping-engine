@@ -38,6 +38,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Set up itemsLinearLayout
             itemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.itemsLinearLayout);
+            itemsLinearLayout.WeightSum = 0;
 
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
@@ -92,6 +93,7 @@ namespace Comparison_shopping_engine_frontend_android
                 height: ViewGroup.LayoutParams.WrapContent);
             itemLayout.Orientation = Orientation.Horizontal;
             itemLayout.WeightSum = 4;
+            itemsLinearLayout.WeightSum++;
 
             EditText itemName = new EditText(this)
             {
