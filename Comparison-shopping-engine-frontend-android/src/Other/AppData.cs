@@ -11,7 +11,7 @@ namespace Comparison_shopping_engine_frontend_android
         public static File file;
         public static File dir;
         public static Bitmap bitmap;
-        //If orientation is changed, when in gallery or camera app, imageView has a height and width of 0, so I'm storing these separately
+        //If orientation is changed, when in gallery or camera app, homeImageView has a height and width of 0, so I'm storing these separately
         public static int imageViewHeight;
         public static int imageViewWidth;
 

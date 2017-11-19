@@ -15,6 +15,9 @@ namespace Comparison_shopping_engine_frontend_android
     [Activity(Label = "CoShE Config")]
     public class ConfigActivity : Activity
     {
+        private Spinner spinner;
+        private TextView requestText;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             SetTheme(AppData.theme);
@@ -22,7 +25,8 @@ namespace Comparison_shopping_engine_frontend_android
 
             SetContentView(Resource.Layout.Config);
 
-            Spinner spinner = FindViewById<Spinner>(Resource.Id.configSpinner);
+            spinner = FindViewById<Spinner>(Resource.Id.configSpinner);
+            requestText = FindViewById<TextView>(Resource.Id.configTextView);
 
             ArrayAdapter adapter = ArrayAdapter.CreateFromResource(
                     this, Resource.Array.Themes, Android.Resource.Layout.SimpleSpinnerDropDownItem);
@@ -31,7 +35,14 @@ namespace Comparison_shopping_engine_frontend_android
             spinner.Adapter = adapter;
 
             spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(SpinnerItemSelected);
+
+            Localise();
             
+        }
+
+        protected void Localise()
+        {
+            requestText.Text = AppResources.ConfigRequest;
         }
 
         private void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)

@@ -16,6 +16,7 @@ namespace Comparison_shopping_engine_frontend_android
     public class OcrWrapper
     {
         private TesseractApi engine;
+        private bool initialized = false;
 
         public OcrWrapper(Android.Content.Context context)
         {
@@ -28,7 +29,12 @@ namespace Comparison_shopping_engine_frontend_android
         /// <returns>The result of initialization</returns>
         public async Task<bool> Initialize()
         {
-            return await engine.Init("lit", OcrEngineMode.TesseractOnly);
+            if (!initialized)
+            {
+                initialized = await engine.Init("lit", OcrEngineMode.TesseractOnly);
+            }
+
+            return initialized;
         }
 
         /// <summary>
@@ -36,13 +42,13 @@ namespace Comparison_shopping_engine_frontend_android
         /// </summary>
         /// <param name="path">The <see cref="Bitmap"/> of the image to be converted</param>
         /// <returns>The <see cref="string"/> output of the OCR engine</returns>
-        public async Task<string> ConvertToText(Bitmap receipt, IEnumerable<EventHandler<ProgressEventArgs>> progressListeners = null)
+        public async Task<string> ConvertToText(Bitmap receipt, IEnumerable<Action<int>> progressListeners = null)
         {
             if (progressListeners != null)
             {
                 foreach (var handler in progressListeners)
                 {
-                    engine.Progress += handler;
+                    engine.Progress += (object sender, ProgressEventArgs eventArgs) => handler(eventArgs.Progress);
                 }
             }
 
@@ -61,7 +67,7 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 foreach (var handler in progressListeners)
                 {
-                    engine.Progress -= handler;
+                    engine.Progress -= (object sender, ProgressEventArgs eventArgs) => handler(eventArgs.Progress);
                 }
             }
 

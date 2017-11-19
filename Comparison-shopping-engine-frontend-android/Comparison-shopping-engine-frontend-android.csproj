@@ -65,6 +65,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="ConfigActivity.cs" />
     <Compile Include="ResultsActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -76,6 +81,7 @@
     <Compile Include="src\Other\AppData.cs" />
     <Compile Include="src\Network\BackendInterface.cs" />
     <Compile Include="src\Network\Client.cs" />
+    <Compile Include="src\Utilities\UIHelpers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -115,6 +121,12 @@
       <Project>{1240682e-cb5c-4826-9f64-0a11b34d8c54}</Project>
       <Name>Comparison-shopping-engine-web-protocol</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
