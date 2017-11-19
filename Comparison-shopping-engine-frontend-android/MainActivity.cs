@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Views;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -146,13 +149,28 @@ namespace Comparison_shopping_engine_frontend_android
             if (AppData.bitmap != null)
             {
                 string receiptText = null;
-                bool initialized = await ocr.Value.Initialize();
 
-                // TODO: exception or a pop-up to inform user that OCR failed
-                if (initialized)
-                {
-                    receiptText = await ocr.Value.ConvertToText(AppData.bitmap);
-                }
+                receiptText = await UIHelpers.executeWithProgressDialog<string>
+                (
+                    async (IEnumerable<Action<int>> progressListeners) => 
+                    {
+                        bool initialized = await ocr.Value.Initialize();
+
+                        //Partial result because tesseract starts the event processing at the odd 40 something percent
+                        progressListeners.ToList().ForEach(listener => listener(30));
+
+                        if (initialized)
+                        {
+                            return await ocr.Value.ConvertToText(AppData.bitmap, progressListeners);
+                        }
+                        else
+                        {
+                            return "";
+                        }
+                    }, 
+                    "Converting image...",
+                    this
+                );
 
                 // Just in case OCR managed to fuck up
                 if (receiptText != null && receiptText != "")
