@@ -181,7 +181,7 @@ namespace Comparison_shopping_engine_frontend_android
                             return "";
                         }
                     }, 
-                    "Converting image...",
+                    AppResources.ConvertProgress,
                     this
                 );
 
