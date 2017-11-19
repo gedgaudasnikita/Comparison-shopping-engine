@@ -22,7 +22,8 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeGalleryButton;
         Button homeResultScreenButton;
         Button homeConfigButton;
-        ImageView imageView;
+        ImageView homeImageView;
+        TextView homeTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,15 +39,18 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.bitmap = null;
             
 
-            // Set up Buttons
+            // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
-            imageView = FindViewById<ImageView>(Resource.Id.homeImageView);
+            homeImageView = FindViewById<ImageView>(Resource.Id.homeImageView);
+            homeTextView = FindViewById<TextView>(Resource.Id.homeTextView);
 
-            // Make imageView invisible while there's no photo
-            imageView.Visibility = Android.Views.ViewStates.Invisible;
+            Localise();
+
+            // Make homeImageView invisible while there's no photo
+            homeImageView.Visibility = Android.Views.ViewStates.Invisible;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
@@ -68,6 +72,15 @@ namespace Comparison_shopping_engine_frontend_android
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
 
+        }
+
+        protected void Localise()
+        {
+            homeCameraButton.Text = AppResources.CameraButton;
+            homeGalleryButton.Text = AppResources.FromGalleryButton;
+            homeResultScreenButton.Text = AppResources.ResultScreenButton;
+            homeConfigButton.Text = AppResources.ConfigButton;
+            homeTextView.Text = AppResources.HomeScreenText;
         }
 
         protected override void OnDestroy()
@@ -113,8 +126,8 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
-            AppData.imageViewHeight = imageView.Height;
-            AppData.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = homeImageView.Height;
+            AppData.imageViewWidth = homeImageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             AppData.file = new File(AppData.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(AppData.file));
@@ -128,8 +141,8 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
-            AppData.imageViewHeight = imageView.Height;
-            AppData.imageViewWidth = imageView.Width;
+            AppData.imageViewHeight = homeImageView.Height;
+            AppData.imageViewWidth = homeImageView.Width;
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
@@ -150,7 +163,7 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 string receiptText = null;
 
-                receiptText = await UIHelpers.executeWithProgressDialog<string>
+                receiptText = await UIHelpers.ExecuteWithProgressDialog<string>
                 (
                     async (IEnumerable<Action<int>> progressListeners) => 
                     {
@@ -215,8 +228,8 @@ namespace Comparison_shopping_engine_frontend_android
                         AppData.bitmap = AppData.file.Path.LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         if (AppData.bitmap != null)
                         {
-                            imageView.SetImageBitmap(AppData.bitmap);
-                            imageView.Visibility = Android.Views.ViewStates.Visible;
+                            homeImageView.SetImageBitmap(AppData.bitmap);
+                            homeImageView.Visibility = Android.Views.ViewStates.Visible;
                         }
 
                         // Not sure if needed, source had it, better keep it in case.
@@ -230,8 +243,8 @@ namespace Comparison_shopping_engine_frontend_android
                     if (resultCode == Result.Ok)
                     {
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
-                        imageView.SetImageBitmap(AppData.bitmap);
-                        imageView.Visibility = Android.Views.ViewStates.Visible;
+                        homeImageView.SetImageBitmap(AppData.bitmap);
+                        homeImageView.Visibility = Android.Views.ViewStates.Visible;
 
                         homeResultScreenButton.Text = "Submit Photo";
                     }

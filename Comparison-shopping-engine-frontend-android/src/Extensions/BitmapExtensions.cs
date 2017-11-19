@@ -6,7 +6,7 @@ namespace Comparison_shopping_engine_frontend_android
     public static class BitmapExtensions
     {
         /// <summary>
-        /// Loads and resizes bitmap according to imageView width and height
+        /// Loads and resizes bitmap according to homeImageView width and height
         /// </summary>
         /// <param name="fileName">Uri of Bitmap</param>
         /// <param name="width">ImageView width</param>
