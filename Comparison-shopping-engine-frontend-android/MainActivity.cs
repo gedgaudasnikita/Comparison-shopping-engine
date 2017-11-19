@@ -235,7 +235,7 @@ namespace Comparison_shopping_engine_frontend_android
                         // Not sure if needed, source had it, better keep it in case.
                         GC.Collect();
 
-                        homeResultScreenButton.Text = "Submit Photo";
+                        homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;
                 //1 - call Gallery
@@ -246,7 +246,7 @@ namespace Comparison_shopping_engine_frontend_android
                         homeImageView.SetImageBitmap(AppData.bitmap);
                         homeImageView.Visibility = Android.Views.ViewStates.Visible;
 
-                        homeResultScreenButton.Text = "Submit Photo";
+                        homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;
                 //2 - config screen
