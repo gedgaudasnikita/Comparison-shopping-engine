@@ -38,7 +38,6 @@ namespace Comparison_shopping_engine_frontend_android
 
             // Set up itemsLinearLayout
             itemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.itemsLinearLayout);
-            itemsLinearLayout.WeightSum = 0;
 
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
@@ -61,7 +60,7 @@ namespace Comparison_shopping_engine_frontend_android
         private void OnResultsNewItemButtonClick(object sender, EventArgs e)
         {
             Item item = new Item();
-            LinearLayout linearLayoutForItem = NewItem(item);// passing item with default values because user can change them
+            RelativeLayout linearLayoutForItem = NewItem(item);// passing item with default values because user can change them
             itemsLinearLayout.AddView(linearLayoutForItem);
         }
 
@@ -75,7 +74,7 @@ namespace Comparison_shopping_engine_frontend_android
             
             foreach(var item in itemList)
             {
-                LinearLayout itemLinearLayout = NewItem(item);
+                RelativeLayout itemLinearLayout = NewItem(item);
                 itemsLinearLayout.AddView(itemLinearLayout);
             }
 
@@ -85,59 +84,85 @@ namespace Comparison_shopping_engine_frontend_android
         /// Creates a LinearLayout with 4 editable EditText views for passed Item object.
         /// Each view is filled with one item property.
         /// </summary>
-        private LinearLayout NewItem(Item item)
+        private RelativeLayout NewItem(Item item)
         {
-            LinearLayout itemLayout = new LinearLayout(this);
+            /*LinearLayout itemLayout = new LinearLayout(this);
             itemLayout.LayoutParameters = new LinearLayout.LayoutParams(
                 width: ViewGroup.LayoutParams.MatchParent,
-                height: ViewGroup.LayoutParams.WrapContent);
+                height: ViewGroup.LayoutParams.WrapContent,
+                weight: 1);
             itemLayout.Orientation = Orientation.Horizontal;
             itemLayout.WeightSum = 4;
-            itemsLinearLayout.WeightSum++;
+            itemsLinearLayout.WeightSum++;*/
 
+            RelativeLayout itemLayout = new RelativeLayout(this)
+            {
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent),
+            };
+
+            RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
             EditText itemName = new EditText(this)
             {
-                Gravity = GravityFlags.Left,
                 Text = item.Name,
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent)
-            };
-            EditText itemStore = new EditText(this)
-            {
-                Gravity = GravityFlags.Left,
-                Text = item.Store,
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent)
+                Hint = "Item Name",
+                LayoutParameters = lpItem,
+                Id = View.GenerateViewId()
             };
 
+            RelativeLayout.LayoutParams lpStore = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpStore.AddRule(LayoutRules.Below, itemName.Id);
+            lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
+            EditText itemStore = new EditText(this)
+            {
+                Text = item.Store,
+                Hint = "Store Name",
+                LayoutParameters = lpStore,
+                Id = View.GenerateViewId()
+            };
+ 
+            RelativeLayout.LayoutParams lpDate = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpStore.AddRule(LayoutRules.Below, itemName.Id);
+            lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
+            lpStore.AddRule(LayoutRules.RightOf, itemStore.Id);
             EditText itemDate = new EditText(this)
             {
-                Gravity = GravityFlags.Left,
                 Text = item.Date.ToString("yyyy-MM-dd"),
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent)
+                Hint = "Date",
+                LayoutParameters = lpDate,
+                Id = View.GenerateViewId()
             };
+
+            RelativeLayout.LayoutParams lpPrice = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpStore.AddRule(LayoutRules.Below, itemName.Id);
+            lpStore.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
+            lpStore.AddRule(LayoutRules.RightOf, itemDate.Id);
             EditText itemPrice = new EditText(this)
             {
-                Gravity = GravityFlags.Left,
                 Text = item.Price.ToString(),
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent)
+                Hint = "Price",
+                LayoutParameters = lpPrice,
+                Id = View.GenerateViewId()
             };
 
             //name, date, store, price
             editTextList.Add(itemName);
-            editTextList.Add(itemDate);
             editTextList.Add(itemStore);
+            editTextList.Add(itemDate);
             editTextList.Add(itemPrice);
-            
+
             itemLayout.AddView(itemName);
-            itemLayout.AddView(itemDate);
             itemLayout.AddView(itemStore);
+            itemLayout.AddView(itemDate);
             itemLayout.AddView(itemPrice);
 
             return itemLayout;

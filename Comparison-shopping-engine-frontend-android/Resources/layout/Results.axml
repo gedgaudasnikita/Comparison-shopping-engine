@@ -24,15 +24,15 @@
             android:id="@+id/itemsLinearLayout"
             android:orientation="vertical"
             android:layout_height="match_parent"
-            android:layout_width="match_parent" 
-            android:weightSum="0"/>
+            android:layout_width="match_parent" />
     </ScrollView>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/resultsButtonsLinearLayout"
-        android:weightSum="4">
+        android:weightSum="2"
+        android:layout_weight="0">
         <Button
             android:id="@+id/resultsSubmitButton"
             android:text="Submit"
@@ -40,7 +40,7 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2" />
+            android:layout_weight="1" />
         <Button
             android:id="@+id/resultsNewItemButton"
             android:text="Add item"
@@ -48,6 +48,6 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2" />
+            android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>
