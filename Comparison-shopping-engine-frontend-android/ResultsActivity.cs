@@ -16,8 +16,6 @@ namespace Comparison_shopping_engine_frontend_android
     [Activity(Label = "CoShE Results")]
     public class ResultsActivity : Activity
     {
-        BackendInterface backendInterface = new BackendInterface();
-
         LinearLayout resultsLinearLayout;
         Button resultsNewItemButton, resultsSubmitButton;
         LinearLayout itemsLinearLayout;
@@ -35,15 +33,14 @@ namespace Comparison_shopping_engine_frontend_android
             // Button for adding new items to the list
             resultsNewItemButton = FindViewById<Button>(Resource.Id.resultsNewItemButton);
             resultsSubmitButton = FindViewById<Button>(Resource.Id.resultsSubmitButton);
+            resultsNewItemButton.Click += OnResultsNewItemButtonClick;
+            resultsSubmitButton.Click += OnResultsSubmitButtonClick;
 
             // Set up itemsLinearLayout
             itemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.itemsLinearLayout);
 
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             ProcessReceipt();
-            
-            resultsNewItemButton.Click += OnResultsNewItemButtonClick;
-            resultsSubmitButton.Click += OnResultsSubmitButtonClick;
         }
 
         private void OnResultsSubmitButtonClick(object sender, EventArgs e)
@@ -67,34 +64,25 @@ namespace Comparison_shopping_engine_frontend_android
         private async void ProcessReceipt()
         {
             string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("");
-            
-            BackendInterface backendIterface = new BackendInterface();
+
+            BackendInterface backendInterface = new BackendInterface();
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
             List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
             
             foreach(var item in itemList)
             {
-                RelativeLayout itemLinearLayout = NewItem(item);
-                itemsLinearLayout.AddView(itemLinearLayout);
+                RelativeLayout itemRelativeLayout = NewItem(item);
+                itemsLinearLayout.AddView(itemRelativeLayout);
             }
 
         }
 
         /// <summary>
-        /// Creates a LinearLayout with 4 editable EditText views for passed Item object.
+        /// Creates a RelativeLayout with 4 editable EditText views for passed Item object.
         /// Each view is filled with one item property.
         /// </summary>
         private RelativeLayout NewItem(Item item)
         {
-            /*LinearLayout itemLayout = new LinearLayout(this);
-            itemLayout.LayoutParameters = new LinearLayout.LayoutParams(
-                width: ViewGroup.LayoutParams.MatchParent,
-                height: ViewGroup.LayoutParams.WrapContent,
-                weight: 1);
-            itemLayout.Orientation = Orientation.Horizontal;
-            itemLayout.WeightSum = 4;
-            itemsLinearLayout.WeightSum++;*/
-
             RelativeLayout itemLayout = new RelativeLayout(this)
             {
                 LayoutParameters = new ViewGroup.LayoutParams(
