@@ -105,6 +105,7 @@ namespace Comparison_shopping_engine_frontend_android
             RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
+            lpItem.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
             EditText itemName = new EditText(this)
             {
                 Text = item.Name,
@@ -129,9 +130,8 @@ namespace Comparison_shopping_engine_frontend_android
             RelativeLayout.LayoutParams lpDate = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
-            lpStore.AddRule(LayoutRules.Below, itemName.Id);
-            lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            lpStore.AddRule(LayoutRules.RightOf, itemStore.Id);
+            lpDate.AddRule(LayoutRules.Below, itemName.Id);
+            lpDate.AddRule(LayoutRules.RightOf, itemStore.Id);
             EditText itemDate = new EditText(this)
             {
                 Text = item.Date.ToString("yyyy-MM-dd"),
@@ -143,9 +143,9 @@ namespace Comparison_shopping_engine_frontend_android
             RelativeLayout.LayoutParams lpPrice = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
-            lpStore.AddRule(LayoutRules.Below, itemName.Id);
-            lpStore.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
-            lpStore.AddRule(LayoutRules.RightOf, itemDate.Id);
+            lpPrice.AddRule(LayoutRules.Below, itemName.Id);
+            lpPrice.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
+            lpPrice.AddRule(LayoutRules.RightOf, itemDate.Id);
             EditText itemPrice = new EditText(this)
             {
                 Text = item.Price.ToString(),
