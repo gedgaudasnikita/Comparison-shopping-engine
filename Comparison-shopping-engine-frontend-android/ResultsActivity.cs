@@ -68,7 +68,7 @@ namespace Comparison_shopping_engine_frontend_android
             BackendInterface backendInterface = new BackendInterface();
             Receipt receiptToProcess = await backendInterface.ProcessImage(receiptText);
             List<Item> itemList = await backendInterface.ProcessReceipt(receiptToProcess);
-            
+
             foreach(var item in itemList)
             {
                 RelativeLayout itemRelativeLayout = NewItem(item);

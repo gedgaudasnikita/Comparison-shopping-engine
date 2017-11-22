@@ -69,7 +69,7 @@ namespace Comparison_shopping_engine_backend
         /// </summary>
         /// <param name="ctx">The <see cref="HttpListenerContext"/> of the particular request</param>
         private void HandleConnection(HttpListenerContext ctx)
-        {         
+        {
             //All the exception handling happenning in one function
             //The arrow function contains both retrieving the handler and invoking it
             MapExceptions(
