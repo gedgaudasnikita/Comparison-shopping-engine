@@ -55,8 +55,6 @@ namespace Comparison_shopping_engine_frontend_android
         {
             var text = convertView.FindViewById<AutoCompleteTextView>(resource);
 
-            Console.WriteLine(text);
-
             text.Text = resultList[position];
 
             return convertView;
@@ -75,7 +73,6 @@ namespace Comparison_shopping_engine_frontend_android
         protected override FilterResults PerformFiltering(ICharSequence constraint)
         {
             FilterResults filterResults = new FilterResults();
-            Console.WriteLine("filtering?");
             var resultTask = BackendInterface.GetSuggestions(constraint.ToString(), 50);
             resultTask.Wait();
             var result = resultTask.Result;

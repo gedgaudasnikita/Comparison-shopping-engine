@@ -100,7 +100,6 @@ namespace Comparison_shopping_engine_backend
         /// <returns>A <see cref="List{string}"/> of the closest matches</returns>
         public List<string> GetClosestList(string name, int limit)
         {
-            Console.WriteLine("he");
             return new List<string>(names.OrderBy(savedName => savedName.GetDistance(name)).Take(limit));
         }
 
