@@ -8,11 +8,46 @@
     android:minHeight="25px">
     <TextView
         android:id="@+id/resultsTextView"
-        android:text="Results Screen"
+        android:text="Results"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center" />
+    <ScrollView
+        android:id="@+id/resultsScroll"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:id="@+id/itemsLinearLayout"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultsButtonsLinearLayout"
+        android:weightSum="2"
+        android:layout_weight="0">
+        <Button
+            android:id="@+id/resultsSubmitButton"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/resultsNewItemButton"
+            android:text="Add item"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
 </LinearLayout>
