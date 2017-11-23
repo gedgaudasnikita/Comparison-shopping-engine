@@ -86,8 +86,13 @@ namespace Comparison_shopping_engine_frontend_android
             resultsSubmitButton.Visibility = ViewStates.Gone;
             resultsNewItemButton.Visibility = ViewStates.Gone;
             mainReceipt = corrected;
-            await BackendInterface.SaveReceipt(corrected);
-            var result = await BackendInterface.ProcessReceipt(corrected);
+
+            var result = await UIHelpers.ExecuteWithSpinnerDialog<List<Item>>(async () => {
+                    await BackendInterface.SaveReceipt(corrected);
+                    return await BackendInterface.ProcessReceipt(corrected);
+                }, "Comparing", this
+            );
+            
             DisplayResults(result);
         }
 
@@ -165,8 +170,17 @@ namespace Comparison_shopping_engine_frontend_android
         private async void DisplayReceipt()
         {
             string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("");
-            
-            mainReceipt = await BackendInterface.ProcessImage(receiptText);
+
+            resultsNewItemButton.Enabled = false;
+            resultsSubmitButton.Enabled = false;
+
+            mainReceipt = await UIHelpers.ExecuteWithSpinnerDialog<Receipt>(async () => {
+                    return await BackendInterface.ProcessImage(receiptText);
+                }, "Extracting", this
+            );
+
+            resultsNewItemButton.Enabled = true;
+            resultsSubmitButton.Enabled = true;
 
             itemsLinearLayout.AddView(NewStoreDate(mainReceipt.Date, mainReceipt.Store));
 

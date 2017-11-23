@@ -41,5 +41,28 @@ namespace Comparison_shopping_engine_frontend_android
             progressDialog.Dismiss();
             return result;
         }
+
+        /// <summary>
+        /// This function is used as a wrapper for async functions, that need to be called with a spinner dialog.
+        /// Contains the basic settings for a spinner dialog. 
+        /// Returns the same type that the function passed returns.
+        /// </summary>
+        /// <typeparam name="ResultType">The type that the function being wrapped returns</typeparam>
+        /// <param name="functionToCall">The function being wrapped.</param>
+        /// <param name="title">The <see cref="string"/> title to be displayed on a Spinner Dialog</param>
+        /// <param name="context">The current <see cref="Android.Content.Context"/> of the application</param>
+        /// <returns>The result of the function being wrapped</returns>
+        public static async Task<ResultType> ExecuteWithSpinnerDialog<ResultType>(Func<Task<ResultType>> functionToCall, string title, Context context)
+        {
+            var progressDialog = new ProgressDialog(context);
+            progressDialog.SetTitle(title);
+            progressDialog.Indeterminate = true;
+            progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            progressDialog.SetCancelable(false);
+            progressDialog.Show();
+            ResultType result = await functionToCall();
+            progressDialog.Dismiss();
+            return result;
+        }
     }
 }
