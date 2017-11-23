@@ -39,7 +39,7 @@ namespace Comparison_shopping_engine_backend
             ItemManager manager = ItemManager.GetInstance();
 
             List<Item> cheapList = source.Items.Select(item => manager.FindCheapest(item)).ToList();
-
+            
             return cheapList;
         }
 
