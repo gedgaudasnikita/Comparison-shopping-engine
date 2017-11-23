@@ -117,9 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddNewItemButton" xml:space="preserve">
+    <value>Add item</value>
+    <comment>Used for adding new items into receipt</comment>
+  </data>
   <data name="CameraButton" xml:space="preserve">
     <value>Camera</value>
     <comment>Used in home screen to access the camera</comment>
+  </data>
+  <data name="ComparingSpinner" xml:space="preserve">
+    <value>Comparing</value>
+    <comment>Used for the spinner during the compare request to server</comment>
   </data>
   <data name="ConfigButton" xml:space="preserve">
     <value>Config</value>
@@ -141,12 +149,34 @@
     <value>Home Screen</value>
     <comment>Used as a title for the Home View</comment>
   </data>
+  <data name="ParsingSpinner" xml:space="preserve">
+    <value>Extracting</value>
+    <comment>Used for the spinner during the parse request to server</comment>
+  </data>
+  <data name="PriceEqual" xml:space="preserve">
+    <value>Couldn't find any cheaper!</value>
+  </data>
+  <data name="PriceSmaller" xml:space="preserve">
+    <value>You are the first to get it so cheap!</value>
+  </data>
+  <data name="ResultLabel" xml:space="preserve">
+    <value>Results</value>
+    <comment>Used after the comparison for the top label</comment>
+  </data>
   <data name="ResultScreenButton" xml:space="preserve">
     <value>Result Screen</value>
     <comment>Used for a button that proceeds to the result screen </comment>
   </data>
+  <data name="SubmitLabel" xml:space="preserve">
+    <value>Did we get it right?</value>
+    <comment>Asking for user Receipt review</comment>
+  </data>
   <data name="SubmitPhotoButton" xml:space="preserve">
     <value>Submit Photo</value>
     <comment>Used to name the proceed button when the photo is uploaded</comment>
+  </data>
+  <data name="SubmitReceiptButton" xml:space="preserve">
+    <value>Looks OK!</value>
+    <comment>Used for user Receipt confirmation</comment>
   </data>
 </root>

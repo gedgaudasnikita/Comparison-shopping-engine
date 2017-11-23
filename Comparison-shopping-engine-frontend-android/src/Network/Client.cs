@@ -51,8 +51,6 @@ namespace Comparison_shopping_engine_frontend_android
                 requestUri += $"?{queryString}";
             }
 
-            Console.WriteLine(requestUri);
-
             var message = new HttpRequestMessage(endpoint.GetMethod(), requestUri);
 
             if (body != null)
