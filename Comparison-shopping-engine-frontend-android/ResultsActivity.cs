@@ -157,6 +157,19 @@ namespace Comparison_shopping_engine_frontend_android
                 LayoutParameters = lpDelete
             };
 
+            //On Button click
+            deleteItemButton.Click += (object sender, EventArgs e) =>
+            {
+                itemLayout.RemoveAllViews();
+
+                itemsLinearLayout.RemoveView(itemLayout);
+
+                editTextList.Remove(itemName);
+                editTextList.Remove(itemStore);
+                editTextList.Remove(itemDate);
+                editTextList.Remove(itemPrice);
+            };
+
             //name, date, store, price
             editTextList.Add(itemName);
             editTextList.Add(itemStore);
