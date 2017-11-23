@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">Comparison-shopping-engine-frontend-android</string>
+  <string name="app_name">CoShE</string>
+  <string name="configSpinner">Select theme:</string>
+  <string-array name="Themes">
+    <item>Themes:</item>
+    <item>Dark</item>
+    <item>Light</item>
+  </string-array>
 </resources>

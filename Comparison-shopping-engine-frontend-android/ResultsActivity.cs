@@ -23,6 +23,7 @@ namespace Comparison_shopping_engine_frontend_android
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
             // Set our view from the "Results" layout resource
             SetContentView(Resource.Layout.Results);
