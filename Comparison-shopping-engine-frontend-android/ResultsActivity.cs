@@ -280,10 +280,22 @@ namespace Comparison_shopping_engine_frontend_android
             itemName.AfterTextChanged += (object sender, Android.Text.AfterTextChangedEventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
             itemName.Click += (object sender, EventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
 
+            //Button that deletes the entire item
+            RelativeLayout.LayoutParams lpDelete = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpDelete.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
+            TextView deleteItemButton = new TextView(this)
+            {
+                Text = "x",
+                LayoutParameters = lpDelete,
+                Id = View.GenerateViewId()
+            };
+
             RelativeLayout.LayoutParams lpPrice = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
-            lpPrice.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
+            lpPrice.AddRule(LayoutRules.LeftOf, deleteItemButton.Id);
             EditText itemPrice = new EditText(this)
             {
                 Text = item.Price.ToString(),
@@ -293,18 +305,6 @@ namespace Comparison_shopping_engine_frontend_android
             };
 
 
-            //Button that deletes the entire item
-            RelativeLayout.LayoutParams lpDelete = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
-            lpDelete.AddRule(LayoutRules.Below, itemStore.Id);
-            lpDelete.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            Button deleteItemButton = new Button(this)
-            {
-                Text = "Delete Item",
-                LayoutParameters = lpDelete
-            };
-
             //On Button click
             deleteItemButton.Click += (object sender, EventArgs e) =>
             {
@@ -312,17 +312,17 @@ namespace Comparison_shopping_engine_frontend_android
 
                 itemsLinearLayout.RemoveView(itemLayout);
 
-                editTextList.Remove(itemName);
-                editTextList.Remove(itemStore);
-                editTextList.Remove(itemDate);
-                editTextList.Remove(itemPrice);
+                editTextLineList.Remove(new Tuple<EditText, EditText>(itemName, itemPrice));
             };
 
-            //name, date, store, price
-            editTextList.Add(itemName);
-            editTextList.Add(itemStore);
-            editTextList.Add(itemDate);
-            editTextList.Add(itemPrice);
+
+            itemName.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
+            itemPrice.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
+            deleteItemButton.SetTextSize(Android.Util.ComplexUnitType.Pt, 7);
+            deleteItemButton.SetTextColor(Android.Graphics.Color.Red);
+
+            //name, price
+            editTextLineList.Add(new Tuple<EditText, EditText>(itemName, itemPrice));
 
             itemLayout.AddView(itemName);
             itemLayout.AddView(itemPrice);
