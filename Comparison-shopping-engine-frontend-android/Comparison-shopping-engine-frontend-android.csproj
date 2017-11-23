@@ -81,6 +81,7 @@
     <Compile Include="src\Other\AppData.cs" />
     <Compile Include="src\Network\BackendInterface.cs" />
     <Compile Include="src\Network\Client.cs" />
+    <Compile Include="src\Utilities\SuggestionAdapter.cs" />
     <Compile Include="src\Utilities\UIHelpers.cs" />
   </ItemGroup>
   <ItemGroup>

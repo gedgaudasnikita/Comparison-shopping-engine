@@ -64,5 +64,11 @@ namespace Comparison_shopping_engine_frontend_android
             progressDialog.Dismiss();
             return result;
         }
+
+        public static async void RenewDropdown(AutoCompleteTextView view, Context ctx)
+        {
+            var autoCompleteOptions = await BackendInterface.GetSuggestions(view.Text, 10);
+            view.Adapter = new ArrayAdapter(ctx, Android.Resource.Layout.SimpleListItem1, autoCompleteOptions);
+        }
     }
 }

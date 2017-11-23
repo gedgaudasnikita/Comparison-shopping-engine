@@ -248,17 +248,36 @@ namespace Comparison_shopping_engine_frontend_android
                     height: ViewGroup.LayoutParams.WrapContent),
             };
 
+           /*  RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
+                  ViewGroup.LayoutParams.WrapContent,
+                  ViewGroup.LayoutParams.WrapContent);
+              lpItem.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
+              EditText itemName = new EditText(this)
+              {
+                  Text = item.Name,
+                  Hint = "Item Name",
+                  LayoutParameters = lpItem,
+                  Id = View.GenerateViewId()
+              };*/
+
             RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
+                  ViewGroup.LayoutParams.WrapContent,
+                  ViewGroup.LayoutParams.WrapContent
+            );
             lpItem.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            EditText itemName = new EditText(this)
+            AutoCompleteTextView itemName = new AutoCompleteTextView(this)
             {
                 Text = item.Name,
                 Hint = "Item Name",
                 LayoutParameters = lpItem,
                 Id = View.GenerateViewId()
             };
+
+            itemName.Threshold = 1;
+            itemName.DropDownWidth = itemName.Width;
+            itemName.TextChanged += (object sender, Android.Text.TextChangedEventArgs a) => { UIHelpers.RenewDropdown(itemName, this); };
+            itemName.AfterTextChanged += (object sender, Android.Text.AfterTextChangedEventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
+            itemName.Click += (object sender, EventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
 
             RelativeLayout.LayoutParams lpPrice = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
