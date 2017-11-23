@@ -48,9 +48,15 @@ namespace Comparison_shopping_engine_frontend_android
             // Get passed receiptText if it's passed, divide it into items and add them as separate TextViews in main LinearLayout
             DisplayReceipt();
 
-            topLabel.Text = "Did we get it right?";
+            Localise();
+            
+        }
 
-            resultsSubmitButton.Text = "Looks OK!";
+        private void Localise()
+        {
+            resultsNewItemButton.Text = AppResources.SubmitReceiptButton;
+            topLabel.Text = AppResources.SubmitLabel;
+            resultsNewItemButton.Text = AppResources.AddNewItemButton;
         }
 
         private async void OnResultsSubmitButtonClick(object sender, EventArgs e)
@@ -90,7 +96,7 @@ namespace Comparison_shopping_engine_frontend_android
             var result = await UIHelpers.ExecuteWithSpinnerDialog<List<Item>>(async () => {
                     await BackendInterface.SaveReceipt(corrected);
                     return await BackendInterface.ProcessReceipt(corrected);
-                }, "Comparing", this
+                }, AppResources.ComparingSpinner, this
             );
             
             DisplayResults(result);
@@ -98,7 +104,7 @@ namespace Comparison_shopping_engine_frontend_android
 
         private void DisplayResults(List<Item> result)
         {
-            topLabel.Text = "Results";
+            topLabel.Text = AppResources.ResultLabel;
             itemsLinearLayout.RemoveAllViews();
 
             itemsLinearLayout.AddView(NewStoreDate(mainReceipt.Date, mainReceipt.Store));
@@ -140,11 +146,11 @@ namespace Comparison_shopping_engine_frontend_android
             switch (original.Price.CompareTo(result.Price))
             {
                 case 0:
-                    output = "Couldn't find any cheaper!";
+                    output = AppResources.PriceEqual;
                     color = Android.Graphics.Color.Green;
                     break;
                 case -1:
-                    output = "You are the first to get it so cheap!";
+                    output = AppResources.PriceSmaller;
                     color = Android.Graphics.Color.Blue;
                     break;
                 case 1:
@@ -176,7 +182,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             mainReceipt = await UIHelpers.ExecuteWithSpinnerDialog<Receipt>(async () => {
                     return await BackendInterface.ProcessImage(receiptText);
-                }, "Extracting", this
+                }, AppResources.ParsingSpinner, this
             );
 
             resultsNewItemButton.Enabled = true;
