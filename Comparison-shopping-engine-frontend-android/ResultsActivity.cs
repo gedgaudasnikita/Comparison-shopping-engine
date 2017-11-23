@@ -89,6 +89,7 @@ namespace Comparison_shopping_engine_frontend_android
                 LayoutParameters = new ViewGroup.LayoutParams(
                     width: ViewGroup.LayoutParams.MatchParent,
                     height: ViewGroup.LayoutParams.WrapContent),
+                Id = View.GenerateViewId()
             };
 
             RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
@@ -143,6 +144,32 @@ namespace Comparison_shopping_engine_frontend_android
                 Id = View.GenerateViewId()
             };
 
+
+            //Button that deletes the entire item
+            RelativeLayout.LayoutParams lpDelete = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpDelete.AddRule(LayoutRules.Below, itemStore.Id);
+            lpDelete.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
+            Button deleteItemButton = new Button(this)
+            {
+                Text = "Delete Item",
+                LayoutParameters = lpDelete
+            };
+
+            //On Button click
+            deleteItemButton.Click += (object sender, EventArgs e) =>
+            {
+                itemLayout.RemoveAllViews();
+
+                itemsLinearLayout.RemoveView(itemLayout);
+
+                editTextList.Remove(itemName);
+                editTextList.Remove(itemStore);
+                editTextList.Remove(itemDate);
+                editTextList.Remove(itemPrice);
+            };
+
             //name, date, store, price
             editTextList.Add(itemName);
             editTextList.Add(itemStore);
@@ -153,6 +180,7 @@ namespace Comparison_shopping_engine_frontend_android
             itemLayout.AddView(itemStore);
             itemLayout.AddView(itemDate);
             itemLayout.AddView(itemPrice);
+            itemLayout.AddView(deleteItemButton);
 
             return itemLayout;
         }
