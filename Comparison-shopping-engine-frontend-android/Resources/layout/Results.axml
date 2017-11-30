@@ -40,7 +40,8 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:enabled="false" />
         <Button
             android:id="@+id/resultsNewItemButton"
             android:text="Add item"
@@ -48,6 +49,7 @@
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:enabled="false" />
     </LinearLayout>
 </LinearLayout>

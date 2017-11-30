@@ -40,6 +40,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             var response = await cli.Request<GetSuggestionsEndpoint>(query: query);
             var result = endpoint.GetResponseBody(response);
+
             return result;
         }
 
