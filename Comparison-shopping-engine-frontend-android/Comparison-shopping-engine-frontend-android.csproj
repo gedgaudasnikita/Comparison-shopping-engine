@@ -78,6 +78,14 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="src\Configuration.cs" />
     <Compile Include="src\Extensions\BitmapExtensions.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\Components\ItemDateView.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\Components\ItemStoreView.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\ItemLine.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\Components\ItemDeleteView.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\Components\ItemPriceView.cs" />
+    <Compile Include="src\Extensions\UI\Elements\ItemLine\Components\ItemNameView.cs" />
+    <Compile Include="src\Extensions\UI\PopUpDialog.cs" />
+    <Compile Include="src\Extensions\UI\Elements\StateColorManager.cs" />
     <Compile Include="src\ImageRecognition\OcrWrapper.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

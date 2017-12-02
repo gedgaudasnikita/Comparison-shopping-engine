@@ -53,6 +53,7 @@
     <Compile Include="src\CoreEntities\ItemComparers\ItemStoreComparer.cs" />
     <Compile Include="src\CoreEntities\Receipt.cs" />
     <Compile Include="src\Extensions\JsonSerializerStream.cs" />
+    <Compile Include="src\Extensions\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

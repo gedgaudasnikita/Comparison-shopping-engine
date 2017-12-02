@@ -12,17 +12,6 @@ namespace Comparison_shopping_engine_backend
     public static class StringExtension
     {
         /// <summary>
-        /// Removes all the non-digits from the given string. 
-        /// Used in image recognition functionality, more specifically in normalisation processes
-        /// </summary>
-        /// <param name="str">The <see cref="string"/> for the method to be called on.</param>
-        /// <returns>A <see cref="string"/> with digits only</returns>
-        public static string RemoveNonDigits(this string str)
-        {
-            return new String(str.Where(Char.IsDigit).ToArray());
-        }
-
-        /// <summary>
         /// Calculates a Damerau-Levenshtein distance between the two given strings.
         /// Used in image recognition functionality, more specifically in normalisation processes
         /// </summary>
