@@ -21,6 +21,8 @@ echo "" > .nojekyll
 doxygen $DOXYFILE 2>&1 | tee doxygen.log
 
 if [ -d "html" ] && [ -f "html/index.html" ]; then
+	mv html/* *
+	rm -rf html
 	git add --all
 	git commit -m "Deploy code docs to GitHub Pages Travis build: ${TRAVIS_BUILD_NUMBER}" -m "Commit: ${TRAVIS_COMMIT}"
 	
