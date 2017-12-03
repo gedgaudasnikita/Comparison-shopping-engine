@@ -73,7 +73,7 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e">The arguments of the <see cref="TextView.TextChanged"/> event</param>
         private void Validate(object sender, Android.Text.TextChangedEventArgs e)
         {
-            if (Text != "" && float.TryParse(Text, out price))
+            if (Text != "" && float.TryParse(Text, out price) && price != 0f)
             {
                 StateManager.State = ItemInfoStates.INFO_UNCERTAIN;
             }
