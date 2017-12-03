@@ -149,6 +149,18 @@
     <value>Home Screen</value>
     <comment>Used as a title for the Home View</comment>
   </data>
+  <data name="ItemDateHint" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ItemNameHint" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="ItemPriceHint" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ItemStoreHint" xml:space="preserve">
+    <value>Store</value>
+  </data>
   <data name="ParsingSpinner" xml:space="preserve">
     <value>Extracting</value>
     <comment>Used for the spinner during the parse request to server</comment>
@@ -156,8 +168,11 @@
   <data name="PriceEqual" xml:space="preserve">
     <value>Couldn't find any cheaper!</value>
   </data>
+  <data name="PriceLarger" xml:space="preserve">
+    <value>Could've saved {0} in {1}!</value>
+  </data>
   <data name="PriceSmaller" xml:space="preserve">
-    <value>You are the first to get it so cheap!</value>
+    <value>You are the first to get it!</value>
   </data>
   <data name="ResultLabel" xml:space="preserve">
     <value>Results</value>
@@ -167,9 +182,33 @@
     <value>Result Screen</value>
     <comment>Used for a button that proceeds to the result screen </comment>
   </data>
+  <data name="SubmitErrorButton" xml:space="preserve">
+    <value>Got it!</value>
+    <comment>A button text of the error popup shown in case there are errors within the manual input</comment>
+  </data>
+  <data name="SubmitErrorMessage" xml:space="preserve">
+    <value>The fields colored red have some issues in them</value>
+    <comment>A message of the error popup shown in case there are errors within the manual input</comment>
+  </data>
+  <data name="SubmitErrorTitle" xml:space="preserve">
+    <value>A few typos?</value>
+    <comment>A title of the error popup shown in case there are errors within the manual input</comment>
+  </data>
   <data name="SubmitLabel" xml:space="preserve">
     <value>Did we get it right?</value>
     <comment>Asking for user Receipt review</comment>
+  </data>
+  <data name="SubmitNoItemsButton" xml:space="preserve">
+    <value>Whoops</value>
+    <comment>A button text of the error popup shown in case there are no items</comment>
+  </data>
+  <data name="SubmitNoItemsMessage" xml:space="preserve">
+    <value>Thought you could outplay me?</value>
+    <comment>A message of the error popup shown in case there are no items</comment>
+  </data>
+  <data name="SubmitNoItemsTitle" xml:space="preserve">
+    <value>Where are the items?</value>
+    <comment>A title of the error popup shown in case there are no items</comment>
   </data>
   <data name="SubmitPhotoButton" xml:space="preserve">
     <value>Submit Photo</value>

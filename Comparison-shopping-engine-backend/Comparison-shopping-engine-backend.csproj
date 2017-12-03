@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="src\Controller\Controller.cs" />
     <Compile Include="src\Extensions\HttpListenerRequestExtensions.cs" />
+    <Compile Include="src\Extensions\StringExtensions.cs" />
     <Compile Include="src\ImageRecognition\NormalizationEngine.cs" />
     <Compile Include="src\ImageRecognition\Parsers\DateParser.cs" />
     <Compile Include="src\ImageRecognition\IParser.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\CoreEntities\ParseableReceipt.cs" />
-    <Compile Include="src\Extensions\StringExtensions.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

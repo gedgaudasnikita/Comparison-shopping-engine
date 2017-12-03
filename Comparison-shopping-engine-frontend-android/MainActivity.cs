@@ -163,7 +163,7 @@ namespace Comparison_shopping_engine_frontend_android
             {
                 string receiptText = null;
 
-                receiptText = await UIHelpers.ExecuteWithProgressDialog<string>
+                receiptText = await UiHelpers.ExecuteWithProgressDialog<string>
                 (
                     async (IEnumerable<Action<int>> progressListeners) => 
                     {

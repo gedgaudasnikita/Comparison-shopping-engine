@@ -20,9 +20,11 @@ namespace Comparison_shopping_engine_frontend_android
         LinearLayout resultsLinearLayout;
         Button resultsNewItemButton, resultsSubmitButton;
         LinearLayout itemsLinearLayout;
+        ItemStoreView storeEdit;
+        ItemDateView dateEdit;
         TextView topLabel;
         Receipt mainReceipt = new Receipt();
-        List<Tuple<EditText, EditText>> editTextLineList = new List<Tuple<EditText, EditText>>(); // List for all EditText views created to show items' properties to the user
+        List<ItemLine> itemLineList = new List<ItemLine>(); // List for all EditText views created to show items' properties to the user
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -50,6 +52,8 @@ namespace Comparison_shopping_engine_frontend_android
 
             Localise();
             
+            resultsNewItemButton.Enabled = true;
+            resultsSubmitButton.Enabled = true;
         }
 
         private void Localise()
@@ -61,39 +65,57 @@ namespace Comparison_shopping_engine_frontend_android
 
         private async void OnResultsSubmitButtonClick(object sender, EventArgs e)
         {
-            Receipt corrected = new Receipt();
-            foreach (var editText in editTextLineList)
+            if (itemLineList.Count == 0)
             {
-                //TODO: code smell! need to create different types of editTexts for each thing
-                if (editText.Item1.Hint == "Store")
-                {
-                    corrected.Store = editText.Item1.Text;
-                    corrected.Date = DateTime.Parse(editText.Item2.Text);
-                } else if (editText.Item1.Hint == "Item Name")
-                {
-                    corrected.Items.Add(new Item()
-                    {
-                        Date = corrected.Date,
-                        Store = corrected.Store,
-                        Name = editText.Item1.Text,
-                        Price = Int32.Parse(editText.Item2.Text)
-                    });
-                }
-
-                editText.Item1.Clickable = false;
-                editText.Item1.SetCursorVisible(false);
-                editText.Item1.Focusable = false;
-                editText.Item1.FocusableInTouchMode = false;
-                editText.Item2.Clickable = false;
-                editText.Item2.SetCursorVisible(false);
-                editText.Item2.Focusable = false;
-                editText.Item2.FocusableInTouchMode = false;
+                UiHelpers.ShowDialog(this,
+                    AppResources.SubmitNoItemsTitle,
+                    AppResources.SubmitNoItemsMessage,
+                    AppResources.SubmitNoItemsButton);
+                return;
             }
+
+            Receipt corrected = new Receipt
+            {
+                Date = DateTime.Parse(dateEdit.Text),
+                Store = storeEdit.Text
+            };
+
+            dateEdit.Clickable = false;
+            storeEdit.Clickable = false;
+
+            bool validated = storeEdit.Validate();
+            foreach (var itemLine in itemLineList)
+            {
+                if (!itemLine.Validate())
+                {
+                    validated = false;
+                    continue;
+                }
+                corrected.Items.Add(new Item()
+                {
+                    Date = corrected.Date,
+                    Store = corrected.Store,
+                    Name = itemLine.Name.Text,
+                    Price = Int32.Parse(itemLine.Price.GetNormalizedText())
+                });
+            }
+
+            if (!validated)
+            {
+                UiHelpers.ShowDialog(this, 
+                    AppResources.SubmitErrorTitle, 
+                    AppResources.SubmitErrorMessage,
+                    AppResources.SubmitErrorButton);
+                return;
+            }
+
             resultsSubmitButton.Visibility = ViewStates.Gone;
             resultsNewItemButton.Visibility = ViewStates.Gone;
             mainReceipt = corrected;
 
-            var result = await UIHelpers.ExecuteWithSpinnerDialog<List<Item>>(async () => {
+            var result = await UiHelpers.ExecuteWithSpinnerDialog<List<Item>>
+            (
+                async () => {
                     await BackendInterface.SaveReceipt(corrected);
                     return await BackendInterface.ProcessReceipt(corrected);
                 }, AppResources.ComparingSpinner, this
@@ -107,7 +129,7 @@ namespace Comparison_shopping_engine_frontend_android
             topLabel.Text = AppResources.ResultLabel;
             itemsLinearLayout.RemoveAllViews();
 
-            itemsLinearLayout.AddView(NewStoreDate(mainReceipt.Date, mainReceipt.Store));
+            itemsLinearLayout.AddView(NewStoreDate(mainReceipt.Date, mainReceipt.Store, false));
 
             for (int index = 0; index < result.Count; index++)
             {
@@ -118,10 +140,10 @@ namespace Comparison_shopping_engine_frontend_android
                     if (itemReceipt.Name != item.Name)
                         continue;
 
-                    RelativeLayout itemRelativeLayout = NewItem(item);
+                    LinearLayout itemRelativeLayout = NewItem(itemReceipt, false);
                     itemsLinearLayout.AddView(itemRelativeLayout);
 
-                    var resultText = CreateItemResult(itemReceipt, item);
+                    var resultText = NewItemResult(itemReceipt, item);
                     itemsLinearLayout.AddView(resultText);
                 }
             }
@@ -129,12 +151,12 @@ namespace Comparison_shopping_engine_frontend_android
 
         private void OnResultsNewItemButtonClick(object sender, EventArgs e)
         {
-            Item item = new Item();
-            RelativeLayout linearLayoutForItem = NewItem(item);// passing item with default values because user can change them
+            Item item = new Item("", 0);
+            LinearLayout linearLayoutForItem = NewItem(item);// passing item with default values because user can change them
             itemsLinearLayout.AddView(linearLayoutForItem);
         }
 
-        private TextView CreateItemResult(Item original, Item result)
+        private TextView NewItemResult(Item original, Item result)
         {
             RelativeLayout.LayoutParams lpResult = new RelativeLayout.LayoutParams(
                         ViewGroup.LayoutParams.WrapContent,
@@ -155,7 +177,7 @@ namespace Comparison_shopping_engine_frontend_android
                     break;
                 case 1:
                     int difference = original.Price - result.Price;
-                    output = $"Could've saved {difference} in {result.Store}!";
+                    output = String.Format(AppResources.PriceLarger, difference, result.Store);
                     color = Android.Graphics.Color.Brown;
                     break;
             }
@@ -175,29 +197,36 @@ namespace Comparison_shopping_engine_frontend_android
 
         private async void DisplayReceipt()
         {
-            string receiptText = Intent.GetStringExtra("ReceiptText") ?? ("");
+            string receiptText = Intent.GetStringExtra("ReceiptText") ?? "";
 
-            resultsNewItemButton.Enabled = false;
-            resultsSubmitButton.Enabled = false;
-
-            mainReceipt = await UIHelpers.ExecuteWithSpinnerDialog<Receipt>(async () => {
-                    return await BackendInterface.ProcessImage(receiptText);
-                }, AppResources.ParsingSpinner, this
-            );
-
-            resultsNewItemButton.Enabled = true;
-            resultsSubmitButton.Enabled = true;
+            if (receiptText != "")
+            {
+                mainReceipt = await UiHelpers.ExecuteWithSpinnerDialog<Receipt>(
+                    async () =>
+                    {
+                        return await BackendInterface.ProcessImage(receiptText);
+                    }, 
+                    AppResources.ParsingSpinner, 
+                    this
+                );
+            } else
+            {
+                mainReceipt = new Receipt()
+                {
+                    Date = DateTime.Today
+                };
+            }
 
             itemsLinearLayout.AddView(NewStoreDate(mainReceipt.Date, mainReceipt.Store));
 
             foreach(var item in mainReceipt.Items)
             {
-                RelativeLayout itemRelativeLayout = NewItem(item);
+                LinearLayout itemRelativeLayout = NewItem(item);
                 itemsLinearLayout.AddView(itemRelativeLayout);
             }
         }
 
-        private RelativeLayout NewStoreDate(DateTime date, string store)
+        private RelativeLayout NewStoreDate(DateTime date, string store, bool clickable = true)
         {
             RelativeLayout storeDateLayout = new RelativeLayout(this)
             {
@@ -210,33 +239,28 @@ namespace Comparison_shopping_engine_frontend_android
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
             lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            EditText storeEdit = new EditText(this)
+            ItemStoreView _storeEdit = new ItemStoreView(this, clickable, store)
             {
-                Text = store,
-                Hint = "Store",
                 LayoutParameters = lpStore,
                 Id = View.GenerateViewId()
             };
+
 
             RelativeLayout.LayoutParams lpDate = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
                 ViewGroup.LayoutParams.WrapContent);
             lpDate.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
-            EditText dateEdit = new EditText(this)
+            ItemDateView _dateEdit = new ItemDateView(this, clickable, date)
             {
-                Text = date.ToString("yyyy-MM-dd"),
-                Hint = "Date",
                 LayoutParameters = lpDate,
                 Id = View.GenerateViewId()
             };
 
-            dateEdit.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
-            storeEdit.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
+            storeEdit = _storeEdit;
+            dateEdit = _dateEdit;
 
-            editTextLineList.Add(new Tuple<EditText, EditText> (storeEdit, dateEdit));
-
-            storeDateLayout.AddView(storeEdit);
-            storeDateLayout.AddView(dateEdit);
+            storeDateLayout.AddView(_storeEdit);
+            storeDateLayout.AddView(_dateEdit);
 
             return storeDateLayout;
         }
@@ -245,71 +269,60 @@ namespace Comparison_shopping_engine_frontend_android
         /// Creates a RelativeLayout with 4 editable EditText views for passed Item object.
         /// Each view is filled with one item property.
         /// </summary>
-        private RelativeLayout NewItem(Item item)
+        private LinearLayout NewItem(Item item, bool clickable = true)
         {
-            RelativeLayout itemLayout = new RelativeLayout(this)
+            LinearLayout itemLayout = new LinearLayout(this)
             {
                 LayoutParameters = new ViewGroup.LayoutParams(
                     width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent),
-                Id = View.GenerateViewId()
+                    height: ViewGroup.LayoutParams.WrapContent
+                ),
+                Id = View.GenerateViewId(),
+                WeightSum = 1f
             };
 
-           /*  RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
+            LinearLayout.LayoutParams lpItem = new LinearLayout.LayoutParams(
                   ViewGroup.LayoutParams.WrapContent,
-                  ViewGroup.LayoutParams.WrapContent);
-              lpItem.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-              EditText itemName = new EditText(this)
-              {
-                  Text = item.Name,
-                  Hint = "Item Name",
-                  LayoutParameters = lpItem,
-                  Id = View.GenerateViewId()
-              };*/
-
-            RelativeLayout.LayoutParams lpItem = new RelativeLayout.LayoutParams(
                   ViewGroup.LayoutParams.WrapContent,
-                  ViewGroup.LayoutParams.WrapContent
-            );
-            lpItem.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            AutoCompleteTextView itemName = new AutoCompleteTextView(this)
+                  0.80f
+            )
             {
-                Text = item.Name,
-                Hint = "Item Name",
+                Width = 0,
+                Gravity = GravityFlags.Fill
+            };
+            ItemNameView itemName = new ItemNameView(this, clickable, item.Name)
+            {
                 LayoutParameters = lpItem,
                 Id = View.GenerateViewId()
             };
 
-            itemName.Threshold = 1;
-            itemName.DropDownWidth = itemName.Width;
-            itemName.TextChanged += (object sender, Android.Text.TextChangedEventArgs a) => { UIHelpers.RenewDropdown(itemName, this); };
-            itemName.AfterTextChanged += (object sender, Android.Text.AfterTextChangedEventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
-            itemName.Click += (object sender, EventArgs a) => { itemName.ShowDropDown(); itemName.RefreshDrawableState(); };
-
-            //Button that deletes the entire item
-            RelativeLayout.LayoutParams lpDelete = new RelativeLayout.LayoutParams(
+            LinearLayout.LayoutParams lpPrice = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
-            lpDelete.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
-            TextView deleteItemButton = new TextView(this)
+                ViewGroup.LayoutParams.WrapContent,
+                clickable ? 0.15f : 0.25f
+            )
+            {
+                Width = 0,
+                Gravity = GravityFlags.Fill
+            };
+            ItemPriceView itemPrice = new ItemPriceView(this, clickable, item.Price / 100f)
+            {
+                LayoutParameters = lpPrice,
+                Id = View.GenerateViewId()
+            };
+            
+            //Button that deletes the entire item
+            LinearLayout.LayoutParams lpDelete = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                0.5f
+            );
+            ItemDeleteView deleteItemButton = new ItemDeleteView(this)
             {
                 Text = "x",
                 LayoutParameters = lpDelete,
                 Id = View.GenerateViewId()
             };
-
-            RelativeLayout.LayoutParams lpPrice = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
-            lpPrice.AddRule(LayoutRules.LeftOf, deleteItemButton.Id);
-            EditText itemPrice = new EditText(this)
-            {
-                Text = item.Price.ToString(),
-                Hint = "Price",
-                LayoutParameters = lpPrice,
-                Id = View.GenerateViewId()
-            };
-
 
             //On Button click
             deleteItemButton.Click += (object sender, EventArgs e) =>
@@ -318,21 +331,26 @@ namespace Comparison_shopping_engine_frontend_android
 
                 itemsLinearLayout.RemoveView(itemLayout);
 
-                editTextLineList.Remove(new Tuple<EditText, EditText>(itemName, itemPrice));
+                itemLineList.Remove(new ItemLine()
+                {
+                    Name = itemName,
+                    Price = itemPrice
+                });
             };
-
-
-            itemName.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
-            itemPrice.SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
-            deleteItemButton.SetTextSize(Android.Util.ComplexUnitType.Pt, 7);
-            deleteItemButton.SetTextColor(Android.Graphics.Color.Red);
-
-            //name, price
-            editTextLineList.Add(new Tuple<EditText, EditText>(itemName, itemPrice));
+            
+            itemLineList.Add(new ItemLine()
+            {
+                Name = itemName,
+                Price = itemPrice
+            });
 
             itemLayout.AddView(itemName);
             itemLayout.AddView(itemPrice);
-            itemLayout.AddView(deleteItemButton);
+
+            if (clickable)
+            {
+                itemLayout.AddView(deleteItemButton);
+            }
 
             return itemLayout;
         }
