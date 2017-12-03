@@ -17,14 +17,13 @@ git config user.email "travis@travis-ci.org"
 rm -rf *
 
 echo "" > .nojekyll
+echo ${TRAVIS_BUILD_NUMBER} > .version
 
 doxygen $DOXYFILE 2>&1 | tee doxygen.log
 
 if [ -d "html" ] && [ -f "html/index.html" ]; then
-    echo 'Documentation created'
     mv html/* .
     rm -rf html
-    echo 'Comitting'
     git add --all
     git commit -m "Deploy code docs to GitHub Pages Travis build: ${TRAVIS_BUILD_NUMBER}" -m "Commit: ${TRAVIS_COMMIT}"
 	
