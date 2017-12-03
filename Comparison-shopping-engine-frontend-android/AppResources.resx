@@ -198,6 +198,18 @@
     <value>Did we get it right?</value>
     <comment>Asking for user Receipt review</comment>
   </data>
+  <data name="SubmitNoItemsButton" xml:space="preserve">
+    <value>Whoops</value>
+    <comment>A button text of the error popup shown in case there are no items</comment>
+  </data>
+  <data name="SubmitNoItemsMessage" xml:space="preserve">
+    <value>Thought you could outplay me?</value>
+    <comment>A message of the error popup shown in case there are no items</comment>
+  </data>
+  <data name="SubmitNoItemsTitle" xml:space="preserve">
+    <value>Where are the items?</value>
+    <comment>A title of the error popup shown in case there are no items</comment>
+  </data>
   <data name="SubmitPhotoButton" xml:space="preserve">
     <value>Submit Photo</value>
     <comment>Used to name the proceed button when the photo is uploaded</comment>

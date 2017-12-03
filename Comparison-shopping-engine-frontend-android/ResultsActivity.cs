@@ -20,8 +20,8 @@ namespace Comparison_shopping_engine_frontend_android
         LinearLayout resultsLinearLayout;
         Button resultsNewItemButton, resultsSubmitButton;
         LinearLayout itemsLinearLayout;
-        EditText storeEdit;
-        EditText dateEdit;
+        ItemStoreView storeEdit;
+        ItemDateView dateEdit;
         TextView topLabel;
         Receipt mainReceipt = new Receipt();
         List<ItemLine> itemLineList = new List<ItemLine>(); // List for all EditText views created to show items' properties to the user
@@ -65,6 +65,15 @@ namespace Comparison_shopping_engine_frontend_android
 
         private async void OnResultsSubmitButtonClick(object sender, EventArgs e)
         {
+            if (itemLineList.Count == 0)
+            {
+                UiHelpers.ShowDialog(this,
+                    AppResources.SubmitNoItemsTitle,
+                    AppResources.SubmitNoItemsMessage,
+                    AppResources.SubmitNoItemsButton);
+                return;
+            }
+
             Receipt corrected = new Receipt
             {
                 Date = DateTime.Parse(dateEdit.Text),
@@ -74,7 +83,7 @@ namespace Comparison_shopping_engine_frontend_android
             dateEdit.Clickable = false;
             storeEdit.Clickable = false;
 
-            bool validated = true;
+            bool validated = storeEdit.Validate();
             foreach (var itemLine in itemLineList)
             {
                 if (!itemLine.Validate())

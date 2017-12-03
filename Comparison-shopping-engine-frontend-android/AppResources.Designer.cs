@@ -259,6 +259,33 @@ namespace Comparison_shopping_engine_frontend_android {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Whoops.
+        /// </summary>
+        public static string SubmitNoItemsButton {
+            get {
+                return ResourceManager.GetString("SubmitNoItemsButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thought you could outplay me?.
+        /// </summary>
+        public static string SubmitNoItemsMessage {
+            get {
+                return ResourceManager.GetString("SubmitNoItemsMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Where are the items?.
+        /// </summary>
+        public static string SubmitNoItemsTitle {
+            get {
+                return ResourceManager.GetString("SubmitNoItemsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Submit Photo.
         /// </summary>
         public static string SubmitPhotoButton {

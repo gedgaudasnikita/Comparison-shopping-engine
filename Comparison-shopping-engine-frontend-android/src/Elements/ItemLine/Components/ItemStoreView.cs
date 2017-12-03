@@ -27,7 +27,7 @@ namespace Comparison_shopping_engine_frontend_android
             //Review state
             if (store == "")
             {
-                StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_UNCERTAIN);
+                StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_WRONG);
             }
             else
             //Result state
@@ -45,10 +45,25 @@ namespace Comparison_shopping_engine_frontend_android
 
             TextChanged += (object sender, Android.Text.TextChangedEventArgs e) =>
             {
-                StateManager.State = ItemInfoStates.INFO_UNCERTAIN;
+                if (Text == "")
+                {
+                    StateManager.State = ItemInfoStates.INFO_WRONG;
+                }
+                else
+                {
+                    StateManager.State = ItemInfoStates.INFO_UNCERTAIN;
+                }
             };
         }
 
-
+        /// <summary>
+        /// The function to check whether the store information is ready to be sent.
+        /// Relies on the internal <see cref="StateColorManager"/>s of the elements.
+        /// </summary>
+        /// <returns>Whether the ItemLine is ready for sending or not</returns>
+        public bool Validate()
+        {
+            return StateManager.State != ItemInfoStates.INFO_WRONG;
+        }
     }
 }

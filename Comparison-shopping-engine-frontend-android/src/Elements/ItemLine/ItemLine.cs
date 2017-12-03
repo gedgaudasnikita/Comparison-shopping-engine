@@ -33,7 +33,7 @@ namespace Comparison_shopping_engine_frontend_android
         /// <returns>Whether the ItemLine is ready for sending or not</returns>
         public bool Validate()
         {
-            return Price.StateManager.State != ItemInfoStates.INFO_WRONG;
+            return Name.StateManager.State != ItemInfoStates.INFO_WRONG && Price.StateManager.State != ItemInfoStates.INFO_WRONG;
         }
     }
 }

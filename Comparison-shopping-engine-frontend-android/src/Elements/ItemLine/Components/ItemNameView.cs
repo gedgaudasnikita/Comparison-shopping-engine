@@ -27,7 +27,7 @@ namespace Comparison_shopping_engine_frontend_android
             //we don't get a name if the "New Item" button has been clicked
             if (name == "")
             {
-                StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_UNCERTAIN);
+                StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_WRONG);
             }
             else
             {
@@ -46,7 +46,14 @@ namespace Comparison_shopping_engine_frontend_android
             OnItemClickListener = this;
             TextChanged += (object sender, Android.Text.TextChangedEventArgs e) => 
             {
-                StateManager.State = ItemInfoStates.INFO_UNCERTAIN;
+                if (Text == "")
+                {
+                    StateManager.State = ItemInfoStates.INFO_WRONG;
+                }
+                else
+                {
+                    StateManager.State = ItemInfoStates.INFO_UNCERTAIN;
+                }
             };
         }
 
