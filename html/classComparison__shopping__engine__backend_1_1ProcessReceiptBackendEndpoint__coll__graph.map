@@ -1,0 +1,6 @@
+<map id="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint" name="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="{ProcessReceiptEndpoint\n||+ GetMethod()\l+ GetURI()\l+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="5,361,184,541"/>
+<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint_3_01RequestBody_00_01RequestParameters_00_01ResponseBody_01_4.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="31,147,209,312"/>
+<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="136,6,243,98"/>
+<area shape="rect" id="node5" href="$interfaceComparison__shopping__engine__backend_1_1IBackendEndpoint.html" title="Implemented by the classes that aim to encapsulate the behaviour of certain server endpoints..." alt="" coords="208,412,336,489"/>
+</map>

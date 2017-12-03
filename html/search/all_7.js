@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['handle',['Handle',['../classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#a5416054c6958672f4811b09fe35d69cd',1,'Comparison_shopping_engine_backend.GetSuggestionsBackendEndpoint.Handle()'],['../classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#a5acf4f7b9c004ef259ada03bfee3a1b6',1,'Comparison_shopping_engine_backend.ProcessImageBackendEndpoint.Handle()'],['../classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html#a598ea9a0afd94ab6f8421a093f82f8f5',1,'Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint.Handle()'],['../classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html#a15b2ca0cfa5b399fdfbb0590fe6d4699',1,'Comparison_shopping_engine_backend.SaveReceiptBackendEndpoint.Handle()'],['../interfaceComparison__shopping__engine__backend_1_1IBackendEndpoint.html#a2fd1a9e58633d01782e94eddcd96fc38',1,'Comparison_shopping_engine_backend.IBackendEndpoint.Handle()']]],
+  ['handler',['Handler',['../namespaceComparison__shopping__engine__backend.html#a07c250c69b6849b3ff675d127307fc7a',1,'Comparison_shopping_engine_backend']]],
+  ['hello',['Hello',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1String.html#a42e8619efe0ccf5eac6ba135b7590e2d',1,'Comparison_shopping_engine_frontend_android::Resource::String']]],
+  ['home',['Home',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Layout.html#aadbe182f431aa08b5c01fcc67bb6136e',1,'Comparison_shopping_engine_frontend_android::Resource::Layout']]],
+  ['homecamerabutton',['homeCameraButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a1eb8a7216ef8a46aa2a72d5aaba0e785',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homeconfigbutton',['homeConfigButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a9f741ac3c9796af3c3a7c609533d00f1',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homegallerybutton',['homeGalleryButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a24645a40a3de9baa0746f8372b84f6a2',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homeimageview',['homeImageView',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a0022fc7339ccf3ae6a8e6ecb8853057f',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homelinearlayout',['homeLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a42394a7dfbe9d61a55074abc57e9cfac',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homeresultscreenbutton',['homeResultScreenButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a049752a6b2bbe0a1e0461b6b945ef2ea',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homescreentext',['HomeScreenText',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#acdc73bbff3092c18394131f813bc0bc1',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['hometextview',['homeTextView',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a6ba2db3a49b3103b0dd48e5411880ce7',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['homevlinearlayout',['homeVLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a51e22bb3efd62e555af161be8c97a440',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
+  ['httplistenerrequestextensions',['HttpListenerRequestExtensions',['../classComparison__shopping__engine__backend_1_1HttpListenerRequestExtensions.html',1,'Comparison_shopping_engine_backend']]],
+  ['httplistenerrequestextensions_2ecs',['HttpListenerRequestExtensions.cs',['../HttpListenerRequestExtensions_8cs.html',1,'']]],
+  ['httpserver',['HttpServer',['../classComparison__shopping__engine__backend_1_1HttpServer.html',1,'Comparison_shopping_engine_backend']]],
+  ['httpserver',['HttpServer',['../classComparison__shopping__engine__backend_1_1HttpServer.html#a80056134e8e0a2207f224ce157c49395',1,'Comparison_shopping_engine_backend::HttpServer']]],
+  ['httpserver_2ecs',['HTTPServer.cs',['../HTTPServer_8cs.html',1,'']]]
+];
