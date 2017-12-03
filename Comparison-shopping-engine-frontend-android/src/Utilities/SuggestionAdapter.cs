@@ -14,12 +14,19 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// A utility class providing a custom <see cref="Adapter"/> for <see cref="AutoCompleteTextView"/>.
+    /// Replaces the standard filtering with a request to the backend. Used for item name suggestion.
+    /// </summary>
     public class SuggestionAdapter: ArrayAdapter
     {
         private SuggestionFilter filter;
 
         public SuggestionAdapter(Context ctx, int resource) : base(ctx, resource) { }
         
+        /// <summary>
+        /// The filter is overriden with a custom version to perform requests to the backend
+        /// </summary>
         public override Filter Filter
         {
             get
@@ -33,6 +40,10 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
+        /// <summary>
+        /// A utility class providing a custom <see cref="Filter"/> for <see cref="SuggestionAdapter"/>.
+        /// Replaces the standard filtering with a request to the backend. Used for item name suggestion.
+        /// </summary>
         private class SuggestionFilter : Filter
         {
             SuggestionAdapter adapter;

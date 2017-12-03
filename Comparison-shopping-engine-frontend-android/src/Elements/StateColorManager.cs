@@ -14,11 +14,18 @@ namespace Comparison_shopping_engine_frontend_android
 {
     public enum ItemInfoStates { INFO_WRONG, INFO_UNCERTAIN, INFO_CONFIRMED };
 
+    /// <summary>
+    /// This class is used to manage the information states in ItemLines, map respective actions to the
+    /// state changes and encapsulates the responsibility for general state management.
+    /// </summary>
     public class StateColorManager
     {
         private ItemInfoStates state;
         private Action<int> colorer;
 
+        /// <summary>
+        /// The current State of the Manager. On each change of State, the appropriate action is executed.
+        /// </summary>
         public ItemInfoStates State {
             get
             {
@@ -41,14 +48,6 @@ namespace Comparison_shopping_engine_frontend_android
                         color = Android.Graphics.Color.Red;
                         break;
                 }
-
-                Console.WriteLine(state);
-
-                Console.WriteLine(Android.Graphics.Color.Black);
-                Console.WriteLine(Android.Graphics.Color.Green);
-                Console.WriteLine(Android.Graphics.Color.Blue);
-                Console.WriteLine(Android.Graphics.Color.Red);
-                Console.WriteLine((int)color);
                 colorer(color);
             }
         }

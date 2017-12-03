@@ -65,6 +65,13 @@ namespace Comparison_shopping_engine_frontend_android
             return result;
         }
 
+        /// <summary>
+        /// Shows a basic <see cref="AlertDialog"/> with a titled closing button.
+        /// </summary>
+        /// <param name="ctx">The <see cref="Context"/> of the execution</param>
+        /// <param name="title">The title of the dialog, optional</param>
+        /// <param name="message">The message of the dialog, optional</param>
+        /// <param name="closeButton">The name of the button, optional</param>
         public static void ShowDialog(Context ctx, String title = null, String message = null, String closeButton = null)
         {
             var dialog = new AlertDialog.Builder(ctx).Create();

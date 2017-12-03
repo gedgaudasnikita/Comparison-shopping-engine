@@ -133,6 +133,42 @@ namespace Comparison_shopping_engine_frontend_android {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string ItemDateHint {
+            get {
+                return ResourceManager.GetString("ItemDateHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item name.
+        /// </summary>
+        public static string ItemNameHint {
+            get {
+                return ResourceManager.GetString("ItemNameHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string ItemPriceHint {
+            get {
+                return ResourceManager.GetString("ItemPriceHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Store.
+        /// </summary>
+        public static string ItemStoreHint {
+            get {
+                return ResourceManager.GetString("ItemStoreHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extracting.
         /// </summary>
         public static string ParsingSpinner {
@@ -151,7 +187,16 @@ namespace Comparison_shopping_engine_frontend_android {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are the first to get it so cheap!.
+        ///   Looks up a localized string similar to Could&apos;ve saved {0} in {1}!.
+        /// </summary>
+        public static string PriceLarger {
+            get {
+                return ResourceManager.GetString("PriceLarger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are the first to get it!.
         /// </summary>
         public static string PriceSmaller {
             get {
@@ -174,6 +219,33 @@ namespace Comparison_shopping_engine_frontend_android {
         public static string ResultScreenButton {
             get {
                 return ResourceManager.GetString("ResultScreenButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Got it!.
+        /// </summary>
+        public static string SubmitErrorButton {
+            get {
+                return ResourceManager.GetString("SubmitErrorButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The fields colored red have some issues in them.
+        /// </summary>
+        public static string SubmitErrorMessage {
+            get {
+                return ResourceManager.GetString("SubmitErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A few typos?.
+        /// </summary>
+        public static string SubmitErrorTitle {
+            get {
+                return ResourceManager.GetString("SubmitErrorTitle", resourceCulture);
             }
         }
         

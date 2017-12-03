@@ -12,14 +12,19 @@ using Android.Widget;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// The class that represents the element, responsible for the setting of the date of the receipt
+    /// and its behaviour
+    /// </summary>
     public class ItemNameView: AutoCompleteTextView, AdapterView.IOnItemClickListener
     {
         public StateColorManager StateManager { get; private set; }
 
         public ItemNameView(Context ctx, bool editable, string name = null) : base(ctx)
         {
-            Hint = "Item name";
+            Hint = AppResources.ItemNameHint;
 
+            //we don't get a name if the "New Item" button has been clicked
             if (name == "")
             {
                 StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_UNCERTAIN);

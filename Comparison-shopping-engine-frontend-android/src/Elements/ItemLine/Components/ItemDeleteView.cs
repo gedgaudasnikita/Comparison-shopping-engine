@@ -12,6 +12,9 @@ using Android.Widget;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// The class that represents the element, responsible for the deletion of the ItemLine
+    /// </summary>
     public class ItemDeleteView: TextView
     {
         public ItemDeleteView(Context ctx) : base(ctx)
@@ -19,7 +22,5 @@ namespace Comparison_shopping_engine_frontend_android
             SetTextSize(Android.Util.ComplexUnitType.Pt, 7);
             SetTextColor(Android.Graphics.Color.Red);
         }
-
-
     }
 }

@@ -93,7 +93,10 @@ namespace Comparison_shopping_engine_frontend_android
 
             if (!validated)
             {
-                UiHelpers.ShowDialog(this, "A few typos?", "The fields colored red have some issues in them", "Got it!");
+                UiHelpers.ShowDialog(this, 
+                    AppResources.SubmitErrorTitle, 
+                    AppResources.SubmitErrorMessage,
+                    AppResources.SubmitErrorButton);
                 return;
             }
 
@@ -165,7 +168,7 @@ namespace Comparison_shopping_engine_frontend_android
                     break;
                 case 1:
                     int difference = original.Price - result.Price;
-                    output = $"Could've saved {difference} in {result.Store}!";
+                    output = String.Format(AppResources.PriceLarger, difference, result.Store);
                     color = Android.Graphics.Color.Brown;
                     break;
             }

@@ -12,28 +12,27 @@ using Android.Widget;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// The class that represents the element, responsible for the setting of the date of the receipt
+    /// and its behaviour
+    /// </summary>
     public class ItemDateView: EditText
     {
         public StateColorManager StateManager { get; private set; }
 
         public ItemDateView(Context ctx, bool editable, DateTime date) : base(ctx)
         {
-            Hint = "Date";
+            Hint = AppResources.ItemDateHint;
 
-            if (date == null)
-            {
-                Text = "";
-                StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_UNCERTAIN);
-            }
-            else
-            {
-                Text = date.ToString("yyyy-MM-dd");
-                StateManager = new StateColorManager(Background.SetTint,
-                    editable ? ItemInfoStates.INFO_UNCERTAIN : ItemInfoStates.INFO_CONFIRMED);
-            }
+            Text = date.ToString("yyyy-MM-dd");
+
+            //If editable is set to true, we are in "Results" state
+            StateManager = new StateColorManager(Background.SetTint,
+                editable ? ItemInfoStates.INFO_UNCERTAIN : ItemInfoStates.INFO_CONFIRMED);
 
             if (editable)
             {
+                //Raise a calendar to pick the date
                 Click += (sender, e) => {
                     Clickable = false;
                     DatePickerDialog dialog = new DatePickerDialog(
@@ -55,6 +54,7 @@ namespace Comparison_shopping_engine_frontend_android
                 Clickable = false;
             }
 
+            //Avoid the user changing the text in other ways than calendar
             Focusable = false;
             FocusableInTouchMode = false;
 

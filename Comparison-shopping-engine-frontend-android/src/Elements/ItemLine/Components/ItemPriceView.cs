@@ -13,6 +13,10 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
+    /// <summary>
+    /// The class that represents the element, responsible for the setting of the price of the ItemLine
+    /// and its behaviour
+    /// </summary>
     public class ItemPriceView : EditText
     {
         private float price = 0;
@@ -23,7 +27,7 @@ namespace Comparison_shopping_engine_frontend_android
         {
             price = _price;
 
-            Hint = "Price";
+            Hint = AppResources.ItemPriceHint;
             SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
 
             Console.WriteLine(editable);
@@ -46,6 +50,12 @@ namespace Comparison_shopping_engine_frontend_android
             Normalise(null, new FocusChangeEventArgs(false));
         }
 
+        /// <summary>
+        /// A function to be called on each change to the focus of the field. If there is no focus,
+        /// it adjusts the formatting of the field to a standard float representation
+        /// </summary>
+        /// <param name="sender">An object to invoke a <see cref="View.FocusChange"/> event</param>
+        /// <param name="e">The arguments of the <see cref="View.FocusChange"/> event</param>
         private void Normalise(object sender, FocusChangeEventArgs e)
         {
             if (!e.HasFocus)
@@ -55,7 +65,13 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
-        public void Validate(object sender, Android.Text.TextChangedEventArgs e)
+        /// <summary>
+        /// A function to be called on each change to the text. Checks if the entered value can be converted
+        /// to a float, and sets the state respectively.
+        /// </summary>
+        /// <param name="sender">An object to invoke a <see cref="TextView.TextChanged"/> event</param>
+        /// <param name="e">The arguments of the <see cref="TextView.TextChanged"/> event</param>
+        private void Validate(object sender, Android.Text.TextChangedEventArgs e)
         {
             if (Text != "" && float.TryParse(Text, out price))
             {
@@ -67,6 +83,10 @@ namespace Comparison_shopping_engine_frontend_android
             }
         }
 
+        /// <summary>
+        /// The function to get the Price value, prepared for sending to the backend
+        /// </summary>
+        /// <returns>Digits-only <see cref="String"/> with the entered price</returns>
         public String GetNormalizedText()
         {
             return Text.RemoveNonDigits();
