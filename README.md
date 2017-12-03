@@ -1,4 +1,4 @@
-﻿[![Builds](https://travis-ci.org/gedgaudasnikita/Comparison-shopping-engine.svg?branch=master)]
+﻿[![Builds](https://travis-ci.org/gedgaudasnikita/Comparison-shopping-engine.svg?branch=master)](https://travis-ci.org/gedgaudasnikita/Comparison-shopping-engine)
 # Comparison-shopping-engine
 
 ## Description
