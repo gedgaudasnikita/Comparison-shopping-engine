@@ -93,7 +93,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             if (!validated)
             {
-                PopUpDialog.Show(this, "A few typos?", "The fields colored red have some issues in them", "Got it!");
+                UiHelpers.ShowDialog(this, "A few typos?", "The fields colored red have some issues in them", "Got it!");
                 return;
             }
 
@@ -101,7 +101,7 @@ namespace Comparison_shopping_engine_frontend_android
             resultsNewItemButton.Visibility = ViewStates.Gone;
             mainReceipt = corrected;
 
-            var result = await UIHelpers.ExecuteWithSpinnerDialog<List<Item>>
+            var result = await UiHelpers.ExecuteWithSpinnerDialog<List<Item>>
             (
                 async () => {
                     await BackendInterface.SaveReceipt(corrected);
@@ -189,7 +189,7 @@ namespace Comparison_shopping_engine_frontend_android
 
             if (receiptText != "")
             {
-                mainReceipt = await UIHelpers.ExecuteWithSpinnerDialog<Receipt>(
+                mainReceipt = await UiHelpers.ExecuteWithSpinnerDialog<Receipt>(
                     async () =>
                     {
                         return await BackendInterface.ProcessImage(receiptText);

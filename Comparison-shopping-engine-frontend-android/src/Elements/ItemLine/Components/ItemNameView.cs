@@ -20,17 +20,16 @@ namespace Comparison_shopping_engine_frontend_android
         {
             Hint = "Item name";
 
-            if (name == null)
+            if (name == "")
             {
-                Text = "";
                 StateManager = new StateColorManager(Background.SetTint, ItemInfoStates.INFO_UNCERTAIN);
             }
             else
             {
-                Text = name;
                 StateManager = new StateColorManager(Background.SetTint, 
                     ItemInfoStates.INFO_CONFIRMED);
             }
+            Text = name;
 
             SetTextSize(Android.Util.ComplexUnitType.Pt, 5);
 

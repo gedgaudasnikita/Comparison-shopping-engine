@@ -16,7 +16,7 @@ namespace Comparison_shopping_engine_frontend_android
     /// <summary>
     /// This static class contains helper methods used to call certain dialogs, pop-ups, or alerts to be used across the application
     /// </summary>
-    static class UIHelpers
+    static class UiHelpers
     {
         /// <summary>
         /// This function is used as a wrapper for async functions, that need to be called with a progress dialog.
@@ -65,10 +65,22 @@ namespace Comparison_shopping_engine_frontend_android
             return result;
         }
 
-        public static async void RenewDropdown(AutoCompleteTextView view, Context ctx)
+        public static void ShowDialog(Context ctx, String title = null, String message = null, String closeButton = null)
         {
-            var autoCompleteOptions = await BackendInterface.GetSuggestions(view.Text, 10);
-            view.Adapter = new ArrayAdapter(ctx, Android.Resource.Layout.SimpleListItem1, autoCompleteOptions);
+            var dialog = new AlertDialog.Builder(ctx).Create();
+
+            if (title != null) dialog.SetTitle(title);
+            if (message != null) dialog.SetMessage(message);
+
+            if (closeButton != null)
+            {
+                dialog.SetButton(closeButton, (object sender, DialogClickEventArgs e) =>
+                {
+                    dialog.Cancel();
+                });
+            }
+
+            dialog.Show();
         }
     }
 }
