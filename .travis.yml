@@ -16,6 +16,13 @@ addons:
       - doxygen-gui
       - graphviz
 
+install:
+  - nuget restore solution-name.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=CI solution-name.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MyProject.Tests/bin/CI/MyProject.Tests.dll
+
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x build-doc.sh
