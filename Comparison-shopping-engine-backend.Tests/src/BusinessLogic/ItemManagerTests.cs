@@ -94,6 +94,7 @@ namespace Comparison_shopping_engine_backend.Tests
             {
                 file.Delete();
             }
+            m1.ClearList();
 
             m1.Add(testItem);
 
