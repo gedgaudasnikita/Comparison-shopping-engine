@@ -21,9 +21,9 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=CI Comparison-shopping-engine.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine/Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine/Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine/Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
