@@ -4,7 +4,7 @@ solution: Comparison-shopping-engine.sln
 env:
   global:
     - GH_REPO_NAME: Comparison-shopping-engine
-    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
+    - DOXYFILE: $TRAVIS_BUILD_DIR/Comparison-shopping-engine-documentation/Doxyfile
     - GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
 
 addons:
@@ -29,5 +29,5 @@ script:
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - chmod +x build-doc.sh
-  - ./build-doc.sh
+  - chmod +x Comparison-shopping-engine-documentation/build-doc.sh
+  - Comparison-shopping-engine-documentation/build-doc.sh
