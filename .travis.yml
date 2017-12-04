@@ -18,12 +18,15 @@ addons:
 
 install:
   - nuget restore Comparison-shopping-engine.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=CI Comparison-shopping-engine.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
+  - ls ./testrunner -a
+  - ls ./testrunner/NUnit.Runners.3.7.0
+  - ls ./testrunner/NUnit.Runners.3.7.0/tools
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
+  - mono ./testrunner/NUnit.Runners.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
