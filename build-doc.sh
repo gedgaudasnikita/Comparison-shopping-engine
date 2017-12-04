@@ -2,7 +2,7 @@
 
 #Original: https://gist.github.com/vidavidorra/548ffbcdae99d752da02
 
-if [[ $TRAVIS_BRANCH != 'master' ]] then
+if [ $TRAVIS_BRANCH != 'master' ]; then
 	exit 0
 fi
 
