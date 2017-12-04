@@ -21,9 +21,6 @@ install:
   - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=CI Comparison-shopping-engine.sln
-  - ls ./testrunner -a
-  - ls ./testrunner/NUnit.ConsoleRunner.3.7.0
-  - ls ./testrunner/NUnit.ConsoleRunner.3.7.0/tools
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
