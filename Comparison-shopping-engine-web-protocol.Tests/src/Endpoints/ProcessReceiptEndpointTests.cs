@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +9,10 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_web_protocol.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ProcessReceiptEndpointTests
     {
-        [TestMethod()]
+        [Test]
         public void GetRequestBodyTest_parsesCorrectly()
         {
             var endpoint = new ProcessReceiptEndpoint();
@@ -27,7 +26,7 @@ namespace Comparison_shopping_engine_web_protocol.Tests
             Assert.AreEqual(true, result.Equals(receipt));
         }
 
-        [TestMethod()]
+        [Test]
         public void GetResponseBodyTest_parsesCorrectly()
         {
             var endpoint = new ProcessReceiptEndpoint();

@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Comparison_shopping_engine_backend;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ParseableReceiptTests
     {
         private class ItemListParserMock : IParser<List<Item>>
@@ -38,7 +38,7 @@ namespace Comparison_shopping_engine_backend.Tests
             }
         }
 
-        [TestMethod()]
+        [Test]
         public void ParseTest_parsesFromString()
         {
             ParseableReceipt.ItemListParser = new ItemListParserMock();

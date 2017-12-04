@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,26 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Comparison_shopping_engine_core_entities;
 
-namespace Comparison_shopping_engine_backend.Tests
+namespace Comparison_shopping_engine_core_entities.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ItemTests
     {
-        [TestMethod()]
+        [Test]
         public void ItemTest_constructsWithDateTime()
         {
             Item i = new Item("Name", "Store", 999, DateTime.Now);
             Assert.IsNotNull(i);
         }
 
-        [TestMethod()]
+        [Test]
         public void ItemTest_constructsWithDateString()
         {
             Item i = new Item("Name", "Store", 999, "2017-10-10");
             Assert.IsNotNull(i);
         }
 
-        [TestMethod()]
+        [Test]
         public void EqualsTest_equalsCorrectly()
         {
             Item a = new Item("Name", "Store", 999, "2017-10-10");

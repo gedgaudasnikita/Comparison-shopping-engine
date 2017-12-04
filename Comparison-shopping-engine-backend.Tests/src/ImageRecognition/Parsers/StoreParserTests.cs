@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Comparison_shopping_engine_backend;
 using System;
 using System.Collections.Generic;
@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class StoreParserTests
     {
-        [TestMethod()]
+        [Test]
         public void ParseTest_parsesStoreName()
         {
             string receipt = @"MAXXMX";
@@ -22,7 +22,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual("MAXIMA", store);
         }
 
-        [TestMethod()]
+        [Test]
         public void ParseTest_doesntProvideResultIfUnparseable()
         {
             string receipt = @"vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";

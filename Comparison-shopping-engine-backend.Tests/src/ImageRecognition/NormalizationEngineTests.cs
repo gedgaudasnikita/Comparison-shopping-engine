@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Comparison_shopping_engine_backend;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,10 @@ using System.IO;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class NormalizationEngineTests
     {
-        [TestMethod()]
+        [Test]
         public void GetInstanceTest_isSingleton()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -22,7 +22,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(m1, m2);
         }
 
-        [TestMethod()]
+        [Test]
         public void GetClosestTest_getsClosest()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -34,7 +34,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual("pretty likely", result);
         }
 
-        [TestMethod()]
+        [Test]
         public void GetClosestTest_returnsEmptyStringIfNoMatch()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -45,7 +45,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual("", result);
         }
 
-        [TestMethod()]
+        [Test]
         public void GetClosestListTest_getsClosest()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -59,7 +59,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual("very unlikely to get matched with", result.ElementAt(1));
         }
 
-        [TestMethod()]
+        [Test]
         public void GetClosestListTest_returnsEmptyListIfNoMatch()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -71,7 +71,7 @@ namespace Comparison_shopping_engine_backend.Tests
         }
 
 
-        [TestMethod()]
+        [Test]
         public void PersistTest_savesNames()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
@@ -85,7 +85,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(1, normalizationDirInfo.GetFiles("names.list").Length);
         }
 
-        [TestMethod()]
+        [Test]
         public void LoadAllTest_loadsNames()
         {
             NormalizationEngine m1 = NormalizationEngine.GetInstance();

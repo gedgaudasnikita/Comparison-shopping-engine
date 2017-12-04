@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,12 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Comparison_shopping_engine_web_protocol;
 
-namespace Comparison_shopping_engine_backend.Tests
+namespace Comparison_shopping_engine_web_protocol.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class GetSuggestionsEndpointTests
     {
-        [TestMethod()]
+        [Test]
         public void GetRequestParametersTest_parsesCorrectly()
         {
             var endpoint = new GetSuggestionsEndpoint();
@@ -27,7 +26,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(parameters, result);
         }
 
-        [TestMethod()]
+        [Test]
         public void GetResponseBodyTest_parsesCorrectly()
         {
             var endpoint = new GetSuggestionsEndpoint();

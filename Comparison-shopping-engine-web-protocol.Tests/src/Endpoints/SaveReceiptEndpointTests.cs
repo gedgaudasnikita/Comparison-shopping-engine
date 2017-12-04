@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +8,12 @@ using System.Drawing;
 using Comparison_shopping_engine_web_protocol;
 using Comparison_shopping_engine_core_entities;
 
-namespace Comparison_shopping_engine_backend.Tests
+namespace Comparison_shopping_engine_web_protocol.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class SaveReceiptEndpointTests
     {
-        [TestMethod()]
+        [Test]
         public void GetRequestBodyTest_parsesCorrectly()
         {
             var endpoint = new SaveReceiptEndpoint();

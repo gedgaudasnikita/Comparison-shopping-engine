@@ -1,12 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class StringExtensionsTests
     {
-        [TestMethod]
+        [Test]
         public void RemoveNonDigits_removesDigits()
         {
             string input = "w1a2d123asd";
@@ -16,7 +17,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual("12123", result);
         }
 
-        [TestMethod]
+        [Test]
         public void GetDistance_calculatesDistanceCorrectly()
         {
             string input1 = "hey";

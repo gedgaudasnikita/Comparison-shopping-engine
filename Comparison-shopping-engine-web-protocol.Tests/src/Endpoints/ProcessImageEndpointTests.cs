@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +9,16 @@ using System.IO;
 using Comparison_shopping_engine_web_protocol;
 using Comparison_shopping_engine_core_entities;
 
-namespace Comparison_shopping_engine_backend.Tests
+namespace Comparison_shopping_engine_web_protocol.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ProcessImageEndpointTests
     {
-        [TestMethod()]
+        [Test]
         public void GetRequestBodyTest_parsesCorrectly()
         {
             var endpoint = new ProcessImageEndpoint();
-            var bitmap = new Bitmap("testdata/receipt.jpg");
+            var bitmap = new Bitmap(Path.Combine(TestContext.CurrentContext.TestDirectory, "testdata/receipt.jpg"));
 
             MemoryStream m = new MemoryStream();
             bitmap.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -32,7 +31,7 @@ namespace Comparison_shopping_engine_backend.Tests
             bitmap.Dispose();
         }
 
-        [TestMethod()]
+        [Test]
         public void GetResponseBodyTest_parsesCorrectly()
         {
             var endpoint = new ProcessImageEndpoint();

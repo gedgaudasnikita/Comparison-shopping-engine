@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Comparison_shopping_engine_backend;
+﻿using Comparison_shopping_engine_backend;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +7,14 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Configuration;
 using Comparison_shopping_engine_core_entities;
+using NUnit.Framework;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ItemManagerTests
     {
-        [TestMethod()]
+        [Test]
         public void GetInstanceTest_isSingleton()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -22,7 +22,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(m1, m2);
         }
 
-        [TestMethod()]
+        [Test]
         public void AddItemTest_addsItem()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -33,7 +33,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.IsTrue(a.Equals(b));
         }
 
-        [TestMethod()]
+        [Test]
         public void ExistsTest_findsExisting()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -48,7 +48,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(2, m1.Count());
         }
 
-        [TestMethod()]
+        [Test]
         public void FindCheapestTest_findsCheapest()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -61,7 +61,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.IsTrue(c.Equals(new Item("NameA", "Store", 1000, "2017-12-12")));
         }
 
-        [TestMethod()]
+        [Test]
         public void CountTest_returnsCount()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -71,7 +71,7 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(1, m1.Count());
         }
 
-        [TestMethod()]
+        [Test]
         public void ClearListTest_clearsList()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -83,23 +83,28 @@ namespace Comparison_shopping_engine_backend.Tests
             Assert.AreEqual(0, m1.Count());
         }
 
-        [TestMethod()]
+        [Test]
         public void PersistTest_savesItems()
         {
             ItemManager m1 = ItemManager.GetInstance();
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
             string storageDir = ConfigurationManager.AppSettings["storageDir"];
+            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
+            foreach (FileInfo file in storageDirInfo.GetFiles())
+            {
+                file.Delete();
+            }
+
             m1.Add(testItem);
 
             m1.Persist();
 
             m1.ClearList();
-            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
             Assert.AreEqual(1, storageDirInfo.GetFiles("*.item").Length);
             Assert.AreEqual($"{ testItem.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item", storageDirInfo.GetFiles("*.item")[0].Name);
         }
 
-        [TestMethod()]
+        [Test]
         public void LoadAllTest_loadsItems()
         {
             ItemManager m1 = ItemManager.GetInstance();

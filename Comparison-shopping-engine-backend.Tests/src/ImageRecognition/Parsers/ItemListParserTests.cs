@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using NUnit.Framework;
 using Comparison_shopping_engine_backend;
 using System;
 using System.Collections.Generic;
@@ -9,10 +9,10 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass()]
+    [TestFixture]
     public class ItemListTests
     {
-        [TestMethod()]
+        [Test]
         public void ParseTest_parsesItemList()
         {
             string receipt = @"MAXIMA L UAB

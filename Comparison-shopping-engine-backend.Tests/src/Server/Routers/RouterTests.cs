@@ -1,13 +1,13 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.IO;
 using System.Collections.Specialized;
 using System.Net.Http;
 
-namespace Comparison_shopping_engine_backend
+namespace Comparison_shopping_engine_backend.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class RouterTests
     {
         private class TestEndpoint : IBackendEndpoint
@@ -31,7 +31,7 @@ namespace Comparison_shopping_engine_backend
             }
         }
 
-        [TestMethod]
+        [Test]
         public void GetCallback_getsCorrectCallback()
         {
             TestEndpoint endpoint = new TestEndpoint();
