@@ -1,19 +1,12 @@
-# This will run on Travis' 'new' container-based infrastructure
-sudo: false
+language: csharp
+solution: Comparison-shopping-engine.sln
 
-# Blacklist
-branches:
-  only:
-    - master
-
-# Environment variables
 env:
   global:
     - GH_REPO_NAME: Comparison-shopping-engine
     - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
     - GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
 
-# Install dependencies
 addons:
   apt:
     packages:
@@ -23,8 +16,7 @@ addons:
       - doxygen-gui
       - graphviz
 
-# Build your code e.g. by calling make
-script:
+after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x build-doc.sh
   - ./build-doc.sh

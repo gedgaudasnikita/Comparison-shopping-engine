@@ -2,6 +2,10 @@
 
 #Original: https://gist.github.com/vidavidorra/548ffbcdae99d752da02
 
+if [[ $TRAVIS_BRANCH != 'master' ]]
+	exit 0
+fi
+
 set -e
 
 mkdir code_docs
