@@ -57,10 +57,22 @@
     <Compile Include="Forms\ItemManagementForm.Designer.cs">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ItemDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemDeleteForm.Designer.cs">
+      <DependentUpon>ItemDeleteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ItemCorrectForm.resx">
+      <DependentUpon>ItemCorrectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ItemManagementForm.resx">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ItemDeleteForm.resx">
+      <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comparison-shopping-engine-core-entities\Comparison-shopping-engine-core-entities.csproj">
+      <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
+      <Name>Comparison-shopping-engine-core-entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

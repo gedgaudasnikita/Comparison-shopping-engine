@@ -30,6 +30,10 @@
         {
             this.ConnectButton = new System.Windows.Forms.Button();
             this.ItemDataGridView = new System.Windows.Forms.DataGridView();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StoreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.MergeButton = new System.Windows.Forms.Button();
             this.RestoreButton = new System.Windows.Forms.Button();
@@ -37,10 +41,6 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.NameSearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchButton = new System.Windows.Forms.Button();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StoreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ItemDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,8 @@
             // 
             // ItemDataGridView
             // 
+            this.ItemDataGridView.AllowUserToAddRows = false;
+            this.ItemDataGridView.AllowUserToDeleteRows = false;
             this.ItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameColumn,
@@ -64,9 +66,36 @@
             this.ItemDataGridView.Enabled = false;
             this.ItemDataGridView.Location = new System.Drawing.Point(22, 55);
             this.ItemDataGridView.Name = "ItemDataGridView";
+            this.ItemDataGridView.ReadOnly = true;
+            this.ItemDataGridView.ShowEditingIcon = false;
             this.ItemDataGridView.Size = new System.Drawing.Size(449, 150);
             this.ItemDataGridView.TabIndex = 1;
             this.ItemDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemDataGridView_CellContentClick);
+            this.ItemDataGridView.SelectionChanged += new System.EventHandler(this.ItemDataGridView_SelectionChanged);
+            // 
+            // NameColumn
+            // 
+            this.NameColumn.HeaderText = "Name";
+            this.NameColumn.Name = "NameColumn";
+            this.NameColumn.ReadOnly = true;
+            // 
+            // PriceColumn
+            // 
+            this.PriceColumn.HeaderText = "Price";
+            this.PriceColumn.Name = "PriceColumn";
+            this.PriceColumn.ReadOnly = true;
+            // 
+            // StoreColumn
+            // 
+            this.StoreColumn.HeaderText = "Store";
+            this.StoreColumn.Name = "StoreColumn";
+            this.StoreColumn.ReadOnly = true;
+            // 
+            // DateColumn
+            // 
+            this.DateColumn.HeaderText = "Date";
+            this.DateColumn.Name = "DateColumn";
+            this.DateColumn.ReadOnly = true;
             // 
             // DeleteButton
             // 
@@ -77,6 +106,7 @@
             this.DeleteButton.TabIndex = 2;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // MergeButton
             // 
@@ -107,6 +137,7 @@
             this.CorrectButton.TabIndex = 5;
             this.CorrectButton.Text = "Correct";
             this.CorrectButton.UseVisualStyleBackColor = true;
+            this.CorrectButton.Click += new System.EventHandler(this.CorrectButton_Click);
             // 
             // RefreshButton
             // 
@@ -135,30 +166,6 @@
             this.SearchButton.TabIndex = 8;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
-            // 
-            // NameColumn
-            // 
-            this.NameColumn.HeaderText = "Name";
-            this.NameColumn.Name = "NameColumn";
-            this.NameColumn.ReadOnly = true;
-            // 
-            // PriceColumn
-            // 
-            this.PriceColumn.HeaderText = "Price";
-            this.PriceColumn.Name = "PriceColumn";
-            this.PriceColumn.ReadOnly = true;
-            // 
-            // StoreColumn
-            // 
-            this.StoreColumn.HeaderText = "Store";
-            this.StoreColumn.Name = "StoreColumn";
-            this.StoreColumn.ReadOnly = true;
-            // 
-            // DateColumn
-            // 
-            this.DateColumn.HeaderText = "Date";
-            this.DateColumn.Name = "DateColumn";
-            this.DateColumn.ReadOnly = true;
             // 
             // MainForm
             // 

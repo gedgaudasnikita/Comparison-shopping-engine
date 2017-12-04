@@ -1,6 +1,6 @@
 ﻿namespace Comparison_shopping_engine_admin
 {
-    partial class ItemCorrectForm
+    partial class ItemDeleteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,15 +36,12 @@
             this.PriceLabel = new System.Windows.Forms.Label();
             this.StoreLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
-            this.NameAllowedLabel = new System.Windows.Forms.Label();
-            this.PriceAllowedLabel = new System.Windows.Forms.Label();
-            this.StoreAllowedLabel = new System.Windows.Forms.Label();
-            this.DateAllowedLabel = new System.Windows.Forms.Label();
-            this.UpdateButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameTextBox
             // 
+            this.NameTextBox.Enabled = false;
             this.NameTextBox.Location = new System.Drawing.Point(52, 13);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -52,14 +49,15 @@
             // 
             // PriceTextBox
             // 
+            this.PriceTextBox.Enabled = false;
             this.PriceTextBox.Location = new System.Drawing.Point(52, 39);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(100, 20);
             this.PriceTextBox.TabIndex = 1;
-            this.PriceTextBox.TextChanged += new System.EventHandler(this.PriceTextBox_TextChanged);
             // 
             // StoreTextBox
             // 
+            this.StoreTextBox.Enabled = false;
             this.StoreTextBox.Location = new System.Drawing.Point(52, 65);
             this.StoreTextBox.Name = "StoreTextBox";
             this.StoreTextBox.Size = new System.Drawing.Size(100, 20);
@@ -67,11 +65,11 @@
             // 
             // DateTextBox
             // 
+            this.DateTextBox.Enabled = false;
             this.DateTextBox.Location = new System.Drawing.Point(52, 91);
             this.DateTextBox.Name = "DateTextBox";
             this.DateTextBox.Size = new System.Drawing.Size(100, 20);
             this.DateTextBox.TabIndex = 3;
-            this.DateTextBox.TextChanged += new System.EventHandler(this.DateTextBox_TextChanged);
             // 
             // NameLabel
             // 
@@ -109,62 +107,21 @@
             this.DateLabel.TabIndex = 7;
             this.DateLabel.Text = "Date:";
             // 
-            // NameAllowedLabel
+            // DeleteButton
             // 
-            this.NameAllowedLabel.AutoSize = true;
-            this.NameAllowedLabel.Location = new System.Drawing.Point(158, 16);
-            this.NameAllowedLabel.Name = "NameAllowedLabel";
-            this.NameAllowedLabel.Size = new System.Drawing.Size(44, 13);
-            this.NameAllowedLabel.TabIndex = 8;
-            this.NameAllowedLabel.Text = "Allowed";
+            this.DeleteButton.Location = new System.Drawing.Point(52, 117);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(100, 23);
+            this.DeleteButton.TabIndex = 12;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
             // 
-            // PriceAllowedLabel
-            // 
-            this.PriceAllowedLabel.AutoSize = true;
-            this.PriceAllowedLabel.Location = new System.Drawing.Point(158, 42);
-            this.PriceAllowedLabel.Name = "PriceAllowedLabel";
-            this.PriceAllowedLabel.Size = new System.Drawing.Size(44, 13);
-            this.PriceAllowedLabel.TabIndex = 9;
-            this.PriceAllowedLabel.Text = "Allowed";
-            // 
-            // StoreAllowedLabel
-            // 
-            this.StoreAllowedLabel.AutoSize = true;
-            this.StoreAllowedLabel.Location = new System.Drawing.Point(158, 68);
-            this.StoreAllowedLabel.Name = "StoreAllowedLabel";
-            this.StoreAllowedLabel.Size = new System.Drawing.Size(44, 13);
-            this.StoreAllowedLabel.TabIndex = 10;
-            this.StoreAllowedLabel.Text = "Allowed";
-            // 
-            // DateAllowedLabel
-            // 
-            this.DateAllowedLabel.AutoSize = true;
-            this.DateAllowedLabel.Location = new System.Drawing.Point(158, 94);
-            this.DateAllowedLabel.Name = "DateAllowedLabel";
-            this.DateAllowedLabel.Size = new System.Drawing.Size(44, 13);
-            this.DateAllowedLabel.TabIndex = 11;
-            this.DateAllowedLabel.Text = "Allowed";
-            // 
-            // UpdateButton
-            // 
-            this.UpdateButton.Location = new System.Drawing.Point(52, 117);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(100, 23);
-            this.UpdateButton.TabIndex = 12;
-            this.UpdateButton.Text = "Update";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-            // 
-            // ItemCorrectForm
+            // ItemDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 152);
-            this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.DateAllowedLabel);
-            this.Controls.Add(this.StoreAllowedLabel);
-            this.Controls.Add(this.PriceAllowedLabel);
-            this.Controls.Add(this.NameAllowedLabel);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.StoreLabel);
             this.Controls.Add(this.PriceLabel);
@@ -173,8 +130,8 @@
             this.Controls.Add(this.StoreTextBox);
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.NameTextBox);
-            this.Name = "ItemCorrectForm";
-            this.Text = "ItemCorrectForm";
+            this.Name = "ItemDeleteForm";
+            this.Text = "ItemDeleteForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,10 +147,6 @@
         private System.Windows.Forms.Label PriceLabel;
         private System.Windows.Forms.Label StoreLabel;
         private System.Windows.Forms.Label DateLabel;
-        private System.Windows.Forms.Label NameAllowedLabel;
-        private System.Windows.Forms.Label PriceAllowedLabel;
-        private System.Windows.Forms.Label StoreAllowedLabel;
-        private System.Windows.Forms.Label DateAllowedLabel;
-        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }
