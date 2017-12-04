@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-web-protocol.Tests", "Comparison-shopping-engine-web-protocol.Tests\Comparison-shopping-engine-web-protocol.Tests.csproj", "{BD71FB67-6356-444A-AD1E-3B9F04BA29C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-admin", "Comparison-shopping-engine-admin\Comparison-shopping-engine-admin.csproj", "{AFF37537-303A-4370-A963-5FE955182D41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{BD71FB67-6356-444A-AD1E-3B9F04BA29C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD71FB67-6356-444A-AD1E-3B9F04BA29C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD71FB67-6356-444A-AD1E-3B9F04BA29C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF37537-303A-4370-A963-5FE955182D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF37537-303A-4370-A963-5FE955182D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF37537-303A-4370-A963-5FE955182D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF37537-303A-4370-A963-5FE955182D41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
