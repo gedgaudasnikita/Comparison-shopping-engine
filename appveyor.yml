@@ -33,8 +33,8 @@ build:
   verbosity: normal
 
 after_test:
-  - git checkout gh-pages
   - mv Comparison-shopping-engine-documentation\Doxyfile C:\projects\
+  - git checkout gh-pages
   - rm -rf *
   - ls .
   - ps: doxygen.exe "C:\projects\Doxyfile"
