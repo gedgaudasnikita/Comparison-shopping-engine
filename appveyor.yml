@@ -12,17 +12,15 @@ init:
 clone_folder: c:\projects\myproject
 
 environment:
-  my_var1: value1
+  GH_REPO_NAME: Comparison-shopping-engine
+  GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
 
 install:
-  - echo This is batch
+  - nuget restore
 
 platform: Any CPU
 
 configuration: CI
-
-before_build:
-  - nuget restore
 
 build:
   parallel: true                  # enable MSBuild parallel builds
@@ -32,10 +30,5 @@ build:
 
   verbosity: normal
 
-
-test:
-
-before_test:
-  - echo script1
-
 after_test:
+  - Comparison-shopping-engine-documentation\build-doc.sh
