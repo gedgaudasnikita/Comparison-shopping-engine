@@ -33,4 +33,11 @@ build:
   verbosity: normal
 
 after_test:
+  - git checkout gh-pages
   ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
+  - rm -rf !(html)
+  - echo "" > .nojekyll
+  - echo build > .version
+  - git add -all
+  - git commit -m "Deploy code docs to GitHub Pages Appveyor build: ${APPVEYOR_BUILD_NUMBER}"
+  - git push
