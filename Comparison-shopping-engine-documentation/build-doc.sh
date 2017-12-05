@@ -6,6 +6,22 @@
 #	exit 0
 #fi
 
+export LD_LIBRARY_PATH=/usr/local/lib
+mono --debug --profile=monocov:outfile=monocovCoverage.cov,+Comparison-shopping-engine-backend ../packages/NUnit.Console.3.7.0/tools/nunit3-console.exe --process=Single ../Comparison-shopping-engine-backend.Tests/bin/Release/Comparison-shopping-engine-backend.Tests.dll
+monocov --export-xml=monocovCoverage monocovCoverage.cov
+cat monocovCoverage.cov
+ls monocovCoverage
+REPO_COMMIT_AUTHOR=$(git show -s --pretty=format:"%cn")
+REPO_COMMIT_AUTHOR_EMAIL=$(git show -s --pretty=format:"%ce")
+REPO_COMMIT_MESSAGE=$(git show -s --pretty=format:"%s")
+echo $TRAVIS_COMMIT
+echo $TRAVIS_BRANCH
+echo $REPO_COMMIT_AUTHOR
+echo $REPO_COMMIT_AUTHOR_EMAIL
+echo $REPO_COMMIT_MESSAGE
+echo $TRAVIS_JOB_ID
+mono ../packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName travis-ci  --useRelativePaths
+
 set -e
 
 mkdir code_docs
@@ -22,9 +38,6 @@ rm -rf *
 
 echo "" > .nojekyll
 echo ${TRAVIS_BUILD_NUMBER} > .version
-
-mono ../../coveragerunner/OpenCover.4.6.519/tools/OpenCover.Console.exe -target:"../../testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe" -targetargs:"../../Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll" -filter:"+[*]* -[Comparison-shopping-engine-backend.Tests*]*" -register
-mono ../../coveragereporter/ReportGenerator.3.0.2/tools/ReportGenerator.exe -reports:results.xml -targetdir:coverage
 
 doxygen $DOXYFILE 2>&1 | tee doxygen.log
 
