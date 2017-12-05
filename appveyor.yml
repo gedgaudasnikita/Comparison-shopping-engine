@@ -40,7 +40,7 @@ after_test:
   - echo build > .version
   - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - ls .
-  - cp html/* .
+  - cp -r html/* .
   - rm -rf html
   - git add --all
   - git commit -m "Deploy code docs to GitHub Pages Appveyor build: ${APPVEYOR_BUILD_NUMBER}"
