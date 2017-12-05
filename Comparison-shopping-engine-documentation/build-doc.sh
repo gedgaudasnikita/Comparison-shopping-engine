@@ -10,7 +10,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 ls .
 echo "what"
 ls ..
-mono --debug --profile=monocov:outfile=monocovCoverage.cov,+Comparison-shopping-engine-backend ../testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --process=Single ../Comparison-shopping-engine-backend.Tests/bin/Release/Comparison-shopping-engine-backend.Tests.dll
+mono --debug --profile=monocov:outfile=monocovCoverage.cov,+Comparison-shopping-engine-backend ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --process=Single ./Comparison-shopping-engine-backend.Tests/bin/Release/Comparison-shopping-engine-backend.Tests.dll
 monocov --export-xml=monocovCoverage monocovCoverage.cov
 cat monocovCoverage.cov
 ls monocovCoverage
@@ -23,7 +23,7 @@ echo $REPO_COMMIT_AUTHOR
 echo $REPO_COMMIT_AUTHOR_EMAIL
 echo $REPO_COMMIT_MESSAGE
 echo $TRAVIS_JOB_ID
-mono ../packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName travis-ci  --useRelativePaths
+mono ./packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName travis-ci  --useRelativePaths
 
 set -e
 
