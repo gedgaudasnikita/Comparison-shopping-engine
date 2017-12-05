@@ -1,6 +1,7 @@
 var searchData=
 [
   ['camerabutton',['CameraButton',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a2cd56c4fac97654d10598216700f9500',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['changes_2emd',['CHANGES.md',['../CHANGES_8md.html',1,'']]],
   ['checkandrotatebitmap',['CheckAndRotateBitmap',['../classComparison__shopping__engine__frontend__android_1_1BitmapExtensions.html#a24ccfe6f50e183e2c814b4c879af2707',1,'Comparison_shopping_engine_frontend_android::BitmapExtensions']]],
   ['clearlist',['ClearList',['../classComparison__shopping__engine__backend_1_1ItemManager.html#a7cfc060510ae04d015e9ce28ffe03f12',1,'Comparison_shopping_engine_backend.ItemManager.ClearList()'],['../classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a55a33272f925d2e4b1b85f28e8eef03f',1,'Comparison_shopping_engine_backend.NormalizationEngine.ClearList()']]],
   ['client',['Client',['../classComparison__shopping__engine__frontend__android_1_1Client.html#a6642f3d37da01944d17b02635ac35c01',1,'Comparison_shopping_engine_frontend_android::Client']]],
@@ -8,6 +9,7 @@ var searchData=
   ['client_2ecs',['Client.cs',['../Client_8cs.html',1,'']]],
   ['compare',['Compare',['../classComparison__shopping__engine__core__entities_1_1ItemDateComparer.html#ab9c65f6a22ca03d1dd3723861ebfcece',1,'Comparison_shopping_engine_core_entities.ItemDateComparer.Compare()'],['../classComparison__shopping__engine__core__entities_1_1ItemNameComparer.html#a763a5f4bf05970fdb627bafc49a2503c',1,'Comparison_shopping_engine_core_entities.ItemNameComparer.Compare()'],['../classComparison__shopping__engine__core__entities_1_1ItemPriceComparer.html#a8af68213da2d5f77375bba9d31371f60',1,'Comparison_shopping_engine_core_entities.ItemPriceComparer.Compare()'],['../classComparison__shopping__engine__core__entities_1_1ItemStoreComparer.html#a50b96074f18f168f9370c20bd5358205',1,'Comparison_shopping_engine_core_entities.ItemStoreComparer.Compare()']]],
   ['comparingspinner',['ComparingSpinner',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a9eab19b88d0f51102c7cb4f6da1edcd4',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['comparison_5fshopping_5fengine_5fadmin',['Comparison_shopping_engine_admin',['../namespaceComparison__shopping__engine__admin.html',1,'']]],
   ['comparison_5fshopping_5fengine_5fbackend',['Comparison_shopping_engine_backend',['../namespaceComparison__shopping__engine__backend.html',1,'']]],
   ['comparison_5fshopping_5fengine_5fcore_5fentities',['Comparison_shopping_engine_core_entities',['../namespaceComparison__shopping__engine__core__entities.html',1,'']]],
   ['comparison_5fshopping_5fengine_5ffrontend_5fandroid',['Comparison_shopping_engine_frontend_android',['../namespaceComparison__shopping__engine__frontend__android.html',1,'']]],

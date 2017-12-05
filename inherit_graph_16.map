@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html" title="This class provides the easy&#45;to&#45;use methods for calling the backend endpoints. " alt="" coords="6,4,231,60"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__core__entities_1_1Receipt.html" title="A class representing the Receipt entity. " alt="" coords="208,5,405,46"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ParseableReceipt.html" title="A class representing the ParseableReceipt entity. Adds the parsing functionality needed in the backen..." alt="" coords="454,5,685,46"/>
 </map>

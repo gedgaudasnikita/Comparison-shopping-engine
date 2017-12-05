@@ -19,6 +19,8 @@ var searchData=
   ['processreceiptbackendendpoint_2ecs',['ProcessReceiptBackendEndpoint.cs',['../ProcessReceiptBackendEndpoint_8cs.html',1,'']]],
   ['processreceiptendpoint',['ProcessReceiptEndpoint',['../classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html',1,'Comparison_shopping_engine_web_protocol']]],
   ['processreceiptendpoint_2ecs',['ProcessReceiptEndpoint.cs',['../ProcessReceiptEndpoint_8cs.html',1,'']]],
+  ['program',['Program',['../classComparison__shopping__engine__admin_1_1Program.html',1,'Comparison_shopping_engine_admin']]],
   ['program',['Program',['../classComparison__shopping__engine__backend_1_1Program.html',1,'Comparison_shopping_engine_backend']]],
-  ['program_2ecs',['Program.cs',['../Program_8cs.html',1,'']]]
+  ['program_2ecs',['Program.cs',['../Comparison-shopping-engine-admin_2Program_8cs.html',1,'']]],
+  ['program_2ecs',['Program.cs',['../Comparison-shopping-engine-backend_2src_2Program_8cs.html',1,'']]]
 ];
