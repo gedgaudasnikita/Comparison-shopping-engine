@@ -1,4 +1,4 @@
-version: 1.0.{build}-{APPVEYOR_REPO_COMMIT}
+version: 1.0.{build}
 
 branches:
   except:
@@ -34,7 +34,7 @@ build:
 
 after_test:
   - git checkout gh-pages
-  - rm -rf .
+  - rm -rf *
   - ls .
   - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - ls .
