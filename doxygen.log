@@ -96,29 +96,10 @@ Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-s
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol.Tests
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragereporter
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragereporter/ReportGenerator.3.0.2
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragereporter/ReportGenerator.3.0.2/tools
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/docs
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/MSBuild
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/Samples
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/Samples/x64
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/Samples/x86
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom/Properties
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest/Properties
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/packages
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/tools
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/tools/x64
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/tools/x86
-Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/transform
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/data
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/data/db
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/data/norm
+Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/monocovCoverage
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/Newtonsoft.Json.10.0.3
 Searching for files in directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/Newtonsoft.Json.10.0.3/lib
@@ -309,10 +290,6 @@ Preprocessing /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comp
 Parsing file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpoint.cs...
 Preprocessing /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpointMeta.cs...
 Parsing file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpointMeta.cs...
-Preprocessing /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom/BomManager.cs...
-Parsing file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom/BomManager.cs...
-Preprocessing /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest/BomManagerTests.cs...
-Parsing file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest/BomManagerTests.cs...
 Reading /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/Newtonsoft.Json.10.0.3/LICENSE.md...
 Reading /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md...
 Reading /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/README.md...
@@ -357,7 +334,16 @@ Adding source references...
 Adding xrefitems...
 Sorting member lists...
 Computing dependencies between directories...
-Generating citations page...
+Generati/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:33: warning: unable to resolve link to `Receipt' for \link command
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:34: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:18: warning: unable to resolve link to `Receipt' for \link command
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:19: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:47: warning: unable to resolve link to `Receipt' for \link command
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:48: warning: Unexpected xml/html command summary found
+ng citations page...
 Counting data structures...
 Resolving user defined references...
 Finding anchors and sections in the documentation...
@@ -371,16 +357,7 @@ Generating file sources...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemCorrectForm.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemCorrectForm.Designer.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemDeleteForm.cs...
-Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engi/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:33: warning: unable to resolve link to `Receipt' for \link command
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:34: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:18: warning: unable to resolve link to `Receipt' for \link command
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:19: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:47: warning: unable to resolve link to `Receipt' for \link command
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs:48: warning: Unexpected xml/html command summary found
-ne/Comparison-shopping-engine-admin/Forms/ItemDeleteForm.Designer.cs...
+Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemDeleteForm.Designer.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemManagementForm.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemManagementForm.Designer.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/obj/CI/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs...
@@ -442,8 +419,6 @@ Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints/SaveReceiptEndpoint.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpoint.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpointMeta.cs...
-Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom/BomManager.cs...
-Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest/BomManagerTests.cs...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/Newtonsoft.Json.10.0.3/LICENSE.md...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md...
 Generating code for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/README.md...
@@ -452,14 +427,14 @@ Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemCorrectForm.Designer.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemDeleteForm.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemDeleteForm.Designer.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemManagementForm.cs...
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemManagementForm.cs.../home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
+/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
+
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms/ItemManagementForm.Designer.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/obj/CI/.NETFramework,Version=v4.6.1.AssemblyAttribute.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Program.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shoppin/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
-/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
-g-engine-backend/src/Program.cs...
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Program.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/obj/CI/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/BusinessLogic/ItemManager.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller/Controller.cs...
@@ -504,11 +479,7 @@ Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Elements/ItemLine/ItemLine.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Elements/StateColorManager.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Extensions/BitmapExtensions.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition/OcrWrapper.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Network/BackendInterface.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Network/Client.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Other/AppData.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-sh/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md:182: warning: Found unknown command `\filename'
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition/OcrWrapper.cs./home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md:182: warning: Found unknown command `\filename'
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md:215: warning: Found unknown command `\FILE'
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md:301: warning: explicit link request to 'Defined' could not be resolved
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md:1505: warning: Found unknown command `\nunit'
@@ -550,7 +521,11 @@ Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
-opping-engine-frontend-android/src/Utilities/SuggestionAdapter.cs...
+..
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Network/BackendInterface.cs...
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Network/Client.cs...
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Other/AppData.cs...
+Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Utilities/SuggestionAdapter.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Utilities/UiHelpers.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints/GetSuggestionsEndpoint.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints/ProcessImageEndpoint.cs...
@@ -558,8 +533,6 @@ Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints/SaveReceiptEndpoint.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpoint.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/IEndpointMeta.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom/BomManager.cs...
-Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest/BomManagerTests.cs...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/Newtonsoft.Json.10.0.3/LICENSE.md...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/packages/NUnit.3.9.0/CHANGES.md...
 Generating docs for file /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/README.md...
@@ -569,10 +542,6 @@ Generating docs for page md__home_travis_build_gedgaudasnikita_Comparison-shoppi
 Generating group documentation...
 Generating class documentation...
 Generating namespace index...
-Generating docs for namespace Bom
-Generating docs for compound Bom::BomManager...
-Generating docs for namespace BomTest
-Generating docs for compound BomTest::BomManagerTests...
 Generating docs for namespace Comparison_shopping_engine_admin
 Generating docs for compound Comparison_shopping_engine_admin::ItemCorrectForm...
 Generating docs for compound Comparison_shopping_engine_admin::ItemDeleteForm...
@@ -591,12 +560,12 @@ Generating docs for compound Comparison_shopping_engine_backend::ItemListParser.
 Generating docs for compound Comparison_shopping_engine_backend::StoreParser...
 Generating docs for compound Comparison_shopping_engine_backend::Program...
 Generating docs for compound Comparison_shopping_engine_backend::GetSuggestionsBackendEndpoint...
-Generating docs for compound Comparison_shopping_engine_backend::ProcessImageBackendEndpoint...
-Generating docs for compound Comparison_shopping_engine_backend/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition/OcrWrapper.cs:41: warning: argument 'path' of command @param is not found in the argument list of Comparison_shopping_engine_frontend_android.OcrWrapper::ConvertToText(Bitmap receipt, IEnumerable< Action< int >> progressListeners=null)
+Generating docs for compound Comparison_shopping_engine_backend::Pr/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition/OcrWrapper.cs:41: warning: argument 'path' of command @param is not found in the argument list of Comparison_shopping_engine_frontend_android.OcrWrapper::ConvertToText(Bitmap receipt, IEnumerable< Action< int >> progressListeners=null)
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition/OcrWrapper.cs:41: warning: The following parameters of Comparison_shopping_engine_frontend_android.OcrWrapper.ConvertToText(Bitmap receipt, IEnumerable< Action< int >> progressListeners=null) are not documented:
   parameter 'receipt'
   parameter 'progressListeners'
-::ProcessReceiptBackendEndpoint...
+ocessImageBackendEndpoint...
+Generating docs for compound Comparison_shopping_engine_backend::ProcessReceiptBackendEndpoint...
 Generating docs for compound Comparison_shopping_engine_backend::SaveReceiptBackendEndpoint...
 Generating docs for compound Comparison_shopping_engine_backend::IBackendEndpoint...
 Generating docs for compound Comparison_shopping_engine_backend::IRouter...
@@ -648,8 +617,6 @@ Generating docs for compound Comparison_shopping_engine_web_protocol::IEndpoint<
 Generating docs for compound Comparison_shopping_engine_web_protocol::IEndpointMeta...
 Generating graph info page...
 Generating directory documentation...
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/Bom
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln/BomTest
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/BusinessLogic
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/obj/CI
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/obj/CI
@@ -664,7 +631,6 @@ Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Com
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Controller
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/src/CoreEntities
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/CoreEntities
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Elements
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol/Endpoints
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Server/Endpoints
@@ -672,28 +638,26 @@ Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Com
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/src/Extensions
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Extensions
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/Forms
-Generating dependency gra/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
+Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition
+Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition
+Generating dependency graph f/home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/DateParser.cs:14: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/ItemListParser.cs:15: warning: Unexpected xml/html command summary found
 /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers/StoreParser.cs:14: warning: Unexpected xml/html command summary found
-ph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/ImageRecognition
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/src/CoreEntities/ItemComparers
+or directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/src/CoreEntities/ItemComparers
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Elements/ItemLine
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Network
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/obj
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-core-entities/obj
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/obj
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-admin/obj
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/src/Other
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/ImageRecognition/Parsers
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src/Protocol
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-frontend-android/Resources
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Server/Routers
-Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/coveragerunner/OpenCover.4.6.519/SampleSln
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Server
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-backend/src/Server/Servers
 Generating dependency graph for directory /home/travis/build/gedgaudasnikita/Comparison-shopping-engine/Comparison-shopping-engine-web-protocol/src
@@ -715,315 +679,299 @@ Generating file member index...
 Generating example index...
 finalizing index lists...
 Running dot...
-Generating dot graphs using 33 parallel threads...
-Running dot for graph 1/195
-Running dot for graph 2/195
-Running dot for graph 3/195
-Running dot for graph 4/195
-Running dot for graph 5/195
-Running dot for graph 6/195
-Running dot for graph 7/195
-Running dot for graph 8/195
-Running dot for graph 9/195
-Running dot for graph 10/195
-Running dot for graph 11/195
-Running dot for graph 12/195
-Running dot for graph 13/195
-Running dot for graph 14/195
-Running dot for graph 15/195
-Running dot for graph 16/195
-Running dot for graph 17/195
-Running dot for graph 18/195
-Running dot for graph 19/195
-Running dot for graph 20/195
-Running dot for graph 21/195
-Running dot for graph 22/195
-Running dot for graph 23/195
-Running dot for graph 24/195
-Running dot for graph 25/195
-Running dot for graph 26/195
-Running dot for graph 27/195
-Running dot for graph 28/195
-Running dot for graph 29/195
-Running dot for graph 30/195
-Running dot for graph 31/195
-Running dot for graph 32/195
-Running dot for graph 33/195
-Running dot for graph 34/195
-Running dot for graph 35/195
-Running dot for graph 36/195
-Running dot for graph 37/195
-Running dot for graph 38/195
-Running dot for graph 39/195
-Running dot for graph 40/195
-Running dot for graph 41/195
-Running dot for graph 42/195
-Running dot for graph 43/195
-Running dot for graph 44/195
-Running dot for graph 45/195
-Running dot for graph 46/195
-Running dot for graph 47/195
-Running dot for graph 48/195
-Running dot for graph 49/195
-Running dot for graph 50/195
-Running dot for graph 51/195
-Running dot for graph 52/195
-Running dot for graph 53/195
-Running dot for graph 54/195
-Running dot for graph 55/195
-Running dot for graph 56/195
-Running dot for graph 57/195
-Running dot for graph 58/195
-Running dot for graph 59/195
-Running dot for graph 60/195
-Running dot for graph 61/195
-Running dot for graph 62/195
-Running dot for graph 63/195
-Running dot for graph 64/195
-Running dot for graph 65/195
-Running dot for graph 66/195
-Running dot for graph 67/195
-Running dot for graph 68/195
-Running dot for graph 69/195
-Running dot for graph 70/195
-Running dot for graph 71/195
-Running dot for graph 72/195
-Running dot for graph 73/195
-Running dot for graph 74/195
-Running dot for graph 75/195
-Running dot for graph 76/195
-Running dot for graph 77/195
-Running dot for graph 78/195
-Running dot for graph 79/195
-Running dot for graph 80/195
-Running dot for graph 81/195
-Running dot for graph 82/195
-Running dot for graph 83/195
-Running dot for graph 84/195
-Running dot for graph 85/195
-Running dot for graph 86/195
-Running dot for graph 87/195
-Running dot for graph 88/195
-Running dot for graph 89/195
-Running dot for graph 90/195
-Running dot for graph 91/195
-Running dot for graph 92/195
-Running dot for graph 93/195
-Running dot for graph 94/195
-Running dot for graph 95/195
-Running dot for graph 96/195
-Running dot for graph 97/195
-Running dot for graph 98/195
-Running dot for graph 99/195
-Running dot for graph 100/195
-Running dot for graph 101/195
-Running dot for graph 102/195
-Running dot for graph 103/195
-Running dot for graph 104/195
-Running dot for graph 105/195
-Running dot for graph 106/195
-Running dot for graph 107/195
-Running dot for graph 108/195
-Running dot for graph 109/195
-Running dot for graph 110/195
-Running dot for graph 111/195
-Running dot for graph 112/195
-Running dot for graph 113/195
-Running dot for graph 114/195
-Running dot for graph 115/195
-Running dot for graph 116/195
-Running dot for graph 117/195
-Running dot for graph 118/195
-Running dot for graph 119/195
-Running dot for graph 120/195
-Running dot for graph 121/195
-Running dot for graph 122/195
-Running dot for graph 123/195
-Running dot for graph 124/195
-Running dot for graph 125/195
-Running dot for graph 126/195
-Running dot for graph 127/195
-Running dot for graph 128/195
-Running dot for graph 129/195
-Running dot for graph 130/195
-Running dot for graph 131/195
-Running dot for graph 132/195
-Running dot for graph 133/195
-Running dot for graph 134/195
-Running dot for graph 135/195
-Running dot for graph 136/195
-Running dot for graph 137/195
-Running dot for graph 138/195
-Running dot for graph 139/195
-Running dot for graph 140/195
-Running dot for graph 141/195
-Running dot for graph 142/195
-Running dot for graph 143/195
-Running dot for graph 144/195
-Running dot for graph 145/195
-Running dot for graph 146/195
-Running dot for graph 147/195
-Running dot for graph 148/195
-Running dot for graph 149/195
-Running dot for graph 150/195
-Running dot for graph 151/195
-Running dot for graph 152/195
-Running dot for graph 153/195
-Running dot for graph 154/195
-Running dot for graph 155/195
-Running dot for graph 156/195
-Running dot for graph 157/195
-Running dot for graph 158/195
-Running dot for graph 159/195
-Running dot for graph 160/195
-Running dot for graph 161/195
-Running dot for graph 162/195
-Running dot for graph 163/195
-Running dot for graph 164/195
-Running dot for graph 165/195
-Running dot for graph 166/195
-Running dot for graph 167/195
-Running dot for graph 168/195
-Running dot for graph 169/195
-Running dot for graph 170/195
-Running dot for graph 171/195
-Running dot for graph 172/195
-Running dot for graph 173/195
-Running dot for graph 174/195
-Running dot for graph 175/195
-Running dot for graph 176/195
-Running dot for graph 177/195
-Running dot for graph 178/195
-Running dot for graph 179/195
-Running dot for graph 180/195
-Running dot for graph 181/195
-Running dot for graph 182/195
-Running dot for graph 183/195
-Running dot for graph 184/195
-Running dot for graph 185/195
-Running dot for graph 186/195
-Running dot for graph 187/195
-Running dot for graph 188/195
-Running dot for graph 189/195
-Running dot for graph 190/195
-Running dot for graph 191/195
-Running dot for graph 192/195
-Running dot for graph 193/195
-Running dot for graph 194/195
-Running dot for graph 195/195
-Patching output file 1/114
-Patching output file 2/114
-Patching output file 3/114
-Patching output file 4/114
-Patching output file 5/114
-Patching output file 6/114
-Patching output file 7/114
-Patching output file 8/114
-Patching output file 9/114
-Patching output file 10/114
-Patching output file 11/114
-Patching output file 12/114
-Patching output file 13/114
-Patching output file 14/114
-Patching output file 15/114
-Patching output file 16/114
-Patching output file 17/114
-Patching output file 18/114
-Patching output file 19/114
-Patching output file 20/114
-Patching output file 21/114
-Patching output file 22/114
-Patching output file 23/114
-Patching output file 24/114
-Patching output file 25/114
-Patching output file 26/114
-Patching output file 27/114
-Patching output file 28/114
-Patching output file 29/114
-Patching output file 30/114
-Patching output file 31/114
-Patching output file 32/114
-Patching output file 33/114
-Patching output file 34/114
-Patching output file 35/114
-Patching output file 36/114
-Patching output file 37/114
-Patching output file 38/114
-Patching output file 39/114
-Patching output file 40/114
-Patching output file 41/114
-Patching output file 42/114
-Patching output file 43/114
-Patching output file 44/114
-Patching output file 45/114
-Patching output file 46/114
-Patching output file 47/114
-Patching output file 48/114
-Patching output file 49/114
-Patching output file 50/114
-Patching output file 51/114
-Patching output file 52/114
-Patching output file 53/114
-Patching output file 54/114
-Patching output file 55/114
-Patching output file 56/114
-Patching output file 57/114
-Patching output file 58/114
-Patching output file 59/114
-Patching output file 60/114
-Patching output file 61/114
-Patching output file 62/114
-Patching output file 63/114
-Patching output file 64/114
-Patching output file 65/114
-Patching output file 66/114
-Patching output file 67/114
-Patching output file 68/114
-Patching output file 69/114
-Patching output file 70/114
-Patching output file 71/114
-Patching output file 72/114
-Patching output file 73/114
-Patching output file 74/114
-Patching output file 75/114
-Patching output file 76/114
-Patching output file 77/114
-Patching output file 78/114
-Patching output file 79/114
-Patching output file 80/114
-Patching output file 81/114
-Patching output file 82/114
-Patching output file 83/114
-Patching output file 84/114
-Patching output file 85/114
-Patching output file 86/114
-Patching output file 87/114
-Patching output file 88/114
-Patching output file 89/114
-Patching output file 90/114
-Patching output file 91/114
-Patching output file 92/114
-Patching output file 93/114
-Patching output file 94/114
-Patching output file 95/114
-Patching output file 96/114
-Patching output file 97/114
-Patching output file 98/114
-Patching output file 99/114
-Patching output file 100/114
-Patching output file 101/114
-Patching output file 102/114
-Patching output file 103/114
-Patching output file 104/114
-Patching output file 105/114
-Patching output file 106/114
-Patching output file 107/114
-Patching output file 108/114
-Patching output file 109/114
-Patching output file 110/114
-Patching output file 111/114
-Patching output file 112/114
-Patching output file 113/114
-Patching output file 114/114
-lookup cache used 1796/65536 hits=5076 misses=1847
+Generating dot graphs using 3 parallel threads...
+Running dot for graph 1/186
+Running dot for graph 2/186
+Running dot for graph 3/186
+Running dot for graph 4/186
+Running dot for graph 5/186
+Running dot for graph 6/186
+Running dot for graph 7/186
+Running dot for graph 8/186
+Running dot for graph 9/186
+Running dot for graph 10/186
+Running dot for graph 11/186
+Running dot for graph 12/186
+Running dot for graph 13/186
+Running dot for graph 14/186
+Running dot for graph 15/186
+Running dot for graph 16/186
+Running dot for graph 17/186
+Running dot for graph 18/186
+Running dot for graph 19/186
+Running dot for graph 20/186
+Running dot for graph 21/186
+Running dot for graph 22/186
+Running dot for graph 23/186
+Running dot for graph 24/186
+Running dot for graph 25/186
+Running dot for graph 26/186
+Running dot for graph 27/186
+Running dot for graph 28/186
+Running dot for graph 29/186
+Running dot for graph 30/186
+Running dot for graph 31/186
+Running dot for graph 32/186
+Running dot for graph 33/186
+Running dot for graph 34/186
+Running dot for graph 35/186
+Running dot for graph 36/186
+Running dot for graph 37/186
+Running dot for graph 38/186
+Running dot for graph 39/186
+Running dot for graph 40/186
+Running dot for graph 41/186
+Running dot for graph 42/186
+Running dot for graph 43/186
+Running dot for graph 44/186
+Running dot for graph 45/186
+Running dot for graph 46/186
+Running dot for graph 47/186
+Running dot for graph 48/186
+Running dot for graph 49/186
+Running dot for graph 50/186
+Running dot for graph 51/186
+Running dot for graph 52/186
+Running dot for graph 53/186
+Running dot for graph 54/186
+Running dot for graph 55/186
+Running dot for graph 56/186
+Running dot for graph 57/186
+Running dot for graph 58/186
+Running dot for graph 59/186
+Running dot for graph 60/186
+Running dot for graph 61/186
+Running dot for graph 62/186
+Running dot for graph 63/186
+Running dot for graph 64/186
+Running dot for graph 65/186
+Running dot for graph 66/186
+Running dot for graph 67/186
+Running dot for graph 68/186
+Running dot for graph 69/186
+Running dot for graph 70/186
+Running dot for graph 71/186
+Running dot for graph 72/186
+Running dot for graph 73/186
+Running dot for graph 74/186
+Running dot for graph 75/186
+Running dot for graph 76/186
+Running dot for graph 77/186
+Running dot for graph 78/186
+Running dot for graph 79/186
+Running dot for graph 80/186
+Running dot for graph 81/186
+Running dot for graph 82/186
+Running dot for graph 83/186
+Running dot for graph 84/186
+Running dot for graph 85/186
+Running dot for graph 86/186
+Running dot for graph 87/186
+Running dot for graph 88/186
+Running dot for graph 89/186
+Running dot for graph 90/186
+Running dot for graph 91/186
+Running dot for graph 92/186
+Running dot for graph 93/186
+Running dot for graph 94/186
+Running dot for graph 95/186
+Running dot for graph 96/186
+Running dot for graph 97/186
+Running dot for graph 98/186
+Running dot for graph 99/186
+Running dot for graph 100/186
+Running dot for graph 101/186
+Running dot for graph 102/186
+Running dot for graph 103/186
+Running dot for graph 104/186
+Running dot for graph 105/186
+Running dot for graph 106/186
+Running dot for graph 107/186
+Running dot for graph 108/186
+Running dot for graph 109/186
+Running dot for graph 110/186
+Running dot for graph 111/186
+Running dot for graph 112/186
+Running dot for graph 113/186
+Running dot for graph 114/186
+Running dot for graph 115/186
+Running dot for graph 116/186
+Running dot for graph 117/186
+Running dot for graph 118/186
+Running dot for graph 119/186
+Running dot for graph 120/186
+Running dot for graph 121/186
+Running dot for graph 122/186
+Running dot for graph 123/186
+Running dot for graph 124/186
+Running dot for graph 125/186
+Running dot for graph 126/186
+Running dot for graph 127/186
+Running dot for graph 128/186
+Running dot for graph 129/186
+Running dot for graph 130/186
+Running dot for graph 131/186
+Running dot for graph 132/186
+Running dot for graph 133/186
+Running dot for graph 134/186
+Running dot for graph 135/186
+Running dot for graph 136/186
+Running dot for graph 137/186
+Running dot for graph 138/186
+Running dot for graph 139/186
+Running dot for graph 140/186
+Running dot for graph 141/186
+Running dot for graph 142/186
+Running dot for graph 143/186
+Running dot for graph 144/186
+Running dot for graph 145/186
+Running dot for graph 146/186
+Running dot for graph 147/186
+Running dot for graph 148/186
+Running dot for graph 149/186
+Running dot for graph 150/186
+Running dot for graph 151/186
+Running dot for graph 152/186
+Running dot for graph 153/186
+Running dot for graph 154/186
+Running dot for graph 155/186
+Running dot for graph 156/186
+Running dot for graph 157/186
+Running dot for graph 158/186
+Running dot for graph 159/186
+Running dot for graph 160/186
+Running dot for graph 161/186
+Running dot for graph 162/186
+Running dot for graph 163/186
+Running dot for graph 164/186
+Running dot for graph 165/186
+Running dot for graph 166/186
+Running dot for graph 167/186
+Running dot for graph 168/186
+Running dot for graph 169/186
+Running dot for graph 170/186
+Running dot for graph 171/186
+Running dot for graph 172/186
+Running dot for graph 173/186
+Running dot for graph 174/186
+Running dot for graph 175/186
+Running dot for graph 176/186
+Running dot for graph 177/186
+Running dot for graph 178/186
+Running dot for graph 179/186
+Running dot for graph 180/186
+Running dot for graph 181/186
+Running dot for graph 182/186
+Running dot for graph 183/186
+Running dot for graph 184/186
+Running dot for graph 185/186
+Running dot for graph 186/186
+Patching output file 1/107
+Patching output file 2/107
+Patching output file 3/107
+Patching output file 4/107
+Patching output file 5/107
+Patching output file 6/107
+Patching output file 7/107
+Patching output file 8/107
+Patching output file 9/107
+Patching output file 10/107
+Patching output file 11/107
+Patching output file 12/107
+Patching output file 13/107
+Patching output file 14/107
+Patching output file 15/107
+Patching output file 16/107
+Patching output file 17/107
+Patching output file 18/107
+Patching output file 19/107
+Patching output file 20/107
+Patching output file 21/107
+Patching output file 22/107
+Patching output file 23/107
+Patching output file 24/107
+Patching output file 25/107
+Patching output file 26/107
+Patching output file 27/107
+Patching output file 28/107
+Patching output file 29/107
+Patching output file 30/107
+Patching output file 31/107
+Patching output file 32/107
+Patching output file 33/107
+Patching output file 34/107
+Patching output file 35/107
+Patching output file 36/107
+Patching output file 37/107
+Patching output file 38/107
+Patching output file 39/107
+Patching output file 40/107
+Patching output file 41/107
+Patching output file 42/107
+Patching output file 43/107
+Patching output file 44/107
+Patching output file 45/107
+Patching output file 46/107
+Patching output file 47/107
+Patching output file 48/107
+Patching output file 49/107
+Patching output file 50/107
+Patching output file 51/107
+Patching output file 52/107
+Patching output file 53/107
+Patching output file 54/107
+Patching output file 55/107
+Patching output file 56/107
+Patching output file 57/107
+Patching output file 58/107
+Patching output file 59/107
+Patching output file 60/107
+Patching output file 61/107
+Patching output file 62/107
+Patching output file 63/107
+Patching output file 64/107
+Patching output file 65/107
+Patching output file 66/107
+Patching output file 67/107
+Patching output file 68/107
+Patching output file 69/107
+Patching output file 70/107
+Patching output file 71/107
+Patching output file 72/107
+Patching output file 73/107
+Patching output file 74/107
+Patching output file 75/107
+Patching output file 76/107
+Patching output file 77/107
+Patching output file 78/107
+Patching output file 79/107
+Patching output file 80/107
+Patching output file 81/107
+Patching output file 82/107
+Patching output file 83/107
+Patching output file 84/107
+Patching output file 85/107
+Patching output file 86/107
+Patching output file 87/107
+Patching output file 88/107
+Patching output file 89/107
+Patching output file 90/107
+Patching output file 91/107
+Patching output file 92/107
+Patching output file 93/107
+Patching output file 94/107
+Patching output file 95/107
+Patching output file 96/107
+Patching output file 97/107
+Patching output file 98/107
+Patching output file 99/107
+Patching output file 100/107
+Patching output file 101/107
+Patching output file 102/107
+Patching output file 103/107
+Patching output file 104/107
+Patching output file 105/107
+Patching output file 106/107
+Patching output file 107/107
+lookup cache used 1769/65536 hits=5038 misses=1820
 finished...
