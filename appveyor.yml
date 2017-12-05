@@ -18,7 +18,7 @@ environment:
 install:
   - nuget restore
   - choco install doxygen.portable
-  - choco install doxygen graphviz
+  - choco install graphviz
 
 platform: Any CPU
 
