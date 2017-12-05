@@ -31,6 +31,7 @@ install:
   - make
   - sudo make install
   - cd $TRAVIS_BUILD_DIR
+
 script:
   - xbuild /p:Configuration=CI Comparison-shopping-engine.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
