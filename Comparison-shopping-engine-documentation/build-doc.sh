@@ -23,8 +23,8 @@ rm -rf *
 echo "" > .nojekyll
 echo ${TRAVIS_BUILD_NUMBER} > .version
 
-../../../coveragerunner/OpenCover.Console.exe -target:"../../../testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe" -targetargs:"../../../Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll" -filter:"+[*]* -[Comparison-shopping-engine-backend.Tests*]*" -register
-../../../coveragereporter/ReportGenerator.exe -reports:results.xml -targetdir:coverage
+../../../coveragerunner/OpenCover.4.6.519/OpenCover.Console.exe -target:"../../../testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe" -targetargs:"../../../Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll" -filter:"+[*]* -[Comparison-shopping-engine-backend.Tests*]*" -register
+../../../coveragereporter/ReportGenerator.3.0.2/tools/ReportGenerator.exe -reports:results.xml -targetdir:coverage
 
 doxygen $DOXYFILE 2>&1 | tee doxygen.log
 

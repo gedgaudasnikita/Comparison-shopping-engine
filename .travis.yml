@@ -25,7 +25,7 @@ script:
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-core-entities.Tests/bin/CI/Comparison-shopping-engine-core-entities.Tests.dll
   - mono ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe ./Comparison-shopping-engine-web-protocol.Tests/bin/CI/Comparison-shopping-engine-web-protocol.Tests.dll
   - nuget install OpenCover -Version 4.6.519 -OutputDirectory $TRAVIS_BUILD_DIR/coveragerunner
-  - nuget install ReportGenerator -OutputDirectory $TRAVIS_BUILD_DIR/coveragereporter
+  - nuget install ReportGenerator -Version 3.0.2 -OutputDirectory $TRAVIS_BUILD_DIR/coveragereporter
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
