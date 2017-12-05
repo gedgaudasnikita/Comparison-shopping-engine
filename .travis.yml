@@ -6,7 +6,6 @@ env:
     - GH_REPO_NAME: Comparison-shopping-engine
     - DOXYFILE: $TRAVIS_BUILD_DIR/Comparison-shopping-engine-documentation/Doxyfile
     - GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
-    - COVERALLS_REPO_TOKEN: 23ac1e9d8ddbede7fbb14b660f1191dfbbb8d4f6
 
 addons:
   apt:
