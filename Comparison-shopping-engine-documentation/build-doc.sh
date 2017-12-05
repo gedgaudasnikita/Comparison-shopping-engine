@@ -7,6 +7,9 @@
 #fi
 
 export LD_LIBRARY_PATH=/usr/local/lib
+ls .
+echo "what"
+ls ..
 mono --debug --profile=monocov:outfile=monocovCoverage.cov,+Comparison-shopping-engine-backend ../testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --process=Single ../Comparison-shopping-engine-backend.Tests/bin/Release/Comparison-shopping-engine-backend.Tests.dll
 monocov --export-xml=monocovCoverage monocovCoverage.cov
 cat monocovCoverage.cov
