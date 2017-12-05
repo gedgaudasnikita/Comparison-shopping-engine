@@ -21,6 +21,9 @@ platform: Any CPU
 
 configuration: CI
 
+before_build:
+  - nuget restore
+
 build:
   parallel: true                  # enable MSBuild parallel builds
   project: Comparison-shopping-engine.sln      # path to Visual Studio solution or project
