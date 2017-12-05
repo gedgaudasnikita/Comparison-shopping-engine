@@ -17,6 +17,8 @@ environment:
 
 install:
   - nuget restore
+  - choco install doxygen.portable
+  - choco install doxygen graphviz
 
 platform: Any CPU
 
@@ -31,4 +33,4 @@ build:
   verbosity: normal
 
 after_test:
-  - Comparison-shopping-engine-documentation\build-doc.sh
+  ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine\Comparison-shopping-engine-documentation\Doxyfile"
