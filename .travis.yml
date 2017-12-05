@@ -17,7 +17,8 @@ addons:
       - graphviz
 
 install:
-  - nuget restore Comparison-shopping-engine.sln
+  - nuget restore Comparison-shopping-engine.sln 
+  - nuget install coveralls.net -Version 0.6.0
   - nuget install NUnit.Runners -Version 3.7.0 -OutputDirectory testrunner
   - sudo apt-get install gtk-sharp2
   - curl -sS https://api.nuget.org/packages/mono.cecil.0.9.5.4.nupkg > /tmp/mono.cecil.0.9.5.4.nupkg.zip

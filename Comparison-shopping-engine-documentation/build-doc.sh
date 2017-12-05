@@ -5,6 +5,7 @@
 #if [ $TRAVIS_BRANCH != 'master' ]; then
 #	exit 0
 #fi
+set -e
 
 export LD_LIBRARY_PATH=/usr/local/lib
 mono --debug --profile=monocov:outfile=monocovCoverage.cov,+Comparison-shopping-engine-backend ./testrunner/NUnit.ConsoleRunner.3.7.0/tools/nunit3-console.exe --process=Single ./Comparison-shopping-engine-backend.Tests/bin/CI/Comparison-shopping-engine-backend.Tests.dll
@@ -20,9 +21,7 @@ echo $REPO_COMMIT_AUTHOR
 echo $REPO_COMMIT_AUTHOR_EMAIL
 echo $REPO_COMMIT_MESSAGE
 echo $TRAVIS_JOB_ID
-mono ./packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --repoToken $GH_REPO_TOKEN --serviceName travis-ci  --useRelativePaths
-
-set -e
+mono ./packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --serviceName travis-ci 
 
 mkdir code_docs
 cd code_docs
