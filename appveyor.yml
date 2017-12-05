@@ -33,7 +33,7 @@ build:
   verbosity: normal
 
 after_test:
-  ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
+  - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - git checkout gh-pages
   - rm -rf !(html)
   - echo "" > .nojekyll
