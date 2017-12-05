@@ -20,7 +20,7 @@ echo $REPO_COMMIT_AUTHOR
 echo $REPO_COMMIT_AUTHOR_EMAIL
 echo $REPO_COMMIT_MESSAGE
 echo $TRAVIS_JOB_ID
-mono ./packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --serviceName travis-ci  --useRelativePaths
+mono ./packages/coveralls.net.0.6.0/tools/csmacnz.Coveralls.exe --monocov -i ./monocovCoverage --repoToken $GH_REPO_TOKEN --serviceName travis-ci  --useRelativePaths
 
 set -e
 
