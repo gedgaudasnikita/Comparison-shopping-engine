@@ -1,4 +1,4 @@
-version: 1.0-${APPVEYOR_REPO_COMMIT}
+version: 1.0.{build}-{APPVEYOR_REPO_COMMIT}
 
 branches:
   except:
