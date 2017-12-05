@@ -34,9 +34,10 @@ build:
 
 after_test:
   - git checkout gh-pages
+  - mv Comparison-shopping-engine-documentation\Doxyfile C:\projects\
   - rm -rf *
   - ls .
-  - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
+  - ps: doxygen.exe "C:\projects\Doxyfile"
   - ls .
   - cp html/* .
   - rm -rf html
