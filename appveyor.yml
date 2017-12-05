@@ -1,0 +1,38 @@
+version: 1.0.{build}-{commit}
+
+branches:
+  except:
+    - gh-pages
+
+image: Visual Studio 2015
+
+init:
+  - git config --global core.autocrlf input
+
+clone_folder: c:\projects\myproject
+
+environment:
+  my_var1: value1
+
+install:
+  - echo This is batch
+
+platform: Any CPU
+
+configuration: CI
+
+build:
+  parallel: true                  # enable MSBuild parallel builds
+  project: Comparison-shopping-engine.sln      # path to Visual Studio solution or project
+  publish_nuget: true             # package projects with .nuspec files and push to artifacts
+  include_nuget_references: true  # add -IncludeReferencedProjects option while packaging NuGet artifacts
+
+  verbosity: normal
+
+
+test:
+
+before_test:
+  - echo script1
+
+after_test:
