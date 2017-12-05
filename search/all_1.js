@@ -8,10 +8,8 @@ var searchData=
   ['bitmapextensions_2ecs',['BitmapExtensions.cs',['../BitmapExtensions_8cs.html',1,'']]],
   ['bom',['Bom',['../namespaceBom.html',1,'']]],
   ['bommanager',['BomManager',['../classBom_1_1BomManager.html',1,'Bom']]],
-  ['bommanager_2ecs',['BomManager.cs',['../coveragerunner_2OpenCover_84_86_8519_2SampleSln_2Bom_2BomManager_8cs.html',1,'']]],
-  ['bommanager_2ecs',['BomManager.cs',['../packages_2OpenCover_84_86_8519_2SampleSln_2Bom_2BomManager_8cs.html',1,'']]],
+  ['bommanager_2ecs',['BomManager.cs',['../BomManager_8cs.html',1,'']]],
   ['bommanagertests',['BomManagerTests',['../classBomTest_1_1BomManagerTests.html',1,'BomTest']]],
-  ['bommanagertests_2ecs',['BomManagerTests.cs',['../packages_2OpenCover_84_86_8519_2SampleSln_2BomTest_2BomManagerTests_8cs.html',1,'']]],
-  ['bommanagertests_2ecs',['BomManagerTests.cs',['../coveragerunner_2OpenCover_84_86_8519_2SampleSln_2BomTest_2BomManagerTests_8cs.html',1,'']]],
+  ['bommanagertests_2ecs',['BomManagerTests.cs',['../BomManagerTests_8cs.html',1,'']]],
   ['bomtest',['BomTest',['../namespaceBomTest.html',1,'']]]
 ];
