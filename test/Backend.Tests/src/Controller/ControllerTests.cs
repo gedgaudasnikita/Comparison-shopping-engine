@@ -12,6 +12,29 @@ namespace Comparison_shopping_engine_backend.Tests
     public class ControllerTests
     {
         [Test]
+        public void ProcessImageTest_parsesReceipt()
+        {
+            ParseableReceipt.DateParser = new DateParser();
+            ParseableReceipt.ItemListParser = new ItemListParser();
+            ParseableReceipt.StoreParser = new StoreParser();
+            var image = "maxima\nfavorit 2.33A";
+
+            var result = Controller.ProcessImage(image);
+
+            Console.WriteLine(result.Store);
+            Console.WriteLine(result.Date);
+            Console.WriteLine(result.Items.Count);
+            Console.WriteLine(result.Items[0].ToString());
+
+            Assert.IsTrue(new Receipt()
+            {
+                Store = "MAXIMA",
+                Date = DateTime.Now.Date,
+                Items = new List<Item>() { new Item("", "MAXIMA", 233, DateTime.Now.Date) }
+            }.Equals(result));
+        }
+
+        [Test]
         public void ProcessReceiptTest_processesReceipt()
         {
             ItemManager manager = ItemManager.GetInstance();

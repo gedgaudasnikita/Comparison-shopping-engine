@@ -106,6 +106,29 @@ namespace Comparison_shopping_engine_backend.Tests
         }
 
         [Test]
+        public void PersistTest_createsDirectory()
+        {
+            ItemManager m1 = ItemManager.GetInstance();
+            Item testItem = new Item("Name", "Store", 999, DateTime.Now);
+            string storageDir = ConfigurationManager.AppSettings["storageDir"];
+            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
+            foreach (FileInfo file in storageDirInfo.GetFiles())
+            {
+                file.Delete();
+            }
+            m1.ClearList();
+            storageDirInfo.Delete();
+
+            m1.Add(testItem);
+
+            m1.Persist();
+
+            m1.ClearList();
+            Assert.AreEqual(1, storageDirInfo.GetFiles("*.item").Length);
+            Assert.AreEqual($"{ testItem.GetHashCode().ToString().PadLeft(10, '0').Substring(0, 10) }.item", storageDirInfo.GetFiles("*.item")[0].Name);
+        }
+
+        [Test]
         public void LoadAllTest_loadsItems()
         {
             ItemManager m1 = ItemManager.GetInstance();
@@ -120,6 +143,24 @@ namespace Comparison_shopping_engine_backend.Tests
             m1.LoadAll();
             
             Assert.IsTrue(m1.Exists(testItem));
+        }
+
+        [Test]
+        public void LoadAllTest_createsDirectory()
+        {
+            ItemManager m1 = ItemManager.GetInstance();
+            string storageDir = ConfigurationManager.AppSettings["storageDir"];
+            DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
+            foreach (FileInfo file in storageDirInfo.GetFiles())
+            {
+                file.Delete();
+            }
+            storageDirInfo.Delete();
+
+            m1.LoadAll();
+            DirectoryInfo newInfo = new DirectoryInfo(storageDir);
+
+            Assert.IsTrue(newInfo.Exists);
         }
     }
 }

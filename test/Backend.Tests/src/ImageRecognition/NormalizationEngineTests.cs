@@ -99,5 +99,41 @@ namespace Comparison_shopping_engine_backend.Tests
 
             Assert.IsTrue(m1.Exists("name"));
         }
+
+        [Test]
+        public void LoadAllTest_createsDirectory()
+        {
+            NormalizationEngine m1 = NormalizationEngine.GetInstance();
+            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
+            DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
+            foreach (FileInfo file in normalizationDirInfo.GetFiles())
+            {
+                file.Delete();
+            }
+            normalizationDirInfo.Delete();
+
+            m1.LoadAll();
+
+            DirectoryInfo newInfo = new DirectoryInfo(normalizationDir);
+
+            Assert.IsTrue(newInfo.Exists);
+        }
+
+        [Test]
+        public void PersistTest_createsDirectory()
+        {
+            NormalizationEngine m1 = NormalizationEngine.GetInstance();
+            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
+            DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
+            foreach (FileInfo file in normalizationDirInfo.GetFiles())
+            {
+                file.Delete();
+            }
+            normalizationDirInfo.Delete();
+
+            m1.Persist();
+            DirectoryInfo normalizationDirInfoNew = new DirectoryInfo(normalizationDir);
+            Assert.IsTrue(normalizationDirInfoNew.Exists);
+        }
     }
 }
