@@ -1,7 +1,5 @@
 <map id="ProcessImageEndpoint" name="ProcessImageEndpoint">
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; string,\l object, Receipt \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="19,389,198,555"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="5,147,212,327"/>
-<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="55,5,162,97"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="223,426,368,518"/>
-<area shape="rect" id="node6" href="$classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="244,198,347,275"/>
+<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; string,\l object, Receipt \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="5,132,184,297"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="209,169,354,261"/>
+<area shape="rect" id="node4" href="$classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="230,5,333,83"/>
 </map>

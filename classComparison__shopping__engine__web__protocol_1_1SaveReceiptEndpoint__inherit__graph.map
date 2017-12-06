@@ -1,6 +1,4 @@
 <map id="SaveReceiptEndpoint" name="SaveReceiptEndpoint">
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to sav..." alt="" coords="11,848,207,925"/>
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; Receipt,\l object, object \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="19,404,198,569"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="5,147,212,327"/>
-<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="55,5,162,97"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to sav..." alt="" coords="5,447,201,524"/>
+<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; Receipt,\l object, object \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="14,5,193,171"/>
 </map>
