@@ -18,7 +18,8 @@ environment:
 install:
   - nuget restore
   - nuget install Doxygen -Version 1.8.13
-  - choco install graphviz
+  - nuget install Graphviz -Version 2.38.0.2
+  - choco install miktex
 
 platform: Any CPU
 
