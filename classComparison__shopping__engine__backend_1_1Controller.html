@@ -91,13 +91,13 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a67697bd3be9cca164733a770439ad76f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classComparison__shopping__engine__core__entities_1_1Receipt.html">Receipt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f">ProcessImage</a> (string source)</td></tr>
-<tr class="memdesc:a67697bd3be9cca164733a770439ad76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes given string into a <a class="el" href="">with normalised names </a>  <a href="#a67697bd3be9cca164733a770439ad76f">More...</a><br /></td></tr>
+<tr class="memdesc:a67697bd3be9cca164733a770439ad76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes given string into a Receipt with normalised names  <a href="#a67697bd3be9cca164733a770439ad76f">More...</a><br /></td></tr>
 <tr class="separator:a67697bd3be9cca164733a770439ad76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad42eab0c420905c232ff0e2cfbf551dd"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="classComparison__shopping__engine__core__entities_1_1Item.html">Item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1Controller.html#ad42eab0c420905c232ff0e2cfbf551dd">ProcessReceipt</a> (<a class="el" href="classComparison__shopping__engine__core__entities_1_1Receipt.html">Receipt</a> source)</td></tr>
-<tr class="memdesc:ad42eab0c420905c232ff0e2cfbf551dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares given <a class="el" href="">items and returns the with cheapest alternatives found </a>  <a href="#ad42eab0c420905c232ff0e2cfbf551dd">More...</a><br /></td></tr>
+<tr class="memdesc:ad42eab0c420905c232ff0e2cfbf551dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares given Receipt items and returns the with cheapest alternatives found  <a href="#ad42eab0c420905c232ff0e2cfbf551dd">More...</a><br /></td></tr>
 <tr class="separator:ad42eab0c420905c232ff0e2cfbf551dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f052a72878f77714c7f7f05dd40e3bc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc">SaveReceipt</a> (<a class="el" href="classComparison__shopping__engine__core__entities_1_1Receipt.html">Receipt</a> source)</td></tr>
-<tr class="memdesc:a6f052a72878f77714c7f7f05dd40e3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the given <a class="el" href="">items </a>  <a href="#a6f052a72878f77714c7f7f05dd40e3bc">More...</a><br /></td></tr>
+<tr class="memdesc:a6f052a72878f77714c7f7f05dd40e3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the given Receipt items  <a href="#a6f052a72878f77714c7f7f05dd40e3bc">More...</a><br /></td></tr>
 <tr class="separator:a6f052a72878f77714c7f7f05dd40e3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -129,14 +129,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Processes given string into a <a class="el" href="">with normalised names </a> </p>
+<p>Processes given string into a Receipt with normalised names </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>A string to process</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A parsed <a class="el" href="">Receipt</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A parsed Receipt</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Controller_8cs_source.html#l00022">22</a> of file <a class="el" href="Controller_8cs_source.html">Controller.cs</a>.</p>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -192,14 +192,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compares given <a class="el" href="">items and returns the with cheapest alternatives found </a> </p>
+<p>Compares given Receipt items and returns the with cheapest alternatives found </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>A <a class="el" href="">to process</a> <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="">representing the cheapest items found</a> </dd></dl>
-</td></tr>
+    <tr><td class="paramname">source</td><td>A Receipt to process</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A List&lt;T&gt; of Item representing the cheapest items found</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Controller_8cs_source.html#l00037">37</a> of file <a class="el" href="Controller_8cs_source.html">Controller.cs</a>.</p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -251,10 +251,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Saves the given <a class="el" href="">items </a> </p>
+<p>Saves the given Receipt items </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">source</td><td>A <a class="el" href="">to save</a> </td></tr>
+    <tr><td class="paramname">source</td><td>A Receipt to save</td></tr>
   </table>
   </dd>
 </dl>

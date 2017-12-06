@@ -1,4 +1,4 @@
 <map id="Parse" name="Parse">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a with normalised names &#160;" alt="" coords="109,5,296,61"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a Receipt with normalised names " alt="" coords="109,5,296,61"/>
 <area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="344,5,555,61"/>
 </map>

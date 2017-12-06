@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nunit_203_2e9_20_2d_20november_2010_2c_202017',['NUnit 3.9 - November 10, 2017',['../md_C_1_projects_myproject_packages_NUnit_83_89_80_CHANGES.html',1,'']]],
   ['name',['Name',['../classComparison__shopping__engine__core__entities_1_1Item.html#a7ee9065718e6628dc7791b756fa6c0f9',1,'Comparison_shopping_engine_core_entities.Item.Name()'],['../classComparison__shopping__engine__frontend__android_1_1ItemLine.html#ad3149e3286a62d622e857d38bb1d21bf',1,'Comparison_shopping_engine_frontend_android.ItemLine.Name()'],['../exparse_8h.html#a47f2e62c0dbebc787052c165afcada0e',1,'NAME():&#160;exparse.h'],['../exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a67bc2ced260a8e43805d2480a785d312',1,'NAME():&#160;exparse.h']]],
   ['nameallowedlabel',['NameAllowedLabel',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a46d259fa4cea84beba85020adeeeeb09',1,'Comparison_shopping_engine_admin::ItemCorrectForm']]],
   ['namecolumn',['NameColumn',['../classComparison__shopping__engine__admin_1_1MainForm.html#aa635c3df65ee9d573639e4b60fca9a5e',1,'Comparison_shopping_engine_admin::MainForm']]],

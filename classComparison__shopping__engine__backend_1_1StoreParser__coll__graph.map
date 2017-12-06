@@ -1,4 +1,4 @@
 <map id="StoreParser" name="StoreParser">
 <area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; string \&gt;\n||+ Parse()\l}" alt="" coords="5,145,124,223"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="Interface to be implemented by all the field parsers. The generic type T is the type of the respectiv..." alt="" coords="17,5,112,83"/>
+<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="Interface to be implemented by all the ParseableReceipt field parsers. The generic type T is the type..." alt="" coords="17,5,112,83"/>
 </map>

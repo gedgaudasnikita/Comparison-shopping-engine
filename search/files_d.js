@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['parseablereceipt_2ecs',['ParseableReceipt.cs',['../ParseableReceipt_8cs.html',1,'']]],
-  ['processimagebackendendpoint_2ecs',['ProcessImageBackendEndpoint.cs',['../ProcessImageBackendEndpoint_8cs.html',1,'']]],
-  ['processimageendpoint_2ecs',['ProcessImageEndpoint.cs',['../ProcessImageEndpoint_8cs.html',1,'']]],
-  ['processreceiptbackendendpoint_2ecs',['ProcessReceiptBackendEndpoint.cs',['../ProcessReceiptBackendEndpoint_8cs.html',1,'']]],
-  ['processreceiptendpoint_2ecs',['ProcessReceiptEndpoint.cs',['../ProcessReceiptEndpoint_8cs.html',1,'']]],
-  ['program_2ecs',['Program.cs',['../Comparison-shopping-engine-admin_2Program_8cs.html',1,'(Global Namespace)'],['../Comparison-shopping-engine-backend_2src_2Program_8cs.html',1,'(Global Namespace)']]]
+  ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['receipt_2ecs',['Receipt.cs',['../Receipt_8cs.html',1,'']]],
+  ['resource_2edesigner_2ecs',['Resource.Designer.cs',['../Resource_8Designer_8cs.html',1,'']]],
+  ['resultsactivity_2ecs',['ResultsActivity.cs',['../ResultsActivity_8cs.html',1,'']]],
+  ['router_2ecs',['Router.cs',['../Router_8cs.html',1,'']]]
 ];
