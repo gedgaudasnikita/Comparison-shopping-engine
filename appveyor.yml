@@ -15,13 +15,6 @@ environment:
   GH_REPO_NAME: Comparison-shopping-engine
   GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
 
-install:
-  - nuget restore
-  - nuget install Doxygen -Version 1.8.13
-  - nuget install Graphviz -Version 2.38.0.2
-  - choco install opencover.portable
-  - choco install codecov
-
 platform: Any CPU
 
 configuration: CI
@@ -44,6 +37,13 @@ for:
     only:
       - master
 
+  install:
+    - nuget restore
+    - nuget install Doxygen -Version 1.8.13
+    - nuget install Graphviz -Version 2.38.0.2
+    - choco install opencover.portable
+    - choco install codecov
+
   after_test:
     - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
     - git config --global credential.helper store
@@ -63,4 +63,9 @@ for:
     - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
 
 -
+  install:
+    - nuget restore
+    - choco install opencover.portable
+    - choco install codecov
+  
   after_test:
