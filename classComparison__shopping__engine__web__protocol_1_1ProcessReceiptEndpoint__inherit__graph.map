@@ -1,4 +1,6 @@
 <map id="ProcessReceiptEndpoint" name="ProcessReceiptEndpoint">
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{ProcessReceiptBackendEndpoint\n||+ Handle()\l}" alt="" coords="5,373,221,451"/>
-<area shape="rect" id="node2" href="$classIEndpoint_3_01Receipt_00_01Object_00_01List_3_01Item_01_4_4.html" title="{IEndpoint\&lt; Receipt,\l Object, List\&lt; Item \&gt;\&gt;\n||}" alt="" coords="38,5,189,97"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{ProcessReceiptBackendEndpoint\n||+ Handle()\l}" alt="" coords="5,848,221,925"/>
+<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; Receipt,\l Object, List\&lt; Item \&gt; \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="24,404,203,569"/>
+<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="10,147,217,327"/>
+<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="60,5,167,97"/>
 </map>

@@ -33,7 +33,7 @@ var searchData=
   ['processreceiptbackendendpoint_2ecs',['ProcessReceiptBackendEndpoint.cs',['../ProcessReceiptBackendEndpoint_8cs.html',1,'']]],
   ['processreceiptendpoint',['ProcessReceiptEndpoint',['../classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html',1,'Comparison_shopping_engine_web_protocol']]],
   ['processreceiptendpoint_2ecs',['ProcessReceiptEndpoint.cs',['../ProcessReceiptEndpoint_8cs.html',1,'']]],
-  ['program',['Program',['../classComparison__shopping__engine__backend_1_1Program.html',1,'Program'],['../classComparison__shopping__engine__admin_1_1Program.html',1,'Program']]],
+  ['program',['Program',['../classComparison__shopping__engine__admin_1_1Program.html',1,'Program'],['../classComparison__shopping__engine__backend_1_1Program.html',1,'Program']]],
   ['program_2ecs',['Program.cs',['../Comparison-shopping-engine-admin_2Program_8cs.html',1,'(Global Namespace)'],['../Comparison-shopping-engine-backend_2src_2Program_8cs.html',1,'(Global Namespace)']]],
   ['publishresults',['PublishResults',['../classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter_1_1SuggestionFilter.html#ad7eb93792e679c457ed74c8d2b6e545b',1,'Comparison_shopping_engine_frontend_android::SuggestionAdapter::SuggestionFilter']]]
 ];
