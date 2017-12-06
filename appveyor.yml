@@ -44,6 +44,7 @@ after_test:
   - echo build > .version
   - ls .
   - ls ..
+  - ls ../Doxygen.1.8.13
   - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - cp -r html/* .
   - rm -rf html
