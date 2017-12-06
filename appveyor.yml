@@ -47,9 +47,9 @@ for:
   after_test:
     - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
     - git config --global credential.helper store
+    - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
     - git config --global user.email "team@appveyor.com"
     - git config --global user.name "AppVeyor CI"
-    - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
     - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
     - cd Comparison-shopping-engine
     - rm -rf *  
