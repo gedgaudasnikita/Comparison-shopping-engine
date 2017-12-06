@@ -33,5 +33,12 @@ namespace Comparison_shopping_engine_core_entities.Tests
             Item c = new Item("Other", "Other", 999, "2017-10-10");
             Assert.IsTrue(a.Equals(b) && !a.Equals(c));
         }
+
+        [Test]
+        public void ToStringTest_RepresentsCorrectly()
+        {
+            Item a = new Item("Name", "Store", 999, DateTime.Now);
+            Assert.AreEqual("Name | Store | 999 | " + DateTime.Now.Date.ToString(), a.ToString());
+        }
     }
 }

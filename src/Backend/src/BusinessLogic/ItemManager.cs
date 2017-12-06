@@ -61,7 +61,6 @@ namespace Comparison_shopping_engine_backend
         /// <param name="item">An <see cref = "Item"/> to add to the list</param>
         public void Add(Item item)
         {
-            item.Saved = true;
             itemList.Add(item);
         }
 

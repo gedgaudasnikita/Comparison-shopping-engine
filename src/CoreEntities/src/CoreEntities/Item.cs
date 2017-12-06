@@ -13,10 +13,6 @@ namespace Comparison_shopping_engine_core_entities
     {
         private DateTime date;
 
-        //Indicates whether the Item has been saved to the storage or not
-        public bool Saved
-        { get; set; }
-
         public string Name
         { get; set; }
 
@@ -75,18 +71,6 @@ namespace Comparison_shopping_engine_core_entities
 
         }
 
-        public Item(string name, int price, DateTime date)
-            : this(name, price)
-        {
-            this.Date = date;
-        }
-
-        public Item(string name, int price, string date)
-            : this(name, price)
-        {
-            this.Date = DateTime.Parse(date);
-        }
-
         public Item(string name, string store, int price, DateTime date)
             :this(name, store, price)
         {
@@ -110,16 +94,6 @@ namespace Comparison_shopping_engine_core_entities
                 && new ItemStoreComparer().Compare(this, other) == 0
                 && new ItemPriceComparer().Compare(this, other) == 0
                 && new ItemDateComparer().Compare(this, other) == 0);
-        }
-
-        /// <summary>
-        /// Checks whether the data contained is valid. Used to determined whether the Item object
-        /// is ready to be saved to storage or not.
-        /// </summary>
-        /// <returns>The <see cref="bool"/> result, indicating whether the data is valid or not</returns>
-        public bool IsComplete()
-        {
-            return (Store != "MissingSt" && Store != "") && (Price != 0);
         }
     }
 }
