@@ -45,4 +45,4 @@ after_test:
   - rm -rf html
   - git add --all
   - git commit -m "Deploy code docs to GitHub Pages Appveyor build: ${APPVEYOR_BUILD_NUMBER}"
-  - git push --force 
+  - git push --force "https://$env:GH_REPO_TOKEN@$env:GH_REPO_REF"
