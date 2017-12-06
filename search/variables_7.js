@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['results',['Results',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Layout.html#a6128f0011f1240b023f33c7c65a42627',1,'Comparison_shopping_engine_frontend_android::Resource::Layout']]],
-  ['resultsbuttonslinearlayout',['resultsButtonsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a1ccbaf54486a4ab3a19ce3fafe5a7d0c',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultslinearlayout',['resultsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a633b4a55ea352afd6dcb3061b69a484b',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultsnewitembutton',['resultsNewItemButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a2e97c73976063297c3c28f3f125a7a62',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultsscroll',['resultsScroll',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a20cb105b840c7bd9f07ed49049950b50',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultssubmitbutton',['resultsSubmitButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#ae70ef48b8241bd9667b0512747652ae5',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultstextview',['resultsTextView',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a9a1203ef01afa9e78b791c92b38302cc',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]]
+  ['id',['id',['../unionEXSTYPE.html#ac7e7cefc74b6159bce6e384b6ba7ac7f',1,'EXSTYPE']]],
+  ['imageviewheight',['imageViewHeight',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#acb22fa100b1bb564a871341bcf4721d5',1,'Comparison_shopping_engine_frontend_android::AppData']]],
+  ['imageviewwidth',['imageViewWidth',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#a0829761b01990972338298a17e8637dd',1,'Comparison_shopping_engine_frontend_android::AppData']]],
+  ['integer',['integer',['../unionEXSTYPE.html#a19fdf14fe477646209fdbbe73d1f5bad',1,'EXSTYPE']]],
+  ['itemslinearlayout',['itemsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a0113c70d2ba0cfa497c590775ed43371',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]]
 ];

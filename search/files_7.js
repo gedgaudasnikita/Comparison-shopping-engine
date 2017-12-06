@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['jsonserializerstream_2ecs',['JsonSerializerStream.cs',['../JsonSerializerStream_8cs.html',1,'']]]
+  ['ibackendendpoint_2ecs',['IBackendEndpoint.cs',['../IBackendEndpoint_8cs.html',1,'']]],
+  ['iendpoint_2ecs',['IEndpoint.cs',['../IEndpoint_8cs.html',1,'']]],
+  ['iendpointmeta_2ecs',['IEndpointMeta.cs',['../IEndpointMeta_8cs.html',1,'']]],
+  ['iparser_2ecs',['IParser.cs',['../IParser_8cs.html',1,'']]],
+  ['irouter_2ecs',['IRouter.cs',['../IRouter_8cs.html',1,'']]],
+  ['iserver_2ecs',['IServer.cs',['../IServer_8cs.html',1,'']]],
+  ['item_2ecs',['Item.cs',['../Item_8cs.html',1,'']]],
+  ['itemcorrectform_2ecs',['ItemCorrectForm.cs',['../ItemCorrectForm_8cs.html',1,'']]],
+  ['itemcorrectform_2edesigner_2ecs',['ItemCorrectForm.Designer.cs',['../ItemCorrectForm_8Designer_8cs.html',1,'']]],
+  ['itemdatecomparer_2ecs',['ItemDateComparer.cs',['../ItemDateComparer_8cs.html',1,'']]],
+  ['itemdateview_2ecs',['ItemDateView.cs',['../ItemDateView_8cs.html',1,'']]],
+  ['itemdeleteform_2ecs',['ItemDeleteForm.cs',['../ItemDeleteForm_8cs.html',1,'']]],
+  ['itemdeleteform_2edesigner_2ecs',['ItemDeleteForm.Designer.cs',['../ItemDeleteForm_8Designer_8cs.html',1,'']]],
+  ['itemdeleteview_2ecs',['ItemDeleteView.cs',['../ItemDeleteView_8cs.html',1,'']]],
+  ['itemline_2ecs',['ItemLine.cs',['../ItemLine_8cs.html',1,'']]],
+  ['itemlistparser_2ecs',['ItemListParser.cs',['../ItemListParser_8cs.html',1,'']]],
+  ['itemmanagementform_2ecs',['ItemManagementForm.cs',['../ItemManagementForm_8cs.html',1,'']]],
+  ['itemmanagementform_2edesigner_2ecs',['ItemManagementForm.Designer.cs',['../ItemManagementForm_8Designer_8cs.html',1,'']]],
+  ['itemmanager_2ecs',['ItemManager.cs',['../ItemManager_8cs.html',1,'']]],
+  ['itemnamecomparer_2ecs',['ItemNameComparer.cs',['../ItemNameComparer_8cs.html',1,'']]],
+  ['itemnameview_2ecs',['ItemNameView.cs',['../ItemNameView_8cs.html',1,'']]],
+  ['itempricecomparer_2ecs',['ItemPriceComparer.cs',['../ItemPriceComparer_8cs.html',1,'']]],
+  ['itempriceview_2ecs',['ItemPriceView.cs',['../ItemPriceView_8cs.html',1,'']]],
+  ['itemstorecomparer_2ecs',['ItemStoreComparer.cs',['../ItemStoreComparer_8cs.html',1,'']]],
+  ['itemstoreview_2ecs',['ItemStoreView.cs',['../ItemStoreView_8cs.html',1,'']]]
 ];

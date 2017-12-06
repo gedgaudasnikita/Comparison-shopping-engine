@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['httplistenerrequestextensions_2ecs',['HttpListenerRequestExtensions.cs',['../HttpListenerRequestExtensions_8cs.html',1,'']]],
-  ['httpserver_2ecs',['HttpServer.cs',['../HttpServer_8cs.html',1,'']]]
+  ['getopt_2eh',['getopt.h',['../getopt_8h.html',1,'']]],
+  ['getsuggestionsbackendendpoint_2ecs',['GetSuggestionsBackendEndpoint.cs',['../GetSuggestionsBackendEndpoint_8cs.html',1,'']]],
+  ['getsuggestionsendpoint_2ecs',['GetSuggestionsEndpoint.cs',['../GetSuggestionsEndpoint_8cs.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['file',['file',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#ac9b0d6c1aee143b34d021137328da319',1,'Comparison_shopping_engine_frontend_android::AppData']]]
+  ['exlval',['exlval',['../exparse_8h.html#a924edeac47f6c431447acf138484954e',1,'exparse.h']]],
+  ['expr',['expr',['../unionEXSTYPE.html#a33188f636716cae0344536ef925768a9',1,'EXSTYPE']]]
 ];
