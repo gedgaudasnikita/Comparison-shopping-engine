@@ -47,7 +47,7 @@ after_test:
   - rm -rf *  
   - echo "" > .nojekyll
   - echo %APPVEYOR_BUILD_ID% > .version
-  - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
+  - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\doc\Doxyfile"
   - cp -r html/* .
   - rm -rf html
   - git add --all
