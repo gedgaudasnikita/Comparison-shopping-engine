@@ -17,7 +17,7 @@ environment:
 
 install:
   - nuget restore
-  - choco install doxygen.portable
+  - nuget install Doxygen -Version 1.8.13
   - choco install graphviz
 
 platform: Any CPU
@@ -42,6 +42,8 @@ after_test:
   - rm -rf *  
   - echo "" > .nojekyll
   - echo build > .version
+  - ls .
+  - ls ..
   - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - cp -r html/* .
   - rm -rf html
