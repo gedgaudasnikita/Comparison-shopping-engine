@@ -44,8 +44,8 @@ after_test:
   - echo build > .version
   - ls .
   - ls ..
-  - ls ../Doxygen.1.8.13
-  - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
+  - ls ../Doxygen.1.8.13/tools
+  - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - cp -r html/* .
   - rm -rf html
   - git add --all
