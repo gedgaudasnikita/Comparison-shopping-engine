@@ -34,9 +34,7 @@ build:
   verbosity: normal
 
 after_test:
-  - echo %PATH%
-  - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\tools
-  - echo %PATH%
+  - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
   - git config --global credential.helper store
   - git config --global user.email "team@appveyor.com"
   - git config --global user.name "AppVeyor CI"
@@ -46,9 +44,6 @@ after_test:
   - rm -rf *  
   - echo "" > .nojekyll
   - echo build > .version
-  - ls .
-  - ls ..
-  - ls ../Graphviz.2.38.0.2
   - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - cp -r html/* .
   - rm -rf html
