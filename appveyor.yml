@@ -39,8 +39,6 @@ test_script:
   - codecov -f "MyProject_coverage.xml"
 
 for:
-
--
   branches:
     only:
       - master

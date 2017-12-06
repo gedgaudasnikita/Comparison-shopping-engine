@@ -21,11 +21,6 @@ namespace Comparison_shopping_engine_backend.Tests
 
             var result = Controller.ProcessImage(image);
 
-            Console.WriteLine(result.Store);
-            Console.WriteLine(result.Date);
-            Console.WriteLine(result.Items.Count);
-            Console.WriteLine(result.Items[0].ToString());
-
             Assert.IsTrue(new Receipt()
             {
                 Store = "MAXIMA",
