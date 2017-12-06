@@ -112,13 +112,17 @@ namespace Comparison_shopping_engine_backend.Tests
             Item testItem = new Item("Name", "Store", 999, DateTime.Now);
             string storageDir = ConfigurationManager.AppSettings["storageDir"];
             DirectoryInfo storageDirInfo = new DirectoryInfo(storageDir);
-            foreach (FileInfo file in storageDirInfo.GetFiles())
+            if (storageDirInfo.Exists)
             {
-                file.Delete();
+                foreach (FileInfo file in storageDirInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+                storageDirInfo.Delete();
             }
-            m1.ClearList();
-            storageDirInfo.Delete();
 
+
+            m1.ClearList();
             m1.Add(testItem);
 
             m1.Persist();
