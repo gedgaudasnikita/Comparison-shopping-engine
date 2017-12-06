@@ -1,5 +1,3 @@
 <map id="Comparison_shopping_engine_web_protocol.GetSuggestionsEndpoint" name="Comparison_shopping_engine_web_protocol.GetSuggestionsEndpoint">
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="18,635,237,741"/>
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint_3_01RequestBody_00_01RequestParameters_00_01ResponseBody_01_4.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="33,147,223,327"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="75,6,181,98"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="19,417,239,524"/>
 </map>

@@ -1,5 +1,3 @@
 <map id="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint" name="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint">
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{Comparison_shopping\l_engine_backend.ProcessReceipt\lBackendEndpoint\n||+ Handle()\l}" alt="" coords="5,619,224,725"/>
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint_3_01RequestBody_00_01RequestParameters_00_01ResponseBody_01_4.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="25,147,204,312"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="61,6,168,98"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{Comparison_shopping\l_engine_backend.ProcessReceipt\lBackendEndpoint\n||+ Handle()\l}" alt="" coords="5,403,224,509"/>
 </map>

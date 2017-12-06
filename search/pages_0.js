@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license',['LICENSE',['../md__home_travis_build_gedgaudasnikita_Comparison-shopping-engine_packages_Newtonsoft_8Json_810_80_83_LICENSE.html',1,'']]]
+  ['license',['LICENSE',['../md_C:_projects_myproject_packages_Newtonsoft.Json.10.0.3_LICENSE.html',1,'']]]
 ];

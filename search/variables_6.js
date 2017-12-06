@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['imageviewheight',['imageViewHeight',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#acb22fa100b1bb564a871341bcf4721d5',1,'Comparison_shopping_engine_frontend_android::AppData']]],
-  ['imageviewwidth',['imageViewWidth',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#a0829761b01990972338298a17e8637dd',1,'Comparison_shopping_engine_frontend_android::AppData']]],
-  ['itemslinearlayout',['itemsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a0113c70d2ba0cfa497c590775ed43371',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]]
+  ['granted',['granted',['../NUnit_83_89_80_2LICENSE_8txt.html#a69a871c6422bee212c62dec26259d682',1,'granted():&#160;LICENSE.txt'],['../NUnit_8ConsoleRunner_83_87_80_2LICENSE_8txt.html#a69a871c6422bee212c62dec26259d682',1,'granted():&#160;LICENSE.txt'],['../NUnit3TestAdapter_83_89_80_2LICENSE_8txt.html#a768a2581bd8d32be6b5fe3c60409e15d',1,'granted():&#160;LICENSE.txt']]]
 ];

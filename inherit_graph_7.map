@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classComparison__shopping__engine__backend_1_1ItemManager.html" title="Class responsible for managing an internal List&lt;Item&gt;, as well as writing/reading from file ItemManag..." alt="" coords="5,5,208,46"/>
+<area shape="rect" id="node1" href="$interfaceComparison__shopping__engine__backend_1_1IRouter.html" title="The classes, implementing this interface are used to store all the accessible endpoints and provides ..." alt="" coords="5,5,173,47"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Router.html" title="Comparison_shopping\l_engine_backend.Router" alt="" coords="221,5,387,47"/>
 </map>
