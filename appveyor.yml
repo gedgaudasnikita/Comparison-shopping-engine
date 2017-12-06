@@ -44,7 +44,7 @@ after_test:
   - cp -r html/* .
   - rm -rf html
   - git add --all
-  - git commit -m "Deploy code docs to GitHub Pages Appveyor build: %APPVEYOR_BUILD_NUMBER%"
+  - git commit -m "Deploy code docs to GitHub Pages Appveyor build:{build}"
   - echo %GH_REPO_TOKEN%
   - echo %GH_REPO_REF%
   - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
