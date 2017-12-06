@@ -33,6 +33,7 @@ build:
   verbosity: normal
 
 after_test:
+  - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
   - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
   - cd Comparison-shopping-engine
@@ -40,12 +41,10 @@ after_test:
   - echo "" > .nojekyll
   - echo build > .version
   - ps: doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
-  - ls .
   - cp -r html/* .
   - rm -rf html
   - git add --all
-  - git commit -m "Deploy code docs to GitHub Pages Appveyor build: ${APPVEYOR_BUILD_NUMBER}"
-  - echo "https://$env:GH_REPO_TOKEN@$env:GH_REPO_REF"
+  - git commit -m "Deploy code docs to GitHub Pages Appveyor build: %APPVEYOR_BUILD_NUMBER%"
   - echo %GH_REPO_TOKEN%
   - echo %GH_REPO_REF%
   - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
