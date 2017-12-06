@@ -152,11 +152,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Comparison-shopping-engine-core-entities\Comparison-shopping-engine-core-entities.csproj">
+    <ProjectReference Include="..\CoreEntities\Comparison-shopping-engine-core-entities.csproj">
       <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Comparison-shopping-engine-web-protocol\Comparison-shopping-engine-web-protocol.csproj">
+    <ProjectReference Include="..\WebProtocol\Comparison-shopping-engine-web-protocol.csproj">
       <Project>{1240682e-cb5c-4826-9f64-0a11b34d8c54}</Project>
       <Name>Comparison-shopping-engine-web-protocol</Name>
     </ProjectReference>

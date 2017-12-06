@@ -69,13 +69,13 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Tesseract, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.dll</HintPath>
     </Reference>
     <Reference Include="Tesseract.Binding.Droid, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.Binding.Droid.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.Binding.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Tesseract.Droid, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.Droid.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Tesseract.0.3.2\lib\MonoAndroid10\Tesseract.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -84,9 +84,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ConfigActivity.cs" />
-    <Compile Include="ResultsActivity.cs" />
-    <Compile Include="MainActivity.cs" />
+    <Compile Include="src\Activities\ConfigActivity.cs" />
+    <Compile Include="src\Activities\ResultsActivity.cs" />
+    <Compile Include="src\Activities\MainActivity.cs" />
     <Compile Include="src\Configuration.cs" />
     <Compile Include="src\Extensions\BitmapExtensions.cs" />
     <Compile Include="src\Elements\ItemLine\Components\ItemDateView.cs" />
@@ -135,11 +135,11 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Comparison-shopping-engine-core-entities\Comparison-shopping-engine-core-entities.csproj">
+    <ProjectReference Include="..\CoreEntities\Comparison-shopping-engine-core-entities.csproj">
       <Project>{78C3ED2A-037B-49C6-A6AC-32D1A849EBD9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Comparison-shopping-engine-web-protocol\Comparison-shopping-engine-web-protocol.csproj">
+    <ProjectReference Include="..\WebProtocol\Comparison-shopping-engine-web-protocol.csproj">
       <Project>{1240682e-cb5c-4826-9f64-0a11b34d8c54}</Project>
       <Name>Comparison-shopping-engine-web-protocol</Name>
     </ProjectReference>

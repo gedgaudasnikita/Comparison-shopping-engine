@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1DC1F5C2-780E-4EA1-BAC6-7B0DFEF9AA00}</ProjectGuid>
+    <ProjectGuid>{4EF59D7E-603F-4093-A13C-A739F3089C52}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Comparison_shopping_engine_backend.Tests</RootNamespace>
-    <AssemblyName>Comparison-shopping-engine-backend.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Comparison_shopping_engine_frontend_android.Tests</RootNamespace>
+    <AssemblyName>Comparison-shopping-engine-frontend-android.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -29,7 +29,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -51,12 +50,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -67,36 +63,20 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="src\Controller\ControllerTests.cs" />
-    <Compile Include="src\Extensions\StringExtensionsTests.cs" />
-    <Compile Include="src\ImageRecognition\NormalizationEngineTests.cs" />
-    <Compile Include="src\ImageRecognition\Parsers\DateParserTests.cs" />
-    <Compile Include="src\ImageRecognition\Parsers\ItemListParserTests.cs" />
-    <Compile Include="src\ImageRecognition\Parsers\StoreParserTests.cs" />
-    <Compile Include="src\BusinessLogic\ItemManagerTests.cs" />
-    <Compile Include="src\CoreEntities\ParseableReceiptTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Server\Routers\RouterTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Comparison-shopping-engine-backend\Comparison-shopping-engine-backend.csproj">
-      <Project>{5D3F37A8-9E60-4DC0-8112-A21656427B70}</Project>
-      <Name>Comparison-shopping-engine-backend</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Comparison-shopping-engine-core-entities\Comparison-shopping-engine-core-entities.csproj">
-      <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
-      <Name>Comparison-shopping-engine-core-entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Comparison-shopping-engine-web-protocol\Comparison-shopping-engine-web-protocol.csproj">
-      <Project>{1240682E-CB5C-4826-9F64-0A11B34D8C54}</Project>
-      <Name>Comparison-shopping-engine-web-protocol</Name>
+    <ProjectReference Include="..\..\src\FrontendAndroid\Comparison-shopping-engine-frontend-android.csproj">
+      <Project>{4D30BD79-CC5A-41A3-815C-143C8295C241}</Project>
+      <Name>Comparison-shopping-engine-frontend-android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Content Include="testdata\receipt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>
@@ -119,15 +99,11 @@
   </Choose>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NUnit3TestAdapter.3.9.0\build\net35\NUnit3TestAdapter.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
