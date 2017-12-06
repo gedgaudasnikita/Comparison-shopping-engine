@@ -10,7 +10,7 @@ namespace Comparison_shopping_engine_backend
 {
     /// <summary>
     /// This class describes the behaviour of parsing a storeName from plain text.
-    /// Intended for usage from <see cref="ParseableReceipt"> class.
+    /// Intended for usage from <see cref="ParseableReceipt"/> class.
     /// Constructor initialises the internal variables with data from App.config
     /// </summary>
     public class StoreParser: IParser<string>
