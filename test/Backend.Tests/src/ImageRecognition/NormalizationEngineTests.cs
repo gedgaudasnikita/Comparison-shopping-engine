@@ -106,11 +106,14 @@ namespace Comparison_shopping_engine_backend.Tests
             NormalizationEngine m1 = NormalizationEngine.GetInstance();
             string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
             DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
-            foreach (FileInfo file in normalizationDirInfo.GetFiles())
+            if (normalizationDirInfo.Exists)
             {
-                file.Delete();
+                foreach (FileInfo file in normalizationDirInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+                normalizationDirInfo.Delete();
             }
-            normalizationDirInfo.Delete();
 
             m1.LoadAll();
 
