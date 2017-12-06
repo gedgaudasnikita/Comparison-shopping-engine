@@ -16,7 +16,7 @@ namespace Comparison_shopping_engine_web_protocol
     /// This class encapsulates the expected behaviour of the endpoint, the responsibility of which is
     /// to match the given Receipt object against the stored Items and return the cheapest alternatives
     /// </summary>
-    public class ProcessReceiptEndpoint : IEndpoint<Receipt, Object, List<Item>>
+    public class ProcessReceiptEndpoint : IEndpoint<Receipt, Object, List<Item> >
     {
         private JsonSerializerStream serializer = new JsonSerializerStream();
 

@@ -16,7 +16,7 @@ namespace Comparison_shopping_engine_web_protocol
     /// to return the list of the best matching item names stored in the normalisation engine given the
     /// input name.
     /// </summary>
-    public class GetSuggestionsEndpoint: IEndpoint<object, GetSuggestionsParameters, List<string>>
+    public class GetSuggestionsEndpoint: IEndpoint<object, GetSuggestionsParameters, List<string> >
     {
         private JsonSerializerStream serializer = new JsonSerializerStream();
 
