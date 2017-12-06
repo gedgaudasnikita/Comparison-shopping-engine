@@ -35,7 +35,7 @@ build:
   verbosity: normal
 
 after_test:
-  - OpenCover.Console.exe -register:user -target:"nunit3-console.exe" "-targetargs:c:\projects\myproject\test\Backend.Tests\bin\CI\Comparison-shopping-engine-backend.Tests.dll c:\projects\myproject\test\CoreEntities.Tests\bin\CI\Comparison-shopping-engine-core-entities.Tests.dll c:\projects\myproject\test\WebProtocol.Tests\bin\CI\Comparison-shopping-engine-web-protocol.Tests.dll" -filter:"+[*]* -[*.Tests*]*" -output:".\MyProject_coverage.xml" --excludebyfile:*Designer*
+  - OpenCover.Console.exe -register:user -target:"nunit3-console.exe" "-targetargs:c:\projects\myproject\test\Backend.Tests\bin\CI\Comparison-shopping-engine-backend.Tests.dll c:\projects\myproject\test\CoreEntities.Tests\bin\CI\Comparison-shopping-engine-core-entities.Tests.dll c:\projects\myproject\test\WebProtocol.Tests\bin\CI\Comparison-shopping-engine-web-protocol.Tests.dll" -filter:"+[*]* -[*.Tests*]*" -output:".\MyProject_coverage.xml" -excludebyfile:*Designer*
   - codecov -f "MyProject_coverage.xml"
   - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
   - git config --global credential.helper store
