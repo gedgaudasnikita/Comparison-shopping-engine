@@ -1,5 +1,5 @@
 <map id="ProcessReceiptBackendEndpoint" name="ProcessReceiptBackendEndpoint">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="{ProcessReceiptEndpoint\n||+ GetMethod()\l+ GetURI()\l+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="143,287,322,467"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to mat..." alt="" coords="143,287,322,467"/>
 <area shape="rect" id="node3" href="$classIEndpoint_3_01Receipt_00_01Object_00_01List_3_01Item_01_4_4.html" title="{IEndpoint\&lt; Receipt,\l Object, List\&lt; Item \&gt;\&gt;\n||}" alt="" coords="5,132,156,224"/>
 <area shape="rect" id="node4" href="$classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="180,132,325,224"/>
 <area shape="rect" id="node5" href="$classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="201,5,304,83"/>

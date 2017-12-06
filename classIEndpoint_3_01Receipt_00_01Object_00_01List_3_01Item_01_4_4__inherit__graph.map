@@ -1,4 +1,4 @@
 <map id="IEndpoint&lt; Receipt, Object, List&lt; Item &gt;&gt;" name="IEndpoint&lt; Receipt, Object, List&lt; Item &gt;&gt;">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="{ProcessReceiptEndpoint\n|&#45; serializer\l|+ GetMethod()\l+ GetURI()\l+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="24,145,203,325"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to mat..." alt="" coords="24,145,203,325"/>
 <area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{ProcessReceiptBackendEndpoint\n||+ Handle()\l}" alt="" coords="5,373,221,451"/>
 </map>
