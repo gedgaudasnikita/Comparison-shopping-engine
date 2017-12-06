@@ -12,6 +12,6 @@ var searchData=
   ['storeedit',['storeEdit',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a3f339d2533f922bffb524e9caf49c1e8',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
   ['storelabel',['StoreLabel',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a2ce4258dcd138554eb4f2cb363cf5fa3',1,'Comparison_shopping_engine_admin.ItemCorrectForm.StoreLabel()'],['../classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a2ce4258dcd138554eb4f2cb363cf5fa3',1,'Comparison_shopping_engine_admin.ItemDeleteForm.StoreLabel()']]],
   ['storetextbox',['StoreTextBox',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a49c541d6177d5e2aa953cc474139a294',1,'Comparison_shopping_engine_admin.ItemCorrectForm.StoreTextBox()'],['../classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a49c541d6177d5e2aa953cc474139a294',1,'Comparison_shopping_engine_admin.ItemDeleteForm.StoreTextBox()']]],
-  ['string',['string',['../unionEXSTYPE.html#aed1cfb225a5fb77461e7972691e68a72',1,'EXSTYPE']]],
+  ['string',['string',['../exparse_8h.html#aed1cfb225a5fb77461e7972691e68a72',1,'EXSTYPE']]],
   ['supportedstores',['supportedStores',['../classComparison__shopping__engine__backend_1_1StoreParser.html#a844380b686f110987fe3f39ac2003d63',1,'Comparison_shopping_engine_backend::StoreParser']]]
 ];

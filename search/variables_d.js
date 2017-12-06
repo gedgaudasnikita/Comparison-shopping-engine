@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['reference',['reference',['../unionEXSTYPE.html#a978c478f22a8ae8e29c509cbba1426e4',1,'EXSTYPE']]],
+  ['reference',['reference',['../exparse_8h.html#a978c478f22a8ae8e29c509cbba1426e4',1,'EXSTYPE']]],
   ['refreshbutton',['RefreshButton',['../classComparison__shopping__engine__admin_1_1MainForm.html#ae516f603a5e89597ddcc456a6695c198',1,'Comparison_shopping_engine_admin::MainForm']]],
   ['requesttext',['requestText',['../classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html#aeb37f38b0d0dd7dc30e55876d703bd22',1,'Comparison_shopping_engine_frontend_android::ConfigActivity']]],
   ['resourceculture',['resourceCulture',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a87058a34a8b44628f03942ac02c08560',1,'Comparison_shopping_engine_frontend_android::AppResources']]],

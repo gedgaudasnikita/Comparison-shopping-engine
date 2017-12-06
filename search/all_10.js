@@ -4,7 +4,7 @@ var searchData=
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['receipt',['Receipt',['../classComparison__shopping__engine__core__entities_1_1Receipt.html',1,'Receipt'],['../classComparison__shopping__engine__core__entities_1_1Receipt.html#a29908bdeec1abff1827e6d7175d9c7ea',1,'Comparison_shopping_engine_core_entities.Receipt.Receipt()']]],
   ['receipt_2ecs',['Receipt.cs',['../Receipt_8cs.html',1,'']]],
-  ['reference',['reference',['../unionEXSTYPE.html#a978c478f22a8ae8e29c509cbba1426e4',1,'EXSTYPE']]],
+  ['reference',['reference',['../exparse_8h.html#a978c478f22a8ae8e29c509cbba1426e4',1,'EXSTYPE']]],
   ['refreshbutton',['RefreshButton',['../classComparison__shopping__engine__admin_1_1MainForm.html#ae516f603a5e89597ddcc456a6695c198',1,'Comparison_shopping_engine_admin::MainForm']]],
   ['removenondigits',['RemoveNonDigits',['../classComparison__shopping__engine__core__entities_1_1StringExtension.html#acc114d4b2a7cca030e2d653587b61a46',1,'Comparison_shopping_engine_core_entities::StringExtension']]],
   ['request_3c_20t_20_3e',['Request&lt; T &gt;',['../classComparison__shopping__engine__frontend__android_1_1Client.html#a9fffb071d0af6116b355a541fef9dad9',1,'Comparison_shopping_engine_frontend_android::Client']]],

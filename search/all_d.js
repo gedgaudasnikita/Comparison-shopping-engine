@@ -14,7 +14,7 @@ var searchData=
   ['onrestart',['OnRestart',['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a0fe61fc70f332645b9b5690f3a6655d0',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
   ['onresultsnewitembuttonclick',['OnResultsNewItemButtonClick',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ae83fd7ded283e07527b33a70c419859b',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
   ['onresultssubmitbuttonclick',['OnResultsSubmitButtonClick',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a87db111c5962c1a76282eea3ea99bc5f',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
-  ['op',['op',['../unionEXSTYPE.html#a8b21910e53867f3b53d61a8c46ac2a7f',1,'EXSTYPE']]],
+  ['op',['op',['../exparse_8h.html#a8b21910e53867f3b53d61a8c46ac2a7f',1,'EXSTYPE']]],
   ['optarg',['optarg',['../getopt_8h.html#adb50a0eab9fed92fc3bfc7dfa4f2c410',1,'getopt.h']]],
   ['opterr',['opterr',['../getopt_8h.html#ae30f05ee1e2e5652f174a35c7875d25e',1,'getopt.h']]],
   ['optind',['optind',['../getopt_8h.html#ad5e1c16213bbee2d5e8cc363309f418c',1,'getopt.h']]],
