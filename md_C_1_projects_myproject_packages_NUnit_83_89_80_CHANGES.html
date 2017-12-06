@@ -73,7 +73,7 @@ $(function() {
 <li>1905 SetupFixture without namespace will make assembly-level Parallelable attribute useless</li>
 <li>2091 When a native exception of corrupted state is thrown, nunit test thread crashes and the nunit-console process hangs</li>
 <li>2102 NUnitLite incorrectly reports Win 10 OS name</li>
-<li>2271 When CollectionAssert.AreEqual do compare each element, it will ignore the IEquatable of the element too</li>
+<li>2271 When CollectionAssert.AreEqual do compare each element, it will ignore the <a class="el" href="classIEquatable.html">IEquatable</a> of the element too</li>
 <li>2289 ResolveTypeNameDifference does not handle generic types well</li>
 <li>2311 Resolve test projects' namespace situation</li>
 <li>2319 Add .editorconfig to set file encodings so that people don't have to think about it</li>
@@ -389,7 +389,7 @@ $(function() {
 <h3>NUnit 3.4 - June 25, 2016</h3>
 <h4>Framework</h4>
 <ul>
-<li>Improvements in comparing equality using <code>IEquatable&lt;T&gt;</code></li>
+<li>Improvements in comparing equality using <code><a class="el" href="classIEquatable.html">IEquatable</a>&lt;T&gt;</code></li>
 <li>Test case names will only be truncated if the runner requests it or it is overridden on the command line with the &ndash;test-name-format option</li>
 <li>The .NET 2.0 version of the framework now includes LINQ. If your tests target .NET 2.0, you can now use LINQ queries in your tests</li>
 </ul>
@@ -436,7 +436,7 @@ $(function() {
 <li>1476 Examine need for "synchronous" events in event queue</li>
 <li>1481 TestCase with generic return type causes NullReferenceException</li>
 <li>1483 Remoting exceptions during test execution</li>
-<li>1484 Comparing Equality using <code>IEquatable&lt;T&gt;</code> Should Use Most Specific Method</li>
+<li>1484 Comparing Equality using <code><a class="el" href="classIEquatable.html">IEquatable</a>&lt;T&gt;</code> Should Use Most Specific Method</li>
 <li>1493 NUnit 2 test results report ParameterizedMethod but should be ParameterizedTest</li>
 <li>1507 NullReferenceException when null arguments are used in TestFixtureAttribute</li>
 <li>1513 Add new teamcity extension to packages</li>
@@ -498,7 +498,7 @@ $(function() {
 <li>1352 Tests losing data setup on thread</li>
 <li>1359 Compilation error in NUnitPortableDriverTests.cs</li>
 <li>1383 Skip Silverlight build if SDK not installed</li>
-<li>1386 Bug when using Assert.Equals() with types that explicitly implement <code>IEquatable&lt;T&gt;</code></li>
+<li>1386 Bug when using Assert.Equals() with types that explicitly implement <code><a class="el" href="classIEquatable.html">IEquatable</a>&lt;T&gt;</code></li>
 <li>1390 &ndash;testlist with file with blank first line causes IndexOutOfRangeException</li>
 <li>1399 Fixed NullReference issue introduced by the fix for #681</li>
 <li>1405 ITestRunner.StopRun throws exception of type 'System.MissingMethodException'</li>
@@ -707,7 +707,7 @@ $(function() {
 <ul>
 <li>41 Check for zeroes in Assert messages</li>
 <li>254 Finalize XML format for test results</li>
-<li>275 NUnitEqualityComparer fails to compare <code>IEquatable&lt;T&gt;</code> where second object is derived from T</li>
+<li>275 NUnitEqualityComparer fails to compare <code><a class="el" href="classIEquatable.html">IEquatable</a>&lt;T&gt;</code> where second object is derived from T</li>
 <li>304 Run test Assemblies in parallel</li>
 <li>374 New syntax for selecting tests to be run</li>
 <li>515 OSPlatform.IsMacOSX doesn't work</li>
@@ -1282,7 +1282,7 @@ $(function() {
 <li>655882 Make CategoryAttribute inherited</li>
 <li>664081 Add Server2008 R2 and Windows 7 to PlatformAttribute</li>
 <li>671432 Upgrade NAnt to Latest Release</li>
-<li>676560 Assert.AreEqual does not support <code>IEquatable&lt;T&gt;</code></li>
+<li>676560 Assert.AreEqual does not support <code><a class="el" href="classIEquatable.html">IEquatable</a>&lt;T&gt;</code></li>
 <li>691129 Add Category parameter to TestFixture</li>
 <li>697069 Feature request: dynamic location for TestResult.xml</li>
 <li>708173 NUnit's logic for comparing arrays - use <code>Comparer&lt;T[]&gt;</code> if it is provided</li>

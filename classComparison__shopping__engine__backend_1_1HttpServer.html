@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Comparison-shopping-engine: Comparison_shopping_engine_backend.HttpServer Class Reference</title>
+<title>Comparison-shopping-engine: HttpServer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,57 +65,78 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classComparison__shopping__engine__backend_1_1HttpServer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Comparison_shopping_engine_backend.HttpServer Class Reference</div>  </div>
+<div class="title">HttpServer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>A barebones implementation of an HTTP server. Uses HttpListener and handles connections asynchronously.  
  <a href="classComparison__shopping__engine__backend_1_1HttpServer.html#details">More...</a></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Comparison_shopping_engine_backend.HttpServer:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for HttpServer:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer__inherit__graph.png" border="0" usemap="#Comparison__shopping__engine__backend_8HttpServer_inherit__map" alt="Inheritance graph"/></div>
-<map name="Comparison__shopping__engine__backend_8HttpServer_inherit__map" id="Comparison__shopping__engine__backend_8HttpServer_inherit__map">
-<area shape="rect" id="node2" href="interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="63,131,134,208"/>
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer__inherit__graph.png" border="0" usemap="#HttpServer_inherit__map" alt="Inheritance graph"/></div>
+<map name="HttpServer_inherit__map" id="HttpServer_inherit__map">
+<area shape="rect" id="node2" href="interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="41,131,112,208"/>
+<area shape="rect" id="node3" href="classIDisposable.html" title="{IDisposable\n||}" alt="" coords="32,5,121,83"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for Comparison_shopping_engine_backend.HttpServer:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for HttpServer:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer__coll__graph.png" border="0" usemap="#Comparison__shopping__engine__backend_8HttpServer_coll__map" alt="Collaboration graph"/></div>
-<map name="Comparison__shopping__engine__backend_8HttpServer_coll__map" id="Comparison__shopping__engine__backend_8HttpServer_coll__map">
-<area shape="rect" id="node2" href="interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="63,131,134,208"/>
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer__coll__graph.png" border="0" usemap="#HttpServer_coll__map" alt="Collaboration graph"/></div>
+<map name="HttpServer_coll__map" id="HttpServer_coll__map">
+<area shape="rect" id="node2" href="interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="15,132,85,209"/>
+<area shape="rect" id="node3" href="classIDisposable.html" title="{IDisposable\n||}" alt="" coords="5,5,95,83"/>
+<area shape="rect" id="node4" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html" title="The classes, implementing this interface are used to store all the accessible endpoints and provides ..." alt="" coords="110,132,217,209"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a80056134e8e0a2207f224ce157c49395"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a80056134e8e0a2207f224ce157c49395">HttpServer</a> (<a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html">IRouter</a> _router)</td></tr>
-<tr class="separator:a80056134e8e0a2207f224ce157c49395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a616a026bf41a7008f201aa4914c95ed4"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a616a026bf41a7008f201aa4914c95ed4">Start</a> ()</td></tr>
-<tr class="memdesc:a616a026bf41a7008f201aa4914c95ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the server and begins to listen. Is non-blocking.  <a href="#a616a026bf41a7008f201aa4914c95ed4">More...</a><br /></td></tr>
-<tr class="separator:a616a026bf41a7008f201aa4914c95ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1de9ca4ac145cfaf0b9cd683402048d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#aa1de9ca4ac145cfaf0b9cd683402048d">Dispose</a> ()</td></tr>
-<tr class="separator:aa1de9ca4ac145cfaf0b9cd683402048d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d85429b6b5d8e7871a6c36e6333d6b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a0d85429b6b5d8e7871a6c36e6333d6b2">HttpServer</a> (<a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html">IRouter</a> _router)</td></tr>
+<tr class="separator:a0d85429b6b5d8e7871a6c36e6333d6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5957aa0d15061f2c6b7145cca4139d83"><td class="memItemLeft" align="right" valign="top">async void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83">Start</a> ()</td></tr>
+<tr class="memdesc:a5957aa0d15061f2c6b7145cca4139d83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the server and begins to listen. Is non-blocking.  <a href="#a5957aa0d15061f2c6b7145cca4139d83">More...</a><br /></td></tr>
+<tr class="separator:a5957aa0d15061f2c6b7145cca4139d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2d745cdb7a7b983f861ed6a9a541a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a6e2d745cdb7a7b983f861ed6a9a541a7">Dispose</a> ()</td></tr>
+<tr class="separator:a6e2d745cdb7a7b983f861ed6a9a541a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a94a57d879775332463d589161a5ea8f8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a94a57d879775332463d589161a5ea8f8">Dispose</a> (bool disposing)</td></tr>
-<tr class="separator:a94a57d879775332463d589161a5ea8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad4348ef0f9969025bab397e7e27e26"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a8ad4348ef0f9969025bab397e7e27e26">Dispose</a> (bool disposing)</td></tr>
+<tr class="separator:a8ad4348ef0f9969025bab397e7e27e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7a8c0234f295cad1413b0aff54c64a70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a7a8c0234f295cad1413b0aff54c64a70">HandleConnection</a> (HttpListenerContext ctx)</td></tr>
+<tr class="memdesc:a7a8c0234f295cad1413b0aff54c64a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">A routine for handling every incoming request. Makes use of <a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html" title="The classes, implementing this interface are used to store all the accessible endpoints and provides ...">IRouter</a> and handles the possible exceptions  <a href="#a7a8c0234f295cad1413b0aff54c64a70">More...</a><br /></td></tr>
+<tr class="separator:a7a8c0234f295cad1413b0aff54c64a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0814aca79d2d6c1940274d906e1aec57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a0814aca79d2d6c1940274d906e1aec57">MapExceptions</a> (Func&lt; Stream &gt; handler, out int statusCode, out Stream outputStream)</td></tr>
+<tr class="memdesc:a0814aca79d2d6c1940274d906e1aec57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the responses for every sort of exception case expected to possibly occur, and assigns them appropriately upon catching.  <a href="#a0814aca79d2d6c1940274d906e1aec57">More...</a><br /></td></tr>
+<tr class="separator:a0814aca79d2d6c1940274d906e1aec57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aee36ff238481fa37e18c41c57d0d81d3"><td class="memItemLeft" align="right" valign="top">HttpListener&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#aee36ff238481fa37e18c41c57d0d81d3">listener</a></td></tr>
+<tr class="separator:aee36ff238481fa37e18c41c57d0d81d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77be4aee856814f246cf132013fa9819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html">IRouter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a77be4aee856814f246cf132013fa9819">router</a></td></tr>
+<tr class="separator:a77be4aee856814f246cf132013fa9819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A barebones implementation of an HTTP server. Uses HttpListener and handles connections asynchronously. </p>
 
 <p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00017">17</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a80056134e8e0a2207f224ce157c49395"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80056134e8e0a2207f224ce157c49395">&#9670;&nbsp;</a></span>HttpServer()</h2>
+<a id="a0d85429b6b5d8e7871a6c36e6333d6b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d85429b6b5d8e7871a6c36e6333d6b2">&#9670;&nbsp;</a></span>HttpServer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +145,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Comparison_shopping_engine_backend.HttpServer.HttpServer </td>
+          <td class="memname"><a class="el" href="classComparison__shopping__engine__backend_1_1HttpServer.html">HttpServer</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html">IRouter</a>&#160;</td>
           <td class="paramname"><em>_router</em></td><td>)</td>
@@ -143,8 +164,8 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa1de9ca4ac145cfaf0b9cd683402048d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1de9ca4ac145cfaf0b9cd683402048d">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[1/2]</span></h2>
+<a id="a6e2d745cdb7a7b983f861ed6a9a541a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2d745cdb7a7b983f861ed6a9a541a7">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +174,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Comparison_shopping_engine_backend.HttpServer.Dispose </td>
+          <td class="memname">void Dispose </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -170,8 +191,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a94a57d879775332463d589161a5ea8f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94a57d879775332463d589161a5ea8f8">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[2/2]</span></h2>
+<a id="a8ad4348ef0f9969025bab397e7e27e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad4348ef0f9969025bab397e7e27e26">&#9670;&nbsp;</a></span>Dispose() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +201,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Comparison_shopping_engine_backend.HttpServer.Dispose </td>
+          <td class="memname">virtual void Dispose </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>disposing</em></td><td>)</td>
@@ -198,8 +219,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a616a026bf41a7008f201aa4914c95ed4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a616a026bf41a7008f201aa4914c95ed4">&#9670;&nbsp;</a></span>Start()</h2>
+<a id="a7a8c0234f295cad1413b0aff54c64a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8c0234f295cad1413b0aff54c64a70">&#9670;&nbsp;</a></span>HandleConnection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +229,129 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">async void Comparison_shopping_engine_backend.HttpServer.Start </td>
+          <td class="memname">void HandleConnection </td>
+          <td>(</td>
+          <td class="paramtype">HttpListenerContext&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A routine for handling every incoming request. Makes use of <a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html" title="The classes, implementing this interface are used to store all the accessible endpoints and provides ...">IRouter</a> and handles the possible exceptions </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>The HttpListenerContext of the particular request</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00071">71</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_cgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_cgraph" id="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_cgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a0814aca79d2d6c1940274d906e1aec57" title="Contains the responses for every sort of exception case expected to possibly occur, and assigns them appropriately upon catching. " alt="" coords="221,5,333,32"/>
+<area shape="rect" id="node3" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html#a9c5be4f0f9ea5e3b581a6bfcc959dd54" title="Returns a Callback that represents the functionality fot the given endpoint. " alt="" coords="180,56,373,112"/>
+</map>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_icgraph" id="classComparison__shopping__engine__backend_1_1HttpServer_a7a8c0234f295cad1413b0aff54c64a70_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83" title="Starts the server and begins to listen. Is non&#45;blocking. " alt="" coords="180,5,231,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0814aca79d2d6c1940274d906e1aec57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0814aca79d2d6c1940274d906e1aec57">&#9670;&nbsp;</a></span>MapExceptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapExceptions </td>
+          <td>(</td>
+          <td class="paramtype">Func&lt; Stream &gt;&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int&#160;</td>
+          <td class="paramname"><em>statusCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out Stream&#160;</td>
+          <td class="paramname"><em>outputStream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Contains the responses for every sort of exception case expected to possibly occur, and assigns them appropriately upon catching. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>The arrow function, that calls the internal handling method of the endpoint</td></tr>
+    <tr><td class="paramname">statusCode</td><td>The out'd int to pass the appropriate status code to the caller</td></tr>
+    <tr><td class="paramname">outputStream</td><td>The out'd Stream to pass the appropriate response body to the caller</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00108">108</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer_a0814aca79d2d6c1940274d906e1aec57_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1HttpServer_a0814aca79d2d6c1940274d906e1aec57_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1HttpServer_a0814aca79d2d6c1940274d906e1aec57_icgraph" id="classComparison__shopping__engine__backend_1_1HttpServer_a0814aca79d2d6c1940274d906e1aec57_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a7a8c0234f295cad1413b0aff54c64a70" title="A routine for handling every incoming request. Makes use of IRouter and handles the possible exceptio..." alt="" coords="165,5,292,32"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83" title="Starts the server and begins to listen. Is non&#45;blocking. " alt="" coords="340,5,391,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5957aa0d15061f2c6b7145cca4139d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5957aa0d15061f2c6b7145cca4139d83">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async void Start </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -223,19 +366,70 @@ Protected Member Functions</h2></td></tr>
 
 <p>Starts the server and begins to listen. Is non-blocking. </p>
 
-<p>Implements <a class="el" href="interfaceComparison__shopping__engine__backend_1_1IServer.html#ae106dc92c763face7796b839bac65a8f">Comparison_shopping_engine_backend.IServer</a>.</p>
+<p>Implements <a class="el" href="interfaceComparison__shopping__engine__backend_1_1IServer.html#a07aaf1227e4d645f15e0a964f54ef291">IServer</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00042">42</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer_a616a026bf41a7008f201aa4914c95ed4_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1HttpServer_a616a026bf41a7008f201aa4914c95ed4_cgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1HttpServer_a616a026bf41a7008f201aa4914c95ed4_cgraph" id="classComparison__shopping__engine__backend_1_1HttpServer_a616a026bf41a7008f201aa4914c95ed4_cgraph">
-<area shape="rect" id="node2" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html#a5155a94eccda6989c69534efbe88c6a5" title="Returns a Callback that represents the functionality fot the given endpoint. " alt="" coords="244,5,437,61"/>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1HttpServer_a5957aa0d15061f2c6b7145cca4139d83_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1HttpServer_a5957aa0d15061f2c6b7145cca4139d83_cgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1HttpServer_a5957aa0d15061f2c6b7145cca4139d83_cgraph" id="classComparison__shopping__engine__backend_1_1HttpServer_a5957aa0d15061f2c6b7145cca4139d83_cgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a7a8c0234f295cad1413b0aff54c64a70" title="A routine for handling every incoming request. Makes use of IRouter and handles the possible exceptio..." alt="" coords="104,39,231,65"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1HttpServer.html#a0814aca79d2d6c1940274d906e1aec57" title="Contains the responses for every sort of exception case expected to possibly occur, and assigns them appropriately upon catching. " alt="" coords="319,5,431,32"/>
+<area shape="rect" id="node4" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html#a9c5be4f0f9ea5e3b581a6bfcc959dd54" title="Returns a Callback that represents the functionality fot the given endpoint. " alt="" coords="279,56,472,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aee36ff238481fa37e18c41c57d0d81d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee36ff238481fa37e18c41c57d0d81d3">&#9670;&nbsp;</a></span>listener</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpListener listener</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00019">19</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
+
+</div>
+</div>
+<a id="a77be4aee856814f246cf132013fa9819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77be4aee856814f246cf132013fa9819">&#9670;&nbsp;</a></span>router</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interfaceComparison__shopping__engine__backend_1_1IRouter.html">IRouter</a> router</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="HttpServer_8cs_source.html#l00020">20</a> of file <a class="el" href="HttpServer_8cs_source.html">HttpServer.cs</a>.</p>
 
 </div>
 </div>

@@ -1,3 +1,4 @@
-<map id="Comparison_shopping_engine_web_protocol.GetSuggestionsEndpoint" name="Comparison_shopping_engine_web_protocol.GetSuggestionsEndpoint">
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="19,417,239,524"/>
+<map id="GetSuggestionsEndpoint" name="GetSuggestionsEndpoint">
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="5,388,223,465"/>
+<area shape="rect" id="node2" href="$classIEndpoint_3_01object_00_01GetSuggestionsParameters_00_01List_3_01string_01_4_4.html" title="{IEndpoint\&lt; object,\l GetSuggestionsParameters,\l List\&lt; string \&gt;\&gt;\n||}" alt="" coords="19,5,209,112"/>
 </map>

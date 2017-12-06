@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Comparison-shopping-engine: Comparison_shopping_engine_backend.NormalizationEngine Class Reference</title>
+<title>Comparison-shopping-engine: NormalizationEngine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,60 +65,80 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classComparison__shopping__engine__backend_1_1NormalizationEngine-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Comparison_shopping_engine_backend.NormalizationEngine Class Reference</div>  </div>
+<div class="title">NormalizationEngine Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>This class is used for normalisation of string names and storing the fixed names. Intended for OCR result correction and autocomplete suggestion mechanisms.  
  <a href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#details">More...</a></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for Comparison_shopping_engine_backend.NormalizationEngine:</div>
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for NormalizationEngine:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine__coll__graph.png" border="0" usemap="#Comparison__shopping__engine__backend_8NormalizationEngine_coll__map" alt="Collaboration graph"/></div>
-<map name="Comparison__shopping__engine__backend_8NormalizationEngine_coll__map" id="Comparison__shopping__engine__backend_8NormalizationEngine_coll__map">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine__coll__graph.png" border="0" usemap="#NormalizationEngine_coll__map" alt="Collaboration graph"/></div>
+<map name="NormalizationEngine_coll__map" id="NormalizationEngine_coll__map">
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78c3be37d4a80fda9c76656e3766d4c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a78c3be37d4a80fda9c76656e3766d4c2">AddName</a> (string name)</td></tr>
-<tr class="memdesc:a78c3be37d4a80fda9c76656e3766d4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new fixed name into the name storage. Should only be used with confirmed names, for example, the ones manually entered by User.  <a href="#a78c3be37d4a80fda9c76656e3766d4c2">More...</a><br /></td></tr>
-<tr class="separator:a78c3be37d4a80fda9c76656e3766d4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e11deb142a2ad3d69d675ef8af417b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a92e11deb142a2ad3d69d675ef8af417b">Exists</a> (string name)</td></tr>
-<tr class="memdesc:a92e11deb142a2ad3d69d675ef8af417b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given name is stored  <a href="#a92e11deb142a2ad3d69d675ef8af417b">More...</a><br /></td></tr>
-<tr class="separator:a92e11deb142a2ad3d69d675ef8af417b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a33272f925d2e4b1b85f28e8eef03f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a55a33272f925d2e4b1b85f28e8eef03f">ClearList</a> ()</td></tr>
-<tr class="memdesc:a55a33272f925d2e4b1b85f28e8eef03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal list  <a href="#a55a33272f925d2e4b1b85f28e8eef03f">More...</a><br /></td></tr>
-<tr class="separator:a55a33272f925d2e4b1b85f28e8eef03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46f9466d1bb0aea55564dc578500f689"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a46f9466d1bb0aea55564dc578500f689">GetClosest</a> (string name)</td></tr>
-<tr class="memdesc:a46f9466d1bb0aea55564dc578500f689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a closest string match from the name storage. Intended to use for initial data normalisation.  <a href="#a46f9466d1bb0aea55564dc578500f689">More...</a><br /></td></tr>
-<tr class="separator:a46f9466d1bb0aea55564dc578500f689"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e07c98e9d1628722cb887a6aacbaa04"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a3e07c98e9d1628722cb887a6aacbaa04">GetClosestList</a> (string name, int limit)</td></tr>
-<tr class="memdesc:a3e07c98e9d1628722cb887a6aacbaa04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of the closest matches for a particular name. Intended to use for generating suggestions. In case where <em>limit</em>  is 1, it is recommended to use getClosest(string) for more efficient implementation.  <a href="#a3e07c98e9d1628722cb887a6aacbaa04">More...</a><br /></td></tr>
-<tr class="separator:a3e07c98e9d1628722cb887a6aacbaa04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefa494c85f7e7fd3bbabd05e8adac3bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#aefa494c85f7e7fd3bbabd05e8adac3bc">Persist</a> ()</td></tr>
-<tr class="memdesc:aefa494c85f7e7fd3bbabd05e8adac3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method serializing all of the names currently stored to a User configured location. Deletes the old data stored before writing.  <a href="#aefa494c85f7e7fd3bbabd05e8adac3bc">More...</a><br /></td></tr>
-<tr class="separator:aefa494c85f7e7fd3bbabd05e8adac3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86eac86804654ccae675a6ea1808af9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a86eac86804654ccae675a6ea1808af9b">LoadAll</a> ()</td></tr>
-<tr class="memdesc:a86eac86804654ccae675a6ea1808af9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method deserializing all of the names currently saved from a User configured location. Deletes all the old names before reading.  <a href="#a86eac86804654ccae675a6ea1808af9b">More...</a><br /></td></tr>
-<tr class="separator:a86eac86804654ccae675a6ea1808af9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152745a3bc062e809d5dfcf579fdde65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a152745a3bc062e809d5dfcf579fdde65">AddName</a> (string name)</td></tr>
+<tr class="memdesc:a152745a3bc062e809d5dfcf579fdde65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new fixed name into the name storage. Should only be used with confirmed names, for example, the ones manually entered by User.  <a href="#a152745a3bc062e809d5dfcf579fdde65">More...</a><br /></td></tr>
+<tr class="separator:a152745a3bc062e809d5dfcf579fdde65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4b0bbd1df39e0a74429d057e067802"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#ada4b0bbd1df39e0a74429d057e067802">Exists</a> (string name)</td></tr>
+<tr class="memdesc:ada4b0bbd1df39e0a74429d057e067802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given name is stored  <a href="#ada4b0bbd1df39e0a74429d057e067802">More...</a><br /></td></tr>
+<tr class="separator:ada4b0bbd1df39e0a74429d057e067802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b85ec494201046fd7686395c996c272"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2b85ec494201046fd7686395c996c272">ClearList</a> ()</td></tr>
+<tr class="memdesc:a2b85ec494201046fd7686395c996c272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal list  <a href="#a2b85ec494201046fd7686395c996c272">More...</a><br /></td></tr>
+<tr class="separator:a2b85ec494201046fd7686395c996c272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab345a028f13afb55347626003311714"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#aab345a028f13afb55347626003311714">GetClosest</a> (string name)</td></tr>
+<tr class="memdesc:aab345a028f13afb55347626003311714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a closest string match from the name storage. Intended to use for initial data normalisation.  <a href="#aab345a028f13afb55347626003311714">More...</a><br /></td></tr>
+<tr class="separator:aab345a028f13afb55347626003311714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2409c97cee13493205b29b3d9d3c46d"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#af2409c97cee13493205b29b3d9d3c46d">GetClosestList</a> (string name, int limit)</td></tr>
+<tr class="memdesc:af2409c97cee13493205b29b3d9d3c46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of the closest matches for a particular name. Intended to use for generating suggestions. In case where <em>limit</em>  is 1, it is recommended to use getClosest(string) for more efficient implementation.  <a href="#af2409c97cee13493205b29b3d9d3c46d">More...</a><br /></td></tr>
+<tr class="separator:af2409c97cee13493205b29b3d9d3c46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb78d52731624dab25493ca244063fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#addb78d52731624dab25493ca244063fa">Persist</a> ()</td></tr>
+<tr class="memdesc:addb78d52731624dab25493ca244063fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method serializing all of the names currently stored to a User configured location. Deletes the old data stored before writing.  <a href="#addb78d52731624dab25493ca244063fa">More...</a><br /></td></tr>
+<tr class="separator:addb78d52731624dab25493ca244063fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8c3335ef46a33a51ed7d74de760421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#afc8c3335ef46a33a51ed7d74de760421">LoadAll</a> ()</td></tr>
+<tr class="memdesc:afc8c3335ef46a33a51ed7d74de760421"><td class="mdescLeft">&#160;</td><td class="mdescRight">A method deserializing all of the names currently saved from a User configured location. Deletes all the old names before reading.  <a href="#afc8c3335ef46a33a51ed7d74de760421">More...</a><br /></td></tr>
+<tr class="separator:afc8c3335ef46a33a51ed7d74de760421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af60031a6f617a05ca5d386fa716c4f48"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#af60031a6f617a05ca5d386fa716c4f48">GetInstance</a> ()</td></tr>
-<tr class="separator:af60031a6f617a05ca5d386fa716c4f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf17ac219d860b4b4ba0b71828c6807"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2cf17ac219d860b4b4ba0b71828c6807">GetInstance</a> ()</td></tr>
+<tr class="separator:a2cf17ac219d860b4b4ba0b71828c6807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:acc873682d815dd7d169776e4bcd2bfcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#acc873682d815dd7d169776e4bcd2bfcb">NormalizationEngine</a> ()</td></tr>
+<tr class="separator:acc873682d815dd7d169776e4bcd2bfcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0da3efcadadb08fa2f9491f47c9831d3"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a0da3efcadadb08fa2f9491f47c9831d3">names</a></td></tr>
+<tr class="separator:a0da3efcadadb08fa2f9491f47c9831d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31251952443063d11b2861a2e7aad8c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#ab31251952443063d11b2861a2e7aad8c">normalizationDir</a></td></tr>
+<tr class="separator:ab31251952443063d11b2861a2e7aad8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a0020b75b8b8222825f0923f2b1e47357"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a0020b75b8b8222825f0923f2b1e47357">instance</a> = null</td></tr>
+<tr class="separator:a0020b75b8b8222825f0923f2b1e47357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used for normalisation of string names and storing the fixed names. Intended for OCR result correction and autocomplete suggestion mechanisms. </p>
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00018">18</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a78c3be37d4a80fda9c76656e3766d4c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78c3be37d4a80fda9c76656e3766d4c2">&#9670;&nbsp;</a></span>AddName()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="acc873682d815dd7d169776e4bcd2bfcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc873682d815dd7d169776e4bcd2bfcb">&#9670;&nbsp;</a></span>NormalizationEngine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +147,50 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Comparison_shopping_engine_backend.NormalizationEngine.AddName </td>
+          <td class="memname"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00024">24</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_acc873682d815dd7d169776e4bcd2bfcb_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_acc873682d815dd7d169776e4bcd2bfcb_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_acc873682d815dd7d169776e4bcd2bfcb_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_acc873682d815dd7d169776e4bcd2bfcb_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2cf17ac219d860b4b4ba0b71828c6807" title="GetInstance" alt="" coords="195,100,287,127"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="346,5,543,61"/>
+<area shape="rect" id="node5" href="classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a with normalised names &#160;" alt="" coords="351,85,538,141"/>
+<area shape="rect" id="node7" href="classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="335,165,555,221"/>
+<area shape="rect" id="node4" href="classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="604,13,812,54"/>
+<area shape="rect" id="node6" href="classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="603,85,813,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a152745a3bc062e809d5dfcf579fdde65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a152745a3bc062e809d5dfcf579fdde65">&#9670;&nbsp;</a></span>AddName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddName </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -153,8 +216,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a55a33272f925d2e4b1b85f28e8eef03f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55a33272f925d2e4b1b85f28e8eef03f">&#9670;&nbsp;</a></span>ClearList()</h2>
+<a id="a2b85ec494201046fd7686395c996c272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b85ec494201046fd7686395c996c272">&#9670;&nbsp;</a></span>ClearList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +226,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Comparison_shopping_engine_backend.NormalizationEngine.ClearList </td>
+          <td class="memname">void ClearList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -179,21 +242,23 @@ Static Public Member Functions</h2></td></tr>
 <p>Clear the internal list </p>
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00071">71</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a55a33272f925d2e4b1b85f28e8eef03f_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a55a33272f925d2e4b1b85f28e8eef03f_icgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a55a33272f925d2e4b1b85f28e8eef03f_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a55a33272f925d2e4b1b85f28e8eef03f_icgraph">
-<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a86eac86804654ccae675a6ea1808af9b" title="A method deserializing all of the names currently saved from a User configured location. Deletes all the old names before reading. " alt="" coords="260,5,467,61"/>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2b85ec494201046fd7686395c996c272_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a2b85ec494201046fd7686395c996c272_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2b85ec494201046fd7686395c996c272_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2b85ec494201046fd7686395c996c272_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#afc8c3335ef46a33a51ed7d74de760421" title="A method deserializing all of the names currently saved from a User configured location. Deletes all the old names before reading. " alt="" coords="127,20,192,47"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="240,5,437,61"/>
+<area shape="rect" id="node4" href="classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="485,13,693,54"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a92e11deb142a2ad3d69d675ef8af417b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92e11deb142a2ad3d69d675ef8af417b">&#9670;&nbsp;</a></span>Exists()</h2>
+<a id="ada4b0bbd1df39e0a74429d057e067802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4b0bbd1df39e0a74429d057e067802">&#9670;&nbsp;</a></span>Exists()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +267,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Comparison_shopping_engine_backend.NormalizationEngine.Exists </td>
+          <td class="memname">bool Exists </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -229,8 +294,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a46f9466d1bb0aea55564dc578500f689"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46f9466d1bb0aea55564dc578500f689">&#9670;&nbsp;</a></span>GetClosest()</h2>
+<a id="aab345a028f13afb55347626003311714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab345a028f13afb55347626003311714">&#9670;&nbsp;</a></span>GetClosest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +304,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string Comparison_shopping_engine_backend.NormalizationEngine.GetClosest </td>
+          <td class="memname">string GetClosest </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>name</em></td><td>)</td>
@@ -266,8 +331,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3e07c98e9d1628722cb887a6aacbaa04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e07c98e9d1628722cb887a6aacbaa04">&#9670;&nbsp;</a></span>GetClosestList()</h2>
+<a id="af2409c97cee13493205b29b3d9d3c46d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2409c97cee13493205b29b3d9d3c46d">&#9670;&nbsp;</a></span>GetClosestList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +341,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;string&gt; Comparison_shopping_engine_backend.NormalizationEngine.GetClosestList </td>
+          <td class="memname">List&lt;string&gt; GetClosestList </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -311,21 +376,21 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A List&lt;string&gt; of the closest matches</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00101">101</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a3e07c98e9d1628722cb887a6aacbaa04_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a3e07c98e9d1628722cb887a6aacbaa04_icgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a3e07c98e9d1628722cb887a6aacbaa04_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a3e07c98e9d1628722cb887a6aacbaa04_icgraph">
-<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#a5416054c6958672f4811b09fe35d69cd" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="260,5,480,61"/>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_af2409c97cee13493205b29b3d9d3c46d_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_af2409c97cee13493205b29b3d9d3c46d_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_af2409c97cee13493205b29b3d9d3c46d_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_af2409c97cee13493205b29b3d9d3c46d_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="161,5,381,61"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af60031a6f617a05ca5d386fa716c4f48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af60031a6f617a05ca5d386fa716c4f48">&#9670;&nbsp;</a></span>GetInstance()</h2>
+<a id="a2cf17ac219d860b4b4ba0b71828c6807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf17ac219d860b4b4ba0b71828c6807">&#9670;&nbsp;</a></span>GetInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +399,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a> Comparison_shopping_engine_backend.NormalizationEngine.GetInstance </td>
+          <td class="memname">static <a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a> GetInstance </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -348,23 +413,35 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00039">39</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_af60031a6f617a05ca5d386fa716c4f48_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_af60031a6f617a05ca5d386fa716c4f48_icgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_af60031a6f617a05ca5d386fa716c4f48_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_af60031a6f617a05ca5d386fa716c4f48_icgraph">
-<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1Controller.html#a793fd0831f5e664d95e78b60c7cc99d1" title="Processes given string into a with normalised names &#160;" alt="" coords="277,5,463,61"/>
-<area shape="rect" id="node4" href="classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#a5416054c6958672f4811b09fe35d69cd" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="260,85,480,141"/>
-<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#a5acf4f7b9c004ef259ada03bfee3a1b6" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="528,5,739,61"/>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_cgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_cgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_cgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#acc873682d815dd7d169776e4bcd2bfcb" title="NormalizationEngine" alt="" coords="145,5,287,32"/>
+</map>
+</div>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a2cf17ac219d860b4b4ba0b71828c6807_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="157,5,354,61"/>
+<area shape="rect" id="node4" href="classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a with normalised names &#160;" alt="" coords="162,85,349,141"/>
+<area shape="rect" id="node6" href="classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="145,165,365,221"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="415,13,623,54"/>
+<area shape="rect" id="node5" href="classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="413,85,624,141"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a86eac86804654ccae675a6ea1808af9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86eac86804654ccae675a6ea1808af9b">&#9670;&nbsp;</a></span>LoadAll()</h2>
+<a id="afc8c3335ef46a33a51ed7d74de760421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8c3335ef46a33a51ed7d74de760421">&#9670;&nbsp;</a></span>LoadAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,7 +450,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Comparison_shopping_engine_backend.NormalizationEngine.LoadAll </td>
+          <td class="memname">void LoadAll </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -389,21 +466,32 @@ Static Public Member Functions</h2></td></tr>
 <p>A method deserializing all of the names currently saved from a User configured location. Deletes all the old names before reading. </p>
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00141">141</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_a86eac86804654ccae675a6ea1808af9b_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_a86eac86804654ccae675a6ea1808af9b_cgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_a86eac86804654ccae675a6ea1808af9b_cgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_a86eac86804654ccae675a6ea1808af9b_cgraph">
-<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a55a33272f925d2e4b1b85f28e8eef03f" title="Clear the internal list " alt="" coords="260,5,467,61"/>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_cgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_cgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_cgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2b85ec494201046fd7686395c996c272" title="Clear the internal list " alt="" coords="119,5,192,32"/>
+</map>
+</div>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_icgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_icgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_icgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_afc8c3335ef46a33a51ed7d74de760421_icgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="119,5,316,61"/>
+<area shape="rect" id="node3" href="classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="364,13,572,54"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="aefa494c85f7e7fd3bbabd05e8adac3bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefa494c85f7e7fd3bbabd05e8adac3bc">&#9670;&nbsp;</a></span>Persist()</h2>
+<a id="addb78d52731624dab25493ca244063fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb78d52731624dab25493ca244063fa">&#9670;&nbsp;</a></span>Persist()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,7 +500,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Comparison_shopping_engine_backend.NormalizationEngine.Persist </td>
+          <td class="memname">void Persist </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -428,16 +516,89 @@ Static Public Member Functions</h2></td></tr>
 <p>A method serializing all of the names currently stored to a User configured location. Deletes the old data stored before writing. </p>
 
 <p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00111">111</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_aefa494c85f7e7fd3bbabd05e8adac3bc_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_aefa494c85f7e7fd3bbabd05e8adac3bc_cgraph" alt=""/></div>
-<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_aefa494c85f7e7fd3bbabd05e8adac3bc_cgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_aefa494c85f7e7fd3bbabd05e8adac3bc_cgraph">
-<area shape="rect" id="node2" href="classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#acced0d030be72e17b62183f62ae1af47" title="An overload, that takes Stream as the first argument instead of JsonWriter Avoids DRY..." alt="" coords="260,5,439,61"/>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classComparison__shopping__engine__backend_1_1NormalizationEngine_addb78d52731624dab25493ca244063fa_cgraph.png" border="0" usemap="#classComparison__shopping__engine__backend_1_1NormalizationEngine_addb78d52731624dab25493ca244063fa_cgraph" alt=""/></div>
+<map name="classComparison__shopping__engine__backend_1_1NormalizationEngine_addb78d52731624dab25493ca244063fa_cgraph" id="classComparison__shopping__engine__backend_1_1NormalizationEngine_addb78d52731624dab25493ca244063fa_cgraph">
+<area shape="rect" id="node2" href="classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#a8597c311fd2ef051c537f8709499d322" title="An overload, that takes Stream as the first argument instead of JsonWriter Avoids DRY..." alt="" coords="116,5,295,61"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0020b75b8b8222825f0923f2b1e47357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0020b75b8b8222825f0923f2b1e47357">&#9670;&nbsp;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classComparison__shopping__engine__backend_1_1NormalizationEngine.html">NormalizationEngine</a> instance = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00020">20</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0da3efcadadb08fa2f9491f47c9831d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da3efcadadb08fa2f9491f47c9831d3">&#9670;&nbsp;</a></span>names</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; names</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00021">21</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab31251952443063d11b2861a2e7aad8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31251952443063d11b2861a2e7aad8c">&#9670;&nbsp;</a></span>normalizationDir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string normalizationDir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="NormalizationEngine_8cs_source.html#l00022">22</a> of file <a class="el" href="NormalizationEngine_8cs_source.html">NormalizationEngine.cs</a>.</p>
 
 </div>
 </div>

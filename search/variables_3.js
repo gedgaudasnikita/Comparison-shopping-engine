@@ -1,4 +1,12 @@
 var searchData=
 [
-  ['dir',['dir',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#a09bf7e1664a992526a9b19b98d2ab9fd',1,'Comparison_shopping_engine_frontend_android::AppData']]]
+  ['date',['date',['../classComparison__shopping__engine__core__entities_1_1Item.html#a230fe7ba9136a22b732a10a85e65a956',1,'Comparison_shopping_engine_core_entities::Item']]],
+  ['dateallowedlabel',['DateAllowedLabel',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a10433f28f15e0218381aaffc24d1ca8a',1,'Comparison_shopping_engine_admin::ItemCorrectForm']]],
+  ['datecolumn',['DateColumn',['../classComparison__shopping__engine__admin_1_1MainForm.html#a082de187851e4868e5f4f66aba14055b',1,'Comparison_shopping_engine_admin::MainForm']]],
+  ['dateedit',['dateEdit',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a71cdab9980072e99a4211e10af462551',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['datelabel',['DateLabel',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a7f768001dbd6a0375c9c1d08af8f3127',1,'Comparison_shopping_engine_admin.ItemCorrectForm.DateLabel()'],['../classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a7f768001dbd6a0375c9c1d08af8f3127',1,'Comparison_shopping_engine_admin.ItemDeleteForm.DateLabel()']]],
+  ['dateregex',['dateRegex',['../classComparison__shopping__engine__backend_1_1DateParser.html#a61cb398b87d2318cf75e3a4ae172471b',1,'Comparison_shopping_engine_backend::DateParser']]],
+  ['datetextbox',['DateTextBox',['../classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#aa26fe3a41ab64a1b49e81e918b30e8bb',1,'Comparison_shopping_engine_admin.ItemCorrectForm.DateTextBox()'],['../classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#aa26fe3a41ab64a1b49e81e918b30e8bb',1,'Comparison_shopping_engine_admin.ItemDeleteForm.DateTextBox()']]],
+  ['deletebutton',['DeleteButton',['../classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#af67843599a7cce84265a2b48cb75ae82',1,'Comparison_shopping_engine_admin.ItemDeleteForm.DeleteButton()'],['../classComparison__shopping__engine__admin_1_1MainForm.html#af67843599a7cce84265a2b48cb75ae82',1,'Comparison_shopping_engine_admin.MainForm.DeleteButton()']]],
+  ['dir',['dir',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#a367402974cd7d77a72a727f287d24a8b',1,'Comparison_shopping_engine_frontend_android::AppData']]]
 ];

@@ -1,6 +1,0 @@
-<map id="Comparison_shopping_engine_backend.GetSuggestionsBackendEndpoint.Handle" name="Comparison_shopping_engine_backend.GetSuggestionsBackendEndpoint.Handle">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1GetSuggestionsEndpoint.html#aa71bd3284ae22044119c4b0b1f0e5b92" title="Comparison_shopping\l_engine_web_protocol.GetSuggestions\lEndpoint.GetRequestParameters" alt="" coords="273,5,520,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1NormalizationEngine.html#af60031a6f617a05ca5d386fa716c4f48" title="Comparison_shopping\l_engine_backend.Normalization\lEngine.GetInstance" alt="" coords="293,85,500,141"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a3e07c98e9d1628722cb887a6aacbaa04" title="Get a list of the closest matches for a particular name. Intended to use for generating suggestions..." alt="" coords="293,165,500,221"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__web__protocol_1_1GetSuggestionsEndpoint.html#a727afda647595ee7d85e5a5ca4c96f1e" title="Comparison_shopping\l_engine_web_protocol.GetSuggestions\lEndpoint.GetResponseBody" alt="" coords="273,245,520,301"/>
-</map>

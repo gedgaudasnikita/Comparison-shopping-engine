@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html" title="Comparison_shopping\l_engine_frontend_android.Config\lActivity" alt="" coords="121,5,331,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1MainActivity.html" title="Comparison_shopping\l_engine_frontend_android.Main\lActivity" alt="" coords="125,85,327,141"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html" title="Comparison_shopping\l_engine_frontend_android.Results\lActivity" alt="" coords="117,165,335,221"/>
+<area shape="rect" id="node1" href="$interfaceComparison__shopping__engine__backend_1_1IRouter.html" title="The classes, implementing this interface are used to store all the accessible endpoints and provides ..." alt="" coords="5,5,68,32"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Router.html" title="Router" alt="" coords="116,5,176,32"/>
 </map>

@@ -1,2 +1,3 @@
-<map id="Comparison_shopping_engine_core_entities.ItemPriceComparer" name="Comparison_shopping_engine_core_entities.ItemPriceComparer">
+<map id="ItemPriceComparer" name="ItemPriceComparer">
+<area shape="rect" id="node2" href="$classIComparer.html" title="{IComparer\&lt; Item \&gt;\n||}" alt="" coords="7,5,137,83"/>
 </map>

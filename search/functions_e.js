@@ -1,4 +1,14 @@
 var searchData=
 [
-  ['tostring',['ToString',['../classComparison__shopping__engine__core__entities_1_1Item.html#ac70f491ab8387309b9cd945e4814b339',1,'Comparison_shopping_engine_core_entities::Item']]]
+  ['saveconfig',['SaveConfig',['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#aa67914e91e1b1ff65d68df7e673a5ca9',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
+  ['savereceipt',['SaveReceipt',['../classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc',1,'Comparison_shopping_engine_backend.Controller.SaveReceipt()'],['../classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a88d6a011c5db82c1baf9c1c235024ba0',1,'Comparison_shopping_engine_frontend_android.BackendInterface.SaveReceipt()']]],
+  ['serialize',['Serialize',['../classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#a8597c311fd2ef051c537f8709499d322',1,'Comparison_shopping_engine_core_entities::JsonSerializerStream']]],
+  ['showdialog',['ShowDialog',['../classComparison__shopping__engine__frontend__android_1_1UiHelpers.html#a48a42b15605fee242ee1ae5ca00897ae',1,'Comparison_shopping_engine_frontend_android::UiHelpers']]],
+  ['spinneritemselected',['SpinnerItemSelected',['../classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html#a11db8d6eebc4abadb10db16c8a81f902',1,'Comparison_shopping_engine_frontend_android::ConfigActivity']]],
+  ['start',['Start',['../interfaceComparison__shopping__engine__backend_1_1IServer.html#a07aaf1227e4d645f15e0a964f54ef291',1,'Comparison_shopping_engine_backend.IServer.Start()'],['../classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83',1,'Comparison_shopping_engine_backend.HttpServer.Start()']]],
+  ['statecolormanager',['StateColorManager',['../classComparison__shopping__engine__frontend__android_1_1StateColorManager.html#abeb3569a45c562e01ce31ac5f4b508bf',1,'Comparison_shopping_engine_frontend_android::StateColorManager']]],
+  ['storeparser',['StoreParser',['../classComparison__shopping__engine__backend_1_1StoreParser.html#af2bf2f44d159bc90314b12f214f5e049',1,'Comparison_shopping_engine_backend::StoreParser']]],
+  ['string',['String',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1String.html#aa4a5af372060f4eabbd4336eeaf92e87',1,'Comparison_shopping_engine_frontend_android.Resource.String.String()'],['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1String.html#a8db865e64c3c3f65ec6a0b6fd8c09a94',1,'Comparison_shopping_engine_frontend_android.Resource.String.String()']]],
+  ['suggestionadapter',['SuggestionAdapter',['../classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter.html#ab365d19f4894cd88ecb0e60a506caf99',1,'Comparison_shopping_engine_frontend_android::SuggestionAdapter']]],
+  ['suggestionfilter',['SuggestionFilter',['../classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter_1_1SuggestionFilter.html#acbf46bcee3cd25803f8c7c4d09e2f089',1,'Comparison_shopping_engine_frontend_android::SuggestionAdapter::SuggestionFilter']]]
 ];

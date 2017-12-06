@@ -1,0 +1,6 @@
+<map id="DisplayReceipt" name="DisplayReceipt">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#afdd5510c5565735600c50cda46cba681" title="Calls the backend&#39;s ProcessImage endpoint " alt="" coords="163,5,387,61"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a73c7655e7b65040e69b2766d59de71b5" title="NewStoreDate" alt="" coords="222,85,327,112"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a79e77753c99fbf31596ae4d454945fee" title="Creates a RelativeLayout with 4 editable EditText views for passed Item object. Each view is filled w..." alt="" coords="239,136,311,163"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__web__protocol_1_1ProcessImageEndpoint.html#ab43f336440cee8f85e423f4888097ebd" title="Comparison_shopping\l_engine_web_protocol.Process\lImageEndpoint.GetResponseBody" alt="" coords="435,5,656,61"/>
+</map>

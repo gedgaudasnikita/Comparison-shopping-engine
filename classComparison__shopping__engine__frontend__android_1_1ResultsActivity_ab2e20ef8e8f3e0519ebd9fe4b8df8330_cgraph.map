@@ -1,9 +1,0 @@
-<map id="Comparison_shopping_engine_frontend_android.ResultsActivity.OnCreate" name="Comparison_shopping_engine_frontend_android.ResultsActivity.OnCreate">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__frontend__android_1_1UiHelpers.html#a96d537038f375b2aec8c4897fbd5ae57" title="Shows a basic AlertDialog with a titled closing button. " alt="" coords="290,5,475,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1ItemStoreView.html#abb90cb9f983dcdecb88ee4b66a036be7" title="The function to check whether the store information is ready to be sent. Relies on the internal State..." alt="" coords="283,85,482,141"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a59fd5ca7733459446da9969ea58f51f2" title="Calls the backend&#39;s SaveReceipt endpoint " alt="" coords="271,165,495,221"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a74ac3b895db75f2342d5fd3f839e79ec" title="Calls the backend&#39;s DisplayReceipt endpoint " alt="" coords="271,245,495,301"/>
-<area shape="rect" id="node7" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a2742ed8332d4b4a249d4b5c8e908a409" title="Calls the backend&#39;s ProcessImage endpoint " alt="" coords="271,325,495,381"/>
-<area shape="rect" id="node6" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html#ad4b814bc9a21e3157c6db5893877b05c" title="Comparison_shopping\l_engine_web_protocol.Process\lReceiptEndpoint.GetResponseBody" alt="" coords="543,245,773,301"/>
-<area shape="rect" id="node8" href="$classComparison__shopping__engine__web__protocol_1_1ProcessImageEndpoint.html#aa49050d8ed0ac3504fac5ef54710ad66" title="Comparison_shopping\l_engine_web_protocol.Process\lImageEndpoint.GetResponseBody" alt="" coords="547,325,769,381"/>
-</map>

@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html" title="Comparison_shopping\l_engine_admin.ItemCorrectForm" alt="" coords="105,5,316,47"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__admin_1_1ItemDeleteForm.html" title="Comparison_shopping\l_engine_admin.ItemDeleteForm" alt="" coords="108,71,313,112"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__admin_1_1MainForm.html" title="Comparison_shopping\l_engine_admin.MainForm" alt="" coords="125,136,296,177"/>
+<area shape="rect" id="node1" href="$classActivity.html" title="Activity" alt="" coords="5,56,69,83"/>
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html" title="ConfigActivity" alt="" coords="121,5,221,32"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1MainActivity.html" title="MainActivity" alt="" coords="125,56,217,83"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html" title="ResultsActivity" alt="" coords="117,107,225,133"/>
 </map>

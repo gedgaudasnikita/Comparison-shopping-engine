@@ -1,5 +1,0 @@
-<map id="Comparison_shopping_engine_backend.ParseableReceipt.Parse" name="Comparison_shopping_engine_backend.ParseableReceipt.Parse">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1StoreParser.html#a7c2a47ab0a30632f98d326c413a1f6e6" title="Parses the given string value and returns the storeName " alt="" coords="294,5,494,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ItemListParser.html#aa2a981611e07413dbabe8256fa8ec090" title="Parses the given string value and returns the itemList " alt="" coords="287,85,501,141"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1DateParser.html#a456bd6aba4faa2f13b915555c3a8c316" title="Parses the given string value and returns the date. " alt="" coords="296,165,492,221"/>
-</map>

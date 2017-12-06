@@ -1,5 +1,0 @@
-<map id="Comparison_shopping_engine_backend.ItemManager.Add" name="Comparison_shopping_engine_backend.ItemManager.Add">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#a270f38fe2b5188a53f8369d94949f4dc" title="Adds a given List&lt;Item&gt; to ItemManagers internal List " alt="" coords="283,5,512,47"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Controller.html#af3a6bac53bc102a31cf6918f7a9f38ce" title="Saves the given items &#160;" alt="" coords="304,71,491,127"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html#a15b2ca0cfa5b399fdfbb0590fe6d4699" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="560,71,759,127"/>
-</map>

@@ -1,5 +1,8 @@
-<map id="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint" name="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="{ProcessReceiptEndpoint\n||+ GetMethod()\l+ GetURI()\l+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="5,145,184,325"/>
-<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__backend_1_1IBackendEndpoint.html" title="Implemented by the classes that aim to encapsulate the behaviour of certain server endpoints..." alt="" coords="209,197,335,274"/>
-<area shape="rect" id="node5" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="219,5,325,97"/>
+<map id="ProcessReceiptBackendEndpoint" name="ProcessReceiptBackendEndpoint">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html" title="{ProcessReceiptEndpoint\n||+ GetMethod()\l+ GetURI()\l+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="143,287,322,467"/>
+<area shape="rect" id="node3" href="$classIEndpoint_3_01Receipt_00_01Object_00_01List_3_01Item_01_4_4.html" title="{IEndpoint\&lt; Receipt,\l Object, List\&lt; Item \&gt;\&gt;\n||}" alt="" coords="5,132,156,224"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="180,132,325,224"/>
+<area shape="rect" id="node5" href="$classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="201,5,304,83"/>
+<area shape="rect" id="node6" href="$interfaceComparison__shopping__engine__backend_1_1IBackendEndpoint.html" title="Implemented by the classes that aim to encapsulate the behaviour of certain server endpoints..." alt="" coords="347,338,473,415"/>
+<area shape="rect" id="node7" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="357,132,463,224"/>
 </map>

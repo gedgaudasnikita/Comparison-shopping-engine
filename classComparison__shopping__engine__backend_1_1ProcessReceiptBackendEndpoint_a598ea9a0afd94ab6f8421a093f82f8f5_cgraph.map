@@ -1,7 +1,0 @@
-<map id="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint.Handle" name="Comparison_shopping_engine_backend.ProcessReceiptBackendEndpoint.Handle">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html#a56825de6c47ea84a59779f607ec70cc7" title="Comparison_shopping\l_engine_web_protocol.Process\lReceiptEndpoint.GetRequestBody" alt="" coords="277,5,497,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Controller.html#a5fc39b82b02ecf4118f473f231cc7416" title="Compares given items and returns the with cheapest alternatives found &#160;" alt="" coords="294,85,481,141"/>
-<area shape="rect" id="node6" href="$classComparison__shopping__engine__web__protocol_1_1ProcessReceiptEndpoint.html#ad4b814bc9a21e3157c6db5893877b05c" title="Comparison_shopping\l_engine_web_protocol.Process\lReceiptEndpoint.GetResponseBody" alt="" coords="272,165,503,221"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#a0851417c1d31739fcb2d9b1cbd415975" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="551,45,757,101"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#a15a2e3002fd51ed38a009f395a408557" title="Returns the cheapest Item of the same name from the list " alt="" coords="551,125,757,181"/>
-</map>

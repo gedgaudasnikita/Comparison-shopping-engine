@@ -1,0 +1,6 @@
+<map id="IEquatable" name="IEquatable">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__core__entities_1_1Item.html" title="The class, representing the core item entity. " alt="" coords="5,131,112,443"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__core__entities_1_1Receipt.html" title="A class representing the Receipt entity. " alt="" coords="137,226,271,347"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__frontend__android_1_1ItemLine.html" title="The aggregation class used to represent the UI model of an ItemLine. Created for the convenience of u..." alt="" coords="296,233,440,340"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ParseableReceipt.html" title="A class representing the ParseableReceipt entity. Adds the parsing functionality needed in the backen..." alt="" coords="142,491,266,597"/>
+</map>

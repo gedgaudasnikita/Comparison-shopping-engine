@@ -1,0 +1,9 @@
+<map id="Handle" name="Handle">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1SaveReceiptEndpoint.html#a6b04d3a090812680c963fe6d0f1c3bdc" title="Comparison_shopping\l_engine_web_protocol.SaveReceipt\lEndpoint.GetRequestBody" alt="" coords="116,5,343,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc" title="Saves the given items &#160;" alt="" coords="136,85,323,141"/>
+<area shape="rect" id="node8" href="$classComparison__shopping__engine__web__protocol_1_1SaveReceiptEndpoint.html#a6484f3c2f3e4100201f1bcda71f79af8" title="Comparison_shopping\l_engine_web_protocol.SaveReceipt\lEndpoint.GetResponseBody" alt="" coords="116,165,343,221"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#af67cd4a65635a9347e520b6b69201978" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="402,12,609,68"/>
+<area shape="rect" id="node6" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#abf5c9911da146b6435d7a28561d8dc70" title="Adds a given Item to ItemManagers internal List " alt="" coords="391,93,620,134"/>
+<area shape="rect" id="node7" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#addb78d52731624dab25493ca244063fa" title="A method serializing all of the Item objects currently stored to a User configured location..." alt="" coords="402,159,609,215"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#aa866c8be66f18e88c181721739f14dc5" title="Comparison_shopping\l_engine_backend.ItemManager.\lItemManager" alt="" coords="668,12,875,68"/>
+</map>

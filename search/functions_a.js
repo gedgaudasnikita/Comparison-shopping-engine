@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['ocrwrapper',['OcrWrapper',['../classComparison__shopping__engine__frontend__android_1_1OcrWrapper.html#a2f36bf53034080103471bbb6aaddf555',1,'Comparison_shopping_engine_frontend_android::OcrWrapper']]],
-  ['onactivityresult',['OnActivityResult',['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#ad6c33b3b27837a1c5209fef3024ddd46',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
-  ['oncreate',['OnCreate',['../classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html#a39add21888806d03a50a477aeebad143',1,'Comparison_shopping_engine_frontend_android.ConfigActivity.OnCreate()'],['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a9ed445a160a9c81b250f8032592fad0d',1,'Comparison_shopping_engine_frontend_android.MainActivity.OnCreate()'],['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ab2e20ef8e8f3e0519ebd9fe4b8df8330',1,'Comparison_shopping_engine_frontend_android.ResultsActivity.OnCreate()']]],
-  ['ondestroy',['OnDestroy',['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a123177bae696d7372872e2056e77b754',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
-  ['onitemclick',['OnItemClick',['../classComparison__shopping__engine__frontend__android_1_1ItemNameView.html#a8a7771e6162a4a5e0e4394aa5a363f4d',1,'Comparison_shopping_engine_frontend_android::ItemNameView']]],
-  ['onrestart',['OnRestart',['../classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a387a284c5e314c0d4a0f4a079b4827c7',1,'Comparison_shopping_engine_frontend_android::MainActivity']]]
+  ['newitem',['NewItem',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a79e77753c99fbf31596ae4d454945fee',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['newitemresult',['NewItemResult',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a4fd502c6e24c367c95ee7d9cfcf77053',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['newstoredate',['NewStoreDate',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a73c7655e7b65040e69b2766d59de71b5',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['normalise',['Normalise',['../classComparison__shopping__engine__frontend__android_1_1ItemPriceView.html#a70f288acaa47cf72450dcdb8f8341a09',1,'Comparison_shopping_engine_frontend_android::ItemPriceView']]],
+  ['normalizationengine',['NormalizationEngine',['../classComparison__shopping__engine__backend_1_1NormalizationEngine.html#acc873682d815dd7d169776e4bcd2bfcb',1,'Comparison_shopping_engine_backend::NormalizationEngine']]]
 ];

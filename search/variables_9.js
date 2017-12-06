@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['reference',['reference',['../unionEXSTYPE.html#a86de3c5b81ffa09f2e49175bf1020a16',1,'EXSTYPE']]],
-  ['results',['Results',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Layout.html#a6128f0011f1240b023f33c7c65a42627',1,'Comparison_shopping_engine_frontend_android::Resource::Layout']]],
-  ['resultsbuttonslinearlayout',['resultsButtonsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a1ccbaf54486a4ab3a19ce3fafe5a7d0c',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultslinearlayout',['resultsLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a633b4a55ea352afd6dcb3061b69a484b',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultsnewitembutton',['resultsNewItemButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a2e97c73976063297c3c28f3f125a7a62',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultsscroll',['resultsScroll',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a20cb105b840c7bd9f07ed49049950b50',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultssubmitbutton',['resultsSubmitButton',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#ae70ef48b8241bd9667b0512747652ae5',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
-  ['resultstextview',['resultsTextView',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a9a1203ef01afa9e78b791c92b38302cc',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]]
+  ['mainreceipt',['mainReceipt',['../classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#aa1ce31583b10dd11472ecaa9e1263fb4',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['maximumstorenamelength',['maximumStoreNameLength',['../classComparison__shopping__engine__backend_1_1StoreParser.html#a763581e4362adfc2c55362c8b98df5b9',1,'Comparison_shopping_engine_backend::StoreParser']]],
+  ['mergebutton',['MergeButton',['../classComparison__shopping__engine__admin_1_1MainForm.html#a2988bba754a513a4b2befbe3f536a970',1,'Comparison_shopping_engine_admin::MainForm']]],
+  ['minimumstorenamelength',['minimumStoreNameLength',['../classComparison__shopping__engine__backend_1_1StoreParser.html#a7d1b1486ccbf54284970b5bdafbe47de',1,'Comparison_shopping_engine_backend::StoreParser']]]
 ];

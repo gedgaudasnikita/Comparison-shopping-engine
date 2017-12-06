@@ -1,4 +1,0 @@
-<map id="Comparison_shopping_engine_backend.ItemManager.FindCheapest" name="Comparison_shopping_engine_backend.ItemManager.FindCheapest">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Controller.html#a5fc39b82b02ecf4118f473f231cc7416" title="Compares given items and returns the with cheapest alternatives found &#160;" alt="" coords="260,5,447,61"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html#a598ea9a0afd94ab6f8421a093f82f8f5" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="495,5,713,61"/>
-</map>

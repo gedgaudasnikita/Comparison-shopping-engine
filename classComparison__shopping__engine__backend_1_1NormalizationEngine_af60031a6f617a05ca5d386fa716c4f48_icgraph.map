@@ -1,5 +1,0 @@
-<map id="Comparison_shopping_engine_backend.NormalizationEngine.GetInstance" name="Comparison_shopping_engine_backend.NormalizationEngine.GetInstance">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Controller.html#a793fd0831f5e664d95e78b60c7cc99d1" title="Processes given string into a with normalised names &#160;" alt="" coords="277,5,463,61"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#a5416054c6958672f4811b09fe35d69cd" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="260,85,480,141"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#a5acf4f7b9c004ef259ada03bfee3a1b6" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="528,5,739,61"/>
-</map>

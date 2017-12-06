@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['camerabutton',['CameraButton',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a2cd56c4fac97654d10598216700f9500',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['comparingspinner',['ComparingSpinner',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a9eab19b88d0f51102c7cb4f6da1edcd4',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['configbutton',['ConfigButton',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a181d3d1ec890ed80740e6a1dc0082e57',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['configrequest',['ConfigRequest',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a62786b5be2a32b69070ed5890afdc26d',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['convertprogress',['ConvertProgress',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#acedf04b51c2b47e89f6f682f090bf78f',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['culture',['Culture',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a869a72039248e1b4bc10bd95e57996e7',1,'Comparison_shopping_engine_frontend_android::AppResources']]]
+  ['camerabutton',['CameraButton',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#ada7ce408c3a41ddbbf7ccafb6e297b58',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['comparingspinner',['ComparingSpinner',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#ac7e48cdc76f3481b2f8bfa2343e3a999',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['configbutton',['ConfigButton',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a5c84dbca5337c3815a901f22fd544aae',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['configrequest',['ConfigRequest',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a298982a90de9d15a7b4fba58c8d6aa73',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['convertprogress',['ConvertProgress',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#ac5c4a4ba3bdade0b5b867e73f36516b4',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
+  ['culture',['Culture',['../classComparison__shopping__engine__frontend__android_1_1AppResources.html#a97174a2d0af83f0bd014787ac18be56c',1,'Comparison_shopping_engine_frontend_android::AppResources']]]
 ];

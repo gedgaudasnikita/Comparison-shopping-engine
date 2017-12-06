@@ -1,0 +1,5 @@
+<map id="GetResponseBody" name="GetResponseBody">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="186,5,406,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a0319a6f387e58d745a1d476242db7994" title="Calls the backend&#39;s GetSuggestions endpoint " alt="" coords="184,85,408,141"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter_1_1SuggestionFilter.html#aae65075b0d6f3d2b80b46a9932c12389" title="Comparison_shopping\l_engine_frontend_android.Suggestion\lAdapter.SuggestionFilter.PerformFiltering" alt="" coords="456,85,716,141"/>
+</map>

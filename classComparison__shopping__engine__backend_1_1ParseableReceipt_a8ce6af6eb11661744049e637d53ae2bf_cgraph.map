@@ -1,0 +1,6 @@
+<map id="Parse" name="Parse">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1StoreParser.html#a182c7c9ab4c4c4dfd3a6965e8c51e54b" title="Parses the given string value and returns the storeName " alt="" coords="117,5,317,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ItemListParser.html#a1e0505510df6441ff6d6869138c899c7" title="Parses the given string value and returns the itemList " alt="" coords="109,85,324,141"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1DateParser.html#a3942e69157d79d40e875e0cc6471a9a5" title="Parses the given string value and returns the date. " alt="" coords="119,165,315,221"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ItemListParser.html#a18fd4c94add86c98bf1e24c018e8baa3" title="A private helper method to parse one separate item. Used from Parse to create an Item for every disco..." alt="" coords="372,85,587,141"/>
+</map>

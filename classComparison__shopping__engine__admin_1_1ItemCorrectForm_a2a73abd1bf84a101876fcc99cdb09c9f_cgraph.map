@@ -1,0 +1,7 @@
+<map id="ItemCorrectForm" name="ItemCorrectForm">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a6405d5db675d5338663195a4d12b4c9f" title="Required method for Designer support &#45; do not modify the contents of this method with the code editor..." alt="" coords="172,56,307,83"/>
+<area shape="rect" id="node6" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a8c3280d23d1b997c772243a613ad67b8" title="DisplayItem" alt="" coords="194,107,285,133"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a0d0cbade707ce6b37323211fa91634ec" title="PriceTextBox_TextChanged" alt="" coords="355,5,537,32"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#abf69f8caa518ed27b974fb36178a8b5c" title="DateTextBox_TextChanged" alt="" coords="356,56,536,83"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a536097c203c154a5cff34b7c76f6326a" title="UpdateButton_Click" alt="" coords="377,107,515,133"/>
+</map>

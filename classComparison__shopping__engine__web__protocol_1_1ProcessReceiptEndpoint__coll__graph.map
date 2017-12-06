@@ -1,2 +1,5 @@
-<map id="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint" name="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint">
+<map id="ProcessReceiptEndpoint" name="ProcessReceiptEndpoint">
+<area shape="rect" id="node2" href="$classIEndpoint_3_01Receipt_00_01Object_00_01List_3_01Item_01_4_4.html" title="{IEndpoint\&lt; Receipt,\l Object, List\&lt; Item \&gt;\&gt;\n||}" alt="" coords="5,132,156,224"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="180,132,325,224"/>
+<area shape="rect" id="node4" href="$classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="201,5,304,83"/>
 </map>

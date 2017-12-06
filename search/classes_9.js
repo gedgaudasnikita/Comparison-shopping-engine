@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['layout',['Layout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Layout.html',1,'Comparison_shopping_engine_frontend_android::Resource']]]
+  ['jsonserializer',['JsonSerializer',['../classJsonSerializer.html',1,'']]],
+  ['jsonserializerstream',['JsonSerializerStream',['../classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html',1,'Comparison_shopping_engine_core_entities']]]
 ];
