@@ -1,7 +1,6 @@
 var searchData=
 [
   ['saveconfig',['SaveConfig',['../dc/d09/classComparison__shopping__engine__frontend__android_1_1MainActivity.html#aa67914e91e1b1ff65d68df7e673a5ca9',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
-  ['saved',['Saved',['../d1/d5d/classComparison__shopping__engine__core__entities_1_1Item.html#aeb072240b66e81ec1dd244089275689c',1,'Comparison_shopping_engine_core_entities::Item']]],
   ['savereceipt',['SaveReceipt',['../d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc',1,'Comparison_shopping_engine_backend.Controller.SaveReceipt()'],['../da/d3e/classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a88d6a011c5db82c1baf9c1c235024ba0',1,'Comparison_shopping_engine_frontend_android.BackendInterface.SaveReceipt()']]],
   ['savereceiptbackendendpoint',['SaveReceiptBackendEndpoint',['../d6/dd5/classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html',1,'Comparison_shopping_engine_backend']]],
   ['savereceiptbackendendpoint_2ecs',['SaveReceiptBackendEndpoint.cs',['../d9/de3/SaveReceiptBackendEndpoint_8cs.html',1,'']]],
@@ -30,7 +29,7 @@ var searchData=
   ['storeparser_2ecs',['StoreParser.cs',['../d9/d7e/StoreParser_8cs.html',1,'']]],
   ['storetextbox',['StoreTextBox',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a49c541d6177d5e2aa953cc474139a294',1,'Comparison_shopping_engine_admin.ItemCorrectForm.StoreTextBox()'],['../d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a49c541d6177d5e2aa953cc474139a294',1,'Comparison_shopping_engine_admin.ItemDeleteForm.StoreTextBox()']]],
   ['stringextension',['StringExtension',['../db/d1f/classComparison__shopping__engine__core__entities_1_1StringExtension.html',1,'StringExtension'],['../db/d4d/classComparison__shopping__engine__backend_1_1StringExtension.html',1,'StringExtension']]],
-  ['stringextensions_2ecs',['StringExtensions.cs',['../d2/d24/Comparison-shopping-engine-backend_2src_2Extensions_2StringExtensions_8cs.html',1,'(Global Namespace)'],['../d0/dc7/Comparison-shopping-engine-core-entities_2src_2Extensions_2StringExtensions_8cs.html',1,'(Global Namespace)']]],
+  ['stringextensions_2ecs',['StringExtensions.cs',['../d9/dde/Backend_2src_2Extensions_2StringExtensions_8cs.html',1,'(Global Namespace)'],['../d0/ddd/CoreEntities_2src_2Extensions_2StringExtensions_8cs.html',1,'(Global Namespace)']]],
   ['submiterrorbutton',['SubmitErrorButton',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#ac0152655d3ff14c97cf652ee54adf8cf',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
   ['submiterrormessage',['SubmitErrorMessage',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#a2b4d367da6a44f52e76fc3d2fc933f29',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
   ['submiterrortitle',['SubmitErrorTitle',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#aeae2ad22c7d7448f27b9fd63b815d95f',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
