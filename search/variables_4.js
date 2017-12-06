@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['example',['example',['../AboutResources_8txt.html#a733504ce7191b5c2070a99d3343bf366',1,'AboutResources.txt']]],
-  ['extensions',['extensions',['../CHANGES_8txt.html#ad5efc21d4d3f238f7dc35046a8a8f24a',1,'CHANGES.txt']]]
+  ['file',['file',['../classComparison__shopping__engine__frontend__android_1_1AppData.html#ac9b0d6c1aee143b34d021137328da319',1,'Comparison_shopping_engine_frontend_android::AppData']]]
 ];

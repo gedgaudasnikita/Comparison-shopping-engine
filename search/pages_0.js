@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license',['LICENSE',['../md_C:_projects_myproject_packages_Newtonsoft.Json.10.0.3_LICENSE.html',1,'']]]
+  ['license',['LICENSE',['../md_C_1_projects_myproject_packages_Newtonsoft_8Json_810_80_83_LICENSE.html',1,'']]]
 ];

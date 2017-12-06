@@ -15,7 +15,6 @@ var searchData=
   ['homevlinearlayout',['homeVLinearLayout',['../classComparison__shopping__engine__frontend__android_1_1Resource_1_1Id.html#a51e22bb3efd62e555af161be8c97a440',1,'Comparison_shopping_engine_frontend_android::Resource::Id']]],
   ['httplistenerrequestextensions',['HttpListenerRequestExtensions',['../classComparison__shopping__engine__backend_1_1HttpListenerRequestExtensions.html',1,'Comparison_shopping_engine_backend']]],
   ['httplistenerrequestextensions_2ecs',['HttpListenerRequestExtensions.cs',['../HttpListenerRequestExtensions_8cs.html',1,'']]],
-  ['httpserver',['HttpServer',['../classComparison__shopping__engine__backend_1_1HttpServer.html',1,'Comparison_shopping_engine_backend']]],
-  ['httpserver',['HttpServer',['../classComparison__shopping__engine__backend_1_1HttpServer.html#a80056134e8e0a2207f224ce157c49395',1,'Comparison_shopping_engine_backend::HttpServer']]],
+  ['httpserver',['HttpServer',['../classComparison__shopping__engine__backend_1_1HttpServer.html',1,'Comparison_shopping_engine_backend.HttpServer'],['../classComparison__shopping__engine__backend_1_1HttpServer.html#a80056134e8e0a2207f224ce157c49395',1,'Comparison_shopping_engine_backend.HttpServer.HttpServer()']]],
   ['httpserver_2ecs',['HttpServer.cs',['../HttpServer_8cs.html',1,'']]]
 ];
