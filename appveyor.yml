@@ -34,6 +34,8 @@ build:
 
 after_test:
   - git config --global credential.helper store
+  - git config --global user.email "team@appveyor.com"
+  - git config --global user.name "AppVeyor CI"
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
   - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
   - cd Comparison-shopping-engine
