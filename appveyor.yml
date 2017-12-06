@@ -45,4 +45,4 @@ after_test:
   - rm -rf html
   - git add --all
   - git commit -m "Deploy code docs to GitHub Pages Appveyor build: ${APPVEYOR_BUILD_NUMBER}"
-  - git push --force > /dev/null 2>&1
+  - git push --force 
