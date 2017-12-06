@@ -1,0 +1,5 @@
+<map id="Comparison_shopping_engine_web_protocol.ProcessImageEndpoint.GetResponseBody" name="Comparison_shopping_engine_web_protocol.ProcessImageEndpoint.GetResponseBody">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#a5acf4f7b9c004ef259ada03bfee3a1b6" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="281,5,492,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a2742ed8332d4b4a249d4b5c8e908a409" title="Calls the backend&#39;s ProcessImage endpoint " alt="" coords="275,85,499,141"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ab2e20ef8e8f3e0519ebd9fe4b8df8330" title="Comparison_shopping\l_engine_frontend_android.Results\lActivity.OnCreate" alt="" coords="547,85,764,141"/>
+</map>

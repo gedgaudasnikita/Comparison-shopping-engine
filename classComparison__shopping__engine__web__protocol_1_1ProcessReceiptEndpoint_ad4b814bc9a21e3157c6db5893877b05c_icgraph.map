@@ -1,0 +1,5 @@
+<map id="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint.GetResponseBody" name="Comparison_shopping_engine_web_protocol.ProcessReceiptEndpoint.GetResponseBody">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html#a598ea9a0afd94ab6f8421a093f82f8f5" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="287,5,505,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a74ac3b895db75f2342d5fd3f839e79ec" title="Calls the backend&#39;s DisplayReceipt endpoint " alt="" coords="284,85,508,141"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ab2e20ef8e8f3e0519ebd9fe4b8df8330" title="Comparison_shopping\l_engine_frontend_android.Results\lActivity.OnCreate" alt="" coords="556,85,773,141"/>
+</map>

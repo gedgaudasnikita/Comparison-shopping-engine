@@ -1,3 +1,4 @@
 <map id="Comparison_shopping_engine_backend.DateParser" name="Comparison_shopping_engine_backend.DateParser">
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; DateTime \&gt;\n||+ Parse()\l}" alt="" coords="30,5,173,83"/>
+<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; DateTime \&gt;\n||+ Parse()\l}" alt="" coords="33,160,176,237"/>
+<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="Interface to be implemented by all the field parsers. The generic type T is the type of the respectiv..." alt="" coords="5,5,204,97"/>
 </map>

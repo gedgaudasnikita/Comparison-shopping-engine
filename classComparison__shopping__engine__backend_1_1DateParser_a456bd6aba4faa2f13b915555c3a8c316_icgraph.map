@@ -1,0 +1,5 @@
+<map id="Comparison_shopping_engine_backend.DateParser.Parse" name="Comparison_shopping_engine_backend.DateParser.Parse">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1ParseableReceipt.html#a5e155ef9464b33bdea709da895cbfc0c" title="Creates a new ParseableReceipt instance and fills it with information, parsed from source ..." alt="" coords="249,5,483,61"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Controller.html#a793fd0831f5e664d95e78b60c7cc99d1" title="Processes given string into a with normalised names &#160;" alt="" coords="531,5,717,61"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#a5acf4f7b9c004ef259ada03bfee3a1b6" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="765,5,976,61"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="Comparison_shopping_engine_backend.ProcessImageBackendEndpoint.Handle" name="Comparison_shopping_engine_backend.ProcessImageBackendEndpoint.Handle">
+<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1ProcessImageEndpoint.html#a0ea77ce6d239ed03777006198441af15" title="Comparison_shopping\l_engine_web_protocol.Process\lImageEndpoint.GetRequestBody" alt="" coords="269,45,480,101"/>
+<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Controller.html#a793fd0831f5e664d95e78b60c7cc99d1" title="Processes given string into a with normalised names &#160;" alt="" coords="281,125,468,181"/>
+<area shape="rect" id="node9" href="$classComparison__shopping__engine__web__protocol_1_1ProcessImageEndpoint.html#aa49050d8ed0ac3504fac5ef54710ad66" title="Comparison_shopping\l_engine_web_protocol.Process\lImageEndpoint.GetResponseBody" alt="" coords="264,205,485,261"/>
+<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ParseableReceipt.html#a5e155ef9464b33bdea709da895cbfc0c" title="Creates a new ParseableReceipt instance and fills it with information, parsed from source ..." alt="" coords="533,85,767,141"/>
+<area shape="rect" id="node8" href="$classComparison__shopping__engine__backend_1_1NormalizationEngine.html#af60031a6f617a05ca5d386fa716c4f48" title="Comparison_shopping\l_engine_backend.Normalization\lEngine.GetInstance" alt="" coords="547,165,753,221"/>
+<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1StoreParser.html#a7c2a47ab0a30632f98d326c413a1f6e6" title="Parses the given string value and returns the storeName " alt="" coords="822,5,1022,61"/>
+<area shape="rect" id="node6" href="$classComparison__shopping__engine__backend_1_1ItemListParser.html#aa2a981611e07413dbabe8256fa8ec090" title="Parses the given string value and returns the itemList " alt="" coords="815,85,1029,141"/>
+<area shape="rect" id="node7" href="$classComparison__shopping__engine__backend_1_1DateParser.html#a456bd6aba4faa2f13b915555c3a8c316" title="Parses the given string value and returns the date. " alt="" coords="824,165,1020,221"/>
+</map>
