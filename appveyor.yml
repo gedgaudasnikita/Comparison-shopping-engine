@@ -34,24 +34,31 @@ build:
 
   verbosity: normal
 
-after_test:
+test_script:
   - OpenCover.Console.exe -register:user -target:"nunit3-console.exe" "-targetargs:c:\projects\myproject\test\Backend.Tests\bin\CI\Comparison-shopping-engine-backend.Tests.dll c:\projects\myproject\test\CoreEntities.Tests\bin\CI\Comparison-shopping-engine-core-entities.Tests.dll c:\projects\myproject\test\WebProtocol.Tests\bin\CI\Comparison-shopping-engine-web-protocol.Tests.dll" -filter:"+[*]* -[*.Tests*]*" -output:".\MyProject_coverage.xml" -excludebyfile:*Designer*;*Program*
   - codecov -f "MyProject_coverage.xml"
-  - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
-  - git config --global credential.helper store
-  - git config --global user.email "team@appveyor.com"
-  - git config --global user.name "AppVeyor CI"
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
-  - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
-  - cd Comparison-shopping-engine
-  - rm -rf *  
-  - echo "" > .nojekyll
-  - echo %APPVEYOR_BUILD_ID% > .version
-  - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\doc\Doxyfile"
-  - cp -r html/* .
-  - rm -rf html
-  - git add --all
-  - git commit -m "Deploy code docs to GitHub Pages Appveyor build:{build}"
-  - echo %GH_REPO_TOKEN%
-  - echo %GH_REPO_REF%
-  - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
+
+for:
+
+-
+  branches:
+    only:
+      - master
+
+  after_test:
+    - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
+    - git config --global credential.helper store
+    - git config --global user.email "team@appveyor.com"
+    - git config --global user.name "AppVeyor CI"
+    - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
+    - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
+    - cd Comparison-shopping-engine
+    - rm -rf *  
+    - echo "" > .nojekyll
+    - echo %APPVEYOR_BUILD_ID% > .version
+    - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\doc\Doxyfile"
+    - cp -r html/* .
+    - rm -rf html
+    - git add --all
+    - git commit -m "Deploy code docs to GitHub Pages Appveyor build:%APPVEYOR_BUILD_NUMBER%"
+    - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
