@@ -13,12 +13,5 @@ var searchData=
   ['onitemclick',['OnItemClick',['../da/d71/classComparison__shopping__engine__frontend__android_1_1ItemNameView.html#a4c52603f2ede0149f6510186926a8f48',1,'Comparison_shopping_engine_frontend_android::ItemNameView']]],
   ['onrestart',['OnRestart',['../dc/d09/classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a0fe61fc70f332645b9b5690f3a6655d0',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
   ['onresultsnewitembuttonclick',['OnResultsNewItemButtonClick',['../d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ae83fd7ded283e07527b33a70c419859b',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
-  ['onresultssubmitbuttonclick',['OnResultsSubmitButtonClick',['../d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a87db111c5962c1a76282eea3ea99bc5f',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
-  ['op',['op',['../d5/d28/exparse_8h.html#a8b21910e53867f3b53d61a8c46ac2a7f',1,'EXSTYPE']]],
-  ['optarg',['optarg',['../da/d47/getopt_8h.html#adb50a0eab9fed92fc3bfc7dfa4f2c410',1,'getopt.h']]],
-  ['opterr',['opterr',['../da/d47/getopt_8h.html#ae30f05ee1e2e5652f174a35c7875d25e',1,'getopt.h']]],
-  ['optind',['optind',['../da/d47/getopt_8h.html#ad5e1c16213bbee2d5e8cc363309f418c',1,'getopt.h']]],
-  ['optopt',['optopt',['../da/d47/getopt_8h.html#a475b8db98445da73e5f62a1ef6324b95',1,'getopt.h']]],
-  ['or',['OR',['../d5/d28/exparse_8h.html#a3363ca4d6d3cc0230b2804280591c991',1,'OR():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a96727447c0ad447987df1c6415aef074',1,'OR():&#160;exparse.h']]],
-  ['ortho',['ORTHO',['../db/d16/config_8h.html#a46a4743a70c48e436c0dbf884c5aa2a0',1,'config.h']]]
+  ['onresultssubmitbuttonclick',['OnResultsSubmitButtonClick',['../d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a87db111c5962c1a76282eea3ea99bc5f',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]]
 ];

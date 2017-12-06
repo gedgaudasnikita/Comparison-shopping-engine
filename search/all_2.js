@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['call',['CALL',['../d5/d28/exparse_8h.html#aa980b5e5e502cf62bdca6c0452b97516',1,'CALL():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545abd0ebc08c262bab82a1882256d2d66e8',1,'CALL():&#160;exparse.h']]],
   ['camerabutton',['CameraButton',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#ada7ce408c3a41ddbbf7ccafb6e297b58',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
-  ['case',['CASE',['../d5/d28/exparse_8h.html#af2b30344be261ffe1c5aad12ab1f6f07',1,'CASE():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a9c9b14644e9370719a51b7342bbc9c4d',1,'CASE():&#160;exparse.h']]],
-  ['cast',['CAST',['../d5/d28/exparse_8h.html#a8b6956a3b15c98d5016a0cfc601b47bd',1,'CAST():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a4e12176f39ac6a9741e69cce2a909a02',1,'CAST():&#160;exparse.h']]],
-  ['character',['CHARACTER',['../d5/d28/exparse_8h.html#a1318901e3fc847acae31155c47e28630',1,'CHARACTER():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a762041e95dc7b081aaf6b0019dca8586',1,'CHARACTER():&#160;exparse.h']]],
   ['checkandrotatebitmap',['CheckAndRotateBitmap',['../de/d71/classComparison__shopping__engine__frontend__android_1_1BitmapExtensions.html#a4af56707b96e842e789efa5aaed7b5c1',1,'Comparison_shopping_engine_frontend_android::BitmapExtensions']]],
   ['clearlist',['ClearList',['../d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#a2b85ec494201046fd7686395c996c272',1,'Comparison_shopping_engine_backend.ItemManager.ClearList()'],['../dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2b85ec494201046fd7686395c996c272',1,'Comparison_shopping_engine_backend.NormalizationEngine.ClearList()']]],
   ['cli',['cli',['../da/d3e/classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a2d2b40b43db00e362f82df771125928a',1,'Comparison_shopping_engine_frontend_android::BackendInterface']]],
@@ -20,7 +16,6 @@ var searchData=
   ['comparison_5fshopping_5fengine_5ffrontend_5fandroid',['Comparison_shopping_engine_frontend_android',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html',1,'']]],
   ['comparison_5fshopping_5fengine_5fweb_5fprotocol',['Comparison_shopping_engine_web_protocol',['../d4/d10/namespaceComparison__shopping__engine__web__protocol.html',1,'']]],
   ['components',['components',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a02595f1c09713bb71dcb2fbbfc7ffa4b',1,'Comparison_shopping_engine_admin.ItemCorrectForm.components()'],['../d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a02595f1c09713bb71dcb2fbbfc7ffa4b',1,'Comparison_shopping_engine_admin.ItemDeleteForm.components()'],['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a02595f1c09713bb71dcb2fbbfc7ffa4b',1,'Comparison_shopping_engine_admin.MainForm.components()']]],
-  ['config_2eh',['config.h',['../db/d16/config_8h.html',1,'']]],
   ['configactivity',['ConfigActivity',['../d1/d82/classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html',1,'Comparison_shopping_engine_frontend_android']]],
   ['configactivity_2ecs',['ConfigActivity.cs',['../dc/d99/ConfigActivity_8cs.html',1,'']]],
   ['configbutton',['ConfigButton',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#a5c84dbca5337c3815a901f22fd544aae',1,'Comparison_shopping_engine_frontend_android::AppResources']]],
@@ -28,8 +23,6 @@ var searchData=
   ['configuration',['Configuration',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html#d5/d64/classComparison__shopping__engine__frontend__android_1_1Configuration',1,'Comparison_shopping_engine_frontend_android']]],
   ['configuration_2ecs',['Configuration.cs',['../d8/df4/Configuration_8cs.html',1,'']]],
   ['connectbutton',['ConnectButton',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a4bb2633c1a9e4d4a424570a73844e0ef',1,'Comparison_shopping_engine_admin::MainForm']]],
-  ['constant',['CONSTANT',['../d5/d28/exparse_8h.html#aa07f83a2de5a158b8643cdc36541b711',1,'CONSTANT():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a83972670b57415508523b5641bb46116',1,'CONSTANT():&#160;exparse.h']]],
-  ['continue',['CONTINUE',['../d5/d28/exparse_8h.html#ab711666ad09d7f6c0b91576525ea158e',1,'CONTINUE():&#160;exparse.h'],['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a49959dd441dcda75d6898cf2c68fb374',1,'CONTINUE():&#160;exparse.h']]],
   ['controller',['Controller',['../d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html',1,'Comparison_shopping_engine_backend']]],
   ['controller_2ecs',['Controller.cs',['../df/dbc/Controller_8cs.html',1,'']]],
   ['convertprogress',['ConvertProgress',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#ac5c4a4ba3bdade0b5b867e73f36516b4',1,'Comparison_shopping_engine_frontend_android::AppResources']]],

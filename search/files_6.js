@@ -1,5 +1,28 @@
 var searchData=
 [
-  ['httplistenerrequestextensions_2ecs',['HttpListenerRequestExtensions.cs',['../d0/dc6/HttpListenerRequestExtensions_8cs.html',1,'']]],
-  ['httpserver_2ecs',['HttpServer.cs',['../d6/dd8/HttpServer_8cs.html',1,'']]]
+  ['ibackendendpoint_2ecs',['IBackendEndpoint.cs',['../df/d92/IBackendEndpoint_8cs.html',1,'']]],
+  ['iendpoint_2ecs',['IEndpoint.cs',['../d6/de6/IEndpoint_8cs.html',1,'']]],
+  ['iendpointmeta_2ecs',['IEndpointMeta.cs',['../da/ddf/IEndpointMeta_8cs.html',1,'']]],
+  ['iparser_2ecs',['IParser.cs',['../d9/d0e/IParser_8cs.html',1,'']]],
+  ['irouter_2ecs',['IRouter.cs',['../d2/d6b/IRouter_8cs.html',1,'']]],
+  ['iserver_2ecs',['IServer.cs',['../d0/d58/IServer_8cs.html',1,'']]],
+  ['item_2ecs',['Item.cs',['../d1/d35/Item_8cs.html',1,'']]],
+  ['itemcorrectform_2ecs',['ItemCorrectForm.cs',['../d5/d21/ItemCorrectForm_8cs.html',1,'']]],
+  ['itemcorrectform_2edesigner_2ecs',['ItemCorrectForm.Designer.cs',['../db/d17/ItemCorrectForm_8Designer_8cs.html',1,'']]],
+  ['itemdatecomparer_2ecs',['ItemDateComparer.cs',['../d3/d05/ItemDateComparer_8cs.html',1,'']]],
+  ['itemdateview_2ecs',['ItemDateView.cs',['../dd/d52/ItemDateView_8cs.html',1,'']]],
+  ['itemdeleteform_2ecs',['ItemDeleteForm.cs',['../db/dd8/ItemDeleteForm_8cs.html',1,'']]],
+  ['itemdeleteform_2edesigner_2ecs',['ItemDeleteForm.Designer.cs',['../dd/d86/ItemDeleteForm_8Designer_8cs.html',1,'']]],
+  ['itemdeleteview_2ecs',['ItemDeleteView.cs',['../d7/d15/ItemDeleteView_8cs.html',1,'']]],
+  ['itemline_2ecs',['ItemLine.cs',['../d8/d85/ItemLine_8cs.html',1,'']]],
+  ['itemlistparser_2ecs',['ItemListParser.cs',['../d4/d0b/ItemListParser_8cs.html',1,'']]],
+  ['itemmanagementform_2ecs',['ItemManagementForm.cs',['../d5/d9b/ItemManagementForm_8cs.html',1,'']]],
+  ['itemmanagementform_2edesigner_2ecs',['ItemManagementForm.Designer.cs',['../d8/dff/ItemManagementForm_8Designer_8cs.html',1,'']]],
+  ['itemmanager_2ecs',['ItemManager.cs',['../df/d7c/ItemManager_8cs.html',1,'']]],
+  ['itemnamecomparer_2ecs',['ItemNameComparer.cs',['../d0/d2a/ItemNameComparer_8cs.html',1,'']]],
+  ['itemnameview_2ecs',['ItemNameView.cs',['../d9/d91/ItemNameView_8cs.html',1,'']]],
+  ['itempricecomparer_2ecs',['ItemPriceComparer.cs',['../df/de0/ItemPriceComparer_8cs.html',1,'']]],
+  ['itempriceview_2ecs',['ItemPriceView.cs',['../d9/d87/ItemPriceView_8cs.html',1,'']]],
+  ['itemstorecomparer_2ecs',['ItemStoreComparer.cs',['../d9/d20/ItemStoreComparer_8cs.html',1,'']]],
+  ['itemstoreview_2ecs',['ItemStoreView.cs',['../dd/dc8/ItemStoreView_8cs.html',1,'']]]
 ];

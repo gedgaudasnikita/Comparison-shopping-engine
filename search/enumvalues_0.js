@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['address',['ADDRESS',['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a4fabbaac7b5e57d7b8b019a0f79ce492',1,'exparse.h']]],
-  ['and',['AND',['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a865555c9f2e0458a7078486aa1b3254f',1,'exparse.h']]],
-  ['array',['ARRAY',['../d5/d28/exparse_8h.html#a35bc54b32fad7719a611b0d09871c545a1e029fbf0c881b85d80fc8e89b753688',1,'exparse.h']]]
+  ['info_5fconfirmed',['INFO_CONFIRMED',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html#afe8ed6f6798ae343a265cb31663b116daa016c997f228335970ba7f839301f9a6',1,'Comparison_shopping_engine_frontend_android']]],
+  ['info_5funcertain',['INFO_UNCERTAIN',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html#afe8ed6f6798ae343a265cb31663b116da7ef6773cb6350ceb860c4fe8e771ff83',1,'Comparison_shopping_engine_frontend_android']]],
+  ['info_5fwrong',['INFO_WRONG',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html#afe8ed6f6798ae343a265cb31663b116da30a8a8af74bf3ae6be53a8b577883f78',1,'Comparison_shopping_engine_frontend_android']]]
 ];
