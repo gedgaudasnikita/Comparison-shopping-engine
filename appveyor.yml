@@ -48,7 +48,7 @@ after_test:
   - echo build > .version
   - ls .
   - ls ..
-  - ls ../Graphviz.2.38.0.2/tools
+  - ls ../Graphviz.2.38.0.2
   - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\Comparison-shopping-engine-documentation\Doxyfile"
   - cp -r html/* .
   - rm -rf html
