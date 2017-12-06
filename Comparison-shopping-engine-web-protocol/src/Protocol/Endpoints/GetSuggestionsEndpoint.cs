@@ -11,12 +11,6 @@ using System.Threading.Tasks;
 
 namespace Comparison_shopping_engine_web_protocol
 {
-    public struct GetSuggestionsParameters
-    {
-        public string Input { get; set; }
-        public int Limit { get; set; }
-    }
-
     /// <summary>
     /// This class encapsulates the expected behaviour of the endpoint, the responsibility of which is
     /// to return the list of the best matching item names stored in the normalisation engine given the
@@ -82,5 +76,14 @@ namespace Comparison_shopping_engine_web_protocol
         {
             return "GetSuggestions";
         }
+    }
+
+    /// <summary>
+    /// This struct represents the query parameters for <see cref="GetSuggestionsEndpoint"/>
+    /// </summary>
+    public struct GetSuggestionsParameters
+    {
+        public string Input { get; set; }
+        public int Limit { get; set; }
     }
 }
