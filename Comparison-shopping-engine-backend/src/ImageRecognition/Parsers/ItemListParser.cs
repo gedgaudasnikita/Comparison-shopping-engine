@@ -10,16 +10,14 @@ using System.Threading.Tasks;
 namespace Comparison_shopping_engine_backend
 {
     /// <summary>
-    /// This class describes the behaviour of parsing an itemList from plain text.
-    /// Intended for usage from <see cref="ParseableReceipt"> class
+    /// This class describes the behaviour of parsing a storeName from plain text.
+    /// Intended for usage from <see cref="ParseableReceipt"> class.
+    /// Constructor initialises the internal variables with data from App.config
     /// </summary>
     public class ItemListParser: IParser<List<Item>>
     {
         private string itemRegex = "";
-
-        /// <summary>
-        /// Constructor method. Initialises the internal variables with data from App.config
-        /// </summary>
+        
         public ItemListParser()
         {
             var taxGroups = ConfigurationManager.AppSettings["supportedTaxGroups"];

@@ -40,7 +40,8 @@ namespace Comparison_shopping_engine_frontend_android
         /// <summary>
         /// Converts a specified image to plain text.
         /// </summary>
-        /// <param name="path">The <see cref="Bitmap"/> of the image to be converted</param>
+        /// <param name="receipt">The <see cref="Bitmap"/> of the image to be converted</param>
+        /// <param name="progressListeners">An array of Actions to handle the progress updates, optional</param>
         /// <returns>The <see cref="string"/> output of the OCR engine</returns>
         public async Task<string> ConvertToText(Bitmap receipt, IEnumerable<Action<int>> progressListeners = null)
         {

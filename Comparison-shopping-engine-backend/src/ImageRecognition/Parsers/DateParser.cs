@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace Comparison_shopping_engine_backend
 {
     /// <summary>
-    /// This class describes the behaviour of parsing an date from plain text.
-    /// Intended for usage from <see cref="ParseableReceipt"> class
+    /// This class describes the behaviour of parsing a storeName from plain text.
+    /// Intended for usage from <see cref="ParseableReceipt"> class.
     /// </summary>
     public class DateParser: IParser<DateTime>
     {

@@ -66,9 +66,9 @@ namespace Comparison_shopping_engine_backend
         }
 
         /// <summary>
-        /// Adds a given <see cref = "List{Item}"/> to ItemManagers internal List
+        /// Adds the items in a given list to ItemManagers internal List
         /// </summary>
-        /// <param name="list">A <see cref = "List{Item}"> to add Items from</param>
+        /// <param name="list">A list to add Items from</param>
         public void Add(List<Item> list)
         {
             foreach (Item item in list)

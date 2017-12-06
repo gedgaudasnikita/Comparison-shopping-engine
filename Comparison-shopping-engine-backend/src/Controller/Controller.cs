@@ -15,10 +15,10 @@ namespace Comparison_shopping_engine_backend
     public static class Controller
     {
         /// <summary>
-        /// Processes given <see cref="string"/> into a <see cref="Receipt"> with normalised names
+        /// Processes given <see cref="string"/> into a <see cref="Receipt"/> with normalised names
         /// </summary>
         /// <param name="source">A <see cref="string"/> to process</param>
-        /// <returns>A parsed <see cref="Receipt"></returns>
+        /// <returns>A parsed <see cref="Receipt"/></returns>
         public static Receipt ProcessImage(string source)
         {
             Receipt receipt = ParseableReceipt.Parse(source);
@@ -30,10 +30,10 @@ namespace Comparison_shopping_engine_backend
         }
 
         /// <summary>
-        /// Compares given <see cref="Receipt"> items and returns the with cheapest alternatives found
+        /// Compares given <see cref="Receipt"/> items and returns the with cheapest alternatives found
         /// </summary>
-        /// <param name="source">A <see cref="Receipt"> to process</param>
-        /// <returns>A <see cref="List{Item}"> representing the cheapest items found</returns>
+        /// <param name="source">A <see cref="Receipt"/> to process</param>
+        /// <returns>A <see cref="List{T}"/> of <see cref="Item"/> representing the cheapest items found</returns>
         public static List<Item> ProcessReceipt(Receipt source)
         {
             ItemManager manager = ItemManager.GetInstance();
@@ -44,9 +44,9 @@ namespace Comparison_shopping_engine_backend
         }
 
         /// <summary>
-        /// Saves the given <see cref="Receipt"> items 
+        /// Saves the given <see cref="Receipt"/> items 
         /// </summary>
-        /// <param name="source">A <see cref="Receipt"> to save</param>
+        /// <param name="source">A <see cref="Receipt"/> to save</param>
         public static void SaveReceipt(Receipt source)
         {
             ItemManager manager = ItemManager.GetInstance();
