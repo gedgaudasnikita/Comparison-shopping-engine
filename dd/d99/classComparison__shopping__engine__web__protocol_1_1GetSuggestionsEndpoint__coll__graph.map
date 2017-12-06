@@ -1,0 +1,7 @@
+<map id="GetSuggestionsEndpoint" name="GetSuggestionsEndpoint">
+<area shape="rect" id="node2" href="$d6/ddd/interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; object,\l GetSuggestionsParameters,\l List\&lt; string \&gt; \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="13,404,204,584"/>
+<area shape="rect" id="node3" href="$d6/ddd/interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="5,147,212,327"/>
+<area shape="rect" id="node4" href="$d4/d3b/interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="55,5,162,97"/>
+<area shape="rect" id="node5" href="$df/d23/classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html" title="The class, containing all the custom extension methods for the JsonSerializer type ..." alt="" coords="228,448,373,540"/>
+<area shape="rect" id="node6" href="$dd/d1d/classJsonSerializer.html" title="{JsonSerializer\n||}" alt="" coords="249,198,352,275"/>
+</map>

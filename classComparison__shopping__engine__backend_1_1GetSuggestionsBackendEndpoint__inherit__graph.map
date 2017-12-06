@@ -1,7 +1,0 @@
-<map id="GetSuggestionsBackendEndpoint" name="GetSuggestionsBackendEndpoint">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__web__protocol_1_1GetSuggestionsEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="15,681,194,861"/>
-<area shape="rect" id="node3" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; object,\l GetSuggestionsParameters,\l List\&lt; string \&gt; \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="5,452,196,632"/>
-<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="19,147,225,327"/>
-<area shape="rect" id="node5" href="$interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="185,5,291,97"/>
-<area shape="rect" id="node6" href="$interfaceComparison__shopping__engine__backend_1_1IBackendEndpoint.html" title="Implemented by the classes that aim to encapsulate the behaviour of certain server endpoints..." alt="" coords="248,351,375,428"/>
-</map>

@@ -1,0 +1,4 @@
+<map id="GetHandler" name="GetHandler">
+<area shape="rect" id="node2" href="$dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html#a7a8c0234f295cad1413b0aff54c64a70" title="A routine for handling every incoming request. Makes use of IRouter and handles the possible exceptio..." alt="" coords="140,5,331,61"/>
+<area shape="rect" id="node3" href="$dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83" title="Starts the server and begins to listen. Is non&#45;blocking. " alt="" coords="379,5,569,61"/>
+</map>

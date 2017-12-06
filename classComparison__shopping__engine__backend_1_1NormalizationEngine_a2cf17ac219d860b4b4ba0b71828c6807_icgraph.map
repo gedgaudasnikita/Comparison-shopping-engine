@@ -1,7 +1,0 @@
-<map id="GetInstance" name="GetInstance">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="157,5,354,61"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a Receipt with normalised names " alt="" coords="162,85,349,141"/>
-<area shape="rect" id="node6" href="$classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="145,165,365,221"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="415,13,623,54"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="413,85,624,141"/>
-</map>

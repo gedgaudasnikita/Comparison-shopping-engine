@@ -1,7 +1,0 @@
-<map id="NewItem" name="NewItem">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a9bba2844f747db865fa6efa65d73e5b0" title="DisplayResults" alt="" coords="125,5,235,32"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ae83fd7ded283e07527b33a70c419859b" title="OnResultsNewItemButtonClick" alt="" coords="283,56,483,83"/>
-<area shape="rect" id="node6" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a5737dd056c8339f1c05fec0d42bf3b28" title="DisplayReceipt" alt="" coords="125,107,235,133"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a87db111c5962c1a76282eea3ea99bc5f" title="OnResultsSubmitButtonClick" alt="" coords="287,5,478,32"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ae117d75d483bd48792122dcc23d369ea" title="OnCreate" alt="" coords="531,56,608,83"/>
-</map>

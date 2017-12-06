@@ -1,0 +1,4 @@
+<map id="HandleConnection" name="HandleConnection">
+<area shape="rect" id="node2" href="$dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html#a0814aca79d2d6c1940274d906e1aec57" title="Contains the responses for every sort of exception case expected to possibly occur, and assigns them appropriately upon catching. " alt="" coords="221,5,333,32"/>
+<area shape="rect" id="node3" href="$d7/dbc/interfaceComparison__shopping__engine__backend_1_1IRouter.html#a9c5be4f0f9ea5e3b581a6bfcc959dd54" title="Returns a Callback that represents the functionality fot the given endpoint. " alt="" coords="180,56,373,112"/>
+</map>

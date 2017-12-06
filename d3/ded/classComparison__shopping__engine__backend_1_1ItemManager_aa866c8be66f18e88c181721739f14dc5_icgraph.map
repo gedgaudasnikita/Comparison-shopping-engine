@@ -1,0 +1,9 @@
+<map id="ItemManager" name="ItemManager">
+<area shape="rect" id="node2" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#af67cd4a65635a9347e520b6b69201978" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="151,100,243,127"/>
+<area shape="rect" id="node3" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="291,5,488,61"/>
+<area shape="rect" id="node5" href="$d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html#ad42eab0c420905c232ff0e2cfbf551dd" title="Compares given Receipt items and returns the with cheapest alternatives found " alt="" coords="296,85,483,141"/>
+<area shape="rect" id="node7" href="$d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc" title="Saves the given Receipt items " alt="" coords="296,165,483,221"/>
+<area shape="rect" id="node4" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="541,13,749,54"/>
+<area shape="rect" id="node6" href="$da/d65/classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="536,85,755,141"/>
+<area shape="rect" id="node8" href="$d6/dd5/classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="546,165,745,221"/>
+</map>

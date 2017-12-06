@@ -1,0 +1,5 @@
+<map id="ProcessReceipt" name="ProcessReceipt">
+<area shape="rect" id="node2" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#af67cd4a65635a9347e520b6b69201978" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="168,5,375,61"/>
+<area shape="rect" id="node4" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#a6c4bf30df5bdd507afbd82d1c4ab78d7" title="Returns the cheapest Item of the same name from the list " alt="" coords="168,85,375,141"/>
+<area shape="rect" id="node3" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#aa866c8be66f18e88c181721739f14dc5" title="Comparison_shopping\l_engine_backend.ItemManager.\lItemManager" alt="" coords="423,5,629,61"/>
+</map>

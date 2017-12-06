@@ -1,4 +1,0 @@
-<map id="HttpServer" name="HttpServer">
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="41,131,112,208"/>
-<area shape="rect" id="node3" href="$classIDisposable.html" title="{IDisposable\n||}" alt="" coords="32,5,121,83"/>
-</map>

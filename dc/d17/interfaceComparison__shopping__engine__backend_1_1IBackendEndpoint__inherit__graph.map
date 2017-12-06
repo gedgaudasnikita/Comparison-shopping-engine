@@ -1,0 +1,7 @@
+<map id="IBackendEndpoint" name="IBackendEndpoint">
+<area shape="rect" id="node3" href="$d9/dde/classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="5,271,223,348"/>
+<area shape="rect" id="node4" href="$d6/df8/classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to par..." alt="" coords="247,271,453,348"/>
+<area shape="rect" id="node5" href="$da/d65/classComparison__shopping__engine__backend_1_1ProcessReceiptBackendEndpoint.html" title="{ProcessReceiptBackendEndpoint\n||+ Handle()\l}" alt="" coords="478,271,694,348"/>
+<area shape="rect" id="node6" href="$d6/dd5/classComparison__shopping__engine__backend_1_1SaveReceiptBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to sav..." alt="" coords="719,271,915,348"/>
+<area shape="rect" id="node2" href="$d4/d3b/interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="414,5,521,97"/>
+</map>

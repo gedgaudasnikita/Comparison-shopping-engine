@@ -1,6 +1,0 @@
-<map id="SaveReceipt" name="SaveReceipt">
-<area shape="rect" id="node2" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#af67cd4a65635a9347e520b6b69201978" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="159,5,366,61"/>
-<area shape="rect" id="node4" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#abf5c9911da146b6435d7a28561d8dc70" title="Adds a given Item to ItemManagers internal List " alt="" coords="148,86,377,127"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#addb78d52731624dab25493ca244063fa" title="A method serializing all of the Item objects currently stored to a User configured location..." alt="" coords="159,152,366,208"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1ItemManager.html#aa866c8be66f18e88c181721739f14dc5" title="Comparison_shopping\l_engine_backend.ItemManager.\lItemManager" alt="" coords="425,5,632,61"/>
-</map>

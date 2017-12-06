@@ -1,0 +1,4 @@
+<map id="DateParser" name="DateParser">
+<area shape="rect" id="node2" href="$d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; DateTime \&gt;\n||+ Parse()\l}" alt="" coords="5,145,148,223"/>
+<area shape="rect" id="node3" href="$d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html" title="Interface to be implemented by all the ParseableReceipt field parsers. The generic type T is the type..." alt="" coords="29,5,124,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="GetSuggestionsEndpoint" name="GetSuggestionsEndpoint">
+<area shape="rect" id="node5" href="$d9/dde/classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html" title="This class encapsulates the expected behaviour of the endpoint, the responsibility of which is to ret..." alt="" coords="5,863,223,940"/>
+<area shape="rect" id="node2" href="$d6/ddd/interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="{IEndpoint\&lt; object,\l GetSuggestionsParameters,\l List\&lt; string \&gt; \&gt;\n||+ GetRequestBody()\l+ GetRequestBody()\l+ GetRequestParameters()\l+ GetRequestParameters()\l+ GetResponseBody()\l+ GetResponseBody()\l}" alt="" coords="19,404,209,584"/>
+<area shape="rect" id="node3" href="$d6/ddd/interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="11,147,217,327"/>
+<area shape="rect" id="node4" href="$d4/d3b/interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html" title="Implemented by the classes that aim to encapsulate such qualities of the web protocol endpoint as the..." alt="" coords="61,5,167,97"/>
+</map>

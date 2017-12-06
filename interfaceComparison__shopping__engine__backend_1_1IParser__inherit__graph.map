@@ -1,6 +1,0 @@
-<map id="IParser&lt; T &gt;" name="IParser&lt; T &gt;">
-<area shape="rect" id="node2" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; string \&gt;\n||+ Parse()\l}" alt="" coords="44,145,163,223"/>
-<area shape="rect" id="node4" href="$interfaceComparison__shopping__engine__backend_1_1IParser.html" title="{IParser\&lt; DateTime \&gt;\n||+ Parse()\l}" alt="" coords="192,145,335,223"/>
-<area shape="rect" id="node3" href="$classComparison__shopping__engine__backend_1_1StoreParser.html" title="This class describes the behaviour of parsing a storeName from plain text. Intended for usage from Pa..." alt="" coords="5,272,196,393"/>
-<area shape="rect" id="node5" href="$classComparison__shopping__engine__backend_1_1DateParser.html" title="This class describes the behaviour of parsing a storeName from plain text. Intended for usage from Pa..." alt="" coords="220,294,312,371"/>
-</map>
