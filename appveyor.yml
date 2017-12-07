@@ -1,0 +1,71 @@
+version: 1.0.{build}
+
+branches:
+  except:
+    - gh-pages
+
+image: Visual Studio 2017
+
+init:
+  - git config --global core.autocrlf input
+
+clone_folder: c:\projects\myproject
+
+environment:
+  GH_REPO_NAME: Comparison-shopping-engine
+  GH_REPO_REF: github.com/gedgaudasnikita/Comparison-shopping-engine.git
+
+platform: Any CPU
+
+configuration: CI
+
+build:
+  parallel: true                  # enable MSBuild parallel builds
+  project: Comparison-shopping-engine.sln      # path to Visual Studio solution or project
+  publish_nuget: true             # package projects with .nuspec files and push to artifacts
+  include_nuget_references: true  # add -IncludeReferencedProjects option while packaging NuGet artifacts
+
+  verbosity: normal
+
+test_script:
+  - OpenCover.Console.exe -register:user -target:"nunit3-console.exe" "-targetargs:c:\projects\myproject\test\Backend.Tests\bin\CI\Comparison-shopping-engine-backend.Tests.dll c:\projects\myproject\test\CoreEntities.Tests\bin\CI\Comparison-shopping-engine-core-entities.Tests.dll c:\projects\myproject\test\WebProtocol.Tests\bin\CI\Comparison-shopping-engine-web-protocol.Tests.dll" -filter:"+[*]* -[*.Tests*]*" -output:".\MyProject_coverage.xml" -excludebyfile:*Designer*;*Program*
+  - codecov -f "MyProject_coverage.xml"
+
+for:
+-
+  branches:
+    only:
+      - master
+
+  install:
+    - nuget restore
+    - nuget install Doxygen -Version 1.8.13
+    - nuget install Graphviz -Version 2.38.0.2
+    - choco install opencover.portable
+    - choco install codecov
+
+  after_test:
+    - set PATH=%PATH%;C:\projects\myproject\Graphviz.2.38.0.2\
+    - git config --global credential.helper store
+    - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_REPO_TOKEN):x-oauth-basic@github.com`n"
+    - git config --global user.email "team@appveyor.com"
+    - git config --global user.name "AppVeyor CI"
+    - git clone -b gh-pages https://git@github.com/gedgaudasnikita/Comparison-shopping-engine.git
+    - cd Comparison-shopping-engine
+    - rm -rf *  
+    - echo "" > .nojekyll
+    - echo %APPVEYOR_BUILD_ID% > .version
+    - ps: ../Doxygen.1.8.13/tools/doxygen.exe "C:\projects\myproject\doc\Doxyfile"
+    - cp -r html/* .
+    - rm -rf html
+    - git add --all
+    - git commit -m "Deploy code docs to GitHub Pages Appveyor build:%APPVEYOR_BUILD_NUMBER%"
+    - git push --force "https://%GH_REPO_TOKEN%@%GH_REPO_REF%"
+
+-
+  install:
+    - nuget restore
+    - choco install opencover.portable
+    - choco install codecov
+  
+  after_test:
