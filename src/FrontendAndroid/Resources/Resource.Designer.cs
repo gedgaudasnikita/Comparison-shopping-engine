@@ -104,14 +104,14 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f05000b
 			public const int resultsLinearLayout = 2131034123;
 			
-			// aapt resource value: 0x7f050011
-			public const int resultsNewItemButton = 2131034129;
+			// aapt resource value: 0x7f050010
+			public const int resultsNewItemButton = 2131034128;
 			
 			// aapt resource value: 0x7f05000d
 			public const int resultsScroll = 2131034125;
 			
-			// aapt resource value: 0x7f050010
-			public const int resultsSubmitButton = 2131034128;
+			// aapt resource value: 0x7f050011
+			public const int resultsSubmitButton = 2131034129;
 			
 			// aapt resource value: 0x7f05000c
 			public const int resultsTextView = 2131034124;
