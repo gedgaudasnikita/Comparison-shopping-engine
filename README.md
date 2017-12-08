@@ -1,4 +1,4 @@
-﻿[![Builds](https://travis-ci.org/gedgaudasnikita/Comparison-shopping-engine.svg?branch=master)](https://travis-ci.org/gedgaudasnikita/Comparison-shopping-engine) [![Coverage](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine/branch/master/graph/badge.svg)](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine)
+﻿[![Builds](https://ci.appveyor.com/api/projects/status/github/gedgaudasnikita/Comparison-shopping-engine?branch=master&svg=true)](https://ci.appveyor.com/project/gedgaudasnikita/comparison-shopping-engine) [![Coverage](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine/branch/master/graph/badge.svg)](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine)
 # Comparison-shopping-engine
 ## Description
 A mobile application, letting the user compare the prices of his purchased items with the ones, submitted by other users.
