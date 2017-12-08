@@ -1,4 +1,4 @@
-﻿[![Builds](https://ci.appveyor.com/api/projects/status/github/gedgaudasnikita/Comparison-shopping-engine?branch=master&svg=true)](https://ci.appveyor.com/project/gedgaudasnikita/comparison-shopping-engine) [![Coverage](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine/branch/master/graph/badge.svg)](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine)
+﻿[![Builds](https://ci.appveyor.com/api/projects/status/github/gedgaudasnikita/Comparison-shopping-engine?branch=master&svg=true)](https://ci.appveyor.com/project/gedgaudasnikita/comparison-shopping-engine) [![Coverage](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine/branch/master/graph/badge.svg)](https://codecov.io/gh/gedgaudasnikita/Comparison-shopping-engine)[![Dependency Status](https://www.versioneye.com/user/projects/5a2a7fac0fb24f11d929dd15/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5a2a7fac0fb24f11d929dd15)
 # Comparison-shopping-engine
 ## Description
 A mobile application, letting the user compare the prices of his purchased items with the ones, submitted by other users.
