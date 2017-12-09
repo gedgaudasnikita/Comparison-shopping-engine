@@ -33,6 +33,9 @@ namespace Comparison_shopping_engine_frontend_android
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
 
+            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+
+
             // Reset App class for safety reasons
             AppData.file = null;
             AppData.dir = null;
