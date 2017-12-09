@@ -13,6 +13,9 @@ using Android.Graphics;
 
 namespace Comparison_shopping_engine_frontend_android.src.Utilities
 {
+    /// <summary>
+    /// A class for a retained picture after configuration change
+    /// </summary>
     class RetainedBitmapFragment : Fragment
     {
         public Bitmap Picture
