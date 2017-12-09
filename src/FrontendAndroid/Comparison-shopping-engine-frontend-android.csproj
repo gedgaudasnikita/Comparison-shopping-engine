@@ -104,6 +104,7 @@
     <Compile Include="src\Network\Client.cs" />
     <Compile Include="src\Utilities\SuggestionAdapter.cs" />
     <Compile Include="src\Utilities\UIHelpers.cs" />
+    <Compile Include="src\Utilities\PictureFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -124,6 +125,7 @@
     <AndroidResource Include="Resources\layout\Home.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\PictureFragment.xml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
