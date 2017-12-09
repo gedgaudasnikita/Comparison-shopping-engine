@@ -39,6 +39,9 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.dir = null;
             AppData.bitmap = null;
             
+            var transaction = FragmentManager.BeginTransaction();
+            transaction.Add(Resource.Id.homeLinearLayout, new PictureFragment(), "PictureFragment")
+                .Commit();
 
             // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
