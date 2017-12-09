@@ -15,7 +15,8 @@ namespace Comparison_shopping_engine_frontend_android.src.Utilities
 {
     class RetainedBitmapFragment : Fragment
     {
-        private Bitmap picture;
+        public Bitmap Picture
+        { get; set; }
 
         //this method is only called once for this fragment
         public override void OnCreate(Bundle savedInstanceState)
@@ -24,6 +25,6 @@ namespace Comparison_shopping_engine_frontend_android.src.Utilities
 
             //retain this fragment
             this.RetainInstance = true;
-        }
+        }  
     }
 }
