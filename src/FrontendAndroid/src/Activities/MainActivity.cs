@@ -38,6 +38,8 @@ namespace Comparison_shopping_engine_frontend_android
             RetainedBitmapFragment pictureFragment = new RetainedBitmapFragment();
             // The fragment will have the ID of Resource.Id.homeImageView
             fragmentTx.Add(Resource.Id.homeImageView, pictureFragment);
+            // Commit the transaction
+            fragmentTx.Commit();
 
             // Reset App class for safety reasons
             AppData.file = null;
