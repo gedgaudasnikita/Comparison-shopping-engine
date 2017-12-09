@@ -1,30 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 namespace Comparison_shopping_engine_frontend_android
 {
     public class PictureFragment : Fragment
     {
+        static ImageView image;
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            this.RetainInstance = true;
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resources.layout.PictureFragment, container, false);
+            View view = inflater.Inflate(Resource.Layout.PictureFragment, container, false);
+            image = (ImageView) view.FindViewById(Resource.Id.homeImageView);
+            // Make homeImageView invisible while there's no photo
+            image.Visibility = ViewStates.Invisible;
 
             return view;
+        }
+
+        public static void SetImage(Bitmap bitmap)
+        {
+            image.SetImageBitmap(bitmap);
+        }
+
+        public static void SetImageVisibility(Android.Views.ViewStates state)
+        {
+            image.Visibility = state;
+        }
+
+        public static int GetImageWidth()
+        {
+            return image.Width;
+        }
+
+        public static int GetImageHeight()
+        {
+            return image.Height;
         }
     }
 }
