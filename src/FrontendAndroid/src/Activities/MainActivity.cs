@@ -33,14 +33,7 @@ namespace Comparison_shopping_engine_frontend_android
             base.OnCreate(savedInstanceState);
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
-
-            FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
-            RetainedBitmapFragment pictureFragment = new RetainedBitmapFragment();
-            // The fragment will have the ID of Resource.Id.homeImageView
-            fragmentTx.Add(Resource.Id.homeImageView, pictureFragment);
-            // Commit the transaction
-            fragmentTx.Commit();
-
+            
             // Reset App class for safety reasons
             AppData.file = null;
             AppData.dir = null;

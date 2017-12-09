@@ -18,16 +18,18 @@ namespace Comparison_shopping_engine_frontend_android.src.Utilities
     /// </summary>
     class RetainedBitmapFragment : Fragment
     {
-        public Bitmap Picture
-        { get; set; }
+        public ImageView pictureImageView;
 
         //this method is only called once for this fragment
-        public override void OnCreate(Bundle savedInstanceState)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            
             //retain this fragment
             this.RetainInstance = true;
+            inflater.Inflate(Resource.Layout., container, false);
+
+            pictureImageView = inflater.
         }  
     }
 }

@@ -11,7 +11,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace Comparison_shopping_engine_frontend_android.Resources.layout
+namespace Comparison_shopping_engine_frontend_android
 {
     public class PictureFragment : Fragment
     {
