@@ -11,6 +11,7 @@ using Android.Views;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
+using Comparison_shopping_engine_frontend_android.src.Utilities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -34,6 +35,7 @@ namespace Comparison_shopping_engine_frontend_android
             SetContentView(Resource.Layout.Home);
 
             FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+            RetainedBitmapFragment pictureFragment = new RetainedBitmapFragment();
 
 
             // Reset App class for safety reasons
