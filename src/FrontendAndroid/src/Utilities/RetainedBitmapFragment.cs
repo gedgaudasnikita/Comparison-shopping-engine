@@ -17,6 +17,10 @@ namespace Comparison_shopping_engine_frontend_android.src.Utilities
     {
         private Bitmap picture;
 
+        public override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
 
+        }
     }
 }
