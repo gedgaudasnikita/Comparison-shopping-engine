@@ -41,6 +41,7 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.NameSearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchButton = new System.Windows.Forms.Button();
+            this.NotifyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ItemDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@
             // DeleteButton
             // 
             this.DeleteButton.Enabled = false;
-            this.DeleteButton.Location = new System.Drawing.Point(145, 214);
+            this.DeleteButton.Location = new System.Drawing.Point(103, 214);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(75, 23);
             this.DeleteButton.TabIndex = 2;
@@ -111,7 +112,7 @@
             // MergeButton
             // 
             this.MergeButton.Enabled = false;
-            this.MergeButton.Location = new System.Drawing.Point(260, 214);
+            this.MergeButton.Location = new System.Drawing.Point(184, 214);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 23);
             this.MergeButton.TabIndex = 3;
@@ -121,7 +122,7 @@
             // RestoreButton
             // 
             this.RestoreButton.Enabled = false;
-            this.RestoreButton.Location = new System.Drawing.Point(373, 214);
+            this.RestoreButton.Location = new System.Drawing.Point(265, 214);
             this.RestoreButton.Name = "RestoreButton";
             this.RestoreButton.Size = new System.Drawing.Size(98, 23);
             this.RestoreButton.TabIndex = 4;
@@ -167,11 +168,22 @@
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
             // 
+            // NotifyButton
+            // 
+            this.NotifyButton.Enabled = false;
+            this.NotifyButton.Location = new System.Drawing.Point(369, 214);
+            this.NotifyButton.Name = "NotifyButton";
+            this.NotifyButton.Size = new System.Drawing.Size(98, 23);
+            this.NotifyButton.TabIndex = 9;
+            this.NotifyButton.Text = "Notify";
+            this.NotifyButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 259);
+            this.Controls.Add(this.NotifyButton);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.NameSearchTextBox);
             this.Controls.Add(this.RefreshButton);
@@ -204,6 +216,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn StoreColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateColumn;
+        private System.Windows.Forms.Button NotifyButton;
     }
 }
 

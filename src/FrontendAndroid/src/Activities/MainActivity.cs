@@ -11,6 +11,10 @@ using Android.Views;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
+using Android.Gms.Common;
+using Firebase.Messaging;
+using Firebase.Iid;
+using Android.Util;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -30,6 +34,8 @@ namespace Comparison_shopping_engine_frontend_android
             RetrieveConfig();
             SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
+
+            
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
 
@@ -71,7 +77,6 @@ namespace Comparison_shopping_engine_frontend_android
             homeConfigButton.Click += OnHomeConfigButtonClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
-
         }
 
         protected void Localise()

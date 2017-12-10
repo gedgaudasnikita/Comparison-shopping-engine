@@ -55,33 +55,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ItemCorrectForm.cs">
+    <Compile Include="src\Forms\ItemCorrectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemCorrectForm.Designer.cs">
+    <Compile Include="src\Forms\ItemCorrectForm.Designer.cs">
       <DependentUpon>ItemCorrectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemManagementForm.cs">
+    <Compile Include="src\Forms\ItemManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemManagementForm.Designer.cs">
+    <Compile Include="src\Forms\ItemManagementForm.Designer.cs">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemDeleteForm.cs">
+    <Compile Include="src\Forms\ItemDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemDeleteForm.Designer.cs">
+    <Compile Include="src\Forms\ItemDeleteForm.Designer.cs">
       <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ItemCorrectForm.resx">
+    <Compile Include="src\Notifications\Notification.cs" />
+    <Compile Include="src\Notifications\NotificationSender.cs" />
+    <EmbeddedResource Include="src\Forms\ItemCorrectForm.resx">
       <DependentUpon>ItemCorrectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemManagementForm.resx">
+    <EmbeddedResource Include="src\Forms\ItemManagementForm.resx">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemDeleteForm.resx">
+    <EmbeddedResource Include="src\Forms\ItemDeleteForm.resx">
       <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,5 +115,6 @@
       <Name>Comparison-shopping-engine-core-entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
