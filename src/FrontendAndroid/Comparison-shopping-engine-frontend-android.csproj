@@ -205,6 +205,10 @@
       <Project>{78C3ED2A-037B-49C6-A6AC-32D1A849EBD9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NotificationProtocol\Comparison-shopping-engine-notification-protocol\Comparison-shopping-engine-notification-protocol.csproj">
+      <Project>{8563f3c9-3201-4ebe-bb30-fc61501c0545}</Project>
+      <Name>Comparison-shopping-engine-notification-protocol</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebProtocol\Comparison-shopping-engine-web-protocol.csproj">
       <Project>{1240682e-cb5c-4826-9f64-0a11b34d8c54}</Project>
       <Name>Comparison-shopping-engine-web-protocol</Name>

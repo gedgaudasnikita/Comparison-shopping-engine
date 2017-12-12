@@ -89,5 +89,29 @@ namespace Comparison_shopping_engine_frontend_android
 
             dialog.Show();
         }
+
+        /// <summary>
+        /// Shows a basic <see cref="Notification"/>.
+        /// </summary>
+        /// <param name="ctx">The <see cref="Context"/> of the execution</param>
+        /// <param name="title">The content of the notificatoin</param>
+        public static void ShowNotification(Context ctx, String content)
+        {
+            Notification.Builder builder = new Notification.Builder(ctx)
+                .SetContentTitle("CoShE")
+                .SetContentText(content)
+                .SetSmallIcon(Resource.Drawable.common_google_signin_btn_icon_dark);
+
+            // Build the notification:
+            Notification notification = builder.Build();
+
+            // Get the notification manager:
+            NotificationManager notificationManager =
+                ctx.GetSystemService(Context.NotificationService) as NotificationManager;
+
+            // Publish the notification:
+            const int notificationId = 0;
+            notificationManager.Notify(notificationId, notification);
+        }
     }
 }

@@ -12,8 +12,15 @@ namespace Comparison_shopping_engine_core_entities
     /// <summary>
     /// The class, containing all the custom extension methods for the <see cref="JsonSerializer"/> type
     /// </summary>
-    public class JsonSerializerStream: JsonSerializer
+    public class JsonSerializerStream
     {
+        private JsonSerializer serializer;
+
+        public JsonSerializerStream()
+        {
+            serializer = new JsonSerializer();
+        }
+
         /// <summary>
         /// An overload, that takes <see cref="Stream"/> as the first argument instead of <see cref="JsonWriter"/>
         /// Avoids DRY. 
@@ -24,7 +31,7 @@ namespace Comparison_shopping_engine_core_entities
         {
             JsonWriter writer = new JsonTextWriter(new StreamWriter(output));
 
-            Serialize(writer, value);
+            serializer.Serialize(writer, value);
 
             writer.Flush();
             output.Position = 0;
@@ -38,7 +45,7 @@ namespace Comparison_shopping_engine_core_entities
         public T Deserialize<T>(Stream input)
         {
             JsonReader reader = new JsonTextReader(new StreamReader(input));
-            return Deserialize<T>(reader);
+            return serializer.Deserialize<T>(reader);
         }
     }
 }
