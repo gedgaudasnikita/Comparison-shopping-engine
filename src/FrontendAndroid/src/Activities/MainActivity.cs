@@ -75,8 +75,6 @@ namespace Comparison_shopping_engine_frontend_android
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
             homeConfigButton.Click += OnHomeConfigButtonClick;
-
-            ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
         }
 
         protected void Localise()

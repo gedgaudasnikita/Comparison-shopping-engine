@@ -19,5 +19,6 @@ namespace Comparison_shopping_engine_frontend_android
     public static class Configuration
     {
         public const string backendUrl = "http://10.0.2.2:4444";
+        public const string dbPath = "db.db3";
     }
 }
