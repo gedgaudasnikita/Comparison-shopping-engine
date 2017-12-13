@@ -11,7 +11,7 @@ using Android.Views;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
-using Comparison_shopping_engine_frontend_android.src.Utilities;
+using Android.Graphics;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -23,7 +23,7 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeGalleryButton;
         Button homeResultScreenButton;
         Button homeConfigButton;
-        ImageView homeImageView;
+        //ImageView homeImageView;
         TextView homeTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -40,21 +40,22 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.bitmap = null;
             
             var transaction = FragmentManager.BeginTransaction();
-            transaction.Add(Resource.Id.homeLinearLayout, new PictureFragment(), "PictureFragment")
+            transaction.Add(Resource.Id.homeLinearLayout, new PictureFragment(), "pictureFragment")
                 .Commit();
+
+            if (savedInstanceState != null)
+            {
+                AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
+            }
 
             // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
-            homeImageView = FindViewById<ImageView>(Resource.Id.homeImageView);
             homeTextView = FindViewById<TextView>(Resource.Id.homeTextView);
 
             Localise();
-
-            // Make homeImageView invisible while there's no photo
-            homeImageView.Visibility = Android.Views.ViewStates.Invisible;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
@@ -76,6 +77,12 @@ namespace Comparison_shopping_engine_frontend_android
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
 
+        }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            outState.PutParcelable("image", AppData.bitmap);
+            base.OnSaveInstanceState(outState);
         }
 
         protected void Localise()
@@ -130,8 +137,12 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
-            AppData.imageViewHeight = homeImageView.Height;
-            AppData.imageViewWidth = homeImageView.Width;
+            // Assigned a magic number to imageViewHeight because
+            // the image height was equal to 0 every time I tried 
+            // to set imageView to new picture, and that
+            // caused division by 0 exception.
+            AppData.imageViewHeight = 1500;
+            AppData.imageViewWidth = PictureFragment.GetImageWidth();
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             AppData.file = new File(AppData.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(AppData.file));
@@ -145,8 +156,12 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
-            AppData.imageViewHeight = homeImageView.Height;
-            AppData.imageViewWidth = homeImageView.Width;
+            // Assigned a magic number to imageViewHeight because
+            // the image height was equal to 0 every time I tried 
+            // to set imageView to new picture, and that
+            // caused division by 0 exception.
+            AppData.imageViewHeight = 1500;
+            AppData.imageViewWidth = PictureFragment.GetImageWidth();
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
@@ -232,8 +247,10 @@ namespace Comparison_shopping_engine_frontend_android
                         AppData.bitmap = AppData.file.Path.LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         if (AppData.bitmap != null)
                         {
-                            homeImageView.SetImageBitmap(AppData.bitmap);
-                            homeImageView.Visibility = Android.Views.ViewStates.Visible;
+                            PictureFragment.SetImage(AppData.bitmap);
+                            PictureFragment.SetImageVisibility(Android.Views.ViewStates.Visible);
+                            //homeImageView.SetImageBitmap(AppData.bitmap);
+                            //homeImageView.Visibility = Android.Views.ViewStates.Visible;
                         }
 
                         // Not sure if needed, source had it, better keep it in case.
@@ -246,10 +263,12 @@ namespace Comparison_shopping_engine_frontend_android
                 case 1:
                     if (resultCode == Result.Ok)
                     {
+                        System.Console.WriteLine("GALLERY HEIGHT: {0}", AppData.imageViewHeight);
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
-                        homeImageView.SetImageBitmap(AppData.bitmap);
-                        homeImageView.Visibility = Android.Views.ViewStates.Visible;
-
+                        //homeImageView.SetImageBitmap(AppData.bitmap);
+                        //homeImageView.Visibility = Android.Views.ViewStates.Visible;
+                        PictureFragment.SetImage(AppData.bitmap);
+                        PictureFragment.SetImageVisibility(Android.Views.ViewStates.Visible);
                         homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;
