@@ -23,7 +23,7 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeGalleryButton;
         Button homeResultScreenButton;
         Button homeConfigButton;
-        //ImageView homeImageView;
+        ImageView homeImageView;
         TextView homeTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -81,10 +81,15 @@ namespace Comparison_shopping_engine_frontend_android
 
         protected override void OnSaveInstanceState(Bundle outState)
         {
-            outState.PutParcelable("image", AppData.bitmap);
             base.OnSaveInstanceState(outState);
+            outState.PutParcelable("image", AppData.bitmap);
         }
 
+        protected override void OnRestoreInstanceState(Bundle savedInstanceState)
+        {
+            base.OnRestoreInstanceState(savedInstanceState);
+            homeImageView.SetImageBitmap((Bitmap)savedInstanceState.GetParcelable("image"));
+        }
         protected void Localise()
         {
             homeCameraButton.Text = AppResources.CameraButton;
