@@ -22,6 +22,7 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeResultScreenButton;
         Button homeConfigButton;
         ImageView homeImageView;
+        TextView homeRemoveImageTextView;
         TextView homeTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -44,11 +45,13 @@ namespace Comparison_shopping_engine_frontend_android
             homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
             homeImageView = FindViewById<ImageView>(Resource.Id.homeImageView);
             homeTextView = FindViewById<TextView>(Resource.Id.homeTextView);
+            homeRemoveImageTextView = FindViewById<TextView>(Resource.Id.homeRemoveImageTextView);
 
             Localise();
 
             //Make homeImageView invisible while there's no photo
             homeImageView.Visibility = ViewStates.Invisible;
+            homeRemoveImageTextView.Visibility = ViewStates.Invisible;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
@@ -66,6 +69,7 @@ namespace Comparison_shopping_engine_frontend_android
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
             homeConfigButton.Click += OnHomeConfigButtonClick;
+            homeRemoveImageTextView.Click += OnRemoveImageTextViewClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
 
@@ -241,6 +245,7 @@ namespace Comparison_shopping_engine_frontend_android
                         {
                             homeImageView.SetImageBitmap(AppData.bitmap);
                             homeImageView.Visibility = ViewStates.Visible;
+                            homeRemoveImageTextView.Visibility = ViewStates.Visible;
                         }
 
                         // Not sure if needed, source had it, better keep it in case.
@@ -256,6 +261,7 @@ namespace Comparison_shopping_engine_frontend_android
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         homeImageView.SetImageBitmap(AppData.bitmap);
                         homeImageView.Visibility = ViewStates.Visible;
+                        homeRemoveImageTextView.Visibility = ViewStates.Visible;
                         homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;
