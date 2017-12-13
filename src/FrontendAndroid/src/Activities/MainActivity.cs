@@ -8,8 +8,6 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Views;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Linq;
 using Android.Graphics;
 
