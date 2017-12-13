@@ -244,10 +244,8 @@ namespace Comparison_shopping_engine_frontend_android
                         AppData.bitmap = AppData.file.Path.LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         if (AppData.bitmap != null)
                         {
-                            PictureFragment.SetImage(AppData.bitmap);
-                            PictureFragment.SetImageVisibility(Android.Views.ViewStates.Visible);
-                            //homeImageView.SetImageBitmap(AppData.bitmap);
-                            //homeImageView.Visibility = Android.Views.ViewStates.Visible;
+                            homeImageView.SetImageBitmap(AppData.bitmap);
+                            homeImageView.Visibility = ViewStates.Visible;
                         }
 
                         // Not sure if needed, source had it, better keep it in case.
@@ -262,10 +260,8 @@ namespace Comparison_shopping_engine_frontend_android
                     {
                         System.Console.WriteLine("GALLERY HEIGHT: {0}", AppData.imageViewHeight);
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
-                        //homeImageView.SetImageBitmap(AppData.bitmap);
-                        //homeImageView.Visibility = Android.Views.ViewStates.Visible;
-                        PictureFragment.SetImage(AppData.bitmap);
-                        PictureFragment.SetImageVisibility(Android.Views.ViewStates.Visible);
+                        homeImageView.SetImageBitmap(AppData.bitmap);
+                        homeImageView.Visibility = ViewStates.Visible;
                         homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;
