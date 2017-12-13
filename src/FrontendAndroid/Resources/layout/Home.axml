@@ -14,11 +14,11 @@
         android:layout_weight="0"
         android:gravity="center" />
     <ImageView
-      android:id="@+id/homeImageView"
-      android:src="@android:drawable/ic_menu_gallery"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1" />
+        android:id="@+id/homeImageView"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
