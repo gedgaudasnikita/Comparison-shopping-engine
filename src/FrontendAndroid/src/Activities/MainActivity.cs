@@ -54,7 +54,6 @@ namespace Comparison_shopping_engine_frontend_android
             if (IsThereAnAppToTakePictures())
             {
                 CreateDirectoryForPictures();
-
                 homeCameraButton.Click += OnHomeCameraButtonClick;
             }
 
@@ -254,7 +253,6 @@ namespace Comparison_shopping_engine_frontend_android
                 case 1:
                     if (resultCode == Result.Ok)
                     {
-                        System.Console.WriteLine("GALLERY HEIGHT: {0}", AppData.imageViewHeight);
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         homeImageView.SetImageBitmap(AppData.bitmap);
                         homeImageView.Visibility = ViewStates.Visible;
