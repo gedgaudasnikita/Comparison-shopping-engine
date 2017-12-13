@@ -86,8 +86,10 @@ namespace Comparison_shopping_engine_frontend_android
         protected override void OnRestoreInstanceState(Bundle savedInstanceState)
         {
             base.OnRestoreInstanceState(savedInstanceState);
-            homeImageView.SetImageBitmap((Bitmap)savedInstanceState.GetParcelable("image"));
+            AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
+            homeImageView.SetImageBitmap(AppData.bitmap);
             homeImageView.Visibility = ViewStates.Visible;
+            homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
         }
         protected void Localise()
         {
