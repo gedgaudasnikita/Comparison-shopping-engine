@@ -87,6 +87,7 @@ namespace Comparison_shopping_engine_frontend_android
         {
             base.OnRestoreInstanceState(savedInstanceState);
             homeImageView.SetImageBitmap((Bitmap)savedInstanceState.GetParcelable("image"));
+            homeImageView.Visibility = ViewStates.Visible;
         }
         protected void Localise()
         {
