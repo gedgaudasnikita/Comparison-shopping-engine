@@ -54,6 +54,9 @@ namespace Comparison_shopping_engine_frontend_android
 
             Localise();
 
+            //Make homeImageView invisible while there's no photo
+            homeImageView.Visibility = ViewStates.Invisible;
+
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
             {
@@ -143,8 +146,8 @@ namespace Comparison_shopping_engine_frontend_android
             // the image height was equal to 0 every time I tried 
             // to set imageView to new picture, and that
             // caused division by 0 exception.
-            AppData.imageViewHeight = 1500;
-            AppData.imageViewWidth = PictureFragment.GetImageWidth();
+            AppData.imageViewHeight = homeImageView.Height;
+            AppData.imageViewWidth = homeImageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
             AppData.file = new File(AppData.dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
             intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(AppData.file));
