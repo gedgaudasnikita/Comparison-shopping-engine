@@ -37,11 +37,6 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.dir = null;
             AppData.bitmap = null;
 
-            /*if (savedInstanceState != null)
-            {
-                AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
-            }*/
-
             // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
