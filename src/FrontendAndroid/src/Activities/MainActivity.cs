@@ -78,6 +78,8 @@ namespace Comparison_shopping_engine_frontend_android
         protected override void OnSaveInstanceState(Bundle outState)
         {
             base.OnSaveInstanceState(outState);
+            var removeImageString = homeRemoveImageTextView.Text;
+            outState.PutString("removeImageString", removeImageString);
             outState.PutParcelable("image", AppData.bitmap);
         }
 
@@ -85,10 +87,16 @@ namespace Comparison_shopping_engine_frontend_android
         {
             base.OnRestoreInstanceState(savedInstanceState);
             AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
-            homeImageView.SetImageBitmap(AppData.bitmap);
-            homeImageView.Visibility = ViewStates.Visible;
-            homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
+            if(AppData.bitmap != null)
+            {
+                homeImageView.SetImageBitmap(AppData.bitmap);
+                homeImageView.Visibility = ViewStates.Visible;
+                homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
+                homeRemoveImageTextView.Text = savedInstanceState.GetString("removeImageString");
+                homeRemoveImageTextView.Visibility = ViewStates.Visible;
+            }
         }
+
         protected void Localise()
         {
             homeCameraButton.Text = AppResources.CameraButton;
@@ -215,6 +223,14 @@ namespace Comparison_shopping_engine_frontend_android
             Intent intent = new Intent(this, typeof(ConfigActivity));
 
             StartActivityForResult(intent, 2);
+        }
+
+        private void OnRemoveImageTextViewClick(object sender, EventArgs e)
+        {
+            homeImageView.SetImageResource(0);
+            AppData.bitmap = null;
+            homeRemoveImageTextView.Visibility = ViewStates.Invisible;
+            homeResultScreenButton.Text = AppResources.ResultScreenButton;
         }
 
         /// <summary>
