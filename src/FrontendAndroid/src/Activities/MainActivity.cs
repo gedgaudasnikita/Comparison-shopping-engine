@@ -142,10 +142,6 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeCameraButtonClick(object sender, EventArgs e)
         {
-            // Assigned a magic number to imageViewHeight because
-            // the image height was equal to 0 every time I tried 
-            // to set imageView to new picture, and that
-            // caused division by 0 exception.
             AppData.imageViewHeight = homeImageView.Height;
             AppData.imageViewWidth = homeImageView.Width;
             Intent intent = new Intent(MediaStore.ActionImageCapture);
@@ -161,10 +157,6 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private void OnHomeGalleryButtonClick(object sender, EventArgs e)
         {
-            // Assigned a magic number to imageViewHeight because
-            // the image height was equal to 0 every time I tried 
-            // to set imageView to new picture, and that
-            // caused division by 0 exception.
             AppData.imageViewHeight = homeImageView.Height;
             AppData.imageViewWidth = homeImageView.Width;
             Intent imageIntent = new Intent();
