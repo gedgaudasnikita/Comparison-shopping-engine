@@ -165,8 +165,8 @@ namespace Comparison_shopping_engine_frontend_android
             // the image height was equal to 0 every time I tried 
             // to set imageView to new picture, and that
             // caused division by 0 exception.
-            AppData.imageViewHeight = 1500;
-            AppData.imageViewWidth = PictureFragment.GetImageWidth();
+            AppData.imageViewHeight = homeImageView.Height;
+            AppData.imageViewWidth = homeImageView.Width;
             Intent imageIntent = new Intent();
             imageIntent.SetType("image/*");
             imageIntent.SetAction(Intent.ActionGetContent);
