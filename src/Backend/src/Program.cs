@@ -22,7 +22,7 @@ namespace Comparison_shopping_engine_backend
             }
 
             server.Start();
-            DBTest(); //Used for initial DB creation and testing, delete later
+            SetUpDB(); //Used for initial DB creation and testing, delete later
             CloseOnUserEntry();
         }
 
@@ -82,7 +82,7 @@ namespace Comparison_shopping_engine_backend
             return initialized;
         }
 
-        static void DBTest()
+        static void SetUpDB()
         {
             using (var db = new ItemsContext())
             {
@@ -115,12 +115,6 @@ namespace Comparison_shopping_engine_backend
                 db.Items.Add(item2);
                 db.Items.Add(item3);
                 db.SaveChanges();
-
-                //Display all items
-                var query = from i in db.Items
-                            select i;
-                foreach (DBItem item in query)
-                    System.Console.Out.WriteLine(item.Name + " " + item.Store + " " + item.Price.ToString() + " " + item.Date.ToString());
             }
         }
     }

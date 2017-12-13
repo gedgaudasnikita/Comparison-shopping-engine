@@ -89,6 +89,11 @@
     <Compile Include="data\db\DBItem.cs" />
     <Compile Include="data\db\DBItemHistory.cs" />
     <Compile Include="data\db\ItemsContext.cs" />
+    <Compile Include="Migrations\201712132209113_InitialCreate.cs" />
+    <Compile Include="Migrations\201712132209113_InitialCreate.Designer.cs">
+      <DependentUpon>201712132209113_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="src\Controller\Controller.cs" />
     <Compile Include="src\Extensions\HttpListenerRequestExtensions.cs" />
     <Compile Include="src\Extensions\StringExtensions.cs" />
@@ -110,6 +115,9 @@
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\CoreEntities\ParseableReceipt.cs" />
+    <EmbeddedResource Include="Migrations\201712132209113_InitialCreate.resx">
+      <DependentUpon>201712132209113_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
