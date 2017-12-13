@@ -38,21 +38,18 @@ namespace Comparison_shopping_engine_frontend_android
             AppData.file = null;
             AppData.dir = null;
             AppData.bitmap = null;
-            
-            var transaction = FragmentManager.BeginTransaction();
-            transaction.Add(Resource.Id.homeLinearLayout, new PictureFragment(), "pictureFragment")
-                .Commit();
 
-            if (savedInstanceState != null)
+            /*if (savedInstanceState != null)
             {
                 AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
-            }
+            }*/
 
             // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
             homeGalleryButton = FindViewById<Button>(Resource.Id.homeGalleryButton);
             homeResultScreenButton = FindViewById<Button>(Resource.Id.homeResultScreenButton);
             homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
+            homeImageView = FindViewById<ImageView>(Resource.Id.homeImageView);
             homeTextView = FindViewById<TextView>(Resource.Id.homeTextView);
 
             Localise();
