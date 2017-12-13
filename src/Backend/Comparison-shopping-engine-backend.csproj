@@ -86,6 +86,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\db\DBItem.cs" />
+    <Compile Include="data\db\DBItemHistory.cs" />
+    <Compile Include="data\db\ItemsContext.cs" />
     <Compile Include="src\Controller\Controller.cs" />
     <Compile Include="src\Extensions\HttpListenerRequestExtensions.cs" />
     <Compile Include="src\Extensions\StringExtensions.cs" />
