@@ -36,10 +36,6 @@ namespace Comparison_shopping_engine_backend
         /// <returns>A <see cref="List{T}"/> of <see cref="Item"/> representing the cheapest items found</returns>
         public static List<Item> ProcessReceipt(Receipt source)
         {
-            /*ItemManager manager = ItemManager.GetInstance();
-
-            List<Item> cheapList = source.Items.Select(item => manager.FindCheapest(item)).ToList();*/
-
             List<Item> cheapList = source.Items.Select(item => DBManager.FindCheapest(item)).ToList();
             
             return cheapList;
@@ -51,11 +47,6 @@ namespace Comparison_shopping_engine_backend
         /// <param name="source">A <see cref="Receipt"/> to save</param>
         public static void SaveReceipt(Receipt source)
         {
-            /*ItemManager manager = ItemManager.GetInstance();
-            manager.Add(source.Items);
-
-            manager.Persist();*/
-
             DBManager.Add(source.Items);
         }
     }

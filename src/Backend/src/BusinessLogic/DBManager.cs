@@ -130,28 +130,6 @@ namespace Comparison_shopping_engine_backend
         }
 
         /// <summary>
-        /// WARNING!
-        /// Clears the entire Database
-        /// </summary>
-        public static void ClearDB()
-        {
-            using (ItemsContext db = new ItemsContext())
-            {
-                var ItemQuery = from item in db.Items
-                                select item;
-                foreach (var item in ItemQuery)
-                    db.Items.Remove(item);
-
-                var ItemHistoryQuery = from item in db.ItemHistories
-                                       select item;
-                foreach (var item in ItemHistoryQuery)
-                    db.ItemHistories.Remove(item);
-
-                db.SaveChanges();
-            }
-        }
-
-        /// <summary>
         /// Adds old data to Database
         /// Should only be used once, ever
         /// </summary>
