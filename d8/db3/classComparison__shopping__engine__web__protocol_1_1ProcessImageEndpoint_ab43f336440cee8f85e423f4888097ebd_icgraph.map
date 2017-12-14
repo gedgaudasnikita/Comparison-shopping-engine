@@ -1,6 +1,6 @@
 <map id="GetResponseBody" name="GetResponseBody">
 <area shape="rect" id="node2" href="$d6/df8/classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="191,5,401,61"/>
 <area shape="rect" id="node3" href="$da/d3e/classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#afdd5510c5565735600c50cda46cba681" title="Calls the backend&#39;s ProcessImage endpoint " alt="" coords="184,85,408,141"/>
-<area shape="rect" id="node4" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a5737dd056c8339f1c05fec0d42bf3b28" title="Comparison_shopping\l_engine_frontend_android.Results\lActivity.DisplayReceipt" alt="" coords="456,85,673,141"/>
-<area shape="rect" id="node5" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#ae117d75d483bd48792122dcc23d369ea" title="Comparison_shopping\l_engine_frontend_android.Results\lActivity.OnCreate" alt="" coords="721,85,939,141"/>
+<area shape="rect" id="node4" href="$d9/d37/classComparison__shopping__engine__frontend__android_1_1ReviewActivity.html#a5737dd056c8339f1c05fec0d42bf3b28" title="Comparison_shopping\l_engine_frontend_android.Review\lActivity.DisplayReceipt" alt="" coords="456,85,669,141"/>
+<area shape="rect" id="node5" href="$d9/d37/classComparison__shopping__engine__frontend__android_1_1ReviewActivity.html#ae117d75d483bd48792122dcc23d369ea" title="Comparison_shopping\l_engine_frontend_android.Review\lActivity.OnCreate" alt="" coords="717,85,931,141"/>
 </map>

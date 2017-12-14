@@ -1,0 +1,8 @@
+<map id="ReviewActivity" name="ReviewActivity">
+<area shape="rect" id="node2" href="$d9/d25/classActivity.html" title="{Activity\n||}" alt="" coords="5,154,69,231"/>
+<area shape="rect" id="node4" href="$df/db5/classComparison__shopping__engine__frontend__android_1_1ItemDateView.html" title="The class that represents the element, responsible for the setting of the date of the receipt and its..." alt="" coords="352,154,475,231"/>
+<area shape="rect" id="node5" href="$d5/dbb/classEditText.html" title="{EditText\n||}" alt="" coords="439,5,510,83"/>
+<area shape="rect" id="node7" href="$d3/d0f/classComparison__shopping__engine__frontend__android_1_1ItemStoreView.html" title="The class that represents the element, responsible for the setting of the store of the receipt and it..." alt="" coords="499,147,626,239"/>
+<area shape="rect" id="node8" href="$dc/d3f/classComparison__shopping__engine__core__entities_1_1Receipt.html" title="A class representing the Receipt entity. " alt="" coords="779,132,866,253"/>
+<area shape="rect" id="node9" href="$d9/d1c/classIEquatable.html" title="{IEquatable\&lt; Receipt \&gt;\n||}" alt="" coords="747,5,898,83"/>
+</map>

@@ -4,7 +4,7 @@ var searchData=
   ['mainactivity',['MainActivity',['../dc/d09/classComparison__shopping__engine__frontend__android_1_1MainActivity.html',1,'Comparison_shopping_engine_frontend_android']]],
   ['mainactivity_2ecs',['MainActivity.cs',['../d3/df8/MainActivity_8cs.html',1,'']]],
   ['mainform',['MainForm',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html',1,'MainForm'],['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a6ca9589dd5e5c17ba341eaab58e2ce0a',1,'Comparison_shopping_engine_admin.MainForm.MainForm()']]],
-  ['mainreceipt',['mainReceipt',['../d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#aa1ce31583b10dd11472ecaa9e1263fb4',1,'Comparison_shopping_engine_frontend_android::ResultsActivity']]],
+  ['mainreceipt',['mainReceipt',['../d9/d37/classComparison__shopping__engine__frontend__android_1_1ReviewActivity.html#aa1ce31583b10dd11472ecaa9e1263fb4',1,'Comparison_shopping_engine_frontend_android::ReviewActivity']]],
   ['mapexceptions',['MapExceptions',['../dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html#a0814aca79d2d6c1940274d906e1aec57',1,'Comparison_shopping_engine_backend::HttpServer']]],
   ['maximumstorenamelength',['maximumStoreNameLength',['../db/db1/classComparison__shopping__engine__backend_1_1StoreParser.html#a763581e4362adfc2c55362c8b98df5b9',1,'Comparison_shopping_engine_backend::StoreParser']]],
   ['mergebutton',['MergeButton',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a2988bba754a513a4b2befbe3f536a970',1,'Comparison_shopping_engine_admin::MainForm']]],

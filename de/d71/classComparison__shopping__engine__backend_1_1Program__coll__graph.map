@@ -1,2 +1,4 @@
 <map id="Program" name="Program">
+<area shape="rect" id="node2" href="$dd/d96/interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="43,132,114,209"/>
+<area shape="rect" id="node3" href="$d0/d07/classIDisposable.html" title="{IDisposable\n||}" alt="" coords="34,5,123,83"/>
 </map>
