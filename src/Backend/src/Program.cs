@@ -22,9 +22,6 @@ namespace Comparison_shopping_engine_backend
             }
 
             server.Start();
-            //Testing the DB
-            DBManager.SetupDB();
-            DBManager.PrintDB();
             CloseOnUserEntry();
         }
 

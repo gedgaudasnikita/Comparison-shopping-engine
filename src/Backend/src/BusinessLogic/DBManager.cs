@@ -26,7 +26,10 @@ namespace Comparison_shopping_engine_backend
                 if (db.Items.Any(i => i.Name.Equals(newItem.Name)))
                 {
                     if (db.Items.Any(i => i.Name.Equals(newItem.Name) && i.Price <= newItem.Price))
-                        db.ItemHistories.Add(new DBItemHistory(newItem));
+                    {
+                        if (!db.ItemHistories.Any(i => i.Name.Equals(newItem.Name) && i.Store.Equals(newItem.Store) && i.Price == newItem.Price && i.Date == newItem.Date))
+                            db.ItemHistories.Add(new DBItemHistory(newItem));
+                    }
                     else
                     {
                         db.ItemHistories.Add(new DBItemHistory((from item in db.Items
@@ -113,6 +116,8 @@ namespace Comparison_shopping_engine_backend
             items.Add(new Item("KELMES pienas, 2,5% rieb.", "IKI", 10, DateTime.Now.Date));
             items.Add(new Item("Malta kava Paulig Extra“", "MAXIMA", 899, DateTime.Now.Date));
             items.Add(new Item("Ledai Maxima Favorit", "MAXIMA", 129, DateTime.Now.Date));
+
+            Add(items);
         }
 
         /// <summary>
