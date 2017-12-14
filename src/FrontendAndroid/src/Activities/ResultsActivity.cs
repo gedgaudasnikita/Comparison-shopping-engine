@@ -1,23 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Comparison_shopping_engine_core_entities;
-using static Android.App.ActionBar;
 
 namespace Comparison_shopping_engine_frontend_android
 {
     [Activity(Label = "CoShE Results")]
     public class ResultsActivity : Activity
     {
-        LinearLayout resultsLinearLayout;
         LinearLayout resultsItemsLinearLayout;
         ItemStoreView storeEdit;
         ItemDateView dateEdit;
