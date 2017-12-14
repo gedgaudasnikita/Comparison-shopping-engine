@@ -25,9 +25,9 @@ namespace Comparison_shopping_engine_frontend_android
         {
             SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
-
+            // Set our view from the "Review" layout resource
             SetContentView(Resource.Layout.Review);
-
+            // Set up views
             reviewLinearLayout = FindViewById<LinearLayout>(Resource.Id.reviewLinearLayout);
             reviewItemsLinearLayout = FindViewById<LinearLayout>(Resource.Id.reviewItemsLinearLayout);
             reviewNewItemButton = FindViewById<Button>(Resource.Id.reviewNewItemButton);
