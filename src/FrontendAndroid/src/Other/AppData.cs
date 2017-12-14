@@ -1,5 +1,6 @@
 ﻿using Java.IO;
 using Android.Graphics;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -11,6 +12,7 @@ namespace Comparison_shopping_engine_frontend_android
         public static File file;
         public static File dir;
         public static Bitmap bitmap;
+        public static Receipt receipt;
         //If orientation is changed, when in gallery or camera app, homeImageView has a height and width of 0, so I'm storing these separately
         public static int imageViewHeight;
         public static int imageViewWidth;

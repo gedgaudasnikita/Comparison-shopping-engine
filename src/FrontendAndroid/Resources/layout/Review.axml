@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/resultsLinearLayout"
+    android:id="@+id/reviewLinearLayout"
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:id="@+id/resultsTextView"
-        android:text="Results"
+        android:id="@+id/reviewTextView"
+        android:text="Did we get it right?"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAllCaps="false"
         android:layout_width="match_parent"
@@ -16,25 +16,25 @@
         android:layout_weight="0"
         android:gravity="center" />
     <ScrollView
-        android:id="@+id/resultsScroll"
+        android:id="@+id/reviewScrollView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_weight="1">
         <LinearLayout
-            android:id="@+id/resultsItemsLinearLayout"
+            android:id="@+id/reviewItemsLinearLayout"
             android:orientation="vertical"
             android:layout_height="match_parent"
             android:layout_width="match_parent" />
     </ScrollView>
-<!--<LinearLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/resultsButtonsLinearLayout"
+        android:id="@+id/reviewButtonsLinearLayout"
         android:weightSum="2"
         android:layout_weight="0">
         <Button
-            android:id="@+id/resultsNewItemButton"
+            android:id="@+id/reviewNewItemButton"
             android:text="Add item"
             android:textAllCaps="false"
             android:clickable="true"
@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:enabled="false" />
         <Button
-            android:id="@+id/resultsSubmitButton"
+            android:id="@+id/reviewSubmitButton"
             android:text="Submit"
             android:textAllCaps="false"
             android:clickable="true"
@@ -51,5 +51,5 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:enabled="false" />
-    </LinearLayout>-->
+    </LinearLayout>
 </LinearLayout>

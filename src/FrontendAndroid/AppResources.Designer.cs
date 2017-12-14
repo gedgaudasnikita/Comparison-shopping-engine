@@ -293,7 +293,7 @@ namespace Comparison_shopping_engine_frontend_android {
                 return ResourceManager.GetString("SubmitPhotoButton", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Looks OK!.
         /// </summary>
