@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d0/d07/classIDisposable.html" title="IDisposable" alt="" coords="5,5,95,32"/>
-<area shape="rect" id="node2" href="$dd/d96/interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="143,5,204,32"/>
-<area shape="rect" id="node3" href="$dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html" title="A barebones implementation of an HTTP server. Uses HttpListener and handles connections asynchronousl..." alt="" coords="252,5,335,32"/>
+<area shape="rect" id="node1" href="$d7/de5/classIComparer.html" title="IComparer" alt="" coords="5,81,87,108"/>
+<area shape="rect" id="node2" href="$df/dc1/classComparison__shopping__engine__core__entities_1_1ItemDateComparer.html" title="This class describes the comparison by date logic for Item classes " alt="" coords="138,5,269,32"/>
+<area shape="rect" id="node3" href="$d5/dae/classComparison__shopping__engine__core__entities_1_1ItemNameComparer.html" title="This class describes the comparison by itemName logic for Item classes " alt="" coords="135,56,272,83"/>
+<area shape="rect" id="node4" href="$da/df6/classComparison__shopping__engine__core__entities_1_1ItemPriceComparer.html" title="This class describes the comparison by price logic for Item classes " alt="" coords="137,107,270,133"/>
+<area shape="rect" id="node5" href="$dd/d6b/classComparison__shopping__engine__core__entities_1_1ItemStoreComparer.html" title="This class describes the comparison by store logic for Item classes " alt="" coords="136,157,271,184"/>
 </map>

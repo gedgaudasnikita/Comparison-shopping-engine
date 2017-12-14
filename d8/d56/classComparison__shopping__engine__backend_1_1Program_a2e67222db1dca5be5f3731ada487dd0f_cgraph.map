@@ -2,7 +2,6 @@
 <area shape="rect" id="node2" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="InitEntities" alt="" coords="162,180,245,207"/>
 <area shape="rect" id="node10" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#ac6350cc0a27ebbe21403731706aa6cc1" title="CloseOnUserEntry" alt="" coords="138,277,269,304"/>
 <area shape="rect" id="node12" href="$dd/d96/interfaceComparison__shopping__engine__backend_1_1IServer.html#a07aaf1227e4d645f15e0a964f54ef291" title="Start the server " alt="" coords="104,329,303,370"/>
-<area shape="rect" id="node13" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a155a5e625fe5fec7d95c62cb22d3befc" title="SetUpDB" alt="" coords="165,395,241,421"/>
 <area shape="rect" id="node3" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#af67cd4a65635a9347e520b6b69201978" title="Initializes ItemManager and return reference to ItemManager object " alt="" coords="351,5,557,61"/>
 <area shape="rect" id="node5" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#afc8c3335ef46a33a51ed7d74de760421" title="A method deserializing all of the Item objects currently saved from a User configured location..." alt="" coords="351,85,557,141"/>
 <area shape="rect" id="node6" href="$dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2cf17ac219d860b4b4ba0b71828c6807" title="Comparison_shopping\l_engine_backend.Normalization\lEngine.GetInstance" alt="" coords="351,165,557,221"/>

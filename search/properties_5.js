@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['id',['Id',['../de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html#a0a916bf878a8754dea5857021ba31f59',1,'Comparison_shopping_engine_backend::Migrations::InitialCreate']]],
+  ['id',['Id',['../de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html#a0a916bf878a8754dea5857021ba31f59',1,'Comparison_shopping_engine_backend.Migrations.InitialCreate.Id()'],['../d9/d5a/classComparison__shopping__engine__backend_1_1Migrations_1_1Fix.html#a0a916bf878a8754dea5857021ba31f59',1,'Comparison_shopping_engine_backend.Migrations.Fix.Id()'],['../d8/d62/classComparison__shopping__engine__backend_1_1Migrations_1_1FixItemHistory.html#a0a916bf878a8754dea5857021ba31f59',1,'Comparison_shopping_engine_backend.Migrations.FixItemHistory.Id()']]],
   ['input',['Input',['../dd/ddf/structComparison__shopping__engine__web__protocol_1_1GetSuggestionsParameters.html#a8210bb7d872d443bfc9a87856cc5bc04',1,'Comparison_shopping_engine_web_protocol::GetSuggestionsParameters']]],
   ['item',['Item',['../db/d7c/classComparison__shopping__engine__backend_1_1DBItemHistory.html#a66707502fae51acb4aa71a2d5ce89ae5',1,'Comparison_shopping_engine_backend::DBItemHistory']]],
   ['itemdatehint',['ItemDateHint',['../de/d78/classComparison__shopping__engine__frontend__android_1_1AppResources.html#a399fee87baa8718768dd167193d9a8db',1,'Comparison_shopping_engine_frontend_android::AppResources']]],

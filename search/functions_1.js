@@ -1,6 +1,7 @@
 var searchData=
 [
   ['checkandrotatebitmap',['CheckAndRotateBitmap',['../de/d71/classComparison__shopping__engine__frontend__android_1_1BitmapExtensions.html#a4af56707b96e842e789efa5aaed7b5c1',1,'Comparison_shopping_engine_frontend_android::BitmapExtensions']]],
+  ['cleardb',['ClearDB',['../d6/d4c/classComparison__shopping__engine__backend_1_1DBManager.html#a79467422692a3c0d14fb3982b6c1ba2a',1,'Comparison_shopping_engine_backend::DBManager']]],
   ['clearlist',['ClearList',['../d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html#a2b85ec494201046fd7686395c996c272',1,'Comparison_shopping_engine_backend.ItemManager.ClearList()'],['../dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2b85ec494201046fd7686395c996c272',1,'Comparison_shopping_engine_backend.NormalizationEngine.ClearList()']]],
   ['client',['Client',['../d8/df0/classComparison__shopping__engine__frontend__android_1_1Client.html#a7564ec0bc2fc5ee72cca7fbbd0bb0365',1,'Comparison_shopping_engine_frontend_android::Client']]],
   ['closeonuserentry',['CloseOnUserEntry',['../d8/d56/classComparison__shopping__engine__backend_1_1Program.html#ac6350cc0a27ebbe21403731706aa6cc1',1,'Comparison_shopping_engine_backend::Program']]],
