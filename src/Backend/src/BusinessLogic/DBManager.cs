@@ -121,6 +121,14 @@ namespace Comparison_shopping_engine_backend
             }
         }
 
+        public static bool Contains(Item newItem)
+        {
+            using (ItemsContext db = new ItemsContext())
+            {
+                return db.Items.Any(i => i.Name.Equals(newItem.Name) && i.Store.Equals(newItem.Store) && i.Price == newItem.Price && i.Date == newItem.Date);
+            }
+        }
+
         /// <summary>
         /// WARNING!
         /// Clears the entire Database
