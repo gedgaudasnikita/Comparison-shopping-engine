@@ -1,5 +1,5 @@
 <map id="DisplayResults" name="DisplayResults">
-<area shape="rect" id="node2" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a73c7655e7b65040e69b2766d59de71b5" title="NewStoreDate" alt="" coords="165,5,270,32"/>
-<area shape="rect" id="node3" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a79e77753c99fbf31596ae4d454945fee" title="Creates a RelativeLayout with 4 editable EditText views for passed Item object. Each view is filled w..." alt="" coords="181,56,253,83"/>
-<area shape="rect" id="node4" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a4fd502c6e24c367c95ee7d9cfcf77053" title="NewItemResult" alt="" coords="163,107,272,133"/>
+<area shape="rect" id="node2" href="$dc/def/classComparison__shopping__engine__frontend__android_1_1UiHelpers.html#a30cc0595c68d32a7f9e93e5434147150" title="Comparison_shopping\l_engine_frontend_android.Ui\lHelpers.NewStoreDate" alt="" coords="163,5,348,61"/>
+<area shape="rect" id="node3" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a79e77753c99fbf31596ae4d454945fee" title="Creates a RelativeLayout with 4 editable EditText views for passed Item object. Each view is filled w..." alt="" coords="219,85,291,112"/>
+<area shape="rect" id="node4" href="$d8/da7/classComparison__shopping__engine__frontend__android_1_1ResultsActivity.html#a4fd502c6e24c367c95ee7d9cfcf77053" title="NewItemResult" alt="" coords="201,136,310,163"/>
 </map>
