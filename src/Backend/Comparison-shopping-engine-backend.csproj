@@ -93,6 +93,14 @@
     <Compile Include="Migrations\201712132209113_InitialCreate.Designer.cs">
       <DependentUpon>201712132209113_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712141528157_Fix.cs" />
+    <Compile Include="Migrations\201712141528157_Fix.Designer.cs">
+      <DependentUpon>201712141528157_Fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712141547327_FixItemHistory.cs" />
+    <Compile Include="Migrations\201712141547327_FixItemHistory.Designer.cs">
+      <DependentUpon>201712141547327_FixItemHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="src\Controller\Controller.cs" />
     <Compile Include="src\Extensions\HttpListenerRequestExtensions.cs" />
@@ -117,6 +125,12 @@
     <Compile Include="src\CoreEntities\ParseableReceipt.cs" />
     <EmbeddedResource Include="Migrations\201712132209113_InitialCreate.resx">
       <DependentUpon>201712132209113_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141528157_Fix.resx">
+      <DependentUpon>201712141528157_Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712141547327_FixItemHistory.resx">
+      <DependentUpon>201712141547327_FixItemHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

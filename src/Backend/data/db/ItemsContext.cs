@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Comparison_shopping_engine_backend
 {
-    class ItemsContext : DbContext
+    public class ItemsContext : DbContext
     {
         public DbSet<DBItem> Items { get; set; }
         public DbSet<DBItemHistory> ItemHistories { get; set; }

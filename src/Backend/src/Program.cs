@@ -22,7 +22,9 @@ namespace Comparison_shopping_engine_backend
             }
 
             server.Start();
-            SetUpDB(); //Used for initial DB creation and testing, delete later
+            //Used for initial DB creation and testing, delete after
+            //SetUpDB();
+            TestDB();
             CloseOnUserEntry();
         }
 
@@ -116,6 +118,10 @@ namespace Comparison_shopping_engine_backend
                 db.Items.Add(item3);
                 db.SaveChanges();
             }
+        }
+
+        static void TestDB()
+        {
         }
     }
 }
