@@ -10,7 +10,7 @@ namespace Comparison_shopping_engine_backend
     /// <summary>
     /// Class containing all the methods used to call Database
     /// </summary>
-    static class DBManager
+    public static class DBManager
     {
         /// <summary>
         /// Checks if there already exists a cheaper entry for GivenItem in the Database
