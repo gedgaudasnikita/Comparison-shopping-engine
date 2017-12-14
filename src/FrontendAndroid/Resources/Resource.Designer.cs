@@ -98,29 +98,38 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f050007
 			public const int homeVLinearLayout = 2131034119;
 			
-			// aapt resource value: 0x7f050013
-			public const int itemsLinearLayout = 2131034131;
-			
-			// aapt resource value: 0x7f050010
-			public const int resultsButtonsLinearLayout = 2131034128;
-			
 			// aapt resource value: 0x7f05000f
 			public const int resultsItemsLinearLayout = 2131034127;
 			
 			// aapt resource value: 0x7f05000c
 			public const int resultsLinearLayout = 2131034124;
 			
-			// aapt resource value: 0x7f050011
-			public const int resultsNewItemButton = 2131034129;
-			
 			// aapt resource value: 0x7f05000e
 			public const int resultsScroll = 2131034126;
 			
-			// aapt resource value: 0x7f050012
-			public const int resultsSubmitButton = 2131034130;
-			
 			// aapt resource value: 0x7f05000d
 			public const int resultsTextView = 2131034125;
+			
+			// aapt resource value: 0x7f050014
+			public const int reviewButtonsLinearLayout = 2131034132;
+			
+			// aapt resource value: 0x7f050013
+			public const int reviewItemsLinearLayout = 2131034131;
+			
+			// aapt resource value: 0x7f050010
+			public const int reviewLinearLayout = 2131034128;
+			
+			// aapt resource value: 0x7f050015
+			public const int reviewNewItemButton = 2131034133;
+			
+			// aapt resource value: 0x7f050012
+			public const int reviewScrollView = 2131034130;
+			
+			// aapt resource value: 0x7f050016
+			public const int reviewSubmitButton = 2131034134;
+			
+			// aapt resource value: 0x7f050011
+			public const int reviewTextView = 2131034129;
 			
 			static Id()
 			{
