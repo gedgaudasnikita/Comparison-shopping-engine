@@ -98,11 +98,14 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f050007
 			public const int homeVLinearLayout = 2131034119;
 			
-			// aapt resource value: 0x7f05000f
-			public const int itemsLinearLayout = 2131034127;
+			// aapt resource value: 0x7f050013
+			public const int itemsLinearLayout = 2131034131;
 			
 			// aapt resource value: 0x7f050010
 			public const int resultsButtonsLinearLayout = 2131034128;
+			
+			// aapt resource value: 0x7f05000f
+			public const int resultsItemsLinearLayout = 2131034127;
 			
 			// aapt resource value: 0x7f05000c
 			public const int resultsLinearLayout = 2131034124;
@@ -140,6 +143,9 @@ namespace Comparison_shopping_engine_frontend_android
 			
 			// aapt resource value: 0x7f020002
 			public const int Results = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Review = 2130837507;
 			
 			static Layout()
 			{
