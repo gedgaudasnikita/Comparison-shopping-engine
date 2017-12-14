@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Comparison_shopping_engine_admin</RootNamespace>
     <AssemblyName>Comparison-shopping-engine-admin</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -73,9 +74,14 @@
     <Compile Include="src\Forms\ItemDeleteForm.Designer.cs">
       <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="src\Forms\ItemNotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\ItemNotifyForm.Designer.cs">
+      <DependentUpon>ItemNotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Notifications\Notification.cs" />
     <Compile Include="src\Notifications\NotificationSender.cs" />
     <EmbeddedResource Include="src\Forms\ItemCorrectForm.resx">
       <DependentUpon>ItemCorrectForm.cs</DependentUpon>
@@ -94,8 +100,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="src\Forms\ItemNotifyForm.resx">
+      <DependentUpon>ItemNotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,6 +125,10 @@
     <ProjectReference Include="..\CoreEntities\Comparison-shopping-engine-core-entities.csproj">
       <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationProtocol\Comparison-shopping-engine-notification-protocol\Comparison-shopping-engine-notification-protocol.csproj">
+      <Project>{8563F3C9-3201-4EBE-BB30-FC61501C0545}</Project>
+      <Name>Comparison-shopping-engine-notification-protocol</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

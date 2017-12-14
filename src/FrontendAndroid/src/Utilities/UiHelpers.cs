@@ -97,10 +97,17 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="title">The content of the notificatoin</param>
         public static void ShowNotification(Context ctx, String content)
         {
+            Intent intent = new Intent(ctx, typeof(MainActivity));
+            
+            PendingIntent pendingIntent =
+                PendingIntent.GetActivity(ctx, 0, intent, PendingIntentFlags.OneShot);
+
             Notification.Builder builder = new Notification.Builder(ctx)
-                .SetContentTitle("CoShE")
-                .SetContentText(content)
-                .SetSmallIcon(Resource.Drawable.common_google_signin_btn_icon_dark);
+                .SetContentIntent(pendingIntent)
+                .SetContentTitle(content)
+                .SetContentText("")
+                .SetDefaults(NotificationDefaults.Sound | NotificationDefaults.Vibrate)
+                .SetSmallIcon(Resource.Drawable.notification);
 
             // Build the notification:
             Notification notification = builder.Build();

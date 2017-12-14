@@ -189,6 +189,9 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f020014
 			public const int googleg_standard_color_18 = 2130837524;
 			
+			// aapt resource value: 0x7f020015
+			public const int notification = 2130837525;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

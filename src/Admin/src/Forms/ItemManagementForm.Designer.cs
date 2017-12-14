@@ -177,6 +177,7 @@
             this.NotifyButton.TabIndex = 9;
             this.NotifyButton.Text = "Notify";
             this.NotifyButton.UseVisualStyleBackColor = true;
+            this.NotifyButton.Click += new System.EventHandler(this.NotifyButton_Click);
             // 
             // MainForm
             // 

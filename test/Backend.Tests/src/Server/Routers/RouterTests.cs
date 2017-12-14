@@ -32,7 +32,7 @@ namespace Comparison_shopping_engine_backend.Tests
         }
 
         [Test]
-        public void GetCallback_getsCorrectCallback()
+        public void GetCallbackTest_getsCorrectCallback()
         {
             TestEndpoint endpoint = new TestEndpoint();
 

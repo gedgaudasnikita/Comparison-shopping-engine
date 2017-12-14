@@ -67,5 +67,12 @@ namespace Comparison_shopping_engine_admin
 
             deletetionForm.Show();
         }
+
+        private void NotifyButton_Click(object sender, EventArgs e)
+        {
+            var notifyForm = new ItemNotifyForm(GetItemFromCells(ItemDataGridView.SelectedRows[0].Cells));
+
+            notifyForm.Show();
+        }
     }
 }
