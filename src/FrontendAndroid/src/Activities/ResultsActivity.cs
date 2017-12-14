@@ -32,8 +32,8 @@ namespace Comparison_shopping_engine_frontend_android
 
         private void DisplayResults(List<Item> result)
         {
-            resultsItemsLinearLayout.AddView(NewStoreDate(AppData.receipt.Date, AppData.receipt.Store, false));
-
+            resultsItemsLinearLayout.AddView(UiHelpers.NewStoreDate(this, ref storeEdit, ref dateEdit, AppData.receipt.Date, AppData.receipt.Store, false));
+            
             for (int index = 0; index < result.Count; index++)
             {
                 var item = result[index];
@@ -178,45 +178,6 @@ namespace Comparison_shopping_engine_frontend_android
             }
 
             return itemLayout;
-        }
-
-        private RelativeLayout NewStoreDate(DateTime date, string store, bool clickable = true)
-        {
-            RelativeLayout storeDateLayout = new RelativeLayout(this)
-            {
-                LayoutParameters = new ViewGroup.LayoutParams(
-                    width: ViewGroup.LayoutParams.MatchParent,
-                    height: ViewGroup.LayoutParams.WrapContent),
-            };
-
-            RelativeLayout.LayoutParams lpStore = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
-            lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
-            ItemStoreView _storeEdit = new ItemStoreView(this, clickable, store)
-            {
-                LayoutParameters = lpStore,
-                Id = View.GenerateViewId()
-            };
-
-
-            RelativeLayout.LayoutParams lpDate = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.WrapContent,
-                ViewGroup.LayoutParams.WrapContent);
-            lpDate.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
-            ItemDateView _dateEdit = new ItemDateView(this, clickable, date)
-            {
-                LayoutParameters = lpDate,
-                Id = View.GenerateViewId()
-            };
-
-            storeEdit = _storeEdit;
-            dateEdit = _dateEdit;
-
-            storeDateLayout.AddView(_storeEdit);
-            storeDateLayout.AddView(_dateEdit);
-
-            return storeDateLayout;
         }
     }
 }
