@@ -29,6 +29,14 @@ namespace Comparison_shopping_engine_backend
             Date = item.Date;
         }
 
+        public DBItem(DBItemHistory item)
+        {
+            Name = item.Name;
+            Store = item.Store;
+            Price = item.Price;
+            Date = item.Date;
+        }
+
         override public string ToString()
         {
             return Name + " " + Store + " " + Price.ToString() + " " + Date.ToString();

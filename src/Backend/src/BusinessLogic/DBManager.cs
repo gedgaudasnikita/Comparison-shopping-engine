@@ -36,11 +36,14 @@ namespace Comparison_shopping_engine_backend
                                                                 where item.Name.Equals(newItem.Name)
                                                                 select item).First()));
 
-                        DBItem itemToRemove = new DBItem { Name = newItem.Name };
-                        db.Items.Attach(itemToRemove);
-                        db.Items.Remove(itemToRemove);
+                        DBItem itemToChange = (from item in db.Items
+                                              where item.Name.Equals(newItem.Name)
+                                              select item).First();
 
-                        db.Items.Add(new DBItem(newItem));
+                        itemToChange.Name = newItem.Name;
+                        itemToChange.Store = newItem.Store;
+                        itemToChange.Price = newItem.Price;
+                        itemToChange.Date = newItem.Date;
                     }
 
                 }
@@ -82,7 +85,42 @@ namespace Comparison_shopping_engine_backend
             }
         }
 
-        //These methods should be used for testing purposes only
+        //These methods are used for Unit tests and other testing purposes
+        /// <summary>
+        /// Removes given item from Database and replaces it with the cheapest of its ItemHistories if it has any
+        /// </summary>
+        /// <param name="newItem"> An <see cref = "Item"/> to delete</param>
+        public static void Remove(Item newItem)
+        {
+            using (ItemsContext db = new ItemsContext())
+            {
+                if (db.Items.Any(i => i.Name.Equals(newItem.Name) && i.Store.Equals(newItem.Store) && i.Price == newItem.Price && i.Date == newItem.Date))
+                {
+                    if (db.ItemHistories.Any(i => i.Name.Equals(newItem.Name)))
+                    {
+                        DBItemHistory itemToRemove = (from item in db.ItemHistories
+                                                      where item.Name.Equals(newItem.Name)
+                                                      orderby item.Price ascending
+                                                      select item).First();
+
+                        DBItem itemToReplace = db.Items.First(i => i.Name.Equals(itemToRemove.Name));
+                        itemToReplace.Store = itemToRemove.Store;
+                        itemToReplace.Price = itemToRemove.Price;
+                        itemToReplace.Date = itemToRemove.Date;
+
+                        db.ItemHistories.Remove(itemToRemove);
+
+                    }
+                    else
+                    {
+                        DBItem itemToRemove = new DBItem(newItem);
+                        db.Items.Remove(itemToRemove);
+                    }
+                    db.SaveChanges();
+                }
+            }
+        }
+
         /// <summary>
         /// WARNING!
         /// Clears the entire Database
