@@ -179,7 +179,7 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private async void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(ResultsActivity));
+            Intent intent = new Intent(this, typeof(ReviewActivity));
 
             // Generate receipt out of image, if we have one
             if (AppData.bitmap != null)
