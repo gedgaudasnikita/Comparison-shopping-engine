@@ -1,5 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d0/d07/classIDisposable.html" title="IDisposable" alt="" coords="5,5,95,32"/>
-<area shape="rect" id="node2" href="$dd/d96/interfaceComparison__shopping__engine__backend_1_1IServer.html" title="Implemented by the classes that aim to encapsulate the functionality of the server. The responsibilities of such classes include setting up the listeners, manage handling of the connections and handle the exceptions appropriately " alt="" coords="143,5,204,32"/>
-<area shape="rect" id="node3" href="$dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html" title="A barebones implementation of an HTTP server. Uses HttpListener and handles connections asynchronousl..." alt="" coords="252,5,335,32"/>
+<area shape="rect" id="node1" href="$d0/da6/classForm.html" title="Form" alt="" coords="5,56,57,83"/>
+<area shape="rect" id="node2" href="$d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html" title="ItemCorrectForm" alt="" coords="105,5,224,32"/>
+<area shape="rect" id="node3" href="$d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html" title="ItemDeleteForm" alt="" coords="107,56,222,83"/>
+<area shape="rect" id="node4" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html" title="MainForm" alt="" coords="125,107,205,133"/>
 </map>

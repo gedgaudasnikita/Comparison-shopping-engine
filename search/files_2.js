@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['client_2ecs',['Client.cs',['../dd/dc3/Client_8cs.html',1,'']]],
-  ['configactivity_2ecs',['ConfigActivity.cs',['../dc/d99/ConfigActivity_8cs.html',1,'']]],
-  ['configuration_2ecs',['Configuration.cs',['../d8/df4/Configuration_8cs.html',1,'']]],
-  ['controller_2ecs',['Controller.cs',['../df/dbc/Controller_8cs.html',1,'']]]
+  ['backendinterface_2ecs',['BackendInterface.cs',['../d1/d2d/BackendInterface_8cs.html',1,'']]],
+  ['bitmapextensions_2ecs',['BitmapExtensions.cs',['../d5/db4/BitmapExtensions_8cs.html',1,'']]]
 ];

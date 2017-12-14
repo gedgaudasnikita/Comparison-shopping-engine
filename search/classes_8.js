@@ -10,6 +10,8 @@ var searchData=
   ['iendpoint_3c_20string_2c_20object_2c_20receipt_20_3e',['IEndpoint&lt; string, object, Receipt &gt;',['../d6/ddd/interfaceComparison__shopping__engine__web__protocol_1_1IEndpoint.html',1,'Comparison_shopping_engine_web_protocol']]],
   ['iendpointmeta',['IEndpointMeta',['../d4/d3b/interfaceComparison__shopping__engine__web__protocol_1_1IEndpointMeta.html',1,'Comparison_shopping_engine_web_protocol']]],
   ['iequatable',['IEquatable',['../d9/d1c/classIEquatable.html',1,'']]],
+  ['imigrationmetadata',['IMigrationMetadata',['../df/d4e/classIMigrationMetadata.html',1,'']]],
+  ['initialcreate',['InitialCreate',['../de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html',1,'Comparison_shopping_engine_backend::Migrations']]],
   ['iparser',['IParser',['../d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html',1,'Comparison_shopping_engine_backend']]],
   ['iparser_3c_20datetime_20_3e',['IParser&lt; DateTime &gt;',['../d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html',1,'Comparison_shopping_engine_backend']]],
   ['iparser_3c_20list_3c_20item_20_3e_3e',['IParser&lt; List&lt; Item &gt;&gt;',['../df/d0e/classIParser_3_01List_3_01Item_01_4_4.html',1,'']]],
@@ -29,6 +31,7 @@ var searchData=
   ['itemnameview',['ItemNameView',['../da/d71/classComparison__shopping__engine__frontend__android_1_1ItemNameView.html',1,'Comparison_shopping_engine_frontend_android']]],
   ['itempricecomparer',['ItemPriceComparer',['../da/df6/classComparison__shopping__engine__core__entities_1_1ItemPriceComparer.html',1,'Comparison_shopping_engine_core_entities']]],
   ['itempriceview',['ItemPriceView',['../d5/d16/classComparison__shopping__engine__frontend__android_1_1ItemPriceView.html',1,'Comparison_shopping_engine_frontend_android']]],
+  ['itemscontext',['ItemsContext',['../de/dd0/classComparison__shopping__engine__backend_1_1ItemsContext.html',1,'Comparison_shopping_engine_backend']]],
   ['itemstorecomparer',['ItemStoreComparer',['../dd/d6b/classComparison__shopping__engine__core__entities_1_1ItemStoreComparer.html',1,'Comparison_shopping_engine_core_entities']]],
   ['itemstoreview',['ItemStoreView',['../d3/d0f/classComparison__shopping__engine__frontend__android_1_1ItemStoreView.html',1,'Comparison_shopping_engine_frontend_android']]]
 ];

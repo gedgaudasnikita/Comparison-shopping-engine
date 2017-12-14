@@ -73,6 +73,7 @@ var menudata={children:[
 {text:"n",url:"functions_prop.html#index_n"},
 {text:"p",url:"functions_prop.html#index_p"},
 {text:"r",url:"functions_prop.html#index_r"},
-{text:"s",url:"functions_prop.html#index_s"}]}]}]},
+{text:"s",url:"functions_prop.html#index_s"},
+{text:"t",url:"functions_prop.html#index_t"}]}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"}]}]}

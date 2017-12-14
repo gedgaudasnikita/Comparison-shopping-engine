@@ -1,6 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d0/da6/classForm.html" title="Form" alt="" coords="5,56,57,83"/>
-<area shape="rect" id="node2" href="$d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html" title="ItemCorrectForm" alt="" coords="105,5,224,32"/>
-<area shape="rect" id="node3" href="$d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html" title="ItemDeleteForm" alt="" coords="107,56,222,83"/>
-<area shape="rect" id="node4" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html" title="MainForm" alt="" coords="125,107,205,133"/>
+<area shape="rect" id="node1" href="$db/d7c/classComparison__shopping__engine__backend_1_1DBItemHistory.html" title="DBItemHistory" alt="" coords="5,5,112,32"/>
 </map>
