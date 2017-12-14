@@ -12,6 +12,7 @@ using Android.Widget;
 
 using Firebase.Iid;
 using Android.Util;
+using Firebase.Messaging;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -21,8 +22,7 @@ namespace Comparison_shopping_engine_frontend_android
     {
         public override void OnTokenRefresh()
         {
-            var refreshedToken = FirebaseInstanceId.Instance.Token;
-            System.Console.WriteLine("Refreshed token: " + refreshedToken);
+            FirebaseMessaging.Instance.SubscribeToTopic(Configuration.notificationTopic);
         }
     }
 }

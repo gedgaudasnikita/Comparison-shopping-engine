@@ -21,5 +21,6 @@ namespace Comparison_shopping_engine_frontend_android
         public const string backendUrl = "http://10.0.2.2:4444";
         public const string dbPath = "db.db3";
         public const int topItems = 20;
+        public const string notificationTopic = "instant";
     }
 }

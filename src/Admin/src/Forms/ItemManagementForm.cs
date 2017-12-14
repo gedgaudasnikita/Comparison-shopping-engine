@@ -29,6 +29,9 @@ namespace Comparison_shopping_engine_admin
 
             switch (ItemDataGridView.SelectedRows.Count)
             {
+                case 0:
+                    restore = merge = delete = correct = notify = false;
+                    break;
                 case 1:
                     restore = delete = correct = notify = true;
                     merge = false;
@@ -38,7 +41,8 @@ namespace Comparison_shopping_engine_admin
                     merge = notify = true;
                     break;
                 default:
-                    restore = merge = delete = correct = notify = false;
+                    restore = merge = delete = correct = false;
+                    notify = true;
                     break;
             }
 
@@ -70,8 +74,13 @@ namespace Comparison_shopping_engine_admin
 
         private void NotifyButton_Click(object sender, EventArgs e)
         {
-            var notifyForm = new ItemNotifyForm(GetItemFromCells(ItemDataGridView.SelectedRows[0].Cells));
+            var itemsToNotify = new List<Item>();
+            foreach (DataGridViewRow row in ItemDataGridView.SelectedRows)
+            {
+                itemsToNotify.Add(GetItemFromCells(row.Cells));
+            }
 
+            var notifyForm = new ItemNotifyForm(itemsToNotify);
             notifyForm.Show();
         }
     }

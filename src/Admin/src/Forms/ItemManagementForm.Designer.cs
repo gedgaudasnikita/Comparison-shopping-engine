@@ -170,7 +170,6 @@
             // 
             // NotifyButton
             // 
-            this.NotifyButton.Enabled = false;
             this.NotifyButton.Location = new System.Drawing.Point(369, 214);
             this.NotifyButton.Name = "NotifyButton";
             this.NotifyButton.Size = new System.Drawing.Size(98, 23);

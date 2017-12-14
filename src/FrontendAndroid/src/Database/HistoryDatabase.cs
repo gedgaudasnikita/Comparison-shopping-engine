@@ -26,9 +26,6 @@ namespace Comparison_shopping_engine_frontend_android
 
         public Task<int> AddItem(ItemHistory item)
         {
-            Console.WriteLine("in add item");
-            //return database.InsertAsync(item);
-
             return database.ExecuteAsync("INSERT OR REPLACE INTO ItemHistory (ItemName, Count) VALUES (?, ifnull((SELECT Count FROM ItemHistory WHERE ItemName = ?), 0) + 1)", item.ItemName, item.ItemName);
         }
 

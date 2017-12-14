@@ -30,9 +30,9 @@
         {
             this.ItemNameLabel = new System.Windows.Forms.Label();
             this.NotificationTextLabel = new System.Windows.Forms.Label();
-            this.ItemNameTextBox = new System.Windows.Forms.TextBox();
             this.NotificationTextBox = new System.Windows.Forms.TextBox();
             this.NotifyButton = new System.Windows.Forms.Button();
+            this.ItemsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ItemNameLabel
@@ -47,30 +47,22 @@
             // NotificationTextLabel
             // 
             this.NotificationTextLabel.AutoSize = true;
-            this.NotificationTextLabel.Location = new System.Drawing.Point(12, 37);
+            this.NotificationTextLabel.Location = new System.Drawing.Point(12, 69);
             this.NotificationTextLabel.Name = "NotificationTextLabel";
             this.NotificationTextLabel.Size = new System.Drawing.Size(87, 13);
             this.NotificationTextLabel.TabIndex = 1;
             this.NotificationTextLabel.Text = "Notification Text:";
             // 
-            // ItemNameTextBox
-            // 
-            this.ItemNameTextBox.Enabled = false;
-            this.ItemNameTextBox.Location = new System.Drawing.Point(105, 6);
-            this.ItemNameTextBox.Name = "ItemNameTextBox";
-            this.ItemNameTextBox.Size = new System.Drawing.Size(167, 20);
-            this.ItemNameTextBox.TabIndex = 2;
-            // 
             // NotificationTextBox
             // 
-            this.NotificationTextBox.Location = new System.Drawing.Point(105, 34);
+            this.NotificationTextBox.Location = new System.Drawing.Point(105, 66);
             this.NotificationTextBox.Name = "NotificationTextBox";
             this.NotificationTextBox.Size = new System.Drawing.Size(167, 20);
             this.NotificationTextBox.TabIndex = 3;
             // 
             // NotifyButton
             // 
-            this.NotifyButton.Location = new System.Drawing.Point(105, 64);
+            this.NotifyButton.Location = new System.Drawing.Point(105, 96);
             this.NotifyButton.Name = "NotifyButton";
             this.NotifyButton.Size = new System.Drawing.Size(75, 23);
             this.NotifyButton.TabIndex = 4;
@@ -78,14 +70,24 @@
             this.NotifyButton.UseVisualStyleBackColor = true;
             this.NotifyButton.Click += new System.EventHandler(this.NotifyButton_Click);
             // 
+            // ItemsTextBox
+            // 
+            this.ItemsTextBox.Enabled = false;
+            this.ItemsTextBox.Location = new System.Drawing.Point(105, 6);
+            this.ItemsTextBox.Multiline = true;
+            this.ItemsTextBox.Name = "ItemsTextBox";
+            this.ItemsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ItemsTextBox.Size = new System.Drawing.Size(167, 54);
+            this.ItemsTextBox.TabIndex = 5;
+            // 
             // ItemNotifyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 94);
+            this.ClientSize = new System.Drawing.Size(284, 131);
+            this.Controls.Add(this.ItemsTextBox);
             this.Controls.Add(this.NotifyButton);
             this.Controls.Add(this.NotificationTextBox);
-            this.Controls.Add(this.ItemNameTextBox);
             this.Controls.Add(this.NotificationTextLabel);
             this.Controls.Add(this.ItemNameLabel);
             this.Name = "ItemNotifyForm";
@@ -99,8 +101,8 @@
 
         private System.Windows.Forms.Label ItemNameLabel;
         private System.Windows.Forms.Label NotificationTextLabel;
-        private System.Windows.Forms.TextBox ItemNameTextBox;
         private System.Windows.Forms.TextBox NotificationTextBox;
         private System.Windows.Forms.Button NotifyButton;
+        private System.Windows.Forms.TextBox ItemsTextBox;
     }
 }

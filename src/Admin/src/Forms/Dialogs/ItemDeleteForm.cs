@@ -11,11 +11,14 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_admin
 {
-    public partial class ItemNotifyForm : Form
+    /// <summary>
+    /// This form is responsible for deleting the item entries
+    /// </summary>
+    public partial class ItemDeleteForm : Form
     {
         private Item item;
 
-        public ItemNotifyForm(Item _item)
+        public ItemDeleteForm(Item _item)
         {
             InitializeComponent();
             item = _item;
@@ -24,12 +27,16 @@ namespace Comparison_shopping_engine_admin
 
         private void DisplayItem()
         {
-            ItemNameTextBox.Text = item.Name;
+            NameLabel.Text = item.Name;
+            PriceLabel.Text = item.Price.ToString();
+            StoreLabel.Text = item.Store;
+            DateLabel.Text = item.Date.ToString("yyyy-MM-dd");
         }
 
-        private void NotifyButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
-            NotificationSender.Send(ItemNameTextBox.Text, NotificationTextBox.Text);
+            //Do the database stuff
+            Close();
         }
     }
 }

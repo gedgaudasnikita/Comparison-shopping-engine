@@ -16,23 +16,21 @@ namespace Comparison_shopping_engine_frontend_android
     {
         public override async void OnMessageReceived(RemoteMessage message)
         {
-            string body = message.GetNotification().Body;
+            await AppData.Database.AddItem(new ItemHistory() { ItemName = "hey" });
 
-            var parsedData = new NotificationData(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(body ?? "")));
-
-            if (parsedData.MapItemToText != null)
+            if (message.Data != null)
             {
                 var topItemsLocal = await AppData.Database.GetTopItems(Configuration.topItems);
 
                 foreach (ItemHistory item in topItemsLocal)
                 {
-                    if (parsedData.MapItemToText.TryGetValue(item.ItemName, out string text))
+                    if (message.Data.TryGetValue(item.ItemName, out string text))
                     {
                         UiHelpers.ShowNotification(this, text);
                         return;
                     }
                 }
             }
-        }
+            }
     }
 }

@@ -158,8 +158,8 @@
     <Compile Include="src\ImageRecognition\OcrWrapper.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Notifications\NotificationMessagingService.cs" />
     <Compile Include="src\Notifications\NotificationIdService.cs" />
+    <Compile Include="src\Notifications\NotificationMessagingService.cs" />
     <Compile Include="src\Other\AppData.cs" />
     <Compile Include="src\Network\BackendInterface.cs" />
     <Compile Include="src\Network\Client.cs" />
