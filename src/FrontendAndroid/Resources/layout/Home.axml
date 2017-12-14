@@ -57,7 +57,7 @@
     </LinearLayout>
     <Button
         android:id="@+id/homeResultScreenButton"
-        android:text="Result Screen"
+        android:text="Proceed"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
