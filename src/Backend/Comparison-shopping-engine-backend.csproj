@@ -86,9 +86,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data\db\DBItem.cs" />
-    <Compile Include="data\db\DBItemHistory.cs" />
-    <Compile Include="data\db\ItemsContext.cs" />
+    <Compile Include="src\BusinessLogic\DBManager.cs" />
+    <Compile Include="src\DataBase\DBItem.cs" />
+    <Compile Include="src\DataBase\DBItemHistory.cs" />
+    <Compile Include="src\DataBase\ItemsContext.cs" />
     <Compile Include="Migrations\201712132209113_InitialCreate.cs" />
     <Compile Include="Migrations\201712132209113_InitialCreate.Designer.cs">
       <DependentUpon>201712132209113_InitialCreate.cs</DependentUpon>

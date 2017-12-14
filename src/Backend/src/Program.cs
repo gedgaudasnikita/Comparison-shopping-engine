@@ -22,9 +22,9 @@ namespace Comparison_shopping_engine_backend
             }
 
             server.Start();
-            //Used for initial DB creation and testing, delete after
-            //SetUpDB();
-            TestDB();
+            //Testing the DB
+            DBManager.SetupDB();
+            DBManager.PrintDB();
             CloseOnUserEntry();
         }
 
@@ -82,46 +82,6 @@ namespace Comparison_shopping_engine_backend
             }
 
             return initialized;
-        }
-
-        static void SetUpDB()
-        {
-            using (var db = new ItemsContext())
-            {
-                //Add old items to DB
-                DBItem item1 = new DBItem
-                {
-                    Name = "KELMES pienas, 2,5% rieb.",
-                    Store = "IKI",
-                    Price = 10,
-                    Date = DateTime.Now.Date
-                };
-
-                DBItem item2 = new DBItem
-                {
-                    Name = "Malta kava Paulig Extra“",
-                    Store = "MAXIMA",
-                    Price = 899,
-                    Date = DateTime.Now.Date
-                };
-
-                DBItem item3 = new DBItem
-                {
-                    Name = "Ledai Maxima Favorit",
-                    Store = "MAXIMA",
-                    Price = 129,
-                    Date = DateTime.Now.Date
-                };
-
-                db.Items.Add(item1);
-                db.Items.Add(item2);
-                db.Items.Add(item3);
-                db.SaveChanges();
-            }
-        }
-
-        static void TestDB()
-        {
         }
     }
 }

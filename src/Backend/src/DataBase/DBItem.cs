@@ -29,5 +29,10 @@ namespace Comparison_shopping_engine_backend
             Date = item.Date;
         }
 
+        override public string ToString()
+        {
+            return Name + " " + Store + " " + Price.ToString() + " " + Date.ToString();
+        }
+
     }
 }
