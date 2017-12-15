@@ -1,3 +1,4 @@
 <map id="ItemCorrectForm" name="ItemCorrectForm">
-<area shape="rect" id="node2" href="$d0/da6/classForm.html" title="{Form\n||}" alt="" coords="5,5,57,83"/>
+<area shape="rect" id="node2" href="$d0/da6/classForm.html" title="{Form\n||}" alt="" coords="5,160,57,237"/>
+<area shape="rect" id="node4" href="$d9/d59/classComparison__shopping__engine__admin_1_1DbClient.html" title="{DbClient\n||+ DbClient()\l+ GetAllItems()\l+ UpdateItem()\l}" alt="" coords="152,145,263,252"/>
 </map>

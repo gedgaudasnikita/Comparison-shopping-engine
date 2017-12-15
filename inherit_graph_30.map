@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d3/ded/classComparison__shopping__engine__backend_1_1ItemManager.html" title="Class responsible for managing an internal List&lt;Item&gt;, as well as writing/reading from file ItemManag..." alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node1" href="$d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html" title="IParser\&lt; string \&gt;" alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$db/db1/classComparison__shopping__engine__backend_1_1StoreParser.html" title="This class describes the behaviour of parsing a storeName from plain text. Intended for usage from Pa..." alt="" coords="172,5,263,32"/>
 </map>

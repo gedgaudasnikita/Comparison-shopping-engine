@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d1/d7a/interfaceComparison__shopping__engine__backend_1_1IParser.html" title="Interface to be implemented by all the ParseableReceipt field parsers. The generic type T is the type..." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node1" href="$d9/d0c/classDbMigration.html" title="DbMigration" alt="" coords="26,31,117,57"/>
+<area shape="rect" id="node2" href="$d9/d5a/classComparison__shopping__engine__backend_1_1Migrations_1_1Fix.html" title="Fix" alt="" coords="219,5,259,32"/>
+<area shape="rect" id="node3" href="$d8/d62/classComparison__shopping__engine__backend_1_1Migrations_1_1FixItemHistory.html" title="FixItemHistory" alt="" coords="185,56,292,83"/>
+<area shape="rect" id="node4" href="$de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html" title="InitialCreate" alt="" coords="193,107,284,133"/>
+<area shape="rect" id="node5" href="$df/d4e/classIMigrationMetadata.html" title="IMigrationMetadata" alt="" coords="5,81,137,108"/>
 </map>

@@ -1,8 +1,0 @@
-<map id="NormalizationEngine" name="NormalizationEngine">
-<area shape="rect" id="node2" href="$dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a2cf17ac219d860b4b4ba0b71828c6807" title="GetInstance" alt="" coords="195,100,287,127"/>
-<area shape="rect" id="node3" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a7a01304694a6c748a7958a713e33853d" title="Comparison_shopping\l_engine_backend.Program.Init\lEntities" alt="" coords="346,5,543,61"/>
-<area shape="rect" id="node5" href="$d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html#a67697bd3be9cca164733a770439ad76f" title="Processes given string into a Receipt with normalised names " alt="" coords="351,85,538,141"/>
-<area shape="rect" id="node7" href="$d9/dde/classComparison__shopping__engine__backend_1_1GetSuggestionsBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="335,165,555,221"/>
-<area shape="rect" id="node4" href="$d8/d56/classComparison__shopping__engine__backend_1_1Program.html#a2e67222db1dca5be5f3731ada487dd0f" title="The main entry point for the application. " alt="" coords="604,13,812,54"/>
-<area shape="rect" id="node6" href="$d6/df8/classComparison__shopping__engine__backend_1_1ProcessImageBackendEndpoint.html#ab27949d5911fba85a94a0964a46010e3" title="Prepares the data to be handled by the Controller and calls the respective method in it..." alt="" coords="603,85,813,141"/>
-</map>

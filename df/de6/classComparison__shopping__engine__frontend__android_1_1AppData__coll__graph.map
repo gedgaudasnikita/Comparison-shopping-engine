@@ -1,4 +1,5 @@
 <map id="AppData" name="AppData">
-<area shape="rect" id="node4" href="$dc/d3f/classComparison__shopping__engine__core__entities_1_1Receipt.html" title="A class representing the Receipt entity. " alt="" coords="231,132,318,253"/>
-<area shape="rect" id="node5" href="$d9/d1c/classIEquatable.html" title="{IEquatable\&lt; Receipt \&gt;\n||}" alt="" coords="199,5,350,83"/>
+<area shape="rect" id="node3" href="$d7/d79/classComparison__shopping__engine__frontend__android_1_1HistoryDatabase.html" title="{HistoryDatabase\n||+ HistoryDatabase()\l+ AddItem()\l+ GetTopItems()\l}" alt="" coords="128,153,267,259"/>
+<area shape="rect" id="node6" href="$dc/d3f/classComparison__shopping__engine__core__entities_1_1Receipt.html" title="A class representing the Receipt entity. " alt="" coords="394,145,481,267"/>
+<area shape="rect" id="node7" href="$d9/d1c/classIEquatable.html" title="{IEquatable\&lt; Receipt \&gt;\n||}" alt="" coords="362,5,513,83"/>
 </map>

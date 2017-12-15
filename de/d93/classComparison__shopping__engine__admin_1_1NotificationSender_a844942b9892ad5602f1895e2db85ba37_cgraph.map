@@ -1,0 +1,5 @@
+<map id="Send" name="Send">
+<area shape="rect" id="node2" href="$df/dc6/classComparison__shopping__engine__admin_1_1NotificationWebRequestBuilder.html#ad03e51d8b92c4d08beb1ceee74de327d" title="Create a HttpWebRequest object filled with necessary metadata " alt="" coords="105,5,332,76"/>
+<area shape="rect" id="node3" href="$dd/d10/classComparison__shopping__engine__notification__protocol_1_1NotificationData.html#abbbd571d6acad8bfe9c85c2cb44f385b" title="Comparison_shopping\l_engine_notification\l_protocol.NotificationData.\lSerialize" alt="" coords="131,100,306,171"/>
+<area shape="rect" id="node4" href="$df/d23/classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#a8597c311fd2ef051c537f8709499d322" title="An overload, that takes Stream as the first argument instead of JsonWriter Avoids DRY..." alt="" coords="380,107,559,163"/>
+</map>

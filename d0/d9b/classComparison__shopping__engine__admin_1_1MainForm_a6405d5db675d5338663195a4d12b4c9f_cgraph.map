@@ -1,7 +1,11 @@
 <map id="InitializeComponent" name="InitializeComponent">
-<area shape="rect" id="node2" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#ad29bc4e1a0518254c8d1811bf9c2f11a" title="ItemDataGridView_CellContent\lClick" alt="" coords="188,5,388,47"/>
-<area shape="rect" id="node3" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a99d00c37ee990aef0e26d45a00bb6a76" title="ItemDataGridView_Selection\lChanged" alt="" coords="195,71,381,112"/>
-<area shape="rect" id="node4" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a06fbbd56b453914219bed31a984310d6" title="DeleteButton_Click" alt="" coords="221,137,355,163"/>
-<area shape="rect" id="node6" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a78c76956c0e7b50470d37b547dfea2b0" title="CorrectButton_Click" alt="" coords="219,187,357,214"/>
-<area shape="rect" id="node5" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#add8788140917f23eb0b5a1e5f693f346" title="GetItemFromCells" alt="" coords="436,162,563,189"/>
+<area shape="rect" id="node2" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#af36c70f3d22bfe15b27b20e6f59ad3f0" title="ConnectButton_Click" alt="" coords="216,5,360,32"/>
+<area shape="rect" id="node3" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#ae0b5f365724cc19fb59c976b76b93bbc" title="RefreshButton_Click" alt="" coords="436,31,576,57"/>
+<area shape="rect" id="node5" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#ad29bc4e1a0518254c8d1811bf9c2f11a" title="ItemDataGridView_CellContent\lClick" alt="" coords="188,107,388,149"/>
+<area shape="rect" id="node6" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a99d00c37ee990aef0e26d45a00bb6a76" title="ItemDataGridView_Selection\lChanged" alt="" coords="195,173,381,214"/>
+<area shape="rect" id="node7" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a06fbbd56b453914219bed31a984310d6" title="DeleteButton_Click" alt="" coords="221,239,355,265"/>
+<area shape="rect" id="node9" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a78c76956c0e7b50470d37b547dfea2b0" title="CorrectButton_Click" alt="" coords="219,289,357,316"/>
+<area shape="rect" id="node10" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#ad8c1c4ab3a79627c644609f190f5a64e" title="NotifyButton_Click" alt="" coords="223,340,353,367"/>
+<area shape="rect" id="node4" href="$d9/d59/classComparison__shopping__engine__admin_1_1DbClient.html#a361b5d0df46c82b896a7b5ddd9ad284e" title="Comparison_shopping\l_engine_admin.DbClient.Get\lAllItems" alt="" coords="624,16,811,72"/>
+<area shape="rect" id="node8" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#add8788140917f23eb0b5a1e5f693f346" title="GetItemFromCells" alt="" coords="443,289,569,316"/>
 </map>

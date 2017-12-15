@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['saveconfig',['SaveConfig',['../dc/d09/classComparison__shopping__engine__frontend__android_1_1MainActivity.html#aa67914e91e1b1ff65d68df7e673a5ca9',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
-  ['savereceipt',['SaveReceipt',['../d3/d8b/classComparison__shopping__engine__backend_1_1Controller.html#a6f052a72878f77714c7f7f05dd40e3bc',1,'Comparison_shopping_engine_backend.Controller.SaveReceipt()'],['../da/d3e/classComparison__shopping__engine__frontend__android_1_1BackendInterface.html#a88d6a011c5db82c1baf9c1c235024ba0',1,'Comparison_shopping_engine_frontend_android.BackendInterface.SaveReceipt()']]],
-  ['seed',['Seed',['../da/dc4/classComparison__shopping__engine__backend_1_1Migrations_1_1Configuration.html#a6a89131c2115bd33ff99b711956aaff7',1,'Comparison_shopping_engine_backend::Migrations::Configuration']]],
-  ['serialize',['Serialize',['../df/d23/classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#a8597c311fd2ef051c537f8709499d322',1,'Comparison_shopping_engine_core_entities::JsonSerializerStream']]],
-  ['setupdb',['SetupDB',['../d6/d4c/classComparison__shopping__engine__backend_1_1DBManager.html#a9e3d065bfc81692159fe6e54396e1e21',1,'Comparison_shopping_engine_backend::DBManager']]],
-  ['showdialog',['ShowDialog',['../dc/def/classComparison__shopping__engine__frontend__android_1_1UiHelpers.html#a48a42b15605fee242ee1ae5ca00897ae',1,'Comparison_shopping_engine_frontend_android::UiHelpers']]],
-  ['spinneritemselected',['SpinnerItemSelected',['../d1/d82/classComparison__shopping__engine__frontend__android_1_1ConfigActivity.html#a11db8d6eebc4abadb10db16c8a81f902',1,'Comparison_shopping_engine_frontend_android::ConfigActivity']]],
-  ['start',['Start',['../dd/d96/interfaceComparison__shopping__engine__backend_1_1IServer.html#a07aaf1227e4d645f15e0a964f54ef291',1,'Comparison_shopping_engine_backend.IServer.Start()'],['../dc/d35/classComparison__shopping__engine__backend_1_1HttpServer.html#a5957aa0d15061f2c6b7145cca4139d83',1,'Comparison_shopping_engine_backend.HttpServer.Start()']]],
-  ['statecolormanager',['StateColorManager',['../d1/d23/classComparison__shopping__engine__frontend__android_1_1StateColorManager.html#abeb3569a45c562e01ce31ac5f4b508bf',1,'Comparison_shopping_engine_frontend_android::StateColorManager']]],
-  ['storeparser',['StoreParser',['../db/db1/classComparison__shopping__engine__backend_1_1StoreParser.html#af2bf2f44d159bc90314b12f214f5e049',1,'Comparison_shopping_engine_backend::StoreParser']]],
-  ['suggestionadapter',['SuggestionAdapter',['../d3/d15/classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter.html#ab365d19f4894cd88ecb0e60a506caf99',1,'Comparison_shopping_engine_frontend_android::SuggestionAdapter']]],
-  ['suggestionfilter',['SuggestionFilter',['../de/d12/classComparison__shopping__engine__frontend__android_1_1SuggestionAdapter_1_1SuggestionFilter.html#acbf46bcee3cd25803f8c7c4d09e2f089',1,'Comparison_shopping_engine_frontend_android::SuggestionAdapter::SuggestionFilter']]]
+  ['receipt',['Receipt',['../dc/d3f/classComparison__shopping__engine__core__entities_1_1Receipt.html#a29908bdeec1abff1827e6d7175d9c7ea',1,'Comparison_shopping_engine_core_entities::Receipt']]],
+  ['refreshbutton_5fclick',['RefreshButton_Click',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#ae0b5f365724cc19fb59c976b76b93bbc',1,'Comparison_shopping_engine_admin::MainForm']]],
+  ['remove',['Remove',['../d6/d4c/classComparison__shopping__engine__backend_1_1DBManager.html#a87a1c128f65046c9984811fc53f8c63f',1,'Comparison_shopping_engine_backend::DBManager']]],
+  ['removenondigits',['RemoveNonDigits',['../db/d1f/classComparison__shopping__engine__core__entities_1_1StringExtension.html#acc114d4b2a7cca030e2d653587b61a46',1,'Comparison_shopping_engine_core_entities::StringExtension']]],
+  ['request_3c_20t_20_3e',['Request&lt; T &gt;',['../d8/df0/classComparison__shopping__engine__frontend__android_1_1Client.html#a9fffb071d0af6116b355a541fef9dad9',1,'Comparison_shopping_engine_frontend_android::Client']]],
+  ['retrieveconfig',['RetrieveConfig',['../dc/d09/classComparison__shopping__engine__frontend__android_1_1MainActivity.html#a4a2e272cfce0c8e748c1bec32de2e72b',1,'Comparison_shopping_engine_frontend_android::MainActivity']]],
+  ['router',['Router',['../dd/de4/classComparison__shopping__engine__backend_1_1Router.html#ab2f8904965ed2342fa40f6dcbdd5eb71',1,'Comparison_shopping_engine_backend::Router']]]
 ];

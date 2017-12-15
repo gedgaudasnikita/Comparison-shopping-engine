@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d7/de5/classIComparer.html" title="IComparer" alt="" coords="5,81,87,108"/>
-<area shape="rect" id="node2" href="$df/dc1/classComparison__shopping__engine__core__entities_1_1ItemDateComparer.html" title="This class describes the comparison by date logic for Item classes " alt="" coords="138,5,269,32"/>
-<area shape="rect" id="node3" href="$d5/dae/classComparison__shopping__engine__core__entities_1_1ItemNameComparer.html" title="This class describes the comparison by itemName logic for Item classes " alt="" coords="135,56,272,83"/>
-<area shape="rect" id="node4" href="$da/df6/classComparison__shopping__engine__core__entities_1_1ItemPriceComparer.html" title="This class describes the comparison by price logic for Item classes " alt="" coords="137,107,270,133"/>
-<area shape="rect" id="node5" href="$dd/d6b/classComparison__shopping__engine__core__entities_1_1ItemStoreComparer.html" title="This class describes the comparison by store logic for Item classes " alt="" coords="136,157,271,184"/>
+<area shape="rect" id="node1" href="$d0/da6/classForm.html" title="Form" alt="" coords="5,81,57,108"/>
+<area shape="rect" id="node2" href="$d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html" title="This form is responsible for editing the item entries " alt="" coords="105,5,224,32"/>
+<area shape="rect" id="node3" href="$d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html" title="This form is responsible for deleting the item entries " alt="" coords="107,56,222,83"/>
+<area shape="rect" id="node4" href="$d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html" title="This form is responsible for editing and sending the notifications to the front end ..." alt="" coords="109,107,220,133"/>
+<area shape="rect" id="node5" href="$d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html" title="MainForm" alt="" coords="125,157,205,184"/>
 </map>

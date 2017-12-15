@@ -1,10 +1,12 @@
 var searchData=
 [
   ['nameallowedlabel',['NameAllowedLabel',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a46d259fa4cea84beba85020adeeeeb09',1,'Comparison_shopping_engine_admin::ItemCorrectForm']]],
-  ['namecolumn',['NameColumn',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#aa635c3df65ee9d573639e4b60fca9a5e',1,'Comparison_shopping_engine_admin::MainForm']]],
   ['namelabel',['NameLabel',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#acdfa763e180277f96c5fe6c61d7c3718',1,'Comparison_shopping_engine_admin.ItemCorrectForm.NameLabel()'],['../d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#acdfa763e180277f96c5fe6c61d7c3718',1,'Comparison_shopping_engine_admin.ItemDeleteForm.NameLabel()']]],
   ['names',['names',['../dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#a0da3efcadadb08fa2f9491f47c9831d3',1,'Comparison_shopping_engine_backend::NormalizationEngine']]],
-  ['namesearchtextbox',['NameSearchTextBox',['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#a4c1fee47d6d6f48e87b00271aef00574',1,'Comparison_shopping_engine_admin::MainForm']]],
   ['nametextbox',['NameTextBox',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a103f4ebe8b3e197e1539ab34a1c83a95',1,'Comparison_shopping_engine_admin.ItemCorrectForm.NameTextBox()'],['../d5/d85/classComparison__shopping__engine__admin_1_1ItemDeleteForm.html#a103f4ebe8b3e197e1539ab34a1c83a95',1,'Comparison_shopping_engine_admin.ItemDeleteForm.NameTextBox()']]],
-  ['normalizationdir',['normalizationDir',['../dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#ab31251952443063d11b2861a2e7aad8c',1,'Comparison_shopping_engine_backend::NormalizationEngine']]]
+  ['notificationtextbox',['NotificationTextBox',['../d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html#a99877ef50b6c18aa8945e2f524569ef4',1,'Comparison_shopping_engine_admin::ItemNotifyForm']]],
+  ['notificationtextlabel',['NotificationTextLabel',['../d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html#a545a141f4d27fba20609f4a9756440ad',1,'Comparison_shopping_engine_admin::ItemNotifyForm']]],
+  ['notificationtopic',['notificationTopic',['../d3/dd6/namespaceComparison__shopping__engine__frontend__android.html#a3fb5377ba5737727d0c2a8fc13e87b84',1,'Comparison_shopping_engine_frontend_android::Configuration']]],
+  ['notifier',['notifier',['../d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html#a2ec2ddb1018a8f226f2dcb6ad3e9565e',1,'Comparison_shopping_engine_admin::ItemNotifyForm']]],
+  ['notifybutton',['NotifyButton',['../d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html#aebffa2cd13ff480fbbfedbbf9a9aef54',1,'Comparison_shopping_engine_admin.ItemNotifyForm.NotifyButton()'],['../d0/d9b/classComparison__shopping__engine__admin_1_1MainForm.html#aebffa2cd13ff480fbbfedbbf9a9aef54',1,'Comparison_shopping_engine_admin.MainForm.NotifyButton()']]]
 ];

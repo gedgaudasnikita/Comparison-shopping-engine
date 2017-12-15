@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['up',['Up',['../de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html#a03225a6d8b562b28ccbf6df17c5b5aa9',1,'Comparison_shopping_engine_backend.Migrations.InitialCreate.Up()'],['../d9/d5a/classComparison__shopping__engine__backend_1_1Migrations_1_1Fix.html#a03225a6d8b562b28ccbf6df17c5b5aa9',1,'Comparison_shopping_engine_backend.Migrations.Fix.Up()'],['../d8/d62/classComparison__shopping__engine__backend_1_1Migrations_1_1FixItemHistory.html#a03225a6d8b562b28ccbf6df17c5b5aa9',1,'Comparison_shopping_engine_backend.Migrations.FixItemHistory.Up()']]],
-  ['updatebutton_5fclick',['UpdateButton_Click',['../d5/d83/classComparison__shopping__engine__admin_1_1ItemCorrectForm.html#a536097c203c154a5cff34b7c76f6326a',1,'Comparison_shopping_engine_admin::ItemCorrectForm']]]
+  ['tostring',['ToString',['../dc/dd2/classComparison__shopping__engine__backend_1_1DBItem.html#aa73e7c4dd1df5fd5fbf81c7764ee1533',1,'Comparison_shopping_engine_backend.DBItem.ToString()'],['../db/d7c/classComparison__shopping__engine__backend_1_1DBItemHistory.html#aa73e7c4dd1df5fd5fbf81c7764ee1533',1,'Comparison_shopping_engine_backend.DBItemHistory.ToString()'],['../d1/d5d/classComparison__shopping__engine__core__entities_1_1Item.html#a012fbb0f39e57c0a44ec83dd408fcda3',1,'Comparison_shopping_engine_core_entities.Item.ToString()']]]
 ];

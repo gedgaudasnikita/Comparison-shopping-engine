@@ -1,3 +1,4 @@
 <map id="Add" name="Add">
-<area shape="rect" id="node2" href="$d6/d4c/classComparison__shopping__engine__backend_1_1DBManager.html#a2af7d9fb28a3a94aac6d2c06a6325f7d" title="Checks if there already exists a cheaper entry for GivenItem in the Database If item exists..." alt="" coords="99,5,144,32"/>
+<area shape="rect" id="node2" href="$d6/d4c/classComparison__shopping__engine__backend_1_1DBManager.html#a2af7d9fb28a3a94aac6d2c06a6325f7d" title="Checks if there already exists a cheaper entry for GivenItem in the Database If item exists..." alt="" coords="179,5,225,32"/>
+<area shape="rect" id="node3" href="$dc/d2b/classComparison__shopping__engine__backend_1_1NormalizationEngine.html#ac01b69853e15ec3ee2d514e6de499c1f" title="Add a new fixed name into the name storage. Should only be used with confirmed names, for example, the ones manually entered by User. " alt="" coords="99,56,305,112"/>
 </map>

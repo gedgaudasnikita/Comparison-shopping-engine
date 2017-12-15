@@ -1,6 +1,7 @@
 var searchData=
 [
   ['dateparser',['DateParser',['../df/de8/classComparison__shopping__engine__backend_1_1DateParser.html',1,'Comparison_shopping_engine_backend']]],
+  ['dbclient',['DbClient',['../d9/d59/classComparison__shopping__engine__admin_1_1DbClient.html',1,'Comparison_shopping_engine_admin']]],
   ['dbcontext',['DbContext',['../d9/d95/classDbContext.html',1,'']]],
   ['dbitem',['DBItem',['../dc/dd2/classComparison__shopping__engine__backend_1_1DBItem.html',1,'Comparison_shopping_engine_backend']]],
   ['dbitemhistory',['DBItemHistory',['../db/d7c/classComparison__shopping__engine__backend_1_1DBItemHistory.html',1,'Comparison_shopping_engine_backend']]],

@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d9/d0c/classDbMigration.html" title="DbMigration" alt="" coords="26,31,117,57"/>
-<area shape="rect" id="node2" href="$d9/d5a/classComparison__shopping__engine__backend_1_1Migrations_1_1Fix.html" title="Fix" alt="" coords="219,5,259,32"/>
-<area shape="rect" id="node3" href="$d8/d62/classComparison__shopping__engine__backend_1_1Migrations_1_1FixItemHistory.html" title="FixItemHistory" alt="" coords="185,56,292,83"/>
-<area shape="rect" id="node4" href="$de/d5d/classComparison__shopping__engine__backend_1_1Migrations_1_1InitialCreate.html" title="InitialCreate" alt="" coords="193,107,284,133"/>
-<area shape="rect" id="node5" href="$df/d4e/classIMigrationMetadata.html" title="IMigrationMetadata" alt="" coords="5,81,137,108"/>
+<area shape="rect" id="node1" href="$d7/de5/classIComparer.html" title="IComparer" alt="" coords="5,81,87,108"/>
+<area shape="rect" id="node2" href="$df/dc1/classComparison__shopping__engine__core__entities_1_1ItemDateComparer.html" title="This class describes the comparison by date logic for Item classes " alt="" coords="138,5,269,32"/>
+<area shape="rect" id="node3" href="$d5/dae/classComparison__shopping__engine__core__entities_1_1ItemNameComparer.html" title="This class describes the comparison by itemName logic for Item classes " alt="" coords="135,56,272,83"/>
+<area shape="rect" id="node4" href="$da/df6/classComparison__shopping__engine__core__entities_1_1ItemPriceComparer.html" title="This class describes the comparison by price logic for Item classes " alt="" coords="137,107,270,133"/>
+<area shape="rect" id="node5" href="$dd/d6b/classComparison__shopping__engine__core__entities_1_1ItemStoreComparer.html" title="This class describes the comparison by store logic for Item classes " alt="" coords="136,157,271,184"/>
 </map>

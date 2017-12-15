@@ -1,0 +1,4 @@
+<map id="ItemNotifyForm" name="ItemNotifyForm">
+<area shape="rect" id="node2" href="$d0/da6/classForm.html" title="{Form\n||}" alt="" coords="5,5,57,83"/>
+<area shape="rect" id="node3" href="$de/d93/classComparison__shopping__engine__admin_1_1NotificationSender.html" title="This class is responsible for sending the notification requests to FCM " alt="" coords="81,5,208,83"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="InitializeComponent" name="InitializeComponent">
+<area shape="rect" id="node2" href="$d4/d3d/classComparison__shopping__engine__admin_1_1ItemNotifyForm.html#ad8c1c4ab3a79627c644609f190f5a64e" title="NotifyButton_Click" alt="" coords="188,75,317,102"/>
+<area shape="rect" id="node3" href="$de/d93/classComparison__shopping__engine__admin_1_1NotificationSender.html#a844942b9892ad5602f1895e2db85ba37" title="Sends a HttpWebRequest to the FCM builder with the given data. " alt="" coords="365,61,543,117"/>
+<area shape="rect" id="node4" href="$df/dc6/classComparison__shopping__engine__admin_1_1NotificationWebRequestBuilder.html#ad03e51d8b92c4d08beb1ceee74de327d" title="Create a HttpWebRequest object filled with necessary metadata " alt="" coords="591,5,817,76"/>
+<area shape="rect" id="node5" href="$dd/d10/classComparison__shopping__engine__notification__protocol_1_1NotificationData.html#abbbd571d6acad8bfe9c85c2cb44f385b" title="Comparison_shopping\l_engine_notification\l_protocol.NotificationData.\lSerialize" alt="" coords="617,100,791,171"/>
+<area shape="rect" id="node6" href="$df/d23/classComparison__shopping__engine__core__entities_1_1JsonSerializerStream.html#a8597c311fd2ef051c537f8709499d322" title="An overload, that takes Stream as the first argument instead of JsonWriter Avoids DRY..." alt="" coords="865,107,1044,163"/>
+</map>
