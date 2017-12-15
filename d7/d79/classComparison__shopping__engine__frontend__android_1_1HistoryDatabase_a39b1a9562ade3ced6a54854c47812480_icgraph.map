@@ -1,3 +1,5 @@
 <map id="AddItem" name="AddItem">
-<area shape="rect" id="node2" href="$d4/d2e/classComparison__shopping__engine__frontend__android_1_1NotificationMessagingService.html#a5ee2c8dea624fe74847975b80f0c8ff7" title="Comparison_shopping\l_engine_frontend_android.Notification\lMessagingService.OnMessageReceived" alt="" coords="124,5,377,61"/>
+<area shape="rect" id="node2" href="$d9/d37/classComparison__shopping__engine__frontend__android_1_1ReviewActivity.html#af6d7e0bc3537fc89201f12c8f2dfb20d" title="Comparison_shopping\l_engine_frontend_android.Review\lActivity.OnReviewSubmitButtonClick" alt="" coords="134,5,367,61"/>
+<area shape="rect" id="node4" href="$d4/d2e/classComparison__shopping__engine__frontend__android_1_1NotificationMessagingService.html#a5ee2c8dea624fe74847975b80f0c8ff7" title="Comparison_shopping\l_engine_frontend_android.Notification\lMessagingService.OnMessageReceived" alt="" coords="124,85,377,141"/>
+<area shape="rect" id="node3" href="$d9/d37/classComparison__shopping__engine__frontend__android_1_1ReviewActivity.html#ae117d75d483bd48792122dcc23d369ea" title="Comparison_shopping\l_engine_frontend_android.Review\lActivity.OnCreate" alt="" coords="425,5,639,61"/>
 </map>
