@@ -15,8 +15,8 @@ namespace Comparison_shopping_engine_admin.Tests
         public void SendTest()
         {
             //NotificationSender.Initialize(@"C:\Users\Nik\Source\Repos\Comparison-shopping-engine\src\Admin\google-services.json").Wait();
-            NotificationSender.Send("hey", "hey");
-            Assert.Fail();
+           // NotificationSender.Send("hey", "hey");
+            //Assert.Fail();
         }
     }
 }

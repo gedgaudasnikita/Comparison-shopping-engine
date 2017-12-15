@@ -17,11 +17,11 @@ namespace Comparison_shopping_engine_admin
     /// </summary>
     public partial class ItemNotifyForm : Form
     {
-        NotificationSender sender;
+        NotificationSender notifier;
 
         public ItemNotifyForm(IEnumerable<Item> items)
         {
-            sender = new NotificationSender();
+            notifier = new NotificationSender();
             InitializeComponent();
             DisplayItem(items);
         }
@@ -42,7 +42,7 @@ namespace Comparison_shopping_engine_admin
                 note.MapItemToText.Add(line, NotificationTextBox.Text);
             }
 
-            NotificationSender.Send(note);
+            notifier.Send(note);
 
             this.Close();
         }
