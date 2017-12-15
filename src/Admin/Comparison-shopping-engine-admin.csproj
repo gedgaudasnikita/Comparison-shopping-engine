@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Database\DbClient.cs" />
     <Compile Include="src\Forms\Dialogs\ItemCorrectForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comparison_shopping_engine_core_entities;
+using System.Data.SqlClient;
 
 namespace Comparison_shopping_engine_admin
 {
     public partial class MainForm : Form
     {
+        private DbClient client;
+
         public MainForm()
         {
             InitializeComponent();
@@ -55,14 +58,14 @@ namespace Comparison_shopping_engine_admin
 
         private void CorrectButton_Click(object sender, EventArgs e)
         {
-            var correctionForm = new ItemCorrectForm(GetItemFromCells(ItemDataGridView.SelectedRows[0].Cells));
+            var correctionForm = new ItemCorrectForm(GetItemFromCells(ItemDataGridView.SelectedRows[0].Cells), client);
 
             correctionForm.Show();
         }
 
         private Item GetItemFromCells(DataGridViewCellCollection cells)
         {
-            return new Item((string)cells[0].Value, (string)cells[2].Value, (int)cells[1].Value, DateTime.Parse(cells[3].Value.ToString()));
+            return new Item((string)cells[0].Value, (string)cells[1].Value, (int)cells[2].Value,  DateTime.Parse(cells[3].Value.ToString()));
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -82,6 +85,23 @@ namespace Comparison_shopping_engine_admin
 
             var notifyForm = new ItemNotifyForm(itemsToNotify);
             notifyForm.Show();
+        }
+
+        private void ConnectButton_Click(object sender, EventArgs e)
+        {
+            //filling the data grid
+            client = new DbClient();
+
+            RefreshButton_Click(sender, e);
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            client.GetAllItems().Fill(dt);
+            ItemDataGridView.DataSource = dt;
+
+            ItemDataGridView.Enabled = true;
         }
     }
 }
