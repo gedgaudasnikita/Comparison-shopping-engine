@@ -22,9 +22,8 @@ namespace Comparison_shopping_engine_backend
         public static Receipt ProcessImage(string source)
         {
             Receipt receipt = ParseableReceipt.Parse(source);
-
-            var normalizer = NormalizationEngine.GetInstance();
-            receipt.Items.ForEach(item => item.Name = normalizer.GetClosest(item.Name));
+            
+            receipt.Items.ForEach(item => item.Name = NormalizationEngine.GetClosest(item.Name));
 
             return receipt;
         }

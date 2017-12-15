@@ -48,9 +48,8 @@ namespace Comparison_shopping_engine_backend
                 ParseableReceipt.ItemListParser = new ItemListParser();
                 ParseableReceipt.DateParser = new DateParser();
                 ParseableReceipt.StoreParser = new StoreParser();
-
-                ItemManager.GetInstance().LoadAll();
-                NormalizationEngine.GetInstance().LoadAll();
+                
+                NormalizationEngine.LoadAll();
 
                 //Server initialization
                 var endpoints = new List<IBackendEndpoint>()

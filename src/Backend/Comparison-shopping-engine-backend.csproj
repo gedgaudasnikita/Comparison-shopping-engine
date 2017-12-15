@@ -111,7 +111,6 @@
     <Compile Include="src\ImageRecognition\IParser.cs" />
     <Compile Include="src\ImageRecognition\Parsers\ItemListParser.cs" />
     <Compile Include="src\ImageRecognition\Parsers\StoreParser.cs" />
-    <Compile Include="src\BusinessLogic\ItemManager.cs" />
     <Compile Include="src\Server\Endpoints\SaveReceiptBackendEndpoint.cs" />
     <Compile Include="src\Server\Endpoints\ProcessReceiptBackendEndpoint.cs" />
     <Compile Include="src\Server\Endpoints\ProcessImageBackendEndpoint.cs" />

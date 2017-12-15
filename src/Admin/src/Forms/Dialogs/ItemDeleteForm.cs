@@ -11,6 +11,9 @@ using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_admin
 {
+    /// <summary>
+    /// This form is responsible for deleting the item entries
+    /// </summary>
     public partial class ItemDeleteForm : Form
     {
         private Item item;

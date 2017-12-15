@@ -86,6 +86,37 @@ namespace Comparison_shopping_engine_frontend_android
             dialog.Show();
         }
 
+        /// <summary>
+        /// Shows a basic <see cref="Notification"/>.
+        /// </summary>
+        /// <param name="ctx">The <see cref="Context"/> of the execution</param>
+        /// <param name="title">The content of the notificatoin</param>
+        public static void ShowNotification(Context ctx, String content)
+        {
+            Intent intent = new Intent(ctx, typeof(MainActivity));
+            
+            PendingIntent pendingIntent =
+                PendingIntent.GetActivity(ctx, 0, intent, PendingIntentFlags.OneShot);
+
+            Notification.Builder builder = new Notification.Builder(ctx)
+                .SetContentIntent(pendingIntent)
+                .SetContentTitle(content)
+                .SetContentText("")
+                .SetDefaults(NotificationDefaults.Sound | NotificationDefaults.Vibrate)
+                .SetSmallIcon(Resource.Drawable.notification);
+
+            // Build the notification:
+            Notification notification = builder.Build();
+
+            // Get the notification manager:
+            NotificationManager notificationManager =
+                ctx.GetSystemService(Context.NotificationService) as NotificationManager;
+
+            // Publish the notification:
+            const int notificationId = 0;
+            notificationManager.Notify(notificationId, notification);
+        }
+      
         public static RelativeLayout NewStoreDate(Context ctx, ref ItemStoreView storeView, ref ItemDateView dateView, DateTime date, string store, bool clickable = true)
         {
             RelativeLayout storeDateLayout = new RelativeLayout(ctx)

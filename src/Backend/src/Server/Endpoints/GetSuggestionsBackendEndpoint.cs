@@ -21,7 +21,7 @@ namespace Comparison_shopping_engine_backend
         {
             var queryParameters = GetRequestParameters(query);
 
-            var result = NormalizationEngine.GetInstance().GetClosestList(queryParameters.Input, queryParameters.Limit);
+            var result = NormalizationEngine.GetClosestList(queryParameters.Input, queryParameters.Limit);
 
             return GetResponseBody(result);
         }

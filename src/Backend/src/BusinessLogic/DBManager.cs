@@ -25,16 +25,9 @@ namespace Comparison_shopping_engine_backend
             {
                 if (db.Items.Any(i => i.Name.Equals(newItem.Name)))
                 {
-                    if (db.Items.Any(i => i.Name.Equals(newItem.Name) && i.Price <= newItem.Price))
+                    if (db.Items.Any(i => i.Name.Equals(newItem.Name) && i.Price > newItem.Price))
                     {
-                        if (!db.ItemHistories.Any(i => i.Name.Equals(newItem.Name) && i.Store.Equals(newItem.Store) && i.Price == newItem.Price && i.Date == newItem.Date))
-                            db.ItemHistories.Add(new DBItemHistory(newItem));
-                    }
-                    else
-                    {
-                        db.ItemHistories.Add(new DBItemHistory((from item in db.Items
-                                                                where item.Name.Equals(newItem.Name)
-                                                                select item).First()));
+                        db.ItemHistories.Add(new DBItemHistory(newItem));
 
                         DBItem itemToChange = (from item in db.Items
                                               where item.Name.Equals(newItem.Name)
@@ -45,9 +38,13 @@ namespace Comparison_shopping_engine_backend
                         itemToChange.Price = newItem.Price;
                         itemToChange.Date = newItem.Date;
                     }
-
                 }
-                else db.Items.Add(new DBItem(newItem));
+                else
+                {
+                    db.ItemHistories.Add(new DBItemHistory(newItem));
+                    db.Items.Add(new DBItem(newItem));
+                }
+
                 db.SaveChanges();
             }
         }
@@ -62,7 +59,10 @@ namespace Comparison_shopping_engine_backend
         public static void Add(List<Item> newItems)
         {
             foreach (Item newItem in newItems)
+            {
                 Add(newItem);
+                NormalizationEngine.AddName(newItem.Name);
+            }
         }
 
         /// <summary>
@@ -136,10 +136,12 @@ namespace Comparison_shopping_engine_backend
         public static void SetupDB()
         {
             //Add old items to DB
-            List<Item> items = new List<Item>();
-            items.Add(new Item("KELMES pienas, 2,5% rieb.", "IKI", 10, DateTime.Now.Date));
-            items.Add(new Item("Malta kava Paulig Extra“", "MAXIMA", 899, DateTime.Now.Date));
-            items.Add(new Item("Ledai Maxima Favorit", "MAXIMA", 129, DateTime.Now.Date));
+            List<Item> items = new List<Item>
+            {
+                new Item("KELMES pienas, 2,5% rieb.", "IKI", 10, DateTime.Now.Date),
+                new Item("Malta kava Paulig Extra“", "MAXIMA", 899, DateTime.Now.Date),
+                new Item("Ledai Maxima Favorit", "MAXIMA", 129, DateTime.Now.Date)
+            };
 
             Add(items);
         }

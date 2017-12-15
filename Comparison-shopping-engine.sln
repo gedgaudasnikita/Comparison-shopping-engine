@@ -1,4 +1,5 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
@@ -19,6 +20,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-web-protocol.Tests", "test\WebProtocol.Tests\Comparison-shopping-engine-web-protocol.Tests.csproj", "{BD71FB67-6356-444A-AD1E-3B9F04BA29C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-admin", "src\Admin\Comparison-shopping-engine-admin.csproj", "{AFF37537-303A-4370-A963-5FE955182D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-notification-protocol", "src\NotificationProtocol\Comparison-shopping-engine-notification-protocol\Comparison-shopping-engine-notification-protocol.csproj", "{8563F3C9-3201-4EBE-BB30-FC61501C0545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-notification-protocol.Tests", "test\NotificationProtocol.Tests\Comparison-shopping-engine-notification-protocol.Tests.csproj", "{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparison-shopping-engine-admin.Tests", "test\Admin.Tests\Comparison-shopping-engine-admin.Tests.csproj", "{F09262A4-34E5-4701-B918-5AACFC7367C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +88,24 @@ Global
 		{AFF37537-303A-4370-A963-5FE955182D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF37537-303A-4370-A963-5FE955182D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF37537-303A-4370-A963-5FE955182D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.CI|Any CPU.ActiveCfg = Release|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.CI|Any CPU.Build.0 = Release|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8563F3C9-3201-4EBE-BB30-FC61501C0545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.CI|Any CPU.ActiveCfg = CI|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.CI|Any CPU.Build.0 = CI|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A810C1F1-5FA1-49AE-97B5-DD8DFC2D907C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.CI|Any CPU.ActiveCfg = CI|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.CI|Any CPU.Build.0 = CI|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09262A4-34E5-4701-B918-5AACFC7367C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Comparison_shopping_engine_admin</RootNamespace>
     <AssemblyName>Comparison-shopping-engine-admin</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,33 +57,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\ItemCorrectForm.cs">
+    <Compile Include="src\Database\DbClient.cs" />
+    <Compile Include="src\Forms\Dialogs\ItemCorrectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemCorrectForm.Designer.cs">
+    <Compile Include="src\Forms\Dialogs\ItemCorrectForm.Designer.cs">
       <DependentUpon>ItemCorrectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemManagementForm.cs">
+    <Compile Include="src\Forms\ItemManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemManagementForm.Designer.cs">
+    <Compile Include="src\Forms\ItemManagementForm.Designer.cs">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ItemDeleteForm.cs">
+    <Compile Include="src\Forms\Dialogs\ItemDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ItemDeleteForm.Designer.cs">
+    <Compile Include="src\Forms\Dialogs\ItemDeleteForm.Designer.cs">
       <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="src\Forms\Dialogs\ItemNotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Forms\Dialogs\ItemNotifyForm.Designer.cs">
+      <DependentUpon>ItemNotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Notifications\NotificationWebRequest.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\ItemCorrectForm.resx">
+    <Compile Include="src\Notifications\NotificationSender.cs" />
+    <EmbeddedResource Include="src\Forms\Dialogs\ItemCorrectForm.resx">
       <DependentUpon>ItemCorrectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemManagementForm.resx">
+    <EmbeddedResource Include="src\Forms\ItemManagementForm.resx">
       <DependentUpon>ItemManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ItemDeleteForm.resx">
+    <EmbeddedResource Include="src\Forms\Dialogs\ItemDeleteForm.resx">
       <DependentUpon>ItemDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -92,8 +103,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="src\Forms\Dialogs\ItemNotifyForm.resx">
+      <DependentUpon>ItemNotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +129,11 @@
       <Project>{78c3ed2a-037b-49c6-a6ac-32d1a849ebd9}</Project>
       <Name>Comparison-shopping-engine-core-entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NotificationProtocol\Comparison-shopping-engine-notification-protocol\Comparison-shopping-engine-notification-protocol.csproj">
+      <Project>{8563F3C9-3201-4EBE-BB30-FC61501C0545}</Project>
+      <Name>Comparison-shopping-engine-notification-protocol</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

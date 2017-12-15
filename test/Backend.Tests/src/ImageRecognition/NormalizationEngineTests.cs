@@ -15,21 +15,12 @@ namespace Comparison_shopping_engine_backend.Tests
     public class NormalizationEngineTests
     {
         [Test]
-        public void GetInstanceTest_isSingleton()
-        {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            NormalizationEngine m2 = NormalizationEngine.GetInstance();
-            Assert.AreEqual(m1, m2);
-        }
-
-        [Test]
         public void GetClosestTest_getsClosest()
         {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            m1.AddName("very unlikely to get matched with");
-            m1.AddName("pretty likely");
+            NormalizationEngine.AddName("very unlikely to get matched with");
+            NormalizationEngine.AddName("pretty likely");
 
-            var result = m1.GetClosest("pretty Lily");
+            var result = NormalizationEngine.GetClosest("pretty Lily");
 
             Assert.AreEqual("pretty likely", result);
         }
@@ -37,10 +28,9 @@ namespace Comparison_shopping_engine_backend.Tests
         [Test]
         public void GetClosestTest_returnsEmptyStringIfNoMatch()
         {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            m1.ClearList();
+            NormalizationEngine.ClearList();
 
-            var result = m1.GetClosest("pretty Lily");
+            var result = NormalizationEngine.GetClosest("pretty Lily");
 
             Assert.AreEqual("", result);
         }
@@ -48,11 +38,10 @@ namespace Comparison_shopping_engine_backend.Tests
         [Test]
         public void GetClosestListTest_getsClosest()
         {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            m1.AddName("very unlikely to get matched with");
-            m1.AddName("pretty likely");
+            NormalizationEngine.AddName("very unlikely to get matched with");
+            NormalizationEngine.AddName("pretty likely");
 
-            var result = m1.GetClosestList("pretty Lily", 2);
+            var result = NormalizationEngine.GetClosestList("pretty Lily", 2);
 
             Assert.AreEqual(2, result.Count());
             Assert.AreEqual("pretty likely", result.ElementAt(0));
@@ -62,81 +51,11 @@ namespace Comparison_shopping_engine_backend.Tests
         [Test]
         public void GetClosestListTest_returnsEmptyListIfNoMatch()
         {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            m1.ClearList();
+            NormalizationEngine.ClearList();
 
-            var result = m1.GetClosestList("pretty Lily", 2);
+            var result = NormalizationEngine.GetClosestList("pretty Lily", 2);
 
             Assert.AreEqual(0, result.Count());
-        }
-
-
-        [Test]
-        public void PersistTest_savesNames()
-        {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
-            m1.AddName("name");
-
-            m1.Persist();
-
-            m1.ClearList();
-            DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
-            Assert.AreEqual(1, normalizationDirInfo.GetFiles("names.list").Length);
-        }
-
-        [Test]
-        public void LoadAllTest_loadsNames()
-        {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
-            m1.AddName("name");
-
-            m1.Persist();
-            m1.ClearList();
-            Assert.IsFalse(m1.Exists("name"));
-            m1.LoadAll();
-
-            Assert.IsTrue(m1.Exists("name"));
-        }
-
-        [Test]
-        public void LoadAllTest_createsDirectory()
-        {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
-            DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
-            if (normalizationDirInfo.Exists)
-            {
-                foreach (FileInfo file in normalizationDirInfo.GetFiles())
-                {
-                    file.Delete();
-                }
-                normalizationDirInfo.Delete();
-            }
-
-            m1.LoadAll();
-
-            DirectoryInfo newInfo = new DirectoryInfo(normalizationDir);
-
-            Assert.IsTrue(newInfo.Exists);
-        }
-
-        [Test]
-        public void PersistTest_createsDirectory()
-        {
-            NormalizationEngine m1 = NormalizationEngine.GetInstance();
-            string normalizationDir = ConfigurationManager.AppSettings["normalizationDir"];
-            DirectoryInfo normalizationDirInfo = new DirectoryInfo(normalizationDir);
-            foreach (FileInfo file in normalizationDirInfo.GetFiles())
-            {
-                file.Delete();
-            }
-            normalizationDirInfo.Delete();
-
-            m1.Persist();
-            DirectoryInfo normalizationDirInfoNew = new DirectoryInfo(normalizationDir);
-            Assert.IsTrue(normalizationDirInfoNew.Exists);
         }
     }
 }

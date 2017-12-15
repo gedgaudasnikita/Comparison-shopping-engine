@@ -1,5 +1,6 @@
 ﻿using Java.IO;
 using Android.Graphics;
+using System;
 using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
@@ -18,5 +19,22 @@ namespace Comparison_shopping_engine_frontend_android
         public static int imageViewWidth;
 
         public static int theme;
+
+        private static HistoryDatabase database;
+        public static HistoryDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    System.Console.WriteLine("hey");
+                    database = new HistoryDatabase(System.IO.Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.Personal),
+                        Configuration.dbPath));
+                }
+
+                return database;
+            }
+        }
     }
 }

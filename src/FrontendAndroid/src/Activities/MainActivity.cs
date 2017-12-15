@@ -9,6 +9,10 @@ using Android.Content.PM;
 using Java.IO;
 using Android.Views;
 using System.Linq;
+using Android.Gms.Common;
+using Firebase.Messaging;
+using Firebase.Iid;
+using Android.Util;
 using Android.Graphics;
 
 namespace Comparison_shopping_engine_frontend_android
@@ -30,6 +34,8 @@ namespace Comparison_shopping_engine_frontend_android
             RetrieveConfig();
             SetTheme(AppData.theme);
             base.OnCreate(savedInstanceState);
+
+            
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
             
@@ -69,10 +75,10 @@ namespace Comparison_shopping_engine_frontend_android
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
             homeConfigButton.Click += OnHomeConfigButtonClick;
+
             homeRemoveImageTextView.Click += OnRemoveImageTextViewClick;
 
             ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
-
         }
 
         protected override void OnSaveInstanceState(Bundle outState)

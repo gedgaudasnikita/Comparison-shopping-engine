@@ -1,5 +1,4 @@
 ﻿using Comparison_shopping_engine_core_entities;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
