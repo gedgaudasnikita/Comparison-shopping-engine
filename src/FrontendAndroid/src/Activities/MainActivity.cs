@@ -8,13 +8,12 @@ using System.Collections.Generic;
 using Android.Content.PM;
 using Java.IO;
 using Android.Views;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Linq;
 using Android.Gms.Common;
 using Firebase.Messaging;
 using Firebase.Iid;
 using Android.Util;
+using Android.Graphics;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -27,6 +26,7 @@ namespace Comparison_shopping_engine_frontend_android
         Button homeResultScreenButton;
         Button homeConfigButton;
         ImageView homeImageView;
+        TextView homeRemoveImageTextView;
         TextView homeTextView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -38,12 +38,11 @@ namespace Comparison_shopping_engine_frontend_android
             
             // Set our view from the "Home" layout resource
             SetContentView(Resource.Layout.Home);
-
+            
             // Reset App class for safety reasons
             AppData.file = null;
             AppData.dir = null;
             AppData.bitmap = null;
-            
 
             // Set up Elements
             homeCameraButton = FindViewById<Button>(Resource.Id.homeCameraButton);
@@ -52,17 +51,18 @@ namespace Comparison_shopping_engine_frontend_android
             homeConfigButton = FindViewById<Button>(Resource.Id.homeConfigButton);
             homeImageView = FindViewById<ImageView>(Resource.Id.homeImageView);
             homeTextView = FindViewById<TextView>(Resource.Id.homeTextView);
+            homeRemoveImageTextView = FindViewById<TextView>(Resource.Id.homeRemoveImageTextView);
 
             Localise();
 
-            // Make homeImageView invisible while there's no photo
-            homeImageView.Visibility = Android.Views.ViewStates.Invisible;
+            //Make homeImageView invisible while there's no photo
+            homeImageView.Visibility = ViewStates.Invisible;
+            homeRemoveImageTextView.Visibility = ViewStates.Invisible;
 
             // Check if camera is available
             if (IsThereAnAppToTakePictures())
             {
                 CreateDirectoryForPictures();
-
                 homeCameraButton.Click += OnHomeCameraButtonClick;
             }
 
@@ -75,6 +75,32 @@ namespace Comparison_shopping_engine_frontend_android
             homeGalleryButton.Click += OnHomeGalleryButtonClick;
             homeResultScreenButton.Click += OnHomeResultsScreenButtonClick;
             homeConfigButton.Click += OnHomeConfigButtonClick;
+
+            homeRemoveImageTextView.Click += OnRemoveImageTextViewClick;
+
+            ocr = new Lazy<OcrWrapper>(() => new OcrWrapper(this));
+        }
+
+        protected override void OnSaveInstanceState(Bundle outState)
+        {
+            base.OnSaveInstanceState(outState);
+            var removeImageString = homeRemoveImageTextView.Text;
+            outState.PutString("removeImageString", removeImageString);
+            outState.PutParcelable("image", AppData.bitmap);
+        }
+
+        protected override void OnRestoreInstanceState(Bundle savedInstanceState)
+        {
+            base.OnRestoreInstanceState(savedInstanceState);
+            AppData.bitmap = (Bitmap)savedInstanceState.GetParcelable("image");
+            if(AppData.bitmap != null)
+            {
+                homeImageView.SetImageBitmap(AppData.bitmap);
+                homeImageView.Visibility = ViewStates.Visible;
+                homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
+                homeRemoveImageTextView.Text = savedInstanceState.GetString("removeImageString");
+                homeRemoveImageTextView.Visibility = ViewStates.Visible;
+            }
         }
 
         protected void Localise()
@@ -159,7 +185,7 @@ namespace Comparison_shopping_engine_frontend_android
         /// <param name="e"></param>
         private async void OnHomeResultsScreenButtonClick(object sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(ResultsActivity));
+            Intent intent = new Intent(this, typeof(ReviewActivity));
 
             // Generate receipt out of image, if we have one
             if (AppData.bitmap != null)
@@ -205,6 +231,14 @@ namespace Comparison_shopping_engine_frontend_android
             StartActivityForResult(intent, 2);
         }
 
+        private void OnRemoveImageTextViewClick(object sender, EventArgs e)
+        {
+            homeImageView.SetImageResource(0);
+            AppData.bitmap = null;
+            homeRemoveImageTextView.Visibility = ViewStates.Invisible;
+            homeResultScreenButton.Text = AppResources.ResultScreenButton;
+        }
+
         /// <summary>
         /// Handles data returned from Android apps
         /// </summary>
@@ -232,7 +266,8 @@ namespace Comparison_shopping_engine_frontend_android
                         if (AppData.bitmap != null)
                         {
                             homeImageView.SetImageBitmap(AppData.bitmap);
-                            homeImageView.Visibility = Android.Views.ViewStates.Visible;
+                            homeImageView.Visibility = ViewStates.Visible;
+                            homeRemoveImageTextView.Visibility = ViewStates.Visible;
                         }
 
                         // Not sure if needed, source had it, better keep it in case.
@@ -247,8 +282,8 @@ namespace Comparison_shopping_engine_frontend_android
                     {
                         AppData.bitmap = GetPathToImage(data.Data).LoadAndResizeBitmap(AppData.imageViewWidth, AppData.imageViewHeight);
                         homeImageView.SetImageBitmap(AppData.bitmap);
-                        homeImageView.Visibility = Android.Views.ViewStates.Visible;
-
+                        homeImageView.Visibility = ViewStates.Visible;
+                        homeRemoveImageTextView.Visibility = ViewStates.Visible;
                         homeResultScreenButton.Text = AppResources.SubmitPhotoButton;
                     }
                     break;

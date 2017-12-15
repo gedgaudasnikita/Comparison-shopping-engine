@@ -144,6 +144,7 @@
     <Compile Include="src\Activities\ConfigActivity.cs" />
     <Compile Include="src\Activities\ResultsActivity.cs" />
     <Compile Include="src\Activities\MainActivity.cs" />
+    <Compile Include="src\Activities\ReviewActivity.cs" />
     <Compile Include="src\Configuration.cs" />
     <Compile Include="src\Database\HistoryDatabase.cs" />
     <Compile Include="src\Database\ItemHistory.cs" />
@@ -183,6 +184,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Config.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Review.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using System.Threading.Tasks;
+using Android.Widget;
+using Android.Views;
+using Comparison_shopping_engine_core_entities;
 
 namespace Comparison_shopping_engine_frontend_android
 {
@@ -119,6 +115,135 @@ namespace Comparison_shopping_engine_frontend_android
             // Publish the notification:
             const int notificationId = 0;
             notificationManager.Notify(notificationId, notification);
+        }
+      
+        public static RelativeLayout NewStoreDate(Context ctx, ref ItemStoreView storeView, ref ItemDateView dateView, DateTime date, string store, bool clickable = true)
+        {
+            RelativeLayout storeDateLayout = new RelativeLayout(ctx)
+            {
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent),
+            };
+
+            RelativeLayout.LayoutParams lpStore = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpStore.AddRule(LayoutRules.AlignParentLeft, Convert.ToInt32(true));
+            ItemStoreView _storeEdit = new ItemStoreView(ctx, clickable, store)
+            {
+                LayoutParameters = lpStore,
+                Id = View.GenerateViewId()
+            };
+
+
+            RelativeLayout.LayoutParams lpDate = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent);
+            lpDate.AddRule(LayoutRules.AlignParentRight, Convert.ToInt32(true));
+            ItemDateView _dateEdit = new ItemDateView(ctx, clickable, date)
+            {
+                LayoutParameters = lpDate,
+                Id = View.GenerateViewId()
+            };
+
+            storeView = _storeEdit;
+            dateView = _dateEdit;
+
+            storeDateLayout.AddView(_storeEdit);
+            storeDateLayout.AddView(_dateEdit);
+
+            return storeDateLayout;
+        }
+
+        /// <summary>
+        /// Creates a RelativeLayout with 4 editable EditText views for passed Item object.
+        /// Each view is filled with one item property.
+        /// </summary>
+        public static LinearLayout NewItem(Context ctx, LinearLayout baseLayout, List<ItemLine> itemLineList, Item item, bool clickable = true)
+        {
+            LinearLayout itemLayout = new LinearLayout(ctx)
+            {
+                LayoutParameters = new ViewGroup.LayoutParams(
+                    width: ViewGroup.LayoutParams.MatchParent,
+                    height: ViewGroup.LayoutParams.WrapContent
+                ),
+                Id = View.GenerateViewId(),
+                WeightSum = 1f
+            };
+
+            LinearLayout.LayoutParams lpItem = new LinearLayout.LayoutParams(
+                  ViewGroup.LayoutParams.WrapContent,
+                  ViewGroup.LayoutParams.WrapContent,
+                  0.80f
+            )
+            {
+                Width = 0,
+                Gravity = GravityFlags.Fill
+            };
+            ItemNameView itemName = new ItemNameView(ctx, clickable, item.Name)
+            {
+                LayoutParameters = lpItem,
+                Id = View.GenerateViewId()
+            };
+
+            LinearLayout.LayoutParams lpPrice = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                clickable ? 0.15f : 0.25f
+            )
+            {
+                Width = 0,
+                Gravity = GravityFlags.Fill
+            };
+            ItemPriceView itemPrice = new ItemPriceView(ctx, clickable, item.Price / 100f)
+            {
+                LayoutParameters = lpPrice,
+                Id = View.GenerateViewId()
+            };
+
+            //Button that deletes the entire item
+            LinearLayout.LayoutParams lpDelete = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WrapContent,
+                ViewGroup.LayoutParams.WrapContent,
+                0.5f
+            );
+            ItemDeleteView deleteItemButton = new ItemDeleteView(ctx)
+            {
+                Text = "x",
+                LayoutParameters = lpDelete,
+                Id = View.GenerateViewId()
+            };
+
+            //On Button click
+            deleteItemButton.Click += (object sender, EventArgs e) =>
+            {
+                itemLayout.RemoveAllViews();
+
+                baseLayout.RemoveView(itemLayout);
+
+                itemLineList.Remove(new ItemLine()
+                {
+                    Name = itemName,
+                    Price = itemPrice
+                });
+            };
+
+            itemLineList.Add(new ItemLine()
+            {
+                Name = itemName,
+                Price = itemPrice
+            });
+
+            itemLayout.AddView(itemName);
+            itemLayout.AddView(itemPrice);
+
+            if (clickable)
+            {
+                itemLayout.AddView(deleteItemButton);
+            }
+
+            return itemLayout;
         }
     }
 }

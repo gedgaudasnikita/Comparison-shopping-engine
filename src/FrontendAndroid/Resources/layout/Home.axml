@@ -13,6 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/homeRemoveImageTextView"
+            android:text="✖"
+            android:textAllCaps="false"
+            android:textSize="12pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4pt" />
+    </RelativeLayout>
     <ImageView
         android:id="@+id/homeImageView"
         android:src="@android:drawable/ic_menu_gallery"
@@ -44,7 +57,7 @@
     </LinearLayout>
     <Button
         android:id="@+id/homeResultScreenButton"
-        android:text="Result Screen"
+        android:text="Proceed"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
