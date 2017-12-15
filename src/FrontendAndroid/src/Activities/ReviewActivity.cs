@@ -76,6 +76,7 @@ namespace Comparison_shopping_engine_frontend_android
                     validated = false;
                     continue;
                 }
+                AppData.Database.AddItem(new ItemHistory() { ItemName = itemLine.Name.Text });
                 corrected.Items.Add(new Item()
                 {
                     Date = corrected.Date,

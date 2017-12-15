@@ -117,7 +117,7 @@
     <Compile Include="src\Server\Endpoints\GetSuggestionsBackendEndpoint.cs" />
     <Compile Include="src\Server\IBackendEndpoint.cs" />
     <Compile Include="src\Server\IServer.cs" />
-    <Compile Include="src\Server\Routers\Router.cs" />
+    <Compile Include="src\Server\Endpoints\Routers\Router.cs" />
     <Compile Include="src\Server\Servers\HttpServer.cs" />
     <Compile Include="src\Server\IRouter.cs" />
     <Compile Include="src\Program.cs" />

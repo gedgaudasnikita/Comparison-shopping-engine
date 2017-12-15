@@ -92,6 +92,8 @@ namespace Comparison_shopping_engine_admin
             //filling the data grid
             client = new DbClient();
 
+            RefreshButton.Enabled = true;
+
             RefreshButton_Click(sender, e);
         }
 

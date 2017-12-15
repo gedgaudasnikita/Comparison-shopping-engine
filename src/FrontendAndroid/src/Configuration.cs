@@ -18,7 +18,7 @@ namespace Comparison_shopping_engine_frontend_android
     /// </summary>
     public static class Configuration
     {
-        public const string backendUrl = "http://192.168.1.6:4444";
+        public const string backendUrl = "http://10.3.2.252:4444";
         public const string dbPath = "db.db3";
         public const int topItems = 20;
         public const string notificationTopic = "instant";

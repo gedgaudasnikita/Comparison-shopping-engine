@@ -225,51 +225,36 @@ namespace Comparison_shopping_engine_frontend_android
 			
 			// aapt resource value: 0x7f080007
 			public const int dark = 2131230727;
-
-			// aapt resource value: 0x7f050008
-			public const int homeCameraButton = 2131034120;
-			
-			// aapt resource value: 0x7f05000b
-			public const int homeConfigButton = 2131034123;
-			
-			// aapt resource value: 0x7f050009
-			public const int homeGalleryButton = 2131034121;
-			
-			// aapt resource value: 0x7f050006
-			public const int homeImageView = 2131034118;
-			
-			// aapt resource value: 0x7f080010
-			public const int homeCameraButton = 2131230736;
-			
-			// aapt resource value: 0x7f050005
-			public const int homeRemoveImageTextView = 2131034117;
-			
-			// aapt resource value: 0x7f05000a
-			public const int homeResultScreenButton = 2131034122;
 			
 			// aapt resource value: 0x7f080011
-			public const int homeGalleryButton = 2131230737;
+			public const int homeCameraButton = 2131230737;
 			
-			// aapt resource value: 0x7f08000e
-			public const int homeImageView = 2131230734;
+			// aapt resource value: 0x7f080014
+			public const int homeConfigButton = 2131230740;
+			
+			// aapt resource value: 0x7f080012
+			public const int homeGalleryButton = 2131230738;
+			
+			// aapt resource value: 0x7f08000f
+			public const int homeImageView = 2131230735;
 			
 			// aapt resource value: 0x7f08000c
 			public const int homeLinearLayout = 2131230732;
 			
-			// aapt resource value: 0x7f080012
-			public const int homeResultScreenButton = 2131230738;
+			// aapt resource value: 0x7f08000e
+			public const int homeRemoveImageTextView = 2131230734;
+			
+			// aapt resource value: 0x7f080013
+			public const int homeResultScreenButton = 2131230739;
 			
 			// aapt resource value: 0x7f08000d
 			public const int homeTextView = 2131230733;
 			
-			// aapt resource value: 0x7f08000f
-			public const int homeVLinearLayout = 2131230735;
+			// aapt resource value: 0x7f080010
+			public const int homeVLinearLayout = 2131230736;
 			
 			// aapt resource value: 0x7f080003
 			public const int icon_only = 2131230723;
-			
-			// aapt resource value: 0x7f080017
-			public const int itemsLinearLayout = 2131230743;
 			
 			// aapt resource value: 0x7f080008
 			public const int light = 2131230728;
@@ -278,64 +263,43 @@ namespace Comparison_shopping_engine_frontend_android
 			public const int none = 2131230722;
 			
 			// aapt resource value: 0x7f080018
-			public const int resultsButtonsLinearLayout = 2131230744;
-			
-			// aapt resource value: 0x7f080014
-			public const int resultsLinearLayout = 2131230740;
-			
-			// aapt resource value: 0x7f08001a
-			public const int resultsNewItemButton = 2131230746;
-			
-			// aapt resource value: 0x7f080016
-			public const int resultsScroll = 2131230742;
-			
-			// aapt resource value: 0x7f080019
-			public const int resultsSubmitButton = 2131230745;
+			public const int resultsItemsLinearLayout = 2131230744;
 			
 			// aapt resource value: 0x7f080015
-			public const int resultsTextView = 2131230741;
+			public const int resultsLinearLayout = 2131230741;
+			
+			// aapt resource value: 0x7f080017
+			public const int resultsScroll = 2131230743;
+			
+			// aapt resource value: 0x7f080016
+			public const int resultsTextView = 2131230742;
+			
+			// aapt resource value: 0x7f08001d
+			public const int reviewButtonsLinearLayout = 2131230749;
+			
+			// aapt resource value: 0x7f08001c
+			public const int reviewItemsLinearLayout = 2131230748;
+			
+			// aapt resource value: 0x7f080019
+			public const int reviewLinearLayout = 2131230745;
+			
+			// aapt resource value: 0x7f08001e
+			public const int reviewNewItemButton = 2131230750;
+			
+			// aapt resource value: 0x7f08001b
+			public const int reviewScrollView = 2131230747;
+			
+			// aapt resource value: 0x7f08001f
+			public const int reviewSubmitButton = 2131230751;
+			
+			// aapt resource value: 0x7f08001a
+			public const int reviewTextView = 2131230746;
 			
 			// aapt resource value: 0x7f080004
 			public const int standard = 2131230724;
 			
 			// aapt resource value: 0x7f080005
 			public const int wide = 2131230725;
-      
-			// aapt resource value: 0x7f050007
-			public const int homeVLinearLayout = 2131034119;
-			
-			// aapt resource value: 0x7f05000f
-			public const int resultsItemsLinearLayout = 2131034127;
-			
-			// aapt resource value: 0x7f05000c
-			public const int resultsLinearLayout = 2131034124;
-			
-			// aapt resource value: 0x7f05000e
-			public const int resultsScroll = 2131034126;
-			
-			// aapt resource value: 0x7f05000d
-			public const int resultsTextView = 2131034125;
-			
-			// aapt resource value: 0x7f050014
-			public const int reviewButtonsLinearLayout = 2131034132;
-			
-			// aapt resource value: 0x7f050013
-			public const int reviewItemsLinearLayout = 2131034131;
-			
-			// aapt resource value: 0x7f050010
-			public const int reviewLinearLayout = 2131034128;
-			
-			// aapt resource value: 0x7f050015
-			public const int reviewNewItemButton = 2131034133;
-			
-			// aapt resource value: 0x7f050012
-			public const int reviewScrollView = 2131034130;
-			
-			// aapt resource value: 0x7f050016
-			public const int reviewSubmitButton = 2131034134;
-			
-			// aapt resource value: 0x7f050011
-			public const int reviewTextView = 2131034129;
 			
 			static Id()
 			{
@@ -375,8 +339,8 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f030002
 			public const int Results = 2130903042;
 			
-			// aapt resource value: 0x7f020003
-			public const int Review = 2130837507;
+			// aapt resource value: 0x7f030003
+			public const int Review = 2130903043;
 			
 			static Layout()
 			{
@@ -397,8 +361,8 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f050011
 			public const int Hello = 2131034129;
 			
-			// aapt resource value: 0x7f050013
-			public const int app_name = 2131034131;
+			// aapt resource value: 0x7f05001a
+			public const int app_name = 2131034138;
 			
 			// aapt resource value: 0x7f050000
 			public const int common_google_play_services_enable_button = 2131034112;
@@ -451,8 +415,29 @@ namespace Comparison_shopping_engine_frontend_android
 			// aapt resource value: 0x7f05000f
 			public const int common_signin_button_text_long = 2131034127;
 			
+			// aapt resource value: 0x7f05001b
+			public const int configSpinner = 2131034139;
+			
+			// aapt resource value: 0x7f050015
+			public const int default_web_client_id = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int firebase_database_url = 2131034134;
+			
+			// aapt resource value: 0x7f050013
+			public const int gcm_defaultSenderId = 2131034131;
+			
+			// aapt resource value: 0x7f050017
+			public const int google_api_key = 2131034135;
+			
 			// aapt resource value: 0x7f050014
-			public const int configSpinner = 2131034132;
+			public const int google_app_id = 2131034132;
+			
+			// aapt resource value: 0x7f050018
+			public const int google_crash_reporting_api_key = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int google_storage_bucket = 2131034137;
 			
 			static String()
 			{
